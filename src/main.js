@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import font from './font'
 
 export default function (Vue, { router, head, isClient }) {
+  Vue.prototype.$devMode = process.env.GRIDSOME_DEV_MODE === 'true'
   Vue.prototype.$isClient = isClient
   Vue.component('Layout', DefaultLayout)
 

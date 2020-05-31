@@ -138,15 +138,21 @@ export default {
 
 			return svg
 		},
+    getResourceUrl(url) {
+      return this.$devMode ? url : this.$url(url)
+    },
 		fetchResources() {
-			return Promise.all([fetch('/id.geojson'), fetch('/dengue-indonesia-2018.csv')])
+      const geoJsonUrl = this.getResourceUrl('/id.geojson')
+      const csvUrl = this.getResourceUrl(`/dengue-indonesia-${this.currentYear}.csv`)
+			return Promise.all([fetch(geoJsonUrl), fetch(csvUrl)])
 		},
 		goYear(year) {
       this.currentYear = year
       this.rerender(this.currentYear)
 		},
 		async rerender(year) {
-		  const data = await this.transformToMap(await fetch(`/dengue-indonesia-${year}.csv`));
+      const csvUrl = this.getResourceUrl(`/dengue-indonesia-${year}.csv`)
+		  const data = await this.transformToMap(await fetch(csvUrl))
 			data.forEach((value, key) => {
 				const province = d3.select(`#${key}`)
 				if (province) {
