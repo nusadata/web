@@ -39,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    this.currentYear = window.location.hash.replace('#', '') || this.yearRange.pop()
+    this.currentYear = window.location.hash.replace('#', '') || this.yearRange[this.yearRange.length - 1]
 
 		this.fetchResources()
       .then(async ([geojson, data]) => {
