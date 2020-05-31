@@ -2,7 +2,7 @@
   <Layout>
     <main role="main">
       <h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
-      <DengueMap v-if="$isClient" />
+      <DengueMap/>
     </main>
   </Layout>
 </template>
