@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-4xl mt-10 mb-20 mx-auto overflow-x-auto">
-    <p id="title" class="font-semibold text-2xl text-center pt-4 mb-4">Cases of Dengue Fever in Indonesia ({{ currentYear }})</p>
-    <div class="text-center">
+  <div class="max-w-4xl mt-10 mb-20 mx-auto overflow-x-hidden">
+    <p id="title" class="font-semibold text-2xl mx-5 text-center pt-4 mb-4">Cases of Dengue Fever in Indonesia ({{ currentYear }})</p>
+    <div class="text-center mx-5">
       <span
         v-for="year in yearRange"
         :key="`link-${year}`"
@@ -13,7 +13,9 @@
         </a>
       </span>
     </div>
-    <div id="content" class="min-w-xl"></div>
+    <div class="overflow-x-auto">
+      <div id="content" class="min-w-xl"/>
+    </div>
   </div>
 </template>
 
