@@ -7,7 +7,8 @@
 module.exports = {
   siteName: 'Nusadata',
   siteDescription: 'All about Indonesia made into data visualizations',
-  siteUrl: 'https://rahmanda.github.io/nusadata',
+  siteUrl: 'https://nusadata.github.io',
+  pathPrefix: '/web',
   titleTemplate: '%s',
   plugins: [
     {
