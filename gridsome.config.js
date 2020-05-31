@@ -12,7 +12,12 @@ module.exports = {
   titleTemplate: '%s',
   plugins: [
     {
-      use: 'gridsome-plugin-tailwindcss'
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        purgeConfig: {
+          whitelistPatternsChildren: [/^tippy/]
+        }
+      }
     }
   ]
 }
