@@ -35,7 +35,7 @@
 
 <script>
 import * as d3 from 'd3'
-import tippy, {followCursor} from 'tippy.js'
+import tippy from 'tippy.js'
 import provinces from '~/provinces'
 import 'tippy.js/dist/tippy.css'
 
@@ -81,14 +81,22 @@ export default {
     getResourceUrl(url) {
       return this.$devMode ? url : this.$url(url)
     },
+    getMaxValueFromType(provinces, type) {
+      let values = []
+      Object.keys(provinces).forEach(slug => {
+        const valuesFromType = provinces[slug].map(d => +d[type])
+        values = values.concat(valuesFromType)
+      })
+      return d3.max(values)
+    },
     async fetchResource() {
       const csvUrl = this.getResourceUrl('/dengue-indonesia-by-province-2011-2018.json')
       let response = await fetch(csvUrl)
       return await response.json()
     },
     async render(province, type) {
-      let data = await this.fetchResource()
-      data = data[province]
+      const dataProvinces = await this.fetchResource()
+      const data = dataProvinces[province]
 
       const selector = this.getSelector('.content')
       d3.select(selector)
@@ -102,38 +110,85 @@ export default {
         .append('g')
         .attr('transform', `translate(100, 50)`)
 
-      const x = d3.scaleBand()
+      const linearGradientId = this.getId('linear-gradient')
+      const linearGradient = svg.append('defs')
+        .attr('class', 'linear-gradient-wrapper')
+        .append('linearGradient')
+        .attr('id', linearGradientId)
+        .attr('x1', '0%')
+        .attr('x2', '0%')
+        .attr('y1', '0%')
+        .attr('y2', '100%')
+
+      linearGradient.append('stop')
+        .attr('class', 'start')
+        .attr('offset', '0%')
+        .attr('stop-color', '#2c5282')
+        .attr('stop-opacity', 1)
+
+      linearGradient.append('stop')
+        .attr('class', 'end')
+        .attr('offset', '100%')
+        .attr('stop-color', '#1a202c')
+        .attr('stop-opacity', 1)
+
+      const x = d3.scalePoint()
         .domain(data.map(d => +d.year).reverse())
         .range([0, 700])
-        .padding(0.5)
+
+      const y = d3.scaleLinear()
+        .domain([0, this.getMaxValueFromType(dataProvinces, type)]) // need to be adjustable
+        .range([400, 0])
+
+      svg.append('path')
+        .datum(data)
+        .attr('class', 'area')
+        .attr('fill', `url(#${linearGradientId})`)
+        .attr('d', d3.area()
+          .x(d => x(+d.year))
+          .y0(400)
+          .y1(d => y(+d[type]))
+          .curve(d3.curveMonotoneX))
+
+      svg.append('path')
+        .datum(data)
+        .attr('class', 'line')
+        .attr('d', d3.line()
+          .x(d => x(+d.year))
+          .y(d => y(+d[type]))
+          .curve(d3.curveMonotoneX))
+
+      svg.selectAll('circle')
+        .data(data)
+        .enter()
+        .append('circle')
+        .attr('class', 'circle')
+        .attr('data-tooltip', d => d[type])
+        .attr('cx', d => x(+d.year))
+        .attr('cy', d => y(+d[type]))
+        .attr('r', 5)
 
       svg.append('g')
         .attr('transform', `translate(0, 400)`)
         .style('font', '1rem Manrope')
         .call(d3.axisBottom(x))
 
-      const y = d3.scaleLinear()
-        .domain([0, d3.max(data, (d) => +d[type])])
-        .range([400, 0])
-
       svg.append('g')
         .style('font', '1rem Manrope')
         .call(d3.axisLeft(y).ticks(5))
 
-      svg.selectAll('.bar')
-        .data(data)
-        .enter()
-        .append('rect')
-        .attr('class', 'bar')
-        .attr('data-tooltip', d => d[type])
-        .attr('x', d => x(+d.year))
-        .attr('y', d => y(+d[type]))
-        .attr('width', x.bandwidth())
-        .attr('height', d => 400 - y(+d[type]))
+      // svg.selectAll('.bar')
+      //   .data(data)
+      //   .enter()
+      //   .append('rect')
+      //   .attr('class', 'bar')
+      //   .attr('data-tooltip', d => d[type])
+      //   .attr('x', d => x(+d.year))
+      //   .attr('y', d => y(+d[type]))
+      //   .attr('width', x.bandwidth())
+      //   .attr('height', d => 400 - y(+d[type]))
 
-      tippy(this.getSelector('.bar'), {
-        followCursor: true,
-        plugins: [followCursor],
+      tippy(this.getSelector('.circle'), {
         content(ref) {
           return ref.getAttribute('data-tooltip')
         }
@@ -145,10 +200,19 @@ export default {
 </script>
 
 <style>
-.bar {
+.tdv .bar {
   fill: #2c5282;
 }
-.bar:hover {
+.tdv .bar:hover {
   fill: #3182ce;
+}
+.tdv .line {
+  fill: none;
+  stroke: #3182ce;
+  stroke-width: 2;
+}
+.tdv .circle {
+  fill: #63b3ed;
+  stroke: none;
 }
 </style>
