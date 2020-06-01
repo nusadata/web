@@ -3,9 +3,9 @@
     <main role="main">
       <div class="mt-5 px-5 lg:px-0 py-10 max-w-4xl mx-auto">
         <h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
+        <p class="text-gray-500 font-semibold">2011-2018</p>
         <p class="text-3xl font-bold">
-        Cases of <span class="text-blue-500">Dengue Fever</span>
-        <span class="ml-1 font-normal">(2011-2018)</span>
+        <span class="text-blue-500">Dengue Fever</span> in Indonesia
         </p>
       </div>
       <DengueMap :year-range="yearRange"/>
@@ -24,7 +24,7 @@ export default {
   computed: {
     meta() {
       return {
-        title: `Cases of Dengue Fever in Indonesia (${this.yearRange[0]}-${this.yearRange[this.yearRange.length - 1]})`
+        title: `Dengue Fever in Indonesia ${this.yearRange[0]}-${this.yearRange[this.yearRange.length - 1]}`
       }
     }
   },
