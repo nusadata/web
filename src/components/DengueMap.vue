@@ -1,22 +1,35 @@
 <template>
-  <div class="max-w-4xl mt-10 mb-20 mx-auto overflow-x-hidden">
-    <p id="title" class="font-semibold text-2xl mx-5 text-center pt-4 mb-4">Cases of Dengue Fever in Indonesia ({{ currentYear }})</p>
-    <div class="text-center mx-5">
-      <span
-        v-for="year in yearRange"
-        :key="`link-${year}`"
-        class="inline-block mx-1 mb-1">
-        <a class="underline text-lg text-blue-500 active:text-blue-300 focus:text-blue-300 visited:text-blue-300"
-           :href="`#${year}`"
-           @click="goYear(year)">
-           {{ year }}
-        </a>
-      </span>
+  <section class="max-w-4xl mb-20 mx-auto overflow-x-hidden">
+    <div class="flex items-center">
+      <h2
+        id="title"
+        class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4 flex-1">
+        Map of {{ currentType.replace('_', ' ') }} in {{ currentYear }}
+      </h2>
+      <div class="mx-5 lg:mx-0 flex-none flex items-center">
+        <select v-model.number="currentYear" class="text-gray-800 mr-4">
+          <option
+            v-for="year in yearRange"
+            :key="`year-${year}`"
+            :value="year">
+            {{ year }}
+          </option>
+        </select>
+
+        <select v-model="currentType" class="text-gray-800">
+          <option
+            v-for="type in types"
+            :key="`type-${type}`"
+            :value="type">
+            {{ type.replace('_', ' ') }}
+          </option>
+        </select>
+      </div>
     </div>
     <div class="overflow-x-auto">
-      <div id="content" class="min-w-xl"/>
+      <div id="content" class="min-w-2xl"/>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -31,21 +44,55 @@ const projection = d3.geoEquirectangular()
 const geoGenerator = d3.geoPath()
   .projection(projection)
 
-const color = d3.scaleQuantize([0, 10000], d3.schemeBlues[7])
-
 export default {
+  props: {
+    yearRange: {
+      type: Array,
+      default: () => [],
+    }
+  },
+  computed: {
+    colorRange() {
+      const range = {
+        total_cases: [0, 10000],
+        total_deaths: [0, 200],
+        incident_rate: [0, 200],
+        fatality_rate: [0, 8.75]
+      }
+      return range[this.currentType]
+    },
+    stopRange() {
+      const range = {
+        total_cases: [0, 1500, 3000, 4500, 6000, 7500, 9000, 10000],
+        total_deaths: [0, 25, 50, 75, 100, 125, 150, 200],
+        incident_rate: [0, 25, 50, 75, 100, 125, 150, 200],
+        fatality_rate: [0, 1.25, 2.5, 3.75, 5, 6.25, 7.5, 8.75]
+      }
+      return range[this.currentType]
+    },
+    legendText() {
+      const texts = {
+        total_cases: 'Number of total cases',
+        total_deaths: 'Number of total deaths',
+        incident_rate: 'Number of incident rate',
+        fatality_rate: 'Number of fatality rate'
+      }
+      return texts[this.currentType]
+    }
+  },
   data() {
     return {
-      currentYear: 2018,
-      yearRange: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+      types: ['total_cases', 'total_deaths', 'incident_rate', 'fatality_rate'],
+      currentType: 'total_cases',
+      currentYear: 2018
     }
   },
   mounted() {
-    this.currentYear = window.location.hash.replace('#', '') || this.yearRange[this.yearRange.length - 1]
+    this.currentYear = this.yearRange[this.yearRange.length - 1]
 
 		this.fetchResources()
       .then(async ([geojson, data]) => {
-				const map = await this.transformToMap(data)
+				const map = await this.transformToMap(data, this.currentType)
 				this.renderLegend(this.render(await geojson.json(), map, geoGenerator))
 				tippy('.province', {
 					followCursor: true,
@@ -55,6 +102,15 @@ export default {
 					}
 				})
 			})
+  },
+  watch: {
+    currentYear(year) {
+      this.rerender(year, this.currentType)
+    },
+    currentType(type) {
+      this.rerender(this.currentYear, type)
+      this.rerenderLegend(this.currentYear, type)
+    },
   },
   methods: {
     render(geojson, data, generator) {
@@ -69,7 +125,7 @@ export default {
 				.selectAll('path')
 				.data(geojson.features)
 				.join('path')
-				.attr('fill', d => color(data.get(d.properties.slug)))
+				.attr('fill', d => this.color(data.get(d.properties.slug)))
 				.attr('data-name', d => d.properties.state)
 				.attr('data-tooltip', d => `${d.properties.state} ${data.get(d.properties.slug)}`)
 				.attr('stroke', strokeColor)
@@ -89,6 +145,7 @@ export default {
     },
 		renderLegend(svg) {
 			const linearGradient = svg.append('defs')
+        .attr('id', 'linear-gradient-wrapper')
 				.append('linearGradient')
 				.attr('id', 'linear-gradient')
 				.attr('x1', '0%')
@@ -96,15 +153,17 @@ export default {
 				.attr('x2', '100%')
 				.attr('y2', '0%')
 
-			const stops = [0, 1500, 3000, 4500, 6000, 7500, 9000, 10000];
+			const stops = this.stopRange;
 
 			linearGradient.selectAll('stop')
 				.data(stops)
 				.join('stop')
 				.attr('offset', (d, index) => `${Math.floor((index + 1) / stops.length * 100)}%`)
-				.attr('stop-color', d => color(d))
+				.attr('stop-color', d => this.color(d))
 
-			const legendWrapper = svg.append('g')
+			const legendWrapper = svg
+        .append('g')
+        .attr('id', 'legend-wrapper')
 				.style('transform', 'translate(calc(50% - 150px), 375px)')
 
 			legendWrapper.append('rect')
@@ -136,7 +195,7 @@ export default {
 				.attr('x', 150)
 				.attr('y', -12)
 				.attr('id', 'legend-title')
-				.text('Number of cases');
+				.text(this.legendText);
 
 			return svg
 		},
@@ -148,29 +207,39 @@ export default {
       const csvUrl = this.getResourceUrl(`/dengue-indonesia-${this.currentYear}.csv`)
 			return Promise.all([fetch(geoJsonUrl), fetch(csvUrl)])
 		},
-		goYear(year) {
-      this.currentYear = year
-      this.rerender(this.currentYear)
-		},
-		async rerender(year) {
+		async rerender(year, type) {
       const csvUrl = this.getResourceUrl(`/dengue-indonesia-${year}.csv`)
-		  const data = await this.transformToMap(await fetch(csvUrl))
+		  const data = await this.transformToMap(await fetch(csvUrl), type)
 			data.forEach((value, key) => {
 				const province = d3.select(`#${key}`)
 				if (province) {
 					province
 						.transition()
-						.attr('fill', color(value))
+						.attr('fill', this.color(value))
 					try {
 						document.getElementById(`${key}`)._tippy.setContent(`${province.attr('data-name')} ${value}`)
 					} catch (e) {
 						console.log(key)
 					}
 				}
-			});
+			})
 		},
- 		async transformToMap(data) {
- 			return new Map(d3.csvParse(await data.text(), ({slug, total_cases}) => [slug, +total_cases]))
+    rerenderLegend(year, type) {
+      const svg = d3.select('#content svg')
+      svg.select('#linear-gradient-wrapper').remove()
+      svg.select('#legend-wrapper').remove()
+      this.renderLegend(svg)
+    },
+    color(value) {
+      return d3.scaleQuantize(this.colorRange, d3.schemeBlues[7])(value)
+    },
+ 		async transformToMap(data, type) {
+      const parsedCsv = d3.csvParse(
+        await data.text(),
+        col => [col.slug, +col[type]]
+      )
+
+ 			return new Map(parsedCsv)
  		}
   }
 }
