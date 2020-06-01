@@ -1,6 +1,6 @@
 <template>
-  <section :class="`${selectorPrefix} max-w-4xl mb-20 mx-auto overflow-x-hidden`">
-    <div class="flex flex-wrap items-center">
+  <section :class="`${selectorPrefix} max-w-4xl mb-24 mx-auto overflow-x-hidden`">
+    <header class="flex flex-wrap items-center">
       <h2
         id="map-of-dengue-fever"
         class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4 w-full md:w-1/2">
@@ -26,7 +26,7 @@
           </option>
         </select>
       </div>
-    </div>
+    </header>
     <div class="overflow-x-auto">
       <div class="content min-w-2xl"/>
     </div>
