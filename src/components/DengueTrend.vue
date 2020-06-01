@@ -1,11 +1,16 @@
 <template>
   <section :class="`${selectorPrefix} max-w-4xl mb-24 mx-auto overflow-x-hidden`">
     <header class="flex flex-wrap items-center">
-      <h2
-        id="trend-of-dengue-fever"
-        class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4 w-full md:w-1/2">
-        Trend of {{ currentType.replace('_', ' ') }} by province
-      </h2>
+      <div class="w-full md:w-1/2">
+        <h2
+          id="trend-of-dengue-fever"
+          class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4">
+          Trend of {{ currentType.replace('_', ' ') }} by province
+        </h2>
+        <p class="mx-5 lg:mx-0 mb-5 text-gray-500">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
       <div
         class="mx-5 lg:mx-0 mb-5 md:mb-0 flex-none flex items-center justify-start md:justify-end w-full md:w-1/2">
         <select v-model="currentProvince" class="text-gray-800 mr-5">
@@ -28,7 +33,7 @@
       </div>
     </header>
     <div class="overflow-x-auto">
-      <div class="content min-w-2xl"/>
+      <div class="content min-w-2xl max-w-3xl"/>
     </div>
   </section>
 </template>
