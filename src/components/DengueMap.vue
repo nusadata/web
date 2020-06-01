@@ -1,8 +1,8 @@
 <template>
-  <section class="max-w-4xl mb-20 mx-auto overflow-x-hidden">
+  <section :class="`${selectorPrefix} max-w-4xl mb-20 mx-auto overflow-x-hidden`">
     <div class="flex flex-wrap items-center">
       <h2
-        id="title"
+        id="map-of-dengue-fever"
         class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4 w-full md:w-1/2">
         Map of {{ currentType.replace('_', ' ') }} in {{ currentYear }}
       </h2>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="overflow-x-auto">
-      <div id="content" class="min-w-2xl"/>
+      <div class="content min-w-2xl"/>
     </div>
   </section>
 </template>
@@ -47,6 +47,10 @@ const geoGenerator = d3.geoPath()
 
 export default {
   props: {
+    selectorPrefix: {
+      type: String,
+      default: 'mdv'
+    },
     yearRange: {
       type: Array,
       default: () => [],
@@ -95,7 +99,7 @@ export default {
       .then(async ([geojson, data]) => {
 				const map = await this.transformToMap(data, this.currentType)
 				this.renderLegend(this.render(await geojson.json(), map, geoGenerator))
-				tippy('.province', {
+				tippy(this.getSelector('.province'), {
 					followCursor: true,
           plugins: [followCursor],
 					content(ref) {
@@ -114,11 +118,17 @@ export default {
     },
   },
   methods: {
+    getSelector(selector) {
+      return `.${this.selectorPrefix} ${selector}`
+    },
+    getId(selector) {
+      return `${this.selectorPrefix}-${selector}`
+    },
     render(geojson, data, generator) {
       const strokeColor = '#22292f'
       const strokeHoverColor = 'black'
 
-      const svg = d3.select('#content')
+      const svg = d3.select(this.getSelector('.content'))
         .append('svg')
         .attr('viewBox', [0, 0, 800, 400])
 
@@ -132,7 +142,7 @@ export default {
 				.attr('stroke', strokeColor)
 				.attr('stroke-linejoin', 'round')
 				.attr('d', generator)
-				.attr('id', d => d.properties.slug)
+				.attr('id', d => this.getId(d.properties.slug))
 				.attr('class', 'province')
 				.on('mouseover', function () {
 					svg.selectAll('.province').transition().style('opacity', 0.5).attr('stroke', strokeColor)
@@ -145,10 +155,11 @@ export default {
 			return svg
     },
 		renderLegend(svg) {
+      const linearGradientId = this.getId('linear-gradient')
 			const linearGradient = svg.append('defs')
-        .attr('id', 'linear-gradient-wrapper')
+        .attr('class', 'linear-gradient-wrapper')
 				.append('linearGradient')
-				.attr('id', 'linear-gradient')
+				.attr('id', linearGradientId)
 				.attr('x1', '0%')
 				.attr('y1', '0%')
 				.attr('x2', '100%')
@@ -164,13 +175,13 @@ export default {
 
 			const legendWrapper = svg
         .append('g')
-        .attr('id', 'legend-wrapper')
+        .attr('class', 'legend-wrapper')
 				.style('transform', 'translate(calc(50% - 150px), 375px)')
 
 			legendWrapper.append('rect')
 				.attr('width', 300)
 				.attr('height', 5)
-				.style('fill', 'url(#linear-gradient)')
+        .style('fill', `url(#${linearGradientId})`)
 
 			const texts = stops.slice(0, stops.length - 1)
 			const textWrapper = legendWrapper.append('g')
@@ -195,7 +206,7 @@ export default {
         .style('fill', fillColor)
 				.attr('x', 150)
 				.attr('y', -12)
-				.attr('id', 'legend-title')
+				.attr('class', 'legend-title')
 				.text(this.legendText);
 
 			return svg
@@ -212,13 +223,14 @@ export default {
       const csvUrl = this.getResourceUrl(`/dengue-indonesia-${year}.csv`)
 		  const data = await this.transformToMap(await fetch(csvUrl), type)
 			data.forEach((value, key) => {
-				const province = d3.select(`#${key}`)
+        const id = this.getId(key)
+				const province = d3.select('#' + id)
 				if (province) {
 					province
 						.transition()
 						.attr('fill', this.color(value))
 					try {
-						document.getElementById(`${key}`)._tippy.setContent(`${province.attr('data-name')} ${value}`)
+						document.getElementById(id)._tippy.setContent(`${province.attr('data-name')} ${value}`)
 					} catch (e) {
 						console.log(key)
 					}
@@ -226,9 +238,9 @@ export default {
 			})
 		},
     rerenderLegend(year, type) {
-      const svg = d3.select('#content svg')
-      svg.select('#linear-gradient-wrapper').remove()
-      svg.select('#legend-wrapper').remove()
+      const svg = d3.select(this.getSelector('.content svg'))
+      svg.select('.linear-gradient-wrapper').remove()
+      svg.select('.legend-wrapper').remove()
       this.renderLegend(svg)
     },
     color(value) {
