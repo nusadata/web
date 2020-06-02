@@ -15,7 +15,7 @@
             In 2016, most of provinces have a significant surge in total deaths compared to the previous and the next year's figure. Despite having a high average cases, the average deaths number in Jakarta is very low with a max number of 20.
           </template>
           <template v-if="currentType === 'fatality_rate'">
-            The trend pattern of fatality rate for all provinces are extremely diverse. The only worth mentioning is that except Maluku and Papua regions, trend for most of provinces is going downward to the end of 2018.
+            The trend pattern of fatality rate for all provinces are extremely diverse. The only worth mentioning is that except Maluku and Papua regions, the trend of fatality rate for most provinces is going downward to the end of 2018.
           </template>
         </p>
       </div>
