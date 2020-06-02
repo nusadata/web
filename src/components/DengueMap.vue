@@ -223,14 +223,13 @@ export default {
 		  const data = await this.transformToMap(await fetch(csvUrl), type)
 			data.forEach((obj, key) => {
         const id = this.getId(key)
-        const province = this.$d3.select('#' + id)
         try {
+          const province = this.$d3.select('#' + id)
 					province
 						.transition()
 						.attr('fill', this.color(obj.value))
-						document.getElementById(id)._this.$tippy.setContent(`${obj.name} ${obj.value}`)
+					document.getElementById(id)._tippy.setContent(`${obj.name} ${obj.value}`)
         } catch (e) {
-          console.log(id)
           console.log(key)
         }
 			})
