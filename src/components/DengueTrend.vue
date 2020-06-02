@@ -47,10 +47,7 @@
 </template>
 
 <script>
-import * as d3 from 'd3'
-import tippy from 'tippy.js'
 import provinces from '~/provinces'
-import 'tippy.js/dist/tippy.css'
 
 export default {
   props: {
@@ -111,7 +108,7 @@ export default {
         const valuesFromType = provinces[slug].map(d => +d[type])
         values = values.concat(valuesFromType)
       })
-      return d3.max(values)
+      return this.$d3.max(values)
     },
     async fetchResource() {
       const csvUrl = this.getResourceUrl('/dengue-indonesia-by-province-2011-2018.json')
@@ -123,11 +120,11 @@ export default {
       const data = dataProvinces[province]
 
       const selector = this.getSelector('.content')
-      d3.select(selector)
+      this.$d3.select(selector)
         .selectAll('*')
         .remove()
 
-      const svg = d3.select(selector)
+      const svg = this.$d3.select(selector)
         .append('svg')
         .attr('preserveAspectRatio', 'xMinYMin meet')
         .attr('viewBox', `0 0 900 500`)
@@ -156,11 +153,11 @@ export default {
         .attr('stop-color', '#1a202c')
         .attr('stop-opacity', 1)
 
-      const x = d3.scalePoint()
+      const x = this.$d3.scalePoint()
         .domain(data.map(d => +d.year).reverse())
         .range([0, 700])
 
-      const y = d3.scaleLinear()
+      const y = this.$d3.scaleLinear()
         .domain([0, this.getMaxValueFromType(dataProvinces, type)]) // need to be adjustable
         .range([400, 0])
 
@@ -168,19 +165,19 @@ export default {
         .datum(data)
         .attr('class', 'area')
         .attr('fill', `url(#${linearGradientId})`)
-        .attr('d', d3.area()
+        .attr('d', this.$d3.area()
           .x(d => x(+d.year))
           .y0(400)
           .y1(d => y(+d[type]))
-          .curve(d3.curveMonotoneX))
+          .curve(this.$d3.curveMonotoneX))
 
       svg.append('path')
         .datum(data)
         .attr('class', 'line')
-        .attr('d', d3.line()
+        .attr('d', this.$d3.line()
           .x(d => x(+d.year))
           .y(d => y(+d[type]))
-          .curve(d3.curveMonotoneX))
+          .curve(this.$d3.curveMonotoneX))
 
       svg.selectAll('circle')
         .data(data)
@@ -195,11 +192,11 @@ export default {
       svg.append('g')
         .attr('transform', `translate(0, 400)`)
         .style('font', '1rem Manrope')
-        .call(d3.axisBottom(x))
+        .call(this.$d3.axisBottom(x))
 
       svg.append('g')
         .style('font', '1rem Manrope')
-        .call(d3.axisLeft(y).ticks(5))
+        .call(this.$d3.axisLeft(y).ticks(5))
 
       // svg.selectAll('.bar')
       //   .data(data)
@@ -212,7 +209,7 @@ export default {
       //   .attr('width', x.bandwidth())
       //   .attr('height', d => 400 - y(+d[type]))
 
-      tippy(this.getSelector('.circle'), {
+      this.$tippy(this.getSelector('.circle'), {
         content(ref) {
           return ref.getAttribute('data-tooltip')
         }

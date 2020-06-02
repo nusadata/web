@@ -34,16 +34,7 @@
 </template>
 
 <script>
-import * as d3 from 'd3'
-import tippy, {followCursor} from 'tippy.js'
-import 'tippy.js/dist/tippy.css'
-
-const projection = d3.geoEquirectangular()
-  .scale(1000)
-  .translate([-1650, 120])
-
-const geoGenerator = d3.geoPath()
-  .projection(projection)
+import {followCursor} from 'tippy.js'
 
 export default {
   props: {
@@ -98,8 +89,8 @@ export default {
 		this.fetchResources()
       .then(async ([geojson, data]) => {
 				const map = await this.transformToMap(data, this.currentType)
-				this.renderLegend(this.render(await geojson.json(), map, geoGenerator))
-				tippy(this.getSelector('.province'), {
+				this.renderLegend(this.render(await geojson.json(), map))
+				this.$tippy(this.getSelector('.province'), {
 					followCursor: true,
           plugins: [followCursor],
 					content(ref) {
@@ -124,11 +115,18 @@ export default {
     getId(selector) {
       return `${this.selectorPrefix}-${selector}`
     },
-    render(geojson, data, generator) {
+    render(geojson, data) {
+      const projection = this.$d3.geoEquirectangular()
+        .scale(1000)
+        .translate([-1650, 120])
+
+      const generator = this.$d3.geoPath()
+        .projection(projection)
+
       const strokeColor = '#22292f'
       const strokeHoverColor = 'black'
 
-      const svg = d3.select(this.getSelector('.content'))
+      const svg = this.$d3.select(this.getSelector('.content'))
         .append('svg')
         .attr('viewBox', [0, 0, 800, 400])
 
@@ -146,7 +144,7 @@ export default {
 				.attr('class', 'province')
 				.on('mouseover', function () {
 					svg.selectAll('.province').transition().style('opacity', 0.5).attr('stroke', strokeColor)
-					d3.select(this).transition().style('opacity', 1).attr('stroke', strokeHoverColor)
+					this.$d3.select(this).transition().style('opacity', 1).attr('stroke', strokeHoverColor)
 				})
 				.on('mouseleave', function () {
 					svg.selectAll('.province').transition().style('opacity', 1).attr('stroke', strokeColor)
@@ -224,13 +222,13 @@ export default {
 		  const data = await this.transformToMap(await fetch(csvUrl), type)
 			data.forEach((value, key) => {
         const id = this.getId(key)
-				const province = d3.select('#' + id)
+				const province = this.$d3.select('#' + id)
 				if (province) {
 					province
 						.transition()
 						.attr('fill', this.color(value))
 					try {
-						document.getElementById(id)._tippy.setContent(`${province.attr('data-name')} ${value}`)
+						document.getElementById(id)._this.$tippy.setContent(`${province.attr('data-name')} ${value}`)
 					} catch (e) {
 						console.log(key)
 					}
@@ -238,16 +236,16 @@ export default {
 			})
 		},
     rerenderLegend(year, type) {
-      const svg = d3.select(this.getSelector('.content svg'))
+      const svg = this.$d3.select(this.getSelector('.content svg'))
       svg.select('.linear-gradient-wrapper').remove()
       svg.select('.legend-wrapper').remove()
       this.renderLegend(svg)
     },
     color(value) {
-      return d3.scaleQuantize(this.colorRange, d3.schemeBlues[7])(value)
+      return this.$d3.scaleQuantize(this.colorRange, this.$d3.schemeBlues[7])(value)
     },
  		async transformToMap(data, type) {
-      const parsedCsv = d3.csvParse(
+      const parsedCsv = this.$d3.csvParse(
         await data.text(),
         col => [col.slug, +col[type]]
       )
