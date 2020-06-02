@@ -8,16 +8,16 @@
       </h2>
     </header>
     <ul class="flex flex-wrap -mx-5 px-5 lg:px-0">
-      <li class="mx-5 mb-5">
+      <li class="mx-5 mb-4">
         <p class="mb-1">Average total cases per year</p>
         <p class="text-4xl text-blue-400">{{ $delimiter(Math.ceil(summary.average_total_cases)) }}</p>
       </li>
-      <li class="mx-5 mb-5">
+      <li class="mx-5 mb-4">
         <p class="mb-1">Highest total cases over period</p>
         <p class="text-4xl text-blue-400">{{ $delimiter(summary.max_total_cases) }}</p>
         <p class="text-gray-500">in {{ summary.province_with_max_total_cases }} {{ summary.year_with_max_total_cases }}</p>
       </li>
-      <li class="mx-5 mb-5">
+      <li class="mx-5 mb-4">
         <p class="mb-1">Highest death cases over period</p>
         <p class="text-4xl text-blue-400">{{ $delimiter(summary.max_death_cases) }}</p>
         <p class="text-gray-500">in {{ summary.province_with_max_death_cases }} {{ summary.year_with_max_death_cases }}</p>
