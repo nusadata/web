@@ -80,14 +80,14 @@ export default {
         total_cases: 'Number of total cases',
         total_deaths: 'Number of total deaths',
         incident_rate: 'Number of incident rate',
-        fatality_rate: 'Number of fatality rate'
+        fatality_rate: 'Number of fatality rate (%)'
       }
       return texts[this.currentType]
     }
   },
   data() {
     return {
-      types: ['total_cases', 'total_deaths', 'incident_rate', 'fatality_rate'],
+      types: ['total_cases', 'total_deaths', 'fatality_rate'],
       currentType: 'total_cases',
       currentYear: 2018
     }

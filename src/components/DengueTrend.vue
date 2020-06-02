@@ -5,7 +5,7 @@
         <h2
           id="trend-of-dengue-fever"
           class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4">
-          Trend of {{ currentType.replace('_', ' ') }} by province
+          Trend of {{ legendText }} by province
         </h2>
         <p class="mx-5 lg:mx-0 mb-5 text-gray-500">
           The average total cases for most provinces in Java Island are remarkably higher than other regions, which is related to their higher population. In 2016, almost all provinces have a significant surge in total cases compared to the previous and the next year's figure.
@@ -55,9 +55,20 @@ export default {
       default: () => []
     }
   },
+  computed: {
+    legendText() {
+      const texts = {
+        total_cases: 'total cases',
+        total_deaths: 'total deaths',
+        incident_rate: 'incident rate',
+        fatality_rate: 'fatality rate (%)',
+      }
+      return texts[this.currentType]
+    }
+  },
   data() {
     return {
-      types: ['total_cases', 'total_deaths', 'incident_rate', 'fatality_rate'],
+      types: ['total_cases', 'total_deaths', 'fatality_rate'],
       provinces: provinces,
       currentType: 'total_cases',
       currentProvince: 'jakarta-special-capital-region',
