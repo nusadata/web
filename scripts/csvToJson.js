@@ -77,13 +77,13 @@ async function generateSummary() {
 
     if (currentTotalCases > maxTotalCases) {
       maxTotalCases = currentTotalCases
-      provinceWithMaxTotalCases = record.slug
+      provinceWithMaxTotalCases = record.province
       yearWithMaxTotalCases = +record.year
     }
 
     if (currentDeathCases > maxDeathCases) {
       maxDeathCases = currentDeathCases
-      provinceWithMaxDeathCases = record.slug
+      provinceWithMaxDeathCases = record.province
       yearWithMaxDeathCases = +record.year
     }
 
