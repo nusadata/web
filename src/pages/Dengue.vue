@@ -10,7 +10,7 @@
           </p>
         </header>
         <p class="text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Dengue fever is a disease caused by the dengue virus which is transmitted to human via a vector mosquito (<a href="https://en.wikipedia.org/wiki/Aedes_aegypti" rel="nofollow noopener" class="underline">Aedes Aegypti</a>). In Indonesia, dengue fever still becomes a important public health issue all over the country. Therefore, making a high availability of information regarding this disease is deemed necessary as a starting point to improve the situation.
         </p>
       </section>
       <DengueMap :year-range="yearRange"/>
