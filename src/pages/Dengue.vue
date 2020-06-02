@@ -15,6 +15,7 @@
       </section>
       <DengueSummary :year-range="yearRange"/>
       <DengueMap :year-range="yearRange"/>
+      <DengueTrendByNational :year-range="yearRange"/>
       <DengueTrend :year-range="yearRange"/>
     </main>
   </Layout>
@@ -28,7 +29,8 @@ export default {
   components: {
     DengueSummary: () => import('~/components/DengueSummary.vue'),
     DengueMap: () => import('~/components/DengueMap.vue'),
-    DengueTrend: () => import('~/components/DengueTrend.vue')
+    DengueTrend: () => import('~/components/DengueTrend.vue'),
+    DengueTrendByNational: () => import('~/components/DengueTrendByNational.vue')
   },
   computed: {
     meta() {

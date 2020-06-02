@@ -5,6 +5,7 @@ const parse = require('csv-parse/lib/sync')
 generateDataByProvince()
 generateProvinces()
 generateSummary()
+generateNationalTrendOverPeriod()
 
 async function generateDataByProvince() {
   const content = await fs.readFile(path.resolve(__dirname, '../static/dengue-indonesia-2011-2018.csv'))
@@ -103,6 +104,38 @@ async function generateSummary() {
   await fs.writeFile(
     path.join(__dirname, '../src/data/dengue-summary.json'),
     JSON.stringify(exportedObj),
+    { encoding: 'utf8' }
+  )
+}
+
+async function generateNationalTrendOverPeriod() {
+  const yearRange = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+  let exported = []
+
+  for (let i = 0; i < yearRange.length; i++) {
+    const year = yearRange[i]
+    const content = await fs.readFile(path.resolve(__dirname, `../static/dengue-indonesia-${year}.csv`))
+    const records = parse(content, {
+      columns: true,
+      skip_empty_lines: true
+    })
+    const obj = {
+      population: 0,
+      total_cases: 0,
+      total_deaths: 0,
+      year,
+    }
+    records.forEach(record => {
+      obj.population += +record.population
+      obj.total_cases += +record.total_cases
+      obj.total_deaths += +record.total_deaths
+    })
+    exported.push(obj)
+  }
+
+  await fs.writeFile(
+    path.join(__dirname, '../src/data/dengue-national.json'),
+    JSON.stringify(exported),
     { encoding: 'utf8' }
   )
 }
