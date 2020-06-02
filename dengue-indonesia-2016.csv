@@ -1,35 +1,35 @@
-slug,population,total_cases,incident_rate,total_deaths,fatality_rate,year
-special-region-of-aceh,5096248,2651,52.02,21,0.79,2016
-north-sumatera,14102911,8618,61.11,46,0.53,2016
-west-sumatera,5260528,3985,75.75,18,0.45,2016
-riau,6500971,4170,64.14,39,0.94,2016
-jambi,3458926,1553,44.9,14,0.9,2016
-south-sumatera,8160901,3851,47.19,25,0.65,2016
-bengkulu,1904793,1746,91.66,22,1.26,2016
-lampung,8205139,4516,55.04,15,0.33,2016
-bangka-belitung-islands,1401827,490,34.95,3,0.61,2016
-riau-islands,2028169,1983,97.77,20,1.01,2016
-jakarta-special-capital-region,10277628,20423,198.71,14,0.07,2016
-west-java,47379389,36631,77.31,270,0.74,2016
-central-java,34019095,14376,42.26,213,1.48,2016
-special-region-of-yogyakarta,3720912,6247,167.89,26,0.42,2016
-east-java,39075152,24005,61.43,340,1.42,2016
-banten,12202848,6139,50.31,71,1.16,2016
-bali,4200069,20329,484.02,61,0.3,2016
-west-nusa-tenggara,4896162,2585,52.8,24,0.93,2016
-east-nusa-tenggara,5203514,1015,19.51,2,0.2,2016
-west-kalimantan,4861738,588,12.09,8,1.36,2016
-central-kalimantan,2550196,1751,68.66,24,1.37,2016
-south-kalimantan,4055479,4098,101.05,28,0.68,2016
-east-kalimantan,3501232,10712,305.95,103,0.96,2016
-north-kalimantan,666333,1055,158.33,11,1.04,2016
-north-sulawesi,2436921,1975,81.04,17,0.86,2016
-central-sulawesi,2921715,2122,72.63,20,0.94,2016
-south-sulawesi,8606375,7685,89.29,41,0.53,2016
-southeast-sulawesi,2792180,3444,123.34,33,0.96,2016
-gorontalo,1150765,746,64.83,20,2.68,2016
-west-sulawesi,1306478,532,40.72,2,0.38,2016
-maluku,1715548,363,21.16,21,5.79,2016
-north-maluku,1185912,266,22.43,7,2.63,2016
-special-region-of-west-papua,893362,105,11.75,0,0,2016
-special-region-of-papua,3207444,1130,35.23,6,0.53,2016
+slug,province,population,total_cases,incident_rate,total_deaths,fatality_rate,year
+special-region-of-aceh,Aceh,5096248,2651,52.02,21,0.79,2016
+north-sumatera,Sumatera Utara,14102911,8618,61.11,46,0.53,2016
+west-sumatera,Sumatera Barat,5260528,3985,75.75,18,0.45,2016
+riau,Riau,6500971,4170,64.14,39,0.94,2016
+jambi,Jambi,3458926,1553,44.9,14,0.9,2016
+south-sumatera,Sumatera Selatan,8160901,3851,47.19,25,0.65,2016
+bengkulu,Bengkulu,1904793,1746,91.66,22,1.26,2016
+lampung,Lampung,8205139,4516,55.04,15,0.33,2016
+bangka-belitung-islands,Bangka Belitung,1401827,490,34.95,3,0.61,2016
+riau-islands,Kepulauan Riau,2028169,1983,97.77,20,1.01,2016
+jakarta-special-capital-region,DKI Jakarta,10277628,20423,198.71,14,0.07,2016
+west-java,Jawa Barat,47379389,36631,77.31,270,0.74,2016
+central-java,Jawa Tengah,34019095,14376,42.26,213,1.48,2016
+special-region-of-yogyakarta,Yogyakarta,3720912,6247,167.89,26,0.42,2016
+east-java,Jawa Timur,39075152,24005,61.43,340,1.42,2016
+banten,Banten,12202848,6139,50.31,71,1.16,2016
+bali,Bali,4200069,20329,484.02,61,0.3,2016
+west-nusa-tenggara,Nusa Tenggara Barat,4896162,2585,52.8,24,0.93,2016
+east-nusa-tenggara,Nusa Tenggara Timur,5203514,1015,19.51,2,0.2,2016
+west-kalimantan,Kalimantan Barat,4861738,588,12.09,8,1.36,2016
+central-kalimantan,Kalimantan Tengah,2550196,1751,68.66,24,1.37,2016
+south-kalimantan,Kalimantan Selatan,4055479,4098,101.05,28,0.68,2016
+east-kalimantan,Kalimantan Timur,3501232,10712,305.95,103,0.96,2016
+north-kalimantan,Kalimantan Utara,666333,1055,158.33,11,1.04,2016
+north-sulawesi,Sulawesi Utara,2436921,1975,81.04,17,0.86,2016
+central-sulawesi,Sulawesi Tengah,2921715,2122,72.63,20,0.94,2016
+south-sulawesi,Sulawesi Selatan,8606375,7685,89.29,41,0.53,2016
+southeast-sulawesi,Sulawesi Tenggara,2792180,3444,123.34,33,0.96,2016
+gorontalo,Gorontalo,1150765,746,64.83,20,2.68,2016
+west-sulawesi,Sulawesi Barat,1306478,532,40.72,2,0.38,2016
+maluku,Maluku,1715548,363,21.16,21,5.79,2016
+north-maluku,Maluku Utara,1185912,266,22.43,7,2.63,2016
+special-region-of-west-papua,Papua Barat,893362,105,11.75,0,0,2016
+special-region-of-papua,Papua,3207444,1130,35.23,6,0.53,2016
