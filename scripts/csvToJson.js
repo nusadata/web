@@ -71,7 +71,7 @@ async function generateSummary() {
 
   records.forEach(record => {
     const currentTotalCases = +record.total_cases
-    const currentDeathCases = +record.death_cases
+    const currentDeathCases = +record.total_deaths
 
     totalCases += currentTotalCases
 
@@ -82,7 +82,7 @@ async function generateSummary() {
     }
 
     if (currentDeathCases > maxDeathCases) {
-      maxTotalCases = currentDeathCases
+      maxDeathCases = currentDeathCases
       provinceWithMaxDeathCases = record.slug
       yearWithMaxDeathCases = +record.year
     }

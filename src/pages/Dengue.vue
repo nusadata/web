@@ -10,9 +10,10 @@
           </p>
         </header>
         <p class="text-gray-500">
-        Dengue fever is a disease caused by the dengue virus which is transmitted to human via a vector mosquito (<a href="https://en.wikipedia.org/wiki/Aedes_aegypti" rel="nofollow noopener" class="underline">Aedes Aegypti</a>). In Indonesia, dengue fever still becomes a important public health issue all over the country. Therefore, making a high availability of information regarding this disease is deemed necessary as a starting point to improve the situation.
+        Dengue fever is a disease caused by the dengue virus which is transmitted to human via a vector mosquito (<a href="https://en.wikipedia.org/wiki/Aedes_aegypti" rel="nofollow noopener" class="underline">Aedes Aegypti</a>). In Indonesia, dengue fever still becomes an important public health issue all over the country. Therefore, making a high availability of information regarding this disease is deemed necessary as a starting point to improve the situation.
         </p>
       </section>
+      <DengueSummary :year-range="yearRange"/>
       <DengueMap :year-range="yearRange"/>
       <DengueTrend :year-range="yearRange"/>
     </main>
@@ -25,8 +26,9 @@ export default {
     return this.meta
   },
   components: {
+    DengueSummary: () => import('~/components/DengueSummary.vue'),
     DengueMap: () => import('~/components/DengueMap.vue'),
-    DengueTrend: () => import('~/components/DengueTrend.vue'),
+    DengueTrend: () => import('~/components/DengueTrend.vue')
   },
   computed: {
     meta() {

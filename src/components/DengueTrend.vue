@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import provinces from '~/provinces'
+import provinces from '~/data/provinces.json'
 
 export default {
   props: {
