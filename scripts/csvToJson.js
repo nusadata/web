@@ -41,7 +41,7 @@ async function generateProvinces() {
 
   records.forEach(record => {
     exportedObj[record.slug] = {
-      name: record.slug
+      name: record.province
     }
   })
 
