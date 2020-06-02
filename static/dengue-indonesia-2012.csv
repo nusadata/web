@@ -1,35 +1,35 @@
-slug,population,total_cases,incident_rate,total_deaths,fatality_rate,year
-special-region-of-aceh,4486570,2269,50.57,7,0.31,2012
-north-sumatera,12893642,4747,36.82,36,0.76,2012
-west-sumatera,4733392,3158,66.72,20,0.63,2012
-riau,5733721,1114,19.43,16,1.44,2012
-jambi,3249012,994,30.59,22,2.21,2012
-south-sumatera,7593425,3243,42.71,24,0.74,2012
-bengkulu,1804085,967,53.6,7,0.72,2012
-lampung,7608405,5207,68.44,38,0.73,2012
-bangka-belitung-islands,1265379,1075,84.95,25,2.33,2012
-riau-islands,2006720,1076,53.62,13,1.21,2012
-jakarta-special-capital-region,9738293,6669,68.48,4,0.06,2012
-west-java,43842907,19663,44.85,167,0.85,2012
-central-java,36745961,7088,19.29,108,1.52,2012
-special-region-of-yogyakarta,3448072,971,28.16,2,0.21,2012
-east-java,38054487,8177,21.49,116,1.42,2012
-banten,10285371,3362,32.69,29,0.86,2012
-bali,4021191,2650,65.9,3,0.11,2012
-west-nusa-tenggara,4434012,961,21.67,3,0.31,2012
-east-nusa-tenggara,4804719,1135,23.62,8,0.7,2012
-west-kalimantan,4249142,1664,39.16,21,1.26,2012
-central-kalimantan,2371153,1590,67.06,15,0.94,2012
-south-kalimantan,3449117,1547,44.85,25,1.62,2012
-east-kalimantan,3874580,3267,84.32,29,0.89,2012
-north-kalimantan,0,0,0,0,0,2012
-north-sulawesi,2265937,1253,55.3,16,1.28,2012
-central-sulawesi,2657646,2259,85,22,0.97,2012
-south-sulawesi,8328957,2333,28.01,23,0.99,2012
-southeast-sulawesi,2230932,373,16.72,2,0.54,2012
-gorontalo,1012191,212,20.94,5,2.36,2012
-west-sulawesi,1145922,581,50.7,0,0,2012
-maluku,1533506,107,6.98,6,5.61,2012
-north-maluku,1060539,65,6.13,0,0,2012
-special-region-of-west-papua,564085,18,3.19,2,11.11,2012
-special-region-of-papua,1692389,450,26.59,2,0.44,2012
+slug,province,population,total_cases,incident_rate,total_deaths,fatality_rate,year
+special-region-of-aceh,Aceh,4486570,2269,50.57,7,0.31,2012
+north-sumatera,Sumatera Utara,12893642,4747,36.82,36,0.76,2012
+west-sumatera,Sumatera Barat,4733392,3158,66.72,20,0.63,2012
+riau,Riau,5733721,1114,19.43,16,1.44,2012
+jambi,Jambi,3249012,994,30.59,22,2.21,2012
+south-sumatera,Sumatera Selatan,7593425,3243,42.71,24,0.74,2012
+bengkulu,Bengkulu,1804085,967,53.6,7,0.72,2012
+lampung,Lampung,7608405,5207,68.44,38,0.73,2012
+bangka-belitung-islands,Bangka Belitung,1265379,1075,84.95,25,2.33,2012
+riau-islands,Kepulauan Riau,2006720,1076,53.62,13,1.21,2012
+jakarta-special-capital-region,DKI Jakarta,9738293,6669,68.48,4,0.06,2012
+west-java,Jawa Barat,43842907,19663,44.85,167,0.85,2012
+central-java,Jawa Tengah,36745961,7088,19.29,108,1.52,2012
+special-region-of-yogyakarta,Yogyakarta,3448072,971,28.16,2,0.21,2012
+east-java,Jawa Timur,38054487,8177,21.49,116,1.42,2012
+banten,Banten,10285371,3362,32.69,29,0.86,2012
+bali,Bali,4021191,2650,65.9,3,0.11,2012
+west-nusa-tenggara,Nusa Tenggara Barat,4434012,961,21.67,3,0.31,2012
+east-nusa-tenggara,Nusa Tenggara Timur,4804719,1135,23.62,8,0.7,2012
+west-kalimantan,Kalimantan Barat,4249142,1664,39.16,21,1.26,2012
+central-kalimantan,Kalimantan Tengah,2371153,1590,67.06,15,0.94,2012
+south-kalimantan,Kalimantan Selatan,3449117,1547,44.85,25,1.62,2012
+east-kalimantan,Kalimantan Timur,3874580,3267,84.32,29,0.89,2012
+north-kalimantan,Kalimantan Utara,0,0,0,0,0,2012
+north-sulawesi,Sulawesi Utara,2265937,1253,55.3,16,1.28,2012
+central-sulawesi,Sulawesi Tengah,2657646,2259,85,22,0.97,2012
+south-sulawesi,Sulawesi Selatan,8328957,2333,28.01,23,0.99,2012
+southeast-sulawesi,Sulawesi Tenggara,2230932,373,16.72,2,0.54,2012
+gorontalo,Gorontalo,1012191,212,20.94,5,2.36,2012
+west-sulawesi,Sulawesi Barat,1145922,581,50.7,0,0,2012
+maluku,Maluku,1533506,107,6.98,6,5.61,2012
+north-maluku,Maluku Utara,1060539,65,6.13,0,0,2012
+special-region-of-west-papua,Papua Barat,564085,18,3.19,2,11.11,2012
+special-region-of-papua,Papua,1692389,450,26.59,2,0.44,2012
