@@ -8,7 +8,7 @@
           Trend of {{ currentType.replace('_', ' ') }} by province
         </h2>
         <p class="mx-5 lg:mx-0 mb-5 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          The average total cases for most provinces in Java Island are remarkably higher than other regions, which is related to their higher population. In 2016, almost all provinces have a significant surge in total cases compared to the previous and the next year's figure.
         </p>
       </div>
       <div
