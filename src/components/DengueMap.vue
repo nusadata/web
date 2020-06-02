@@ -130,21 +130,22 @@ export default {
         .append('svg')
         .attr('viewBox', [0, 0, 800, 400])
 
+      const contextD3 = this.$d3 // need to use this because the callback already has its context object
+
 			svg.append('g')
 				.selectAll('path')
 				.data(geojson.features)
 				.join('path')
-				.attr('fill', d => this.color(data.get(d.properties.slug)))
-				.attr('data-name', d => d.properties.state)
-				.attr('data-tooltip', d => `${d.properties.state} ${data.get(d.properties.slug)}`)
+				.attr('fill', d => this.color(data.get(d.properties.slug).value))
+				.attr('data-tooltip', d => `${data.get(d.properties.slug).name} ${data.get(d.properties.slug).value}`)
 				.attr('stroke', strokeColor)
 				.attr('stroke-linejoin', 'round')
 				.attr('d', generator)
-				.attr('id', d => this.getId(d.properties.slug))
+        .attr('id', d => this.getId(d.properties.slug))
 				.attr('class', 'province')
 				.on('mouseover', function () {
 					svg.selectAll('.province').transition().style('opacity', 0.5).attr('stroke', strokeColor)
-					this.$d3.select(this).transition().style('opacity', 1).attr('stroke', strokeHoverColor)
+					contextD3.select(this).transition().style('opacity', 1).attr('stroke', strokeHoverColor)
 				})
 				.on('mouseleave', function () {
 					svg.selectAll('.province').transition().style('opacity', 1).attr('stroke', strokeColor)
@@ -220,19 +221,18 @@ export default {
 		async rerender(year, type) {
       const csvUrl = this.getResourceUrl(`/dengue-indonesia-${year}.csv`)
 		  const data = await this.transformToMap(await fetch(csvUrl), type)
-			data.forEach((value, key) => {
+			data.forEach((obj, key) => {
         const id = this.getId(key)
-				const province = this.$d3.select('#' + id)
-				if (province) {
+        const province = this.$d3.select('#' + id)
+        try {
 					province
 						.transition()
-						.attr('fill', this.color(value))
-					try {
-						document.getElementById(id)._this.$tippy.setContent(`${province.attr('data-name')} ${value}`)
-					} catch (e) {
-						console.log(key)
-					}
-				}
+						.attr('fill', this.color(obj.value))
+						document.getElementById(id)._this.$tippy.setContent(`${obj.name} ${obj.value}`)
+        } catch (e) {
+          console.log(id)
+          console.log(key)
+        }
 			})
 		},
     rerenderLegend(year, type) {
@@ -247,7 +247,7 @@ export default {
  		async transformToMap(data, type) {
       const parsedCsv = this.$d3.csvParse(
         await data.text(),
-        col => [col.slug, +col[type]]
+        col => [col.slug, { value: +col[type], name: col.province }]
       )
 
  			return new Map(parsedCsv)
