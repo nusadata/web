@@ -56,10 +56,6 @@ export default {
     selectorPrefix: {
       type: String,
       default: 'tdv'
-    },
-    yearRange: {
-      type: Array,
-      default: () => []
     }
   },
   computed: {

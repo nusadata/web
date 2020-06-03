@@ -13,10 +13,10 @@
         Dengue fever is a disease caused by the dengue virus which is transmitted to human via a vector mosquito (<a href="https://en.wikipedia.org/wiki/Aedes_aegypti" rel="nofollow noopener" class="underline">Aedes Aegypti</a>). In Indonesia, dengue fever still becomes an important public health issue all over the country. Therefore, making a high availability of information regarding this disease is deemed necessary as a starting point to improve the situation.
         </p>
       </section>
-      <DengueSummary :year-range="yearRange"/>
+      <DengueSummary/>
       <DengueMap :year-range="yearRange"/>
-      <DengueTrendByNational :year-range="yearRange"/>
-      <DengueTrend :year-range="yearRange"/>
+      <DengueTrendByNational/>
+      <DengueTrend/>
     </main>
   </Layout>
 </template>
@@ -35,13 +35,13 @@ export default {
   computed: {
     meta() {
       return {
-        title: `Dengue Fever in Indonesia ${this.yearRange[0]}-${this.yearRange[this.yearRange.length - 1]}`
+        title: `Dengue Fever in Indonesia ${this.yearRange[this.yearRange.length - 1]}-${this.yearRange[0]}`
       }
     }
   },
   data() {
     return {
-      yearRange: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+      yearRange: [2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
     }
   }
 }

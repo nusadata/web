@@ -34,10 +34,6 @@ export default {
     selectorPrefix: {
       type: String,
       default: 'sdv'
-    },
-    yearRange: {
-      type: Array,
-      default: () => []
     }
   },
   data() {

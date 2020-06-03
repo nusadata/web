@@ -84,12 +84,10 @@ export default {
     return {
       types: ['total_cases', 'total_deaths', 'fatality_rate'],
       currentType: 'total_cases',
-      currentYear: 2018
+      currentYear: this.yearRange[0]
     }
   },
   mounted() {
-    this.currentYear = this.yearRange[this.yearRange.length - 1]
-
 		this.fetchResources()
       .then(async ([geojson, data]) => {
 				const map = await this.transformToMap(data, this.currentType)
