@@ -9,7 +9,7 @@
         </h2>
       </div>
       <div
-        class="mb-5 md:mb-0 flex-none w-full lg:w-1/2">
+        class="mb-5 lg:mb-0 flex-none w-full lg:w-1/2">
         <div class="mx-5 lg:mx-0 flex items-center justify-start lg:justify-end">
           <select v-model.number="currentYear" class="text-gray-800 mr-4">
             <option

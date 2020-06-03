@@ -20,7 +20,7 @@
         </p>
       </div>
       <div
-        class="mb-5 md:mb-0 flex-none flex items-center justify-start lg:justify-end w-full lg:w-1/2">
+        class="mb-5 lg:mb-0 flex-none flex items-center justify-start lg:justify-end w-full lg:w-1/2">
         <div class="mx-5 lg:mx-0">
           <select v-model="currentProvince" class="text-gray-800 mr-5">
             <option
