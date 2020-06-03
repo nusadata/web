@@ -152,15 +152,24 @@ export default {
           .y(d => y(+d[type]))
           .curve(this.$d3.curveMonotoneX))
 
-      svg.selectAll('circle')
+      svg.selectAll('dot')
         .data(data)
         .enter()
         .append('circle')
         .attr('class', 'circle')
-        .attr('data-tooltip', d => d[type])
         .attr('cx', d => x(+d.year))
         .attr('cy', d => y(+d[type]))
         .attr('r', 5)
+
+      svg.selectAll('circle-pad')
+        .data(data)
+        .enter()
+        .append('circle')
+        .attr('class', 'circle-pad')
+        .attr('data-tooltip', d => d[type])
+        .attr('cx', d => x(+d.year))
+        .attr('cy', d => y(+d[type]))
+        .attr('r', 10)
 
       svg.append('g')
         .attr('transform', `translate(0, 400)`)
@@ -171,7 +180,7 @@ export default {
         .style('font', '1rem Manrope')
         .call(this.$d3.axisLeft(y).ticks(5))
 
-      this.$tippy(this.getSelector('.circle'), {
+      this.$tippy(this.getSelector('.circle-pad'), {
         content(ref) {
           return ref.getAttribute('data-tooltip')
         }
@@ -190,6 +199,11 @@ export default {
 }
 .tndv .circle {
   fill: #63b3ed;
+  stroke: none;
+}
+.tdv .circle-pad {
+  fill: #63b3ed;
+  fill-opacity: 0;
   stroke: none;
 }
 </style>
