@@ -201,7 +201,7 @@ export default {
   fill: #63b3ed;
   stroke: none;
 }
-.tdv .circle-pad {
+.tndv .circle-pad {
   fill: #63b3ed;
   fill-opacity: 0;
   stroke: none;
