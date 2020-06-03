@@ -1,7 +1,7 @@
 <template>
   <section :class="`${selectorPrefix} max-w-4xl mb-24 mx-auto overflow-x-hidden`">
     <header class="flex flex-wrap items-center">
-      <div class="w-full md:w-2/3">
+      <div class="w-full lg:w-2/3">
         <h2
           id="trend-of-dengue-fever"
           class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4">
@@ -17,15 +17,17 @@
         </p>
       </div>
       <div
-        class="mx-5 lg:mx-0 mb-5 md:mb-0 flex-none flex items-center justify-start md:justify-center w-full md:w-1/3">
-        <select v-model="currentType" class="text-gray-800">
-          <option
-            v-for="type in types"
-            :key="`type-${type}`"
-            :value="type">
-            {{ type.replace('_', ' ') }}
-          </option>
-        </select>
+        class="mb-5 md:mb-0 flex-none w-full lg:w-1/3">
+        <div class="mx-5 lg:mx-0 flex items-center justify-start lg:justify-center">
+          <select v-model="currentType" class="text-gray-800">
+            <option
+              v-for="type in types"
+              :key="`type-${type}`"
+              :value="type">
+              {{ type.replace('_', ' ') }}
+            </option>
+          </select>
+        </div>
       </div>
     </header>
     <div class="overflow-x-auto">
@@ -169,7 +171,7 @@ export default {
         .attr('data-tooltip', d => d[type])
         .attr('cx', d => x(+d.year))
         .attr('cy', d => y(+d[type]))
-        .attr('r', 10)
+        .attr('r', 12)
 
       svg.append('g')
         .attr('transform', `translate(0, 400)`)

@@ -1,30 +1,34 @@
 <template>
   <section :class="`${selectorPrefix} max-w-4xl mb-24 mx-auto overflow-x-hidden`">
     <header class="flex flex-wrap items-center">
-      <h2
-        id="map-of-dengue-fever"
-        class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4 w-full md:w-1/2">
-        Map of {{ currentType.replace('_', ' ') }} in {{ currentYear }}
-      </h2>
+      <div class="mx-5 lg:mx-0 w-full lg:w-1/2">
+        <h2
+          id="map-of-dengue-fever"
+          class="font-semibold text-2xl pt-4 mb-4">
+          Map of {{ currentType.replace('_', ' ') }} in {{ currentYear }}
+        </h2>
+      </div>
       <div
-        class="mx-5 lg:mx-0 mb-5 md:mb-0 flex-none flex items-center justify-start md:justify-end w-full md:w-1/2">
-        <select v-model.number="currentYear" class="text-gray-800 mr-4">
-          <option
-            v-for="year in yearRange"
-            :key="`year-${year}`"
-            :value="year">
-            {{ year }}
-          </option>
-        </select>
+        class="mb-5 md:mb-0 flex-none w-full lg:w-1/2">
+        <div class="mx-5 lg:mx-0 flex items-center justify-start lg:justify-end">
+          <select v-model.number="currentYear" class="text-gray-800 mr-4">
+            <option
+              v-for="year in yearRange"
+              :key="`year-${year}`"
+              :value="year">
+              {{ year }}
+            </option>
+          </select>
 
-        <select v-model="currentType" class="text-gray-800">
-          <option
-            v-for="type in types"
-            :key="`type-${type}`"
-            :value="type">
-            {{ type.replace('_', ' ') }}
-          </option>
-        </select>
+          <select v-model="currentType" class="text-gray-800">
+            <option
+              v-for="type in types"
+              :key="`type-${type}`"
+              :value="type">
+              {{ type.replace('_', ' ') }}
+            </option>
+          </select>
+        </div>
       </div>
     </header>
     <div class="overflow-x-auto">
