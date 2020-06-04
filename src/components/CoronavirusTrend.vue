@@ -19,20 +19,13 @@ export default {
     selectorPrefix: {
       type: String,
       default: 'cvs'
+    },
+    daily: {
+      type: Array,
+      required: true
     }
   },
-  data() {
-    return {
-      confirmed: [],
-      deaths: [],
-      recovered: []
-    }
-  },
-  async mounted() {
-    const [confirmed, deaths, recovered] = await this.fetchResource()
-    this.confirmed = await confirmed.json()
-    this.deaths = await deaths.json()
-    this.recovered = await recovered.json()
+  mounted() {
     this.render()
   },
   methods: {
@@ -42,18 +35,10 @@ export default {
     getId(selector) {
       return `${this.selectorPrefix}-${selector}`
     },
-    async fetchResource() {
-      const request = Promise.all([
-        fetch('https://api.covid19api.com/dayone/country/indonesia/status/confirmed'),
-        fetch('https://api.covid19api.com/dayone/country/indonesia/status/deaths'),
-        fetch('https://api.covid19api.com/dayone/country/indonesia/status/recovered')
-      ])
-      return request
-    },
-    async render() {
-      const confirmed = this.confirmed
-      const deaths = this.deaths
-      const recovered = this.recovered
+    render() {
+      const confirmed = this.daily
+      const deaths = this.daily
+      const recovered = this.daily
 
       const selector = this.getSelector('.content')
       this.$d3.select(selector)
@@ -72,11 +57,11 @@ export default {
       const linearGradientSucId = this.createLinearGradient(svg, 'linear-gradient-suc', '#285e61', '#1a202c')
 
       const x = this.$d3.scaleTime()
-        .domain(this.$d3.extent(confirmed, d => new Date(d.Date)))
+        .domain(this.$d3.extent(confirmed, d => new Date(d.key)))
         .range([0, 700])
 
       const y = this.$d3.scaleLinear()
-        .domain([0, this.$d3.max(confirmed, d => d.Cases)]) // need to be adjustable
+        .domain([0, this.$d3.max(confirmed, d => d.jumlah_positif_kum.value)])
         .range([400, 0])
 
       svg.append('path')
@@ -84,17 +69,17 @@ export default {
         .attr('class', 'area')
         .attr('fill', `url(#${linearGradientId})`)
         .attr('d', this.$d3.area()
-          .x(d => x(new Date(d.Date)))
+          .x(d => x(new Date(d.key)))
           .y0(400)
-          .y1(d => y(d.Cases))
+          .y1(d => y(d.jumlah_positif_kum.value))
           .curve(this.$d3.curveMonotoneX))
 
       svg.append('path')
         .datum(confirmed)
         .attr('class', 'line')
         .attr('d', this.$d3.line()
-          .x(d => x(new Date(d.Date)))
-          .y(d => y(d.Cases))
+          .x(d => x(new Date(d.key)))
+          .y(d => y(d.jumlah_positif_kum.value))
           .curve(this.$d3.curveMonotoneX))
 
       svg.append('path')
@@ -102,17 +87,17 @@ export default {
         .attr('class', 'area')
         .attr('fill', `url(#${linearGradientSucId})`)
         .attr('d', this.$d3.area()
-          .x(d => x(new Date(d.Date)))
+          .x(d => x(new Date(d.key)))
           .y0(400)
-          .y1(d => y(d.Cases))
+          .y1(d => y(d.jumlah_sembuh_kum.value))
           .curve(this.$d3.curveMonotoneX))
 
       svg.append('path')
         .datum(recovered)
         .attr('class', 'line-suc')
         .attr('d', this.$d3.line()
-          .x(d => x(new Date(d.Date)))
-          .y(d => y(d.Cases))
+          .x(d => x(new Date(d.key)))
+          .y(d => y(d.jumlah_sembuh_kum.value))
           .curve(this.$d3.curveMonotoneX))
 
       svg.append('path')
@@ -121,9 +106,9 @@ export default {
         .attr('class', 'area')
         .attr('fill', `url(#${linearGradientInvId})`)
         .attr('d', this.$d3.area()
-          .x(d => x(new Date(d.Date)))
+          .x(d => x(new Date(d.key)))
           .y0(400)
-          .y1(d => y(d.Cases))
+          .y1(d => y(d.jumlah_meninggal_kum.value))
           .curve(this.$d3.curveMonotoneX))
 
       svg.append('path')
@@ -131,8 +116,8 @@ export default {
         .style('opacity', '0.8')
         .attr('class', 'line-inv')
         .attr('d', this.$d3.line()
-          .x(d => x(new Date(d.Date)))
-          .y(d => y(d.Cases))
+          .x(d => x(new Date(d.key)))
+          .y(d => y(d.jumlah_meninggal_kum.value))
           .curve(this.$d3.curveMonotoneX))
 
       svg.append('g')

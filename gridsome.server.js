@@ -5,9 +5,18 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const axios = require('axios')
+
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  // load source from api.covid19api.com
+  api.loadSource(async actions => {
+    const { data } = await axios.get('https://data.covid19.go.id/public/api/update.json')
+    const collection = actions.addCollection('Coronavirus')
+    collection.addNode({
+      new: data.update.penambahan,
+      daily: data.update.harian,
+      total: data.update.total
+    })
   })
 
   api.createPages(({ createPage }) => {

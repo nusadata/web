@@ -39,74 +39,48 @@
 <script>
 
 function getTotalCases(records) {
-  if (records.length) {
-    return records[records.length - 1].Cases
-  }
-  return 0
+  return records[records.length - 1].jumlah_positif_kum.value
 }
 
 function getNewCases(records) {
-  if (records.length) {
-    const newCases = records[records.length - 1].Cases - records[records.length - 2].Cases
-    const pastDayCases = records[records.length - 2].Cases - records[records.length - 3].Cases
-    return [newCases, ((newCases - pastDayCases) / pastDayCases * 100)]
-  }
-  return [0, 0]
+  const newCases = records[records.length - 1].jumlah_positif.value
+  const pastDayCases = records[records.length - 2].jumlah_positif.value
+  return [newCases, ((newCases - pastDayCases) / pastDayCases * 100)]
 }
 
 function getAverageCasesPastOneWeek(records) {
-  if (records.length) {
-    const latestRecord = records[records.length - 1]
-    const pastOneWeekRecord = records[records.length - 7]
-    const totalCasesPastOneWeek = latestRecord.Cases - pastOneWeekRecord.Cases
-    const avgCasesPastOneWeek = totalCasesPastOneWeek / 7
+  const latestRecord = records[records.length - 1].jumlah_positif_kum.value
+  const pastOneWeekRecord = records[records.length - 7].jumlah_positif_kum.value
+  const totalCasesPastOneWeek = latestRecord - pastOneWeekRecord
+  const avgCasesPastOneWeek = totalCasesPastOneWeek / 7
 
-    const recordsWithoutPastOneWeek = records.slice(0, records.length - 7)
-    const latestTwoWeekRecord = recordsWithoutPastOneWeek[recordsWithoutPastOneWeek.length - 1]
-    const pastTwoWeekRecord = recordsWithoutPastOneWeek[recordsWithoutPastOneWeek.length - 7]
-    const totalCasesPastTwoWeek = latestTwoWeekRecord.Cases - pastTwoWeekRecord.Cases
-    const avgCasesPastTwoWeek = totalCasesPastTwoWeek / 7
+  const recordsWithoutPastOneWeek = records.slice(0, records.length - 7)
+  const latestTwoWeekRecord = recordsWithoutPastOneWeek[recordsWithoutPastOneWeek.length - 1].jumlah_positif_kum.value
+  const pastTwoWeekRecord = recordsWithoutPastOneWeek[recordsWithoutPastOneWeek.length - 7].jumlah_positif_kum.value
+  const totalCasesPastTwoWeek = latestTwoWeekRecord - pastTwoWeekRecord
+  const avgCasesPastTwoWeek = totalCasesPastTwoWeek / 7
 
-    return [avgCasesPastOneWeek, ((avgCasesPastOneWeek - avgCasesPastTwoWeek) / avgCasesPastTwoWeek * 100)]
-  }
-  return [0, 0]
+  return [avgCasesPastOneWeek, ((avgCasesPastOneWeek - avgCasesPastTwoWeek) / avgCasesPastTwoWeek * 100)]
 }
 
 export default {
+  props: {
+    daily: {
+      type: Array,
+      required: true
+    }
+  },
   computed: {
     summary() {
-      const [newCases, percentMarginNewCasesPastDay] = getNewCases(this.confirmed)
-      const [avgCasesOneWeek, percentMarginAvgCasesOneWeek] = getAverageCasesPastOneWeek(this.confirmed)
+      const [newCases, percentMarginNewCasesPastDay] = getNewCases(this.daily)
+      const [avgCasesOneWeek, percentMarginAvgCasesOneWeek] = getAverageCasesPastOneWeek(this.daily)
       return {
-        totalCases: getTotalCases(this.confirmed),
+        totalCases: getTotalCases(this.daily),
         newCases,
         percentMarginNewCasesPastDay,
         avgCasesOneWeek,
         percentMarginAvgCasesOneWeek,
       }
-    }
-  },
-  data() {
-    return {
-      confirmed: [],
-      deaths: [],
-      recovered: []
-    }
-  },
-  async mounted() {
-    const [confirmed, deaths, recovered] = await this.fetchResource()
-    this.confirmed = await confirmed.json()
-    this.deaths = await deaths.json()
-    this.recovered = await recovered.json()
-  },
-  methods: {
-    async fetchResource() {
-      const request = Promise.all([
-        fetch('https://api.covid19api.com/dayone/country/indonesia/status/confirmed'),
-        fetch('https://api.covid19api.com/dayone/country/indonesia/status/deaths'),
-        fetch('https://api.covid19api.com/dayone/country/indonesia/status/recovered')
-      ])
-      return request
     }
   }
 }
