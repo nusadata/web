@@ -20,14 +20,18 @@
 </template>
 
 <script>
+import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
+import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
+import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
+
 export default {
   metaInfo() {
     return this.meta
   },
   components: {
-    CoronavirusSummary: () => import('~/components/CoronavirusSummary.vue'),
-    CoronavirusTrend: () => import('~/components/CoronavirusTrend'),
-    CoronavirusTrendNewCases: () => import('~/components/CoronavirusTrendNewCases'),
+    CoronavirusSummary,
+    CoronavirusTrend,
+    CoronavirusTrendNewCases,
   },
   computed: {
     meta() {
