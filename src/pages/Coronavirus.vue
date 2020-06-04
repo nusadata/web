@@ -15,59 +15,25 @@
       <CoronavirusSummary :daily="$page.allCoronavirus.edges[0].node.daily" />
       <CoronavirusTrendNewCases :daily="$page.allCoronavirus.edges[0].node.daily" />
       <CoronavirusTrendByProvince :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
+      <CoronavirusMap :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
       <CoronavirusTrend :daily="$page.allCoronavirus.edges[0].node.daily" />
     </main>
   </Layout>
 </template>
 
 <script>
+import CoronavirusMap from '~/components/CoronavirusMap.vue'
 import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
 import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
-
-const provinces = [
-  "Aceh",
-  "Sumatera Utara",
-  "Sumatera Barat",
-  "Riau",
-  "Jambi",
-  "Sumatera Selatan",
-  "Bengkulu",
-  "Lampung",
-  "Kepulauan Bangka Belitung",
-  "Kepulauan Riau",
-	"DKI Jakarta",
-	"Jawa Barat",
-  "Jawa Tengah",
-  "Daerah Istimewa Yogyakarta",
-  "Jawa Timur",
-  "Banten",
-	"Bali",
-  "Nusa Tenggara Barat",
-  "Nusa Tenggara Timur",
-	"Kalimantan Barat",
-  "Kalimantan Tengah",
-	"Kalimantan Selatan",
-	"Kalimantan Timur",
-	"Kalimantan Utara",
-  "Sulawesi Utara",
-  "Gorontalo",
-  "Sulawesi Barat",
-  "Sulawesi Tengah",
-  "Sulawesi Tenggara",
-  "Sulawesi Selatan",
-	"Maluku",
-	"Maluku Utara",
-	"Papua",
-	"Papua Barat",
-]
 
 export default {
   metaInfo() {
     return this.meta
   },
   components: {
+    CoronavirusMap,
     CoronavirusSummary,
     CoronavirusTrend,
     CoronavirusTrendByProvince,
@@ -84,6 +50,146 @@ export default {
     }
   }
 }
+
+var provinces = {
+  "ACEH": {
+    slug: "special-region-of-aceh",
+    name: "Aceh"
+  },
+  "SUMATERA UTARA": {
+    slug: "north-sumatera",
+    name: "Sumatera Utara"
+  },
+  "SUMATERA BARAT": {
+    slug: "west-sumatera",
+    name: "Sumatera Barat",
+  },
+  "RIAU": {
+    slug: "riau",
+    name: "Riau",
+  },
+  "JAMBI": {
+    slug: "jambi",
+    name: "Jambi",
+  },
+  "SUMATERA SELATAN": {
+    slug: "south-sumatera",
+    name: "Sumatera Selatan",
+  },
+  "BENGKULU": {
+    slug: "bengkulu",
+    name: "Bengkulu",
+  },
+  "LAMPUNG": {
+    slug: "lampung",
+    name: "Lampung"
+  },
+  "KEPULAUAN BANGKA BELITUNG": {
+    slug: "bangka-belitung-islands",
+    name: "Bangka Belitung",
+  },
+  "KEPULAUAN RIAU": {
+    slug: "riau-islands",
+    name: "Kepulauan Riau",
+  },
+	"DKI JAKARTA": {
+    slug: "jakarta-special-capital-region",
+    name: "DKI Jakarta",
+  },
+	"JAWA BARAT": {
+    slug: "west-java",
+    name: "Jawa Barat",
+  },
+  "JAWA TENGAH": {
+    slug: "central-java",
+    name: "Jawa Tengah",
+  },
+  "DAERAH ISTIMEWA YOGYAKARTA": {
+    slug: "special-region-of-yogyakarta",
+    name: "Yogyakarta"
+  },
+  "JAWA TIMUR": {
+    slug: "east-java",
+    name: "Jawa Timur",
+  },
+  "BANTEN": {
+    slug: "banten",
+    name: "Banten",
+  },
+	"BALI": {
+    slug: "bali",
+    name: "Bali",
+  },
+  "NUSA TENGGARA BARAT": {
+    slug: "west-nusa-tenggara",
+    name: "Nusa Tenggara Barat",
+  },
+  "NUSA TENGGARA TIMUR": {
+    slug: "east-nusa-tenggara",
+    name: "Nusa Tenggara Timur",
+  },
+	"KALIMANTAN BARAT": {
+    slug: "west-kalimantan",
+    name: "Kalimantan Barat",
+  },
+  "KALIMANTAN TENGAH": {
+    slug: "central-kalimantan",
+    name: "Kalimantan Tengah",
+  },
+	"KALIMANTAN SELATAN": {
+    slug: "south-kalimantan",
+    name: "Kalimantan Selatan",
+  },
+	"KALIMANTAN TIMUR": {
+    slug: "east-kalimantan",
+    name: "Kalimantan Timur",
+  },
+	"KALIMANTAN UTARA": {
+    slug: "north-kalimantan",
+    name: "Kalimantan Utara",
+  },
+  "SULAWESI UTARA": {
+    slug: "north-sulawesi",
+    name: "Sulawesi Utara",
+  },
+  "GORONTALO": {
+    slug: "gorontalo",
+    name: "Gorontalo",
+  },
+  "SULAWESI BARAT": {
+    slug: "west-sulawesi",
+    name: "Sulawesi Barat",
+  },
+  "SULAWESI TENGAH": {
+    slug: "central-sulawesi",
+    name: "Sulawesi Tengah",
+  },
+  "SULAWESI TENGGARA": {
+    slug: "southeast-sulawesi",
+    name: "Sulawesi Tenggara",
+  },
+  "SULAWESI SELATAN": {
+    slug: "south-sulawesi",
+    name: "Sulawesi Selatan",
+  },
+	"MALUKU": {
+    slug: "maluku",
+    name: "Maluku",
+  },
+	"MALUKU UTARA": {
+    slug: "north-maluku",
+    name: "Maluku Utara",
+  },
+	"PAPUA": {
+    slug: "special-region-of-papua",
+    name: "Papua",
+  },
+	"PAPUA BARAT": {
+    slug: "special-region-of-west-papua",
+    name: "Papua Barat",
+  },
+}
+
 </script>
 
 <page-query>
@@ -96,6 +202,7 @@ export default {
             total_cases: cur_total
             data {
               key
+              total_cases: doc_count
               cases: cur_doc_count
             }
           }

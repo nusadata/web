@@ -3,7 +3,7 @@
     <header class="flex flex-wrap items-center">
       <div class="w-full lg:w-2/3">
         <h2
-          id="trend-of-coronavirus"
+          id="trend-of-coronavirus-by-province"
           class="font-semibold text-2xl mx-5 lg:mx-0 my-4">
           Trend of new cases by province
         </h2>
@@ -11,12 +11,12 @@
       <div
         class="mb-5 lg:mb-0 flex-none flex items-center justify-start lg:justify-end w-full lg:w-1/3">
         <div class="mx-5 lg:mx-0">
-          <select v-model="selectedProvince" class="text-gray-800 mr-5">
+          <select v-model="currentProvince" class="text-gray-800 mr-5">
             <option
-              v-for="province in provinces"
-              :key="`province-${province}`"
-              :value="province">
-              {{ province }}
+              v-for="(province, key) in provinces"
+              :key="`province-${province.slug}`"
+              :value="key">
+              {{ province.name }}
             </option>
           </select>
         </div>
@@ -40,18 +40,13 @@ export default {
       required: true
     },
     provinces: {
-      type: Array,
+      type: Object,
       required: true
-    }
-  },
-  computed: {
-    currentProvince() {
-      return this.selectedProvince.toUpperCase()
     }
   },
   data() {
     return {
-      selectedProvince: 'DKI Jakarta',
+      currentProvince: 'DKI JAKARTA',
     }
   },
   mounted() {
