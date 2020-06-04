@@ -14,6 +14,7 @@
       </section>
       <CoronavirusSummary :daily="$page.allCoronavirus.edges[0].node.daily" />
       <CoronavirusTrendNewCases :daily="$page.allCoronavirus.edges[0].node.daily" />
+      <CoronavirusTrendByProvince :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
       <CoronavirusTrend :daily="$page.allCoronavirus.edges[0].node.daily" />
     </main>
   </Layout>
@@ -22,7 +23,45 @@
 <script>
 import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
 import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
+import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
+
+const provinces = [
+  "Aceh",
+  "Sumatera Utara",
+  "Sumatera Barat",
+  "Riau",
+  "Jambi",
+  "Sumatera Selatan",
+  "Bengkulu",
+  "Lampung",
+  "Kepulauan Bangka Belitung",
+  "Kepulauan Riau",
+	"DKI Jakarta",
+	"Jawa Barat",
+  "Jawa Tengah",
+  "Daerah Istimewa Yogyakarta",
+  "Jawa Timur",
+  "Banten",
+	"Bali",
+  "Nusa Tenggara Barat",
+  "Nusa Tenggara Timur",
+	"Kalimantan Barat",
+  "Kalimantan Tengah",
+	"Kalimantan Selatan",
+	"Kalimantan Timur",
+	"Kalimantan Utara",
+  "Sulawesi Utara",
+  "Gorontalo",
+  "Sulawesi Barat",
+  "Sulawesi Tengah",
+  "Sulawesi Tenggara",
+  "Sulawesi Selatan",
+	"Maluku",
+	"Maluku Utara",
+	"Papua",
+	"Papua Barat",
+]
 
 export default {
   metaInfo() {
@@ -31,6 +70,7 @@ export default {
   components: {
     CoronavirusSummary,
     CoronavirusTrend,
+    CoronavirusTrendByProvince,
     CoronavirusTrendNewCases,
   },
   computed: {
@@ -38,6 +78,9 @@ export default {
       return {
         title: 'Coronavirus In Indonesia'
       }
+    },
+    provinces() {
+      return provinces
     }
   }
 }
@@ -45,6 +88,20 @@ export default {
 
 <page-query>
   query {
+    byProvince: allCoronavirusByProvince {
+      edges {
+        node {
+          list {
+            date
+            total_cases: cur_total
+            data {
+              key
+              cases: cur_doc_count
+            }
+          }
+        }
+      }
+    }
     allCoronavirus {
       edges {
         node {

@@ -19,6 +19,14 @@ module.exports = function (api) {
     })
   })
 
+  api.loadSource(async actions => {
+    const { data } = await axios.get('https://data.covid19.go.id/public/api/prov_time.json')
+    const collection = actions.addCollection('CoronavirusByProvince')
+    collection.addNode({
+      list: data.list,
+    })
+  })
+
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
