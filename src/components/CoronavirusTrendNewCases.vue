@@ -89,7 +89,7 @@ export default {
         .attr('d', this.$d3.area()
           .x(d => x(new Date(d.key)))
           .y0(400)
-          .y1(d => y(d.jumlah_positif.value))
+          .y1(d => y(d.jumlah_sembuh.value))
           .curve(this.$d3.curveMonotoneX))
 
       svg.append('path')
