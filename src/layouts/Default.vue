@@ -25,7 +25,7 @@
           Data is sourced from
           <a class="underline" href="https://pusdatin.kemkes.go.id/folder/view/01/structure-publikasi-data-pusat-data-dan-informasi.html">Pusat Data dan Informasi Kementerian Kesehatan Indonesia</a>
           and
-          <a class="underline" href="https://covid19api.com">covid19api.com</a>
+          <a class="underline" href="https://covid19.go.id">covid19.go.id</a>
         </p>
       </div>
     </footer>
