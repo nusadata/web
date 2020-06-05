@@ -107,6 +107,52 @@ export default {
           .y(d => y(d.data.filter(l => l.key === this.currentProvince)[0].cases))
           .curve(this.$d3.curveMonotoneX))
 
+      const mouseG = svg.append('g')
+        .attr('class', 'mouse-over-effect')
+
+      const mousePerLineConfirmed = mouseG
+        .append('g')
+        .attr('class', 'mouse-per-line-confirmed')
+
+      mousePerLineConfirmed.append('circle')
+        .attr('r', 5)
+        .attr('class', 'circle')
+
+      mousePerLineConfirmed.append('text')
+        .attr('class', 'text')
+        .attr('transform', 'translate(10,3)')
+
+      const self = this
+      mouseG.append('rect')
+        .attr('width', 700)
+        .attr('height', 400)
+        .attr('fill', 'none')
+        .attr('pointer-events', 'all')
+        .on('mouseout', () => {
+          svg.select('.mouse-per-line-confirmed circle').style('opacity', '0')
+          svg.select('.mouse-per-line-confirmed text').style('opacity', '0')
+        })
+        .on('mouseover', () => {
+          svg.select('.mouse-per-line-confirmed circle').style('opacity', '1')
+          svg.select('.mouse-per-line-confirmed text').style('opacity', '1')
+        })
+
+        .on('mousemove', function () {
+          const mouse = self.$d3.mouse(this)
+
+          svg.select('.mouse-per-line-confirmed')
+            .attr('transform', function (d, i) {
+              const xDate = x.invert(mouse[0])
+              const bisect = self.$d3.bisector(data => new Date(data.date)).left
+              const idx = bisect(confirmed, xDate)
+
+              self.$d3.select(this).select('text')
+                .text(Math.ceil(y.invert(y(confirmed[idx].data.filter(l => l.key === self.currentProvince)[0].cases))))
+
+              return `translate(${x(new Date(confirmed[idx].date))}, ${y(confirmed[idx].data.filter(l => l.key === self.currentProvince)[0].cases)})`
+            })
+        })
+
       svg.append('g')
         .attr('transform', `translate(0, 400)`)
         .style('font', '1rem Manrope')
@@ -208,12 +254,13 @@ export default {
   stroke: #319795;
   stroke-width: 2;
 }
-.cnpvs .circle {
-  opacity: 0;
+.cnpvs .mouse-per-line-confirmed .circle {
   fill: #63b3ed;
   stroke: none;
 }
-.cnpvs .circle:hover {
-  opacity: 1;
+.cnpvs .text {
+  opacity: 0;
+  fill: #edf2f7;
+  stroke: none;
 }
 </style>
