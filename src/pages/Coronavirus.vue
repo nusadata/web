@@ -3,10 +3,10 @@
     <main role="main">
       <section class="mt-5 px-5 lg:px-0 py-10 max-w-4xl mx-auto">
         <header class="mb-2">
-          <p class="text-3xl font-bold">
+          <h1 class="text-3xl font-bold">
             <span class="text-blue-500">Coronavirus</span>
             in Indonesia
-          </p>
+          </h1>
         </header>
         <p class="text-gray-500">
           Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.
