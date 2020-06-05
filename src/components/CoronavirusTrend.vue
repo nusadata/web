@@ -120,6 +120,115 @@ export default {
           .y(d => y(d.jumlah_meninggal_kum.value))
           .curve(this.$d3.curveMonotoneX))
 
+      const mouseG = svg.append('g')
+        .attr('class', 'mouse-over-effect')
+
+      const mousePerLineConfirmed = mouseG
+        .append('g')
+        .attr('class', 'mouse-per-line-confirmed')
+
+      mousePerLineConfirmed.append('circle')
+        .attr('r', 5)
+        .attr('class', 'circle')
+        .style('opacity', '0')
+
+      mousePerLineConfirmed.append('text')
+        .attr('class', 'text')
+        .attr('transform', 'translate(10,3)')
+
+      const mousePerLineRecovered = mouseG
+        .append('g')
+        .attr('class', 'mouse-per-line-recovered')
+
+      mousePerLineRecovered.append('circle')
+        .attr('r', 5)
+        .attr('class', 'circle')
+        .style('opacity', '0')
+
+      mousePerLineRecovered.append('text')
+        .attr('class', 'text')
+        .attr('transform', 'translate(10,3)')
+
+      const mousePerLineDeaths = mouseG
+        .append('g')
+        .attr('class', 'mouse-per-line-deaths')
+
+      mousePerLineDeaths.append('circle')
+        .attr('r', 5)
+        .attr('class', 'circle')
+        .style('opacity', '0')
+
+      mousePerLineDeaths.append('text')
+        .attr('class', 'text')
+        .attr('transform', 'translate(10,3)')
+
+      const self = this
+      mouseG.append('rect')
+        .attr('width', 700)
+        .attr('height', 400)
+        .attr('fill', 'none')
+        .attr('pointer-events', 'all')
+        .on('mouseout', () => {
+          svg.select('.mouse-per-line-confirmed circle').style('opacity', '0')
+          svg.select('.mouse-per-line-confirmed text').style('opacity', '0')
+
+          svg.select('.mouse-per-line-recovered circle').style('opacity', '0')
+          svg.select('.mouse-per-line-recovered text').style('opacity', '0')
+
+          svg.select('.mouse-per-line-deaths circle').style('opacity', '0')
+          svg.select('.mouse-per-line-deaths text').style('opacity', '0')
+        })
+        .on('mouseover', () => {
+          svg.select('.mouse-per-line-confirmed circle').style('opacity', '1')
+          svg.select('.mouse-per-line-confirmed text').style('opacity', '1')
+
+          svg.select('.mouse-per-line-recovered circle').style('opacity', '1')
+          svg.select('.mouse-per-line-recovered text').style('opacity', '1')
+
+          svg.select('.mouse-per-line-deaths circle').style('opacity', '1')
+          svg.select('.mouse-per-line-deaths text').style('opacity', '1')
+        })
+        .on('mousemove', function () {
+          const mouse = self.$d3.mouse(this)
+
+          svg.select('.mouse-per-line-confirmed')
+            .attr('transform', function (d, i) {
+              const xDate = x.invert(mouse[0])
+              const bisect = self.$d3.bisector(data => new Date(data.key)).left
+              const idx = bisect(confirmed, xDate)
+
+              self.$d3.select(this).select('text')
+                .text(Math.ceil(y.invert(y(confirmed[idx].jumlah_positif_kum.value))))
+
+              return `translate(${x(new Date(confirmed[idx].key))}, ${y(confirmed[idx].jumlah_positif_kum.value)})`
+            })
+
+          svg.select('.mouse-per-line-recovered')
+            .attr('transform', function (d, i) {
+              const xDate = x.invert(mouse[0])
+              const bisect = self.$d3.bisector(data => new Date(data.key)).left
+              const idx = bisect(recovered, xDate)
+
+              self.$d3.select(this).select('text')
+                .text(Math.ceil(y.invert(y(confirmed[idx].jumlah_sembuh_kum.value))))
+
+              return `translate(${x(new Date(confirmed[idx].key))}, ${y(confirmed[idx].jumlah_sembuh_kum.value)})`
+            })
+
+          svg.select('.mouse-per-line-deaths')
+            .attr('transform', function (d, i) {
+              const xDate = x.invert(mouse[0])
+              const bisect = self.$d3.bisector(data => new Date(data.key)).left
+              const idx = bisect(deaths, xDate)
+
+              self.$d3.select(this).select('text')
+                .text(Math.ceil(y.invert(y(confirmed[idx].jumlah_meninggal_kum.value))))
+
+              return `translate(${x(new Date(confirmed[idx].key))}, ${y(confirmed[idx].jumlah_meninggal_kum.value)})`
+            })
+        })
+
+
       svg.append('g')
         .attr('transform', `translate(0, 400)`)
         .style('font', '1rem Manrope')
@@ -223,12 +332,21 @@ export default {
   stroke: #319795;
   stroke-width: 2;
 }
-.cvs .circle {
-  opacity: 0;
+.cvs .mouse-per-line-confirmed .circle {
   fill: #63b3ed;
   stroke: none;
 }
-.cvs .circle:hover {
-  opacity: 1;
+.cvs .mouse-per-line-recovered .circle {
+  fill: #319795;
+  stroke: none;
+}
+.cvs .mouse-per-line-deaths .circle {
+  fill: #dd6b20;
+  stroke: none;
+}
+.cvs .text {
+  opacity: 0;
+  fill: #edf2f7;
+  stroke: none;
 }
 </style>

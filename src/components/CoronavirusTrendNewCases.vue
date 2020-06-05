@@ -191,7 +191,7 @@ export default {
         .on('mousemove', function () {
           const mouse = self.$d3.mouse(this)
 
-          self.$d3.select('.mouse-per-line-confirmed')
+          svg.select('.mouse-per-line-confirmed')
             .attr('transform', function (d, i) {
               const xDate = x.invert(mouse[0])
               const bisect = self.$d3.bisector(data => new Date(data.key)).left
@@ -203,7 +203,7 @@ export default {
               return `translate(${x(new Date(confirmed[idx].key))}, ${y(confirmed[idx].jumlah_positif.value)})`
             })
 
-          self.$d3.select('.mouse-per-line-recovered')
+          svg.select('.mouse-per-line-recovered')
             .attr('transform', function (d, i) {
               const xDate = x.invert(mouse[0])
               const bisect = self.$d3.bisector(data => new Date(data.key)).left
@@ -215,7 +215,7 @@ export default {
               return `translate(${x(new Date(confirmed[idx].key))}, ${y(confirmed[idx].jumlah_sembuh.value)})`
             })
 
-          self.$d3.select('.mouse-per-line-deaths')
+          svg.select('.mouse-per-line-deaths')
             .attr('transform', function (d, i) {
               const xDate = x.invert(mouse[0])
               const bisect = self.$d3.bisector(data => new Date(data.key)).left
