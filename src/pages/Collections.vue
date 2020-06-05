@@ -49,7 +49,7 @@ export default {
         },
         {
           name: 'Coronavirus in Indonesia',
-          description: 'Indonesia is the second of the worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.',
+          description: 'Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.',
           link: '/coronavirus/'
         }
       ]

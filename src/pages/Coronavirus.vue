@@ -9,7 +9,7 @@
           </p>
         </header>
         <p class="text-gray-500">
-          Indonesia is the second of the worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.
+          Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.
         </p>
       </section>
       <CoronavirusSummary :daily="$page.allCoronavirus.edges[0].node.daily" :province-daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
