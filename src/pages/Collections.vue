@@ -13,14 +13,14 @@
           </p>
         </div>
       </section>
-      <section class="px-5 mb-24">
+      <section class="px-5 mt-16 mb-24">
         <ul class="flex flex-wrap -mx-5">
-          <li v-for="item in items" class="w-full md:w-1/2 lg:w-1/3">
+          <li v-for="item in items" class="w-full md:w-1/2 lg:w-1/3 mb-10">
             <article class="mx-5">
               <h3 class="text-lg mb-2">
                 <g-link :to="item.link" class="hover:underline hover:text-blue-500">{{ item.name }}</g-link>
               </h3>
-              <p class="text-gray-500 text-sm">{{ item.description }}</p>
+              <p class="text-gray-500">{{ item.description }}</p>
             </article>
           </li>
         </ul>
