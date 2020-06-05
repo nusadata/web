@@ -8,8 +8,8 @@
             in Indonesia
           </p>
         </header>
-        <p v-if="false" class="text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        <p class="text-gray-500">
+          Indonesia is the second of the worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.
         </p>
       </section>
       <CoronavirusSummary :daily="$page.allCoronavirus.edges[0].node.daily" :province-daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>

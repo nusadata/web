@@ -14,8 +14,10 @@
               Nusadata is a place to see various kinds of interesting data visualization and statistics about Indonesia. We want to help people to easily find information about Indonesia with a fast website and reliable source.
             </p>
             <g-link
-              class="px-5 py-3 rounded inline-block bg-gray-800 hover:bg-gray-700 font-semibold shadow"
-              to="/dengue/">Preview sample page -></g-link>
+              class="w-full sm:w-auto px-5 py-3 text-base md:text-lg text-center rounded inline-block bg-gray-800 hover:bg-gray-700 font-semibold shadow"
+              to="/collections/">
+              View collection ->
+            </g-link>
           </div>
           <div class="flex-1 hidden md:block">
             <g-image src="~/indonesia-map.png" alt="Indonesian map" class="opacity-25" />
