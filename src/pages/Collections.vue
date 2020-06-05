@@ -1,19 +1,16 @@
 <template>
   <Layout>
     <main class="max-w-6xl mx-auto relative">
-      <section class="my-10">
+      <section class="mt-5 py-10 mx-5">
         <h1 class="hidden" aria-hidden="true">
           {{ this.meta.title }}
         </h1>
-        <div
-          class="mx-5">
-          <p class="text-4xl leading-tight font-bold mb-5">Collection of <span class="text-blue-500">Data Visualization</span></p>
-          <p class="text-gray-500 mb-8">
-            We are still working on a lot of stuffs, so for now there are still few data visualizations here. Many new data visualizations will be added soon.
-          </p>
-        </div>
+        <p class="text-3xl leading-tight font-bold mb-5">Collection of <span class="text-blue-500">Data Visualizations</span></p>
+        <p class="text-gray-500 mb-8">
+          We are still working on a lot of stuffs, so for now there are still few data visualizations here. Many new data visualizations will be added soon.
+        </p>
       </section>
-      <section class="px-5 mt-16 mb-24">
+      <section class="px-5 mb-24">
         <ul class="flex flex-wrap -mx-5">
           <li v-for="item in items" class="w-full md:w-1/2 lg:w-1/3 mb-10">
             <article class="mx-5">
