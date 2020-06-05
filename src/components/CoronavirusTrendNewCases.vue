@@ -123,9 +123,7 @@ export default {
       const mouseG = svg.append('g')
         .attr('class', 'mouse-over-effect')
 
-      const mousePerLineConfirmed = mouseG.selectAll('.mouse-per-line-confirmed')
-        .data(confirmed)
-        .enter()
+      const mousePerLineConfirmed = mouseG
         .append('g')
         .attr('class', 'mouse-per-line-confirmed')
 
@@ -138,9 +136,7 @@ export default {
         .attr('class', 'text')
         .attr('transform', 'translate(10,3)')
 
-      const mousePerLineRecovered = mouseG.selectAll('.mouse-per-line-recovered')
-        .data(recovered)
-        .enter()
+      const mousePerLineRecovered = mouseG
         .append('g')
         .attr('class', 'mouse-per-line-recovered')
 
@@ -153,9 +149,7 @@ export default {
         .attr('class', 'text')
         .attr('transform', 'translate(10,3)')
 
-      const mousePerLineDeaths = mouseG.selectAll('.mouse-per-line-deaths')
-        .data(deaths)
-        .enter()
+      const mousePerLineDeaths = mouseG
         .append('g')
         .attr('class', 'mouse-per-line-deaths')
 
@@ -175,29 +169,29 @@ export default {
         .attr('fill', 'none')
         .attr('pointer-events', 'all')
         .on('mouseout', () => {
-          this.$d3.select('.mouse-per-line-confirmed circle').style('opacity', '0')
-          this.$d3.select('.mouse-per-line-confirmed text').style('opacity', '0')
+          svg.select('.mouse-per-line-confirmed circle').style('opacity', '0')
+          svg.select('.mouse-per-line-confirmed text').style('opacity', '0')
 
-          this.$d3.select('.mouse-per-line-recovered circle').style('opacity', '0')
-          this.$d3.select('.mouse-per-line-recovered text').style('opacity', '0')
+          svg.select('.mouse-per-line-recovered circle').style('opacity', '0')
+          svg.select('.mouse-per-line-recovered text').style('opacity', '0')
 
-          this.$d3.select('.mouse-per-line-deaths circle').style('opacity', '0')
-          this.$d3.select('.mouse-per-line-deaths text').style('opacity', '0')
+          svg.select('.mouse-per-line-deaths circle').style('opacity', '0')
+          svg.select('.mouse-per-line-deaths text').style('opacity', '0')
         })
         .on('mouseover', () => {
-          this.$d3.select('.mouse-per-line-confirmed circle').style('opacity', '1')
-          this.$d3.select('.mouse-per-line-confirmed text').style('opacity', '1')
+          svg.select('.mouse-per-line-confirmed circle').style('opacity', '1')
+          svg.select('.mouse-per-line-confirmed text').style('opacity', '1')
 
-          this.$d3.select('.mouse-per-line-recovered circle').style('opacity', '1')
-          this.$d3.select('.mouse-per-line-recovered text').style('opacity', '1')
+          svg.select('.mouse-per-line-recovered circle').style('opacity', '1')
+          svg.select('.mouse-per-line-recovered text').style('opacity', '1')
 
-          this.$d3.select('.mouse-per-line-deaths circle').style('opacity', '1')
-          this.$d3.select('.mouse-per-line-deaths text').style('opacity', '1')
+          svg.select('.mouse-per-line-deaths circle').style('opacity', '1')
+          svg.select('.mouse-per-line-deaths text').style('opacity', '1')
         })
         .on('mousemove', function () {
           const mouse = self.$d3.mouse(this)
 
-          self.$d3.selectAll('.mouse-per-line-confirmed')
+          self.$d3.select('.mouse-per-line-confirmed')
             .attr('transform', function (d, i) {
               const xDate = x.invert(mouse[0])
               const bisect = self.$d3.bisector(data => new Date(data.key)).left
@@ -209,7 +203,7 @@ export default {
               return `translate(${x(new Date(confirmed[idx].key))}, ${y(confirmed[idx].jumlah_positif.value)})`
             })
 
-          self.$d3.selectAll('.mouse-per-line-recovered')
+          self.$d3.select('.mouse-per-line-recovered')
             .attr('transform', function (d, i) {
               const xDate = x.invert(mouse[0])
               const bisect = self.$d3.bisector(data => new Date(data.key)).left
@@ -221,7 +215,7 @@ export default {
               return `translate(${x(new Date(confirmed[idx].key))}, ${y(confirmed[idx].jumlah_sembuh.value)})`
             })
 
-          self.$d3.selectAll('.mouse-per-line-deaths')
+          self.$d3.select('.mouse-per-line-deaths')
             .attr('transform', function (d, i) {
               const xDate = x.invert(mouse[0])
               const bisect = self.$d3.bisector(data => new Date(data.key)).left
