@@ -20,7 +20,7 @@
               <h3 class="text-lg mb-2">
                 <g-link :to="item.link" class="hover:underline hover:text-blue-500">{{ item.name }}</g-link>
               </h3>
-              <p class="text-gray-500">{{ item.description }}</p>
+              <p class="text-gray-500 text-sm">{{ item.description }}</p>
             </article>
           </li>
         </ul>
