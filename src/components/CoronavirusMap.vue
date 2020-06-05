@@ -3,7 +3,7 @@
     <header>
       <h2
         id="map-of-coronavirus"
-        class="font-semibold text-2xl pt-4 mb-4">
+        class="font-semibold text-2xl mx-5 lg:mx-0 my-4">
         Map of total cases
       </h2>
     </header>
