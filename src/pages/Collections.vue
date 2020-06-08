@@ -5,7 +5,7 @@
         <h1 class="hidden" aria-hidden="true">
           {{ this.meta.title }}
         </h1>
-        <p class="text-3xl leading-tight font-bold mb-5">Collection of <span class="text-blue-500">Data Visualizations</span></p>
+        <p class="text-3xl leading-tight font-bold mb-5">Collections of <span class="text-blue-500">Data Visualization</span></p>
         <p class="text-gray-500 mb-8">
           We are still working on a lot of stuffs, so for now there are still few data visualizations here. Many new data visualizations will be added soon.
         </p>
@@ -48,6 +48,11 @@ export default {
           name: 'Coronavirus in Indonesia',
           description: 'Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.',
           link: '/coronavirus/'
+        },
+        {
+          name: 'Coronavirus Timeline',
+          description: 'This page provides visualization about the government actions timeline in response to COVID-19 pandemic. This page is best viewed in desktop platform.',
+          link: '/coronavirus-timeline/'
         }
       ]
     }
