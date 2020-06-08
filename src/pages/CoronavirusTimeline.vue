@@ -68,16 +68,17 @@
                                currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
                 <p class="text-gray-500 font-semibold">16 March 2020</p>
                 <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Several activities began to be restricted
+                  Activities began to be restricted
                 </h2>
                 <p class="mb-2">
-                  Several regions closed schools and imposed learning activity from home [1]. MUI issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
+                  Following to President Joko Widodo call on social distancing, major Jakarta companies started conducting work from home policy [1]. Several regions closed schools and imposed learning activity from home [2]. MUI issued a fatwa to forbid non-compulsory prays in mosque during pandemic [3]. On 17 March, COVID-19 health protocols have been released to public [4].
                 </p>
                 <p class="text-sm text-gray-500">
                   (source:
-                    [1] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
-                    [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI number 14 2020</a>
-                    [3] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
+                    [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/03/15/work-from-home-policy-in-effect-at-major-jakarta-companies-over-virus-concerns.html" rel="nofollow noopener">The Jakarta Post</a>
+                    [2] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
+                    [3] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI number 14 2020</a>
+                    [4] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
                   )
                 </p>
               </section>
