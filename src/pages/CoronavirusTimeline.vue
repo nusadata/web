@@ -95,7 +95,7 @@
 					</transition>
 					<transition name="fade">
 						<section v-show="currentDate >= new Date('2020-03-30T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-04-02T00:00:00.000Z').getTime()">
+                             currentDate < new Date('2020-04-10T00:00:00.000Z').getTime()">
               <p class="text-gray-500 font-semibold">30 March 2020</p>
 							<h2 class="text-3xl font-bold leading-tight mb-2">
 								Not yet lockdown for Jakarta
@@ -105,6 +105,38 @@
 							</p>
 							<p class="text-sm text-gray-500">
 							  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+							</p>
+						</section>
+					</transition>
+					<transition name="fade">
+						<section v-show="currentDate >= new Date('2020-04-13T00:00:00.000Z').getTime() &&
+                             currentDate < new Date('2020-04-18T00:00:00.000Z').getTime()">
+              <p class="text-gray-500 font-semibold">13 April 2020</p>
+							<h2 class="text-3xl font-bold leading-tight mb-2">
+								COVID-19 is a national disaster
+							</h2>
+							<p class="mb-2">
+							  President Joko Widodo declared COVID-19 as a national disaster after it has infected 4557 people and caused 399 deaths in Indonesia.
+							</p>
+							<p class="text-sm text-gray-500">
+							  (source: <a class="underline" href="https://setkab.go.id/presiden-tetapkan-bencana-nonalam-penyebaran-covid-19-sebagai-bencana-nasional/" target="__blank" rel="nofollow noopener">setkab.go.id</a>)
+							</p>
+						</section>
+					</transition>
+					<transition name="fade">
+						<section v-show="currentDate >= new Date('2020-04-21T00:00:00.000Z').getTime() &&
+                             currentDate < new Date('2020-04-25T00:00:00.000Z').getTime()">
+              <p class="text-gray-500 font-semibold">21 April 2020</p>
+							<h2 class="text-3xl font-bold leading-tight mb-2">
+								Mudik Idul Fitri is banned
+							</h2>
+							<p class="mb-2">
+							  President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19 [1]. To help with this effort, several long distance transportations were banned until at least 31 May [2].
+							</p>
+							<p class="text-sm text-gray-500">
+								(source:
+								 [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+								 [2] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
 							</p>
 						</section>
 					</transition>
