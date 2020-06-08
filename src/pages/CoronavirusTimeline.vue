@@ -169,10 +169,10 @@
                            currentDate < new Date('2020-05-09T00:00:00.000Z').getTime()">
             <p class="text-gray-500 font-semibold">6 May 2020</p>
             <h2 class="text-3xl font-bold leading-tight mb-2">
-              Government allowed public transportation to operate but still banned 'mudik'
+              Public transportation was allowed to operate but not for 'mudik'
             </h2>
             <p class="mb-2">
-              Transportation Minister Budi Karya Sumadi said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik.
+              Transportation Minister said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik.
             </p>
             <p class="text-sm text-gray-500">
               (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
