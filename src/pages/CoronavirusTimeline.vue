@@ -188,7 +188,7 @@
               Government tightened security at 'mudik' ban checkpoints
             </h2>
             <p class="mb-2">
-              The government tightened its monitoring of the Idul Fitri mudik ban as the Islamic holiday, which falls on May 24 and 25 2020. Violators would either be stopped or turned back.
+              The government tightened its monitoring of the Idul Fitri mudik ban on the Islamic holiday, which falls on May 24 and 25 2020. Violators would either be stopped or turned back.
             </p>
             <p class="text-sm text-gray-500">
               (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
