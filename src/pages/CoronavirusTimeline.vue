@@ -49,23 +49,25 @@
 							</p>
 						</section>
 					</transition>
-          <section v-show="currentDate >= new Date('2020-03-16T00:00:00.000Z').getTime() &&
-                           currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
-						<p class="text-gray-500 font-semibold">16 March 2020</p>
-						<h2 class="text-3xl font-bold leading-tight mb-2">
-							Several activities began to be restricted
-						</h2>
-						<p class="mb-2">
-							Several regions closed schools and imposed learning activity from home [1]. Majelis Ulama Indonesia issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
-						</p>
-						<p class="text-sm text-gray-500">
-							(source:
-                [1] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
-                [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI nomor 14 tahun 2020</a>
-								[3] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
-              )
-						</p>
-					</section>
+          <transition name="fade">
+            <section v-show="currentDate >= new Date('2020-03-16T00:00:00.000Z').getTime() &&
+                             currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
+              <p class="text-gray-500 font-semibold">16 March 2020</p>
+              <h2 class="text-3xl font-bold leading-tight mb-2">
+                Several activities began to be restricted
+              </h2>
+              <p class="mb-2">
+                Several regions closed schools and imposed learning activity from home [1]. Majelis Ulama Indonesia issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
+              </p>
+              <p class="text-sm text-gray-500">
+                (source:
+                  [1] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
+                  [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI nomor 14 tahun 2020</a>
+                  [3] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
+                )
+              </p>
+            </section>
+          </transition>
 					<transition name="fade">
 						<section v-show="currentDate >= new Date('2020-03-23T00:00:00.000Z').getTime() &&
                              currentDate < new Date('2020-03-28T00:00:00.000Z').getTime()">
@@ -101,7 +103,7 @@
                              currentDate < new Date('2020-04-05T00:00:00.000Z').getTime()">
               <p class="text-gray-500 font-semibold">2 April 2020</p>
 							<h2 class="text-3xl font-bold leading-tight mb-2">
-						    Temporary entry ban from all foreign citizens
+						    Temporary entry ban for all foreign citizens
 							</h2>
 							<p class="mb-2">
 							  The Directorate General of Immigration in Indonesia temporarily ban entry to the Republic of Indonesia for foreign citizens with several exceptions.
@@ -156,7 +158,42 @@
 							  President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19 [1]. To help with this effort, several long distance transportations were banned until at least 31 May [2].
 							</p>
 							<p class="text-sm text-gray-500">
-								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+								(source:
+                 [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+                 [2] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+                )
+							</p>
+						</section>
+					</transition>
+					<transition name="fade">
+						<section v-show="currentDate >= new Date('2020-05-06T00:00:00.000Z').getTime() &&
+                             currentDate < new Date('2020-05-09T00:00:00.000Z').getTime()">
+              <p class="text-gray-500 font-semibold">6 May 2020</p>
+							<h2 class="text-3xl font-bold leading-tight mb-2">
+								Government allowed public transportation to operate but still banned 'mudik'
+							</h2>
+							<p class="mb-2">
+							  Transportation Minister Budi Karya Sumadi said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik.
+							</p>
+							<p class="text-sm text-gray-500">
+								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+                )
+							</p>
+						</section>
+					</transition>
+					<transition name="fade">
+						<section v-show="currentDate >= new Date('2020-05-20T00:00:00.000Z').getTime() &&
+                             currentDate < new Date('2020-05-23T00:00:00.000Z').getTime()">
+              <p class="text-gray-500 font-semibold">20 May 2020</p>
+							<h2 class="text-3xl font-bold leading-tight mb-2">
+								Government tightened security at 'mudik' ban checkpoints
+							</h2>
+							<p class="mb-2">
+							  The government tightened its monitoring of the Idul Fitri mudik ban as the Islamic holiday, which falls on May 24 and 25 2020. Violators would either be stopped or turned back.
+							</p>
+							<p class="text-sm text-gray-500">
+								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+                )
 							</p>
 						</section>
 					</transition>
@@ -209,6 +246,8 @@ export default {
         { date: '2020-04-10T00:00:00.000Z', value: 220 },
         { date: '2020-04-13T00:00:00.000Z', value: 316 },
         { date: '2020-04-21T00:00:00.000Z', value: 376 },
+        { date: '2020-05-06T00:00:00.000Z', value: 368 },
+        { date: '2020-05-20T00:00:00.000Z', value: 693 },
       ]
     }
   },
