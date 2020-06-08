@@ -1,9 +1,29 @@
 <template>
   <main :class="`${selectorPrefix} relative max-w-4xl h-screen mx-auto py-5`" role="main">
     <div class="z-0 viewbox">
-      <header id="article-header" class="pt-10 px-5 lg:px-0">
+      <header id="article-header" class="px-5 lg:px-0">
+        <div class="flex items-center">
+          <g-link class="flex-none text-lg leading-none" to="/">
+            <span class="font-bold text-gray-200">Nusa</span>
+            <span class="font-bold text-blue-500">data</span>
+          </g-link>
+
+          <div class="flex-1 flex justify-end text-right text-sm">
+            <g-link
+              class="py-5 text-gray-500 hover:text-gray-400 mr-5"
+              to="/collections/">
+              Collections
+            </g-link>
+            <a
+              class="py-5 text-gray-500 hover:text-gray-400"
+              href="https://github.com/nusadata/web">
+              Repository
+            </a>
+          </div>
+        </div>
+
         <h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
-        <p class="font-bold text-4xl mb-2"><span class="text-blue-500">Coronavirus</span> Timeline</p>
+        <p class="font-bold text-4xl pt-10 mb-2"><span class="text-blue-500">Coronavirus</span> Timeline</p>
         <p class="text-gray-500">This page provides timeline visualization regarding the government actions in response to COVID-19 pandemic starting from the first case to this day. We will update this page regularly following to the latest development of pandemic situation in Indonesia. Best viewed in desktop platform.</p>
         <div class="flex flex-col items-center pt-20 pb-10">
           <p class="text-gray-500">Scroll down to navigate</p>
@@ -298,8 +318,8 @@ export default {
     window.addEventListener("scroll", () => {
         this.scrollY = this.scrollFn(window.scrollY)
         if (window.scrollY >= headerRect.bottom) {
-					document.querySelector('.content-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left - 9}px;`)
-					document.querySelector('.article-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left - 9}px;`)
+					document.querySelector('.content-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
+					document.querySelector('.article-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
         } else {
           document.querySelector('.content-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
 		      document.querySelector('.article-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
