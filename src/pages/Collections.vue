@@ -51,7 +51,7 @@ export default {
         },
         {
           name: 'Coronavirus Timeline',
-          description: 'This page provides visualization about the government actions timeline in response to COVID-19 pandemic. This page is best viewed in desktop platform.',
+          description: 'This page provides timeline visualization regarding the government actions in response to COVID-19 pandemic. This page is best viewed in desktop platform.',
           link: '/coronavirus-timeline/'
         }
       ]
