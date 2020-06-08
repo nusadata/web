@@ -1,204 +1,204 @@
 <template>
   <main :class="`${selectorPrefix} relative max-w-4xl h-screen mx-auto py-5`" role="main">
-    <div class="px-5 lg:px-0 relative z-0 viewbox">
-			<h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
-      <div class="article-container fixed">
-				<article class="w-1/2 px-5 py-5">
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-03-02T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-03-05T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">3 March 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								The first cases
-							</h2>
-							<p class="mb-2">
-								President Joko Widodo announced two first positive cases in Indonesia
-							</p>
-							<p class="text-sm text-gray-500">
-								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/02/breaking-jokowi-announces-indonesias-first-two-confirmed-covid-19-cases.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-03-08T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-03-11T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">8 March 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Expanded international travel ban
-							</h2>
-							<p class="mb-2">
-								Travel restrictions expanded to include several cities in South Korea, Italy and Iran. Visitors from these countries must provide a valid health certificate.
-							</p>
-							<p class="text-sm text-gray-500">
-								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/05/covid-19-indonesia-issues-travel-ban-for-hardest-hit-iran-south-korea-italy.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-03-13T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-03-15T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">13 March 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Treatment facilities
-							</h2>
-							<p class="mb-2">
-								The government designated 132 treatment facilities across Indonesia
-							</p>
-							<p class="text-sm text-gray-500">
-							  (source: <a class="underline" href="https://infeksiemerging.kemkes.go.id/situasi-infeksi-emerging/info-corona-virus/menteri-kesehatan-tetapkan-132-rumah-sakit-rujukan-covid-19/" target="__blank" rel="nofollow noopener">Kementerian Kesehatan</a>)
-							</p>
-						</section>
-					</transition>
-          <transition name="fade">
-            <section v-show="currentDate >= new Date('2020-03-16T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">16 March 2020</p>
-              <h2 class="text-3xl font-bold leading-tight mb-2">
-                Several activities began to be restricted
-              </h2>
-              <p class="mb-2">
-                Several regions closed schools and imposed learning activity from home [1]. Majelis Ulama Indonesia issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
-              </p>
-              <p class="text-sm text-gray-500">
-                (source:
-                  [1] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
-                  [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI nomor 14 tahun 2020</a>
-                  [3] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
-                )
-              </p>
-            </section>
-          </transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-03-23T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-03-28T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">23 March 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Kemayoran Athletes Village
-							</h2>
-							<p class="mb-2">
-								Kemayoran Athletes Village was officially converted to house COVID-19 patients with mild symptoms. This site claimed to be able to house up to 1800 patients.
-							</p>
-							<p class="text-sm text-gray-500">
-							  (source: <a class="underline" href="https://nasional.kompas.com/read/2020/03/18/19194761/wisma-atlet-untuk-pasien-covid-19-wapres-ada-1800-tempat-tidur" target="__blank" rel="nofollow noopener">Kompas.com</a>)
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-03-30T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-04-7T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">30 March 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Not yet lockdown for Jakarta
-							</h2>
-							<p class="mb-2">
-								President Joko Widodo refused to impose lockdown on Jakarta.  Bus routes connecting Jakarta and other cities and provinces will remain open following the cancellation of a plan to temporarily suspend operations of AKAP buses.
-							</p>
-							<p class="text-sm text-gray-500">
-							  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-04-02T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-04-05T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">2 April 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-						    Temporary entry ban for all foreign citizens
-							</h2>
-							<p class="mb-2">
-							  The Directorate General of Immigration in Indonesia temporarily ban entry to the Republic of Indonesia for foreign citizens with several exceptions.
-							</p>
-							<p class="text-sm text-gray-500">
-							  (source:
-                  <a class="underline" href="https://www.indonesia.travel/gb/en/news/temporary-entry-ban-for-foreign-citizen-entering-the-republic-of-indonesia" target="__blank" rel="nofollow noopener">indonesia.travel</a>
-                 )
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-04-10T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-04-12T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">10 April 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Large-scale Social Restrictions (PSBB)
-							</h2>
-							<p class="mb-2">
-							  The government of DKI Jakarta imposed large-scale social restrictions, followed by several other regions like Bogor, Depok, Bekasi and Tangerang.
-							</p>
-							<p class="text-sm text-gray-500">
-							  (source:
-                  <a class="underline" href="https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup" target="__blank" rel="nofollow noopener">Kompas.com</a>
-                 )
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-04-13T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-04-18T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">13 April 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								COVID-19 is a national disaster
-							</h2>
-							<p class="mb-2">
-							  President Joko Widodo declared COVID-19 as a national disaster after it has infected 4557 people and caused 399 deaths in Indonesia.
-							</p>
-							<p class="text-sm text-gray-500">
-							  (source: <a class="underline" href="https://setkab.go.id/presiden-tetapkan-bencana-nonalam-penyebaran-covid-19-sebagai-bencana-nasional/" target="__blank" rel="nofollow noopener">setkab.go.id</a>)
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-04-21T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-04-25T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">21 April 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Mudik Idul Fitri is banned
-							</h2>
-							<p class="mb-2">
-							  President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19 [1]. To help with this effort, several long distance transportations were banned until at least 31 May [2].
-							</p>
-							<p class="text-sm text-gray-500">
-								(source:
-                 [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                 [2] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                )
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-05-06T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-05-09T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">6 May 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Government allowed public transportation to operate but still banned 'mudik'
-							</h2>
-							<p class="mb-2">
-							  Transportation Minister Budi Karya Sumadi said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik.
-							</p>
-							<p class="text-sm text-gray-500">
-								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                )
-							</p>
-						</section>
-					</transition>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-05-20T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-05-23T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">20 May 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Government tightened security at 'mudik' ban checkpoints
-							</h2>
-							<p class="mb-2">
-							  The government tightened its monitoring of the Idul Fitri mudik ban as the Islamic holiday, which falls on May 24 and 25 2020. Violators would either be stopped or turned back.
-							</p>
-							<p class="text-sm text-gray-500">
-								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                )
-							</p>
-						</section>
-					</transition>
-				</article>
-       </div>
+    <h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
+    <div class="article-container w-1/2 fixed z-10">
+      <article class="px-5 py-5">
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-03-02T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-03-05T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">3 March 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              The first cases
+            </h2>
+            <p class="mb-2">
+              President Joko Widodo announced two first positive cases in Indonesia
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/02/breaking-jokowi-announces-indonesias-first-two-confirmed-covid-19-cases.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-03-08T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-03-11T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">8 March 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Expanded international travel ban
+            </h2>
+            <p class="mb-2">
+              Travel restrictions expanded to include several cities in South Korea, Italy and Iran. Visitors from these countries must provide a valid health certificate.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/05/covid-19-indonesia-issues-travel-ban-for-hardest-hit-iran-south-korea-italy.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-03-13T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-03-15T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">13 March 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Treatment facilities
+            </h2>
+            <p class="mb-2">
+              The government designated 132 treatment facilities across Indonesia
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://infeksiemerging.kemkes.go.id/situasi-infeksi-emerging/info-corona-virus/menteri-kesehatan-tetapkan-132-rumah-sakit-rujukan-covid-19/" target="__blank" rel="nofollow noopener">Kementerian Kesehatan</a>)
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-03-16T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">16 March 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Several activities began to be restricted
+            </h2>
+            <p class="mb-2">
+              Several regions closed schools and imposed learning activity from home [1]. Majelis Ulama Indonesia issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
+            </p>
+            <p class="text-sm text-gray-500">
+              (source:
+                [1] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
+                [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI nomor 14 tahun 2020</a>
+                [3] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
+              )
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-03-23T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-03-28T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">23 March 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Kemayoran Athletes Village
+            </h2>
+            <p class="mb-2">
+              Kemayoran Athletes Village was officially converted to house COVID-19 patients with mild symptoms. This site claimed to be able to house up to 1800 patients.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://nasional.kompas.com/read/2020/03/18/19194761/wisma-atlet-untuk-pasien-covid-19-wapres-ada-1800-tempat-tidur" target="__blank" rel="nofollow noopener">Kompas.com</a>)
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-03-30T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-04-7T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">30 March 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Not yet lockdown for Jakarta
+            </h2>
+            <p class="mb-2">
+              President Joko Widodo refused to impose lockdown on Jakarta.  Bus routes connecting Jakarta and other cities and provinces will remain open following the cancellation of a plan to temporarily suspend operations of AKAP buses.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-04-02T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-04-05T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">2 April 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Temporary entry ban for all foreign citizens
+            </h2>
+            <p class="mb-2">
+              The Directorate General of Immigration in Indonesia temporarily ban entry to the Republic of Indonesia for foreign citizens with several exceptions.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source:
+                <a class="underline" href="https://www.indonesia.travel/gb/en/news/temporary-entry-ban-for-foreign-citizen-entering-the-republic-of-indonesia" target="__blank" rel="nofollow noopener">indonesia.travel</a>
+               )
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-04-10T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-04-12T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">10 April 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Large-scale Social Restrictions (PSBB)
+            </h2>
+            <p class="mb-2">
+              The government of DKI Jakarta imposed large-scale social restrictions, followed by several other regions like Bogor, Depok, Bekasi and Tangerang.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source:
+                <a class="underline" href="https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup" target="__blank" rel="nofollow noopener">Kompas.com</a>
+               )
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-04-13T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-04-18T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">13 April 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              COVID-19 is a national disaster
+            </h2>
+            <p class="mb-2">
+              President Joko Widodo declared COVID-19 as a national disaster after it has infected 4557 people and caused 399 deaths in Indonesia.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://setkab.go.id/presiden-tetapkan-bencana-nonalam-penyebaran-covid-19-sebagai-bencana-nasional/" target="__blank" rel="nofollow noopener">setkab.go.id</a>)
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-04-21T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-04-25T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">21 April 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Mudik Idul Fitri is banned
+            </h2>
+            <p class="mb-2">
+              President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19 [1]. To help with this effort, several long distance transportations were banned until at least 31 May [2].
+            </p>
+            <p class="text-sm text-gray-500">
+              (source:
+               [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+               [2] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+              )
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-05-06T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-05-09T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">6 May 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Government allowed public transportation to operate but still banned 'mudik'
+            </h2>
+            <p class="mb-2">
+              Transportation Minister Budi Karya Sumadi said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+              )
+            </p>
+          </section>
+        </transition>
+        <transition name="fade">
+          <section v-show="currentDate >= new Date('2020-05-20T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-05-23T00:00:00.000Z').getTime()">
+            <p class="text-gray-500 font-semibold">20 May 2020</p>
+            <h2 class="text-3xl font-bold leading-tight mb-2">
+              Government tightened security at 'mudik' ban checkpoints
+            </h2>
+            <p class="mb-2">
+              The government tightened its monitoring of the Idul Fitri mudik ban as the Islamic holiday, which falls on May 24 and 25 2020. Violators would either be stopped or turned back.
+            </p>
+            <p class="text-sm text-gray-500">
+              (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+              )
+            </p>
+          </section>
+        </transition>
+      </article>
+    </div>
+    <div class="px-5 lg:px-0 z-0 viewbox">
     </div>
     <div class="fixed content-container">
       <div class="content"/>
@@ -213,6 +213,9 @@ export default {
       ...this.meta,
       bodyAttrs: {
         class: 'font-sans bg-gray-900 text-gray-200'
+      },
+      htmlAttrs: {
+        class: 'antialiased'
       }
     }
   },
