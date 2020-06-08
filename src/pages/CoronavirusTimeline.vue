@@ -49,35 +49,23 @@
 							</p>
 						</section>
 					</transition>
-					<section v-show="currentDate === new Date('2020-03-16T00:00:00.000Z').getTime()">
+          <section v-show="currentDate >= new Date('2020-03-16T00:00:00.000Z').getTime() &&
+                           currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
 						<p class="text-gray-500 font-semibold">16 March 2020</p>
 						<h2 class="text-3xl font-bold leading-tight mb-2">
-							Fatwa MUI regarding prayer activity during pandemic
+							Several activities began to be restricted
 						</h2>
 						<p class="mb-2">
-							Majelis Ulama Indonesia issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during COVID-19 pandemic.
+							Several regions closed schools and imposed learning activity from home [1]. Majelis Ulama Indonesia issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
 						</p>
 						<p class="text-sm text-gray-500">
-							(source: <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI nomor 14 tahun 2020</a>)
+							(source:
+                [1] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
+                [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI nomor 14 tahun 2020</a>
+								[3] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
+              )
 						</p>
 					</section>
-					<transition name="fade">
-						<section v-show="currentDate >= new Date('2020-03-17T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
-              <p class="text-gray-500 font-semibold">17 March 2020</p>
-							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Health protocol
-							</h2>
-							<p class="mb-2">
-								On 17 March, COVID-19 health protocols have been released to public [1]. The government also expanded the travel restriction to suspend visa free entry to Indonesia for one month and deny transit or arrival for visitors from several countries [2].
-							</p>
-              <p class="text-sm text-gray-500">
-								(source:
-								 [1] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
-								 [2] <a class="underline" href="https://news.detik.com/berita/d-4942940/cegah-persebaran-corona-travelers-dari-8-negara-ini-dilarang-masuk-ri" target="__blank" rel="nofollow noopener">Detik.com</a>)
-              </p>
-						</section>
-					</transition>
 					<transition name="fade">
 						<section v-show="currentDate >= new Date('2020-03-23T00:00:00.000Z').getTime() &&
                              currentDate < new Date('2020-03-28T00:00:00.000Z').getTime()">
@@ -216,7 +204,6 @@ export default {
         { date: '2020-03-08T00:00:00.000Z', value: 14 },
         { date: '2020-03-13T00:00:00.000Z', value: 35 },
         { date: '2020-03-16T00:00:00.000Z', value: 18 },
-        { date: '2020-03-17T00:00:00.000Z', value: 38 },
         { date: '2020-03-23T00:00:00.000Z', value: 65 },
         { date: '2020-04-02T00:00:00.000Z', value: 114 },
         { date: '2020-04-10T00:00:00.000Z', value: 220 },
