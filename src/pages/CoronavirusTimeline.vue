@@ -71,12 +71,12 @@
                   Several activities began to be restricted
                 </h2>
                 <p class="mb-2">
-                  Several regions closed schools and imposed learning activity from home [1]. Majelis Ulama Indonesia issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
+                  Several regions closed schools and imposed learning activity from home [1]. MUI issued a fatwa to temporarily forbid non-compulsory prays in mosque and other public places during pandemic [2]. On 17 March, COVID-19 health protocols have been released to public [3].
                 </p>
                 <p class="text-sm text-gray-500">
                   (source:
                     [1] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
-                    [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI nomor 14 tahun 2020</a>
+                    [2] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI number 14 2020</a>
                     [3] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
                   )
                 </p>
@@ -203,7 +203,7 @@
                   Government tightened security at 'mudik' ban checkpoints
                 </h2>
                 <p class="mb-2">
-                  The government tightened its monitoring of the Idul Fitri mudik ban on the Islamic holiday, which falls on May 24 and 25 2020. Violators would either be stopped or turned back.
+                  The government tightened its monitoring of the Idul Fitri mudik ban on public holiday (24-25 May). Violators would either be stopped or turned back.
                 </p>
                 <p class="text-sm text-gray-500">
                   (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
