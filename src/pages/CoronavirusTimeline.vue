@@ -24,7 +24,7 @@
                              currentDate < new Date('2020-03-11T00:00:00.000Z').getTime()">
               <p class="text-gray-500 font-semibold">8 March 2020</p>
 							<h2 class="text-3xl font-bold leading-tight mb-2">
-								Expanded travel ban	abroad
+								Expanded international travel ban
 							</h2>
 							<p class="mb-2">
 								Travel restrictions expanded to include several cities in South Korea, Italy and Iran. Visitors from these countries must provide a valid health certificate.
@@ -105,6 +105,23 @@
 							</p>
 							<p class="text-sm text-gray-500">
 							  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+							</p>
+						</section>
+					</transition>
+					<transition name="fade">
+						<section v-show="currentDate >= new Date('2020-04-02T00:00:00.000Z').getTime() &&
+                             currentDate < new Date('2020-04-05T00:00:00.000Z').getTime()">
+              <p class="text-gray-500 font-semibold">2 April 2020</p>
+							<h2 class="text-3xl font-bold leading-tight mb-2">
+						    Temporary entry ban from all foreign citizens
+							</h2>
+							<p class="mb-2">
+							  The Directorate General of Immigration in Indonesia temporarily ban entry to the Republic of Indonesia for foreign citizens with several exceptions.
+							</p>
+							<p class="text-sm text-gray-500">
+							  (source:
+                  <a class="underline" href="https://www.indonesia.travel/gb/en/news/temporary-entry-ban-for-foreign-citizen-entering-the-republic-of-indonesia" target="__blank" rel="nofollow noopener">indonesia.travel</a>
+                 )
 							</p>
 						</section>
 					</transition>
@@ -201,6 +218,7 @@ export default {
         { date: '2020-03-16T00:00:00.000Z', value: 18 },
         { date: '2020-03-17T00:00:00.000Z', value: 38 },
         { date: '2020-03-23T00:00:00.000Z', value: 65 },
+        { date: '2020-04-02T00:00:00.000Z', value: 114 },
         { date: '2020-04-10T00:00:00.000Z', value: 220 },
         { date: '2020-04-13T00:00:00.000Z', value: 316 },
         { date: '2020-04-21T00:00:00.000Z', value: 376 },
@@ -247,8 +265,8 @@ export default {
     },
     render(confirmed, viewboxWidth, viewboxHeight) {
       const selector = this.getSelector('.content')
-      const marginX = 50
-      const marginY = 50
+      const marginX = 30
+      const marginY = 40
       const width = viewboxWidth - (marginX * 2)
       const height = viewboxHeight - (marginY * 2)
       this.$d3.select(selector)
@@ -330,7 +348,7 @@ export default {
           .attr('cy', y(caption.value))
           .on('click', function (d, i) {
             const x = +this.getAttribute('data-x')
-            const scrollY = Math.floor(self.scrollFn.invert(x))
+            const scrollY = self.scrollFn.invert(x).toFixed(2)
             window.scrollTo(0, scrollY)
           })
       })
