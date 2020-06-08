@@ -43,6 +43,9 @@ export default {
     return {
       bodyAttrs: {
         class: 'font-sans bg-gray-900 text-gray-200'
+      },
+      htmlAttrs: {
+        class: 'antialiased'
       }
     }
   }
