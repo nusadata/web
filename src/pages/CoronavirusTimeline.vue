@@ -159,6 +159,7 @@ export default {
       this.currentDate = currentData.key
       this.$d3.select('.mouse-per-line-confirmed text').text(
         Math.ceil(this.yFn.invert(this.yFn(currentData.jumlah_positif.value))))
+      this.$d3.select('.mouse-per-line-confirmed circle').style('opacity', '1')
       this.$d3.select('.mouse-per-line-confirmed').attr('transform', `translate(${this.xFn(new Date(currentData.key))}, ${this.yFn(currentData.jumlah_positif.value)})`)
     }
   },
@@ -167,8 +168,8 @@ export default {
     const viewboxRect = document.querySelector('.viewbox').getBoundingClientRect()
     const viewboxWidth = document.querySelector('.viewbox').offsetWidth
     const viewboxHeight = window.innerHeight
-    const scrollLength = 10000
-    this.scrollFn = this.$d3.scaleLinear().domain([0, scrollLength]).range([0, viewboxWidth - (50 * 2)])
+    const scrollLength = 15000
+    this.scrollFn = this.$d3.scaleLinear().domain([0, scrollLength]).range([0, viewboxWidth])
     document.querySelector('.viewbox').setAttribute('style', `height: ${scrollLength}px`)
     document.querySelector('.content-container').setAttribute('style', `top: 0; left: ${viewboxRect.right - viewboxWidth}px`)
 		document.querySelector('.article-container').setAttribute('style', `top: 0; left: ${viewboxRect.left}px`)
@@ -394,6 +395,7 @@ export default {
   stroke-width: 2;
 }
 .cts .mouse-per-line-confirmed .circle {
+  opacity: 0;
   fill: #63b3ed;
   stroke: none;
 }
@@ -402,7 +404,7 @@ export default {
   stroke: none;
 }
 .cts .fade-enter-active, .fade-leave-active {
-  transition: opacity .25s;
+  transition: opacity .15s;
 }
 .cts .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
