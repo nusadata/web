@@ -204,7 +204,7 @@
                   Government tightened security at 'mudik' ban checkpoints
                 </h2>
                 <p class="mb-2">
-                  The government tightened its monitoring of the Idul Fitri mudik ban on public holiday (24-25 May). Violators would either be stopped or turned back.
+                  The government began to tighten its monitoring of the mudik ban as the Idul Fitri holiday on 24-25 May was approaching. Violators would either be stopped or turned back.
                 </p>
                 <p class="text-sm text-gray-500">
                   (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
