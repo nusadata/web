@@ -1,6 +1,6 @@
 <template>
   <main :class="`${selectorPrefix} relative max-w-4xl h-screen mx-auto py-5`" role="main">
-    <div class="px-5 lg:px-0 relative z-10 viewbox">
+    <div class="px-5 lg:px-0 relative z-0 viewbox">
 			<h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
       <div class="article-container fixed">
 				<article class="w-1/2 px-5 py-5">
@@ -194,6 +194,17 @@ export default {
       xFn: null,
       yFn: null,
       scrollFn: null,
+      captionsGraph: [
+        { date: '2020-03-02T00:00:00.000Z', value: 2 },
+        { date: '2020-03-08T00:00:00.000Z', value: 14 },
+        { date: '2020-03-13T00:00:00.000Z', value: 35 },
+        { date: '2020-03-16T00:00:00.000Z', value: 18 },
+        { date: '2020-03-17T00:00:00.000Z', value: 38 },
+        { date: '2020-03-23T00:00:00.000Z', value: 65 },
+        { date: '2020-04-10T00:00:00.000Z', value: 220 },
+        { date: '2020-04-13T00:00:00.000Z', value: 316 },
+        { date: '2020-04-21T00:00:00.000Z', value: 376 },
+      ]
     }
   },
   watch: {
@@ -294,12 +305,35 @@ export default {
 
       mousePerLineConfirmed.append('text')
         .attr('class', 'text')
-        .attr('transform', 'translate(10,3)')
+        .attr('transform', 'translate(-5,-10)')
 
       svg.append('g')
         .attr('transform', `translate(0, ${height})`)
         .style('font', '1rem Manrope')
         .call(this.$d3.axisBottom(x).ticks(5))
+
+      const captionCircles = svg.append('g')
+        .attr('class', 'caption-circles')
+      const self = this
+      this.captionsGraph.forEach(caption => {
+        captionCircles.append('circle')
+          .attr('r', 5)
+          .attr('class', 'caption-circle-donut')
+          .attr('cx', x(new Date(caption.date)))
+          .attr('cy', y(caption.value))
+
+        captionCircles.append('circle')
+          .attr('r', 8)
+          .attr('class', 'caption-circle')
+          .attr('data-x', x(new Date(caption.date)))
+          .attr('cx', x(new Date(caption.date)))
+          .attr('cy', y(caption.value))
+          .on('click', function (d, i) {
+            const x = +this.getAttribute('data-x')
+            const scrollY = Math.floor(self.scrollFn.invert(x))
+            window.scrollTo(0, scrollY)
+          })
+      })
 
       // svg.append('g')
       //   .style('font', '1rem Manrope')
@@ -331,52 +365,6 @@ export default {
         .attr('stop-opacity', 1)
 
       return linearGradientId
-    },
-    renderLegend(svg) {
-      const fillColor = '#edf2f7'
-      const legendWrapper = svg
-        .append('g')
-        .attr('class', 'legend-wrapper')
-        .style('transform', 'translate(20px, 0)')
-
-      legendWrapper.append('rect')
-        .attr('x', 0)
-        .attr('y', 0)
-        .attr('width', 15)
-        .attr('height', 15)
-        .style('fill', '#3182ce')
-
-      legendWrapper.append('text')
-        .attr('x', 15 + 10)
-        .attr('y', 13)
-        .style('fill', fillColor)
-        .text('new cases')
-
-      legendWrapper.append('rect')
-        .attr('x', 0)
-        .attr('y', 15 + 10)
-        .attr('width', 15)
-        .attr('height', 15)
-        .style('fill', '#319795')
-
-      legendWrapper.append('text')
-        .attr('x', 15 + 10)
-        .attr('y', 25 + 13)
-        .style('fill', fillColor)
-        .text('recovered')
-
-      legendWrapper.append('rect')
-        .attr('x', 0)
-        .attr('y', 15 + 15 + 10 + 10)
-        .attr('width', 15)
-        .attr('height', 15)
-        .style('fill', '#dd6b20')
-
-      legendWrapper.append('text')
-        .attr('x', 15 + 10)
-        .attr('y', 25 + 25 + 13)
-        .style('fill', fillColor)
-        .text('deaths')
     }
   }
 
@@ -455,5 +443,15 @@ export default {
 }
 .cts .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+.cts .caption-circles .caption-circle {
+  fill: #bee3f8;
+  fill-opacity: 0;
+  stroke: #bee3f8;
+  stroke-width: 2;
+}
+.cts .caption-circles .caption-circle-donut {
+  fill: #63b3ed;
+  stroke: none;
 }
 </style>
