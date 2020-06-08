@@ -95,7 +95,7 @@
 					</transition>
 					<transition name="fade">
 						<section v-show="currentDate >= new Date('2020-03-30T00:00:00.000Z').getTime() &&
-                             currentDate < new Date('2020-04-10T00:00:00.000Z').getTime()">
+                             currentDate < new Date('2020-04-7T00:00:00.000Z').getTime()">
               <p class="text-gray-500 font-semibold">30 March 2020</p>
 							<h2 class="text-3xl font-bold leading-tight mb-2">
 								Not yet lockdown for Jakarta
@@ -105,6 +105,23 @@
 							</p>
 							<p class="text-sm text-gray-500">
 							  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+							</p>
+						</section>
+					</transition>
+					<transition name="fade">
+						<section v-show="currentDate >= new Date('2020-04-10T00:00:00.000Z').getTime() &&
+                             currentDate < new Date('2020-04-12T00:00:00.000Z').getTime()">
+              <p class="text-gray-500 font-semibold">10 April 2020</p>
+							<h2 class="text-3xl font-bold leading-tight mb-2">
+								Large-scale Social Restrictions (PSBB)
+							</h2>
+							<p class="mb-2">
+							  The government of DKI Jakarta imposed large-scale social restrictions, followed by several other regions like Bogor, Depok, Bekasi and Tangerang.
+							</p>
+							<p class="text-sm text-gray-500">
+							  (source:
+                  <a class="underline" href="https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup" target="__blank" rel="nofollow noopener">Kompas.com</a>
+                 )
 							</p>
 						</section>
 					</transition>
@@ -134,9 +151,7 @@
 							  President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19 [1]. To help with this effort, several long distance transportations were banned until at least 31 May [2].
 							</p>
 							<p class="text-sm text-gray-500">
-								(source:
-								 [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-								 [2] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
+								(source: <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
 							</p>
 						</section>
 					</transition>
