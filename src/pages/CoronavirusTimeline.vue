@@ -306,15 +306,23 @@ export default {
   },
   mounted() {
     this.scrollY = window.scrollY
+
+    // Important note: these need to be declare first because we need to display
+    // scroll first before getting the correct width
+		const headerRect = document.querySelector('#article-header').getBoundingClientRect()
+    const scrollLength = 15000 + headerRect.bottom
+    document.querySelector('.viewbox').setAttribute('style', `height: ${scrollLength}px`)
+
     const viewboxRect = document.querySelector('.viewbox').getBoundingClientRect()
     const viewboxWidth = document.querySelector('.viewbox').offsetWidth
     const viewboxHeight = window.innerHeight
-		const headerRect = document.querySelector('#article-header').getBoundingClientRect()
-    const scrollLength = 15000 + headerRect.bottom
+
     this.scrollFn = this.$d3.scaleLinear().domain([headerRect.bottom, scrollLength]).range([0, viewboxWidth])
+
     document.querySelector('.viewbox').setAttribute('style', `height: ${scrollLength}px`)
     document.querySelector('.content-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
 		document.querySelector('.article-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
+
     window.addEventListener("scroll", () => {
         this.scrollY = this.scrollFn(window.scrollY)
         if (window.scrollY >= headerRect.bottom) {
