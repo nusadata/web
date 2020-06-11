@@ -91,7 +91,7 @@
                   Activities began to be restricted
                 </h2>
                 <p class="mb-2">
-                  Following to President Joko Widodo call on social distancing, major Jakarta companies started conducting work from home policy [1]. Several regions closed schools and imposed learning activity from home [2]. MUI issued a fatwa to forbid non-compulsory prays in mosque during pandemic [3]. On 17 March, COVID-19 health protocols have been released to public [4].
+                  Following to President Joko Widodo call on social distancing, major Jakarta companies started conducting work from home policy [1]. Several regions closed schools and imposed learning activity from home [2]. MUI issued a fatwa to forbid non-compulsory worships in mosque during pandemic [3]. On 17 March, COVID-19 health protocols have been released to public [4].
                 </p>
                 <p class="text-sm text-gray-500">
                   (source:
@@ -201,6 +201,22 @@
               </section>
             </transition>
             <transition name="fade">
+              <section v-show="currentDate >= new Date('2020-05-04T00:00:00.000Z').getTime() &&
+                               currentDate < new Date('2020-05-06T00:00:00.000Z').getTime()">
+                <p class="text-gray-500 font-semibold">4 May 2020</p>
+                <h2 class="text-3xl font-bold leading-tight mb-2">
+                  Regional elections are postponed
+                </h2>
+                <p class="mb-2">
+                  President issued a regulation to postpone 2020 regional elections until December with a potential to prolong the postponement should the national disaster persist.
+                </p>
+                <p class="text-sm text-gray-500">
+                  (source: <a class="underline" href="https://jdih.setneg.go.id/viewpdfperaturan/P18867/Perpu%20Nomor%202%20Tahun%202020" target="__blank" rel="nofollow noopener">jdih.setneg.go.id</a>
+                  )
+                </p>
+              </section>
+            </transition>
+            <transition name="fade">
               <section v-show="currentDate >= new Date('2020-05-06T00:00:00.000Z').getTime() &&
                                currentDate < new Date('2020-05-09T00:00:00.000Z').getTime()">
                 <p class="text-gray-500 font-semibold">6 May 2020</p>
@@ -228,6 +244,54 @@
                 </p>
                 <p class="text-sm text-gray-500">
                   (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
+                  )
+                </p>
+              </section>
+            </transition>
+            <transition name="fade">
+              <section v-show="currentDate >= new Date('2020-05-29T00:00:00.000Z').getTime() &&
+                               currentDate < new Date('2020-06-01T00:00:00.000Z').getTime()">
+                <p class="text-gray-500 font-semibold">29 May 2020</p>
+                <h2 class="text-3xl font-bold leading-tight mb-2">
+                  Religious activities on public are starting to return
+                </h2>
+                <p class="mb-2">
+                  Using SE 15/2020, the Minister of Religious Affairs allows houses of worship to reopen if it is deemed safe by its respective regional head of COVID-19 Task Force and as long as they implement a strict health and hygiene protocol.
+                </p>
+                <p class="text-sm text-gray-500">
+                  (source: <a class="underline" href="https://covid19.go.id/storage/app/media/Regulasi/SE%20Menag%20Nomor%2015%202020%20Rumah%20Ibadah.pdf" target="__blank" rel="nofollow noopener">covid19.go.id</a>
+                  )
+                </p>
+              </section>
+            </transition>
+            <transition name="fade">
+              <section v-show="currentDate >= new Date('2020-06-04T00:00:00.000Z').getTime() &&
+                               currentDate < new Date('2020-06-07T00:00:00.000Z').getTime()">
+                <p class="text-gray-500 font-semibold">4 June 2020</p>
+                <h2 class="text-3xl font-bold leading-tight mb-2">
+                  PSBB begins to relax
+                </h2>
+                <p class="mb-2">
+                  Jakarta Governor Anies Baswedan has issued Pergub No. 51/2020 on the implementation of relaxing PSBB (transitional PSBB). The document lists various regulations in place duringthe transitional PSBB period, such as allowing business to operate with 50% presence.
+                </p>
+                <p class="text-sm text-gray-500">
+                  (source: <a class="underline" href="https://covid19.go.id/p/protokol/pergub-51-tahun-2020-tentang-pelaksanaan-psbb-transisi" target="__blank" rel="nofollow noopener">covid19.go.id</a>
+                  )
+                </p>
+              </section>
+            </transition>
+            <transition name="fade">
+              <section v-show="currentDate >= new Date('2020-06-08T00:00:00.000Z').getTime() &&
+                               currentDate < new Date('2020-06-11T00:00:00.000Z').getTime()">
+                <p class="text-gray-500 font-semibold">8 June 2020</p>
+                <h2 class="text-3xl font-bold leading-tight mb-2">
+                  Ojek to return operating
+                </h2>
+                <p class="mb-2">
+                  The Ministry of Transportation has issued regulation Permenhub No. 41/2020 to relax the various restrictions placed by the previous regulation (Permenhub No. 18/2020). The relaxations include allowing motorcycle taxi services (ojek) to continue operating again and increase the maximum capacity of flight passengers to 70%.
+                </p>
+                <p class="text-sm text-gray-500">
+                  (source: <a class="underline" href="https://covid19.go.id/storage/app/media/Regulasi/PM%2041%20TAHUN%202020.pdf" target="__blank" rel="nofollow noopener">covid19.go.id</a>
                   )
                 </p>
               </section>
@@ -285,8 +349,12 @@ export default {
         { date: '2020-04-10T00:00:00.000Z', value: 220 },
         { date: '2020-04-13T00:00:00.000Z', value: 316 },
         { date: '2020-04-21T00:00:00.000Z', value: 376 },
+        { date: '2020-05-04T00:00:00.000Z', value: 395 },
         { date: '2020-05-06T00:00:00.000Z', value: 368 },
         { date: '2020-05-20T00:00:00.000Z', value: 693 },
+        { date: '2020-05-29T00:00:00.000Z', value: 678 },
+        { date: '2020-06-04T00:00:00.000Z', value: 585 },
+        { date: '2020-06-08T00:00:00.000Z', value: 847 },
       ]
     }
   },
