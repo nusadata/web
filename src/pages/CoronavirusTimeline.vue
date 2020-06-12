@@ -272,7 +272,7 @@
                   PSBB begins to relax
                 </h2>
                 <p class="mb-2">
-                  Jakarta Governor Anies Baswedan has issued Pergub No. 51/2020 on the implementation of relaxing PSBB (transitional PSBB). The document lists various regulations in place duringthe transitional PSBB period, such as allowing business to operate with 50% presence.
+                  Jakarta Governor Anies Baswedan has issued Pergub No. 51/2020 on the implementation of relaxing PSBB (transitional PSBB). The document lists various regulations in place during transitional PSBB period, such as allowing business to operate with 50% presence.
                 </p>
                 <p class="text-sm text-gray-500">
                   (source: <a class="underline" href="https://covid19.go.id/p/protokol/pergub-51-tahun-2020-tentang-pelaksanaan-psbb-transisi" target="__blank" rel="nofollow noopener">covid19.go.id</a>
