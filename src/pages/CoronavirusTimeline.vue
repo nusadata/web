@@ -1,6 +1,6 @@
 <template>
   <main :class="`${selectorPrefix} relative max-w-4xl h-screen mx-auto py-5`" role="main">
-    <div class="z-0 viewbox">
+    <div class="z-0">
       <header id="article-header" class="px-5 lg:px-0">
         <div class="flex items-center">
           <g-link class="flex-none text-lg leading-none" to="/">
@@ -35,7 +35,7 @@
 					</span>
          </div>
       </header>
-      <div class="relative">
+      <div class="relative viewbox">
         <div class="article-container w-1/2 z-10 px-5 lg:px-0">
           <article class="py-5">
             <transition name="fade">
@@ -301,6 +301,12 @@
         <div class="content-container px-5 lg:px-0">
           <div class="content"/>
         </div>
+        <div id="article-footer" class="text-lg text-gray-500 px-5 lg:px-0 py-48 text-center absolute bottom-0 left-0 w-full">
+          <p class="mb-5">Wash your hands often</p>
+          <p class="mb-5">Always use mask on public</p>
+          <p class="mb-5">Keep 1.5m distance from each other</p>
+          <p>Stay safe, stay healthy</p>
+        </div>
       </div>
     </div>
   </main>
@@ -378,11 +384,15 @@ export default {
     // Important note: these need to be declare first because we need to display
     // scroll first before getting the correct width
 		const headerRect = document.querySelector('#article-header').getBoundingClientRect()
-    const scrollLength = 15000 + headerRect.bottom
-    document.querySelector('.viewbox').setAttribute('style', `height: ${scrollLength}px`)
+    const scrollLength = 15000
+    let footerRect = document.querySelector('#article-footer').getBoundingClientRect()
+    document.querySelector('.viewbox').setAttribute(
+      'style',
+      `height: ${scrollLength + footerRect.height}px`
+    )
 
     const viewboxRect = document.querySelector('.viewbox').getBoundingClientRect()
-    const viewboxWidth = document.querySelector('.viewbox').offsetWidth
+    const viewboxWidth = document.querySelector('.viewbox').offsetWidth - (20 * 2) // 20px == 1.25rem
     const viewboxHeight = window.innerHeight
 
     this.scrollFn = this.$d3.scaleLinear().domain([headerRect.bottom, scrollLength]).range([0, viewboxWidth])
@@ -391,10 +401,18 @@ export default {
     document.querySelector('.content-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
 		document.querySelector('.article-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
 
+
+    footerRect = document.querySelector('#article-footer').getBoundingClientRect()
+    const contentRect = document.querySelector('.content-container').getBoundingClientRect()
+
     window.addEventListener("scroll", () => {
         this.scrollY = this.scrollFn(window.scrollY)
-        if (window.scrollY >= headerRect.bottom) {
-					document.querySelector('.content-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
+        const top = footerRect.top - contentRect.height - footerRect.height
+        if (window.scrollY >= top) {
+          document.querySelector('.content-container').setAttribute('style', `position: absolute; bottom: ${footerRect.height}px; left: 0`)
+          document.querySelector('.article-container').setAttribute('style', `position: absolute; bottom: ${footerRect.height}px; left: 0`)
+        } else if (window.scrollY >= headerRect.bottom) {
+          document.querySelector('.content-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
 					document.querySelector('.article-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
         } else {
           document.querySelector('.content-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
@@ -414,7 +432,7 @@ export default {
     },
     render(confirmed, viewboxWidth, viewboxHeight) {
       const selector = this.getSelector('.content')
-      const marginX = 30
+      const marginX = 15
       const marginY = 40
       const width = viewboxWidth - (marginX * 2)
       const height = viewboxHeight - (marginY * 2)
