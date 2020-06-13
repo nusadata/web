@@ -32,17 +32,20 @@ module.exports = function (api) {
       {
         name: 'Dengue fever in Indonesia',
         description: 'In Indonesia, dengue fever still becomes an important public health issue all over the country. This data visualization provides insights about the spread of the disease in all provinces and the trend of the cases in 2011-2018.',
-        link: '/dengue/'
+        link: '/dengue/',
+        new: false
       },
       {
         name: 'Coronavirus in Indonesia',
         description: 'Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.',
-        link: '/coronavirus/'
+        link: '/coronavirus/',
+        new: false
       },
       {
         name: 'Coronavirus Timeline',
         description: 'This page provides timeline visualization regarding the government actions in response to COVID-19 pandemic. This page is best viewed in desktop platform.',
-        link: '/coronavirus-timeline/'
+        link: '/coronavirus-timeline/',
+        new: true
       }
     ]
     const collection = actions.addCollection('Collections')
