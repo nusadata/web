@@ -8,19 +8,18 @@
           Trend of {{ legendText }} by province
         </h2>
         <p class="mx-5 lg:mx-0 mb-5 text-gray-500">
-          <template v-if="currentType === 'total_cases'">
-            The average total cases for most provinces in Java Island are remarkably higher than other regions, which is related to their higher population. In 2016, almost all provinces have a significant surge in total cases compared to the previous and the next year's figure.
-          </template>
-          <template v-if="currentType === 'total_deaths'">
-            In 2016, most of provinces have a significant surge in total deaths compared to the previous and the next year's figure. Despite having a high average cases, the average deaths number in Jakarta is very low with a max number of 20.
-          </template>
-          <template v-if="currentType === 'fatality_rate'">
-            The trend pattern of fatality rate for all provinces are extremely diverse. The only worth mentioning is that except Maluku and Papua regions, the trend of fatality rate for most provinces is going downward to the end of 2018.
-          </template>
+        <template v-if="currentType === 'total_cases'">
+          The average total cases for most provinces in Java Island are remarkably higher than other regions, which is related to their higher population. In 2016, almost all provinces have a significant surge in total cases compared to the previous and the next year's figure.
+        </template>
+        <template v-if="currentType === 'total_deaths'">
+          In 2016, most of provinces have a significant surge in total deaths compared to the previous and the next year's figure. Despite having a high average cases, the average deaths number in Jakarta is very low with a max number of 20.
+        </template>
+        <template v-if="currentType === 'fatality_rate'">
+          The trend pattern of fatality rate for all provinces are extremely diverse. The only worth mentioning is that except Maluku and Papua regions, the trend of fatality rate for most provinces is going downward to the end of 2018.
+        </template>
         </p>
       </div>
-      <div
-        class="mb-5 lg:mb-0 flex-none flex items-center justify-start lg:justify-end w-full lg:w-1/2">
+      <div class="mb-5 lg:mb-0 flex-none flex items-center justify-start lg:justify-end w-full lg:w-1/2">
         <div class="mx-5 lg:mx-0">
           <select v-model="currentProvince" class="text-gray-800 mr-5">
             <option

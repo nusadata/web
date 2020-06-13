@@ -26,7 +26,7 @@
     <slot/>
     <footer class="mb-5">
       <div class="max-w-6xl mx-auto">
-        <p class="text-xs text-gray-500 px-5">
+        <p class="text-xs text-gray-500 px-5" lang="en">
           Data is sourced from
           <a class="underline" href="https://pusdatin.kemkes.go.id/folder/view/01/structure-publikasi-data-pusat-data-dan-informasi.html">Pusat Data dan Informasi Kementerian Kesehatan Indonesia</a>
           and

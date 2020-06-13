@@ -19,10 +19,10 @@
           <p class="mb-2">New cases</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.newCases) }}</p>
           <p class="text-gray-500">
-            <span :class="(summary.percentMarginNewCasesPastDay > 0 ? 'text-red-500' : 'text-green-500')">
-              {{ summary.percentMarginNewCasesPastDay > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginNewCasesPastDay) }}%
-            </span>
-            from previous day
+          <span :class="(summary.percentMarginNewCasesPastDay > 0 ? 'text-red-500' : 'text-green-500')">
+            {{ summary.percentMarginNewCasesPastDay > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginNewCasesPastDay) }}%
+          </span>
+          from previous day
           </p>
         </div>
       </li>
@@ -31,10 +31,10 @@
           <p class="mb-2">Avg cases in one week</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(Math.ceil(summary.avgCasesOneWeek)) }}</p>
           <p class="text-gray-500">
-            <span :class="(summary.percentMarginAvgCasesOneWeek > 0 ? 'text-red-500' : 'text-green-500')">
-              {{ summary.percentMarginAvgCasesOneWeek > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginAvgCasesOneWeek) }}%
-            </span>
-            from previous week
+          <span :class="(summary.percentMarginAvgCasesOneWeek > 0 ? 'text-red-500' : 'text-green-500')">
+            {{ summary.percentMarginAvgCasesOneWeek > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginAvgCasesOneWeek) }}%
+          </span>
+          from previous week
           </p>
         </div>
       </li>
@@ -42,10 +42,10 @@
         <div class="mx-5">
           <p class="mb-2">Highest new cases</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">
-            {{ summary.highestNewCasesInProvince.value }}
+          {{ summary.highestNewCasesInProvince.value }}
           </p>
           <p v-if="summary.highestNewCasesInProvince.province" class="text-gray-500">
-            in {{ provinces[summary.highestNewCasesInProvince.province].name }}
+          in {{ provinces[summary.highestNewCasesInProvince.province].name }}
           </p>
         </div>
       </li>

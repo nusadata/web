@@ -16,8 +16,7 @@
           </template>
         </p>
       </div>
-      <div
-        class="mb-5 lg:mb-0 flex-none w-full lg:w-1/3">
+      <div class="mb-5 lg:mb-0 flex-none w-full lg:w-1/3">
         <div class="mx-5 lg:mx-0 flex items-center justify-start lg:justify-center">
           <select v-model="currentType" class="text-gray-800">
             <option
