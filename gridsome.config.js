@@ -4,11 +4,15 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const isGithubPages = process.env.GITHUB_PAGES === 'true'
+const siteUrl = isGithubPages ? 'https://nusadata.github.io' : 'https://www.nusadata.org'
+const pathPrefix = isGithubPages ? '/web' : ''
+
 module.exports = {
   siteName: 'Nusadata',
-  siteDescription: 'All about Indonesia made into data visualizations',
-  siteUrl: 'https://nusadata.github.io',
-  pathPrefix: '/web',
+  siteDescription: 'Collections of data visualization based on Indonesian statistics',
+  siteUrl,
+  pathPrefix,
   titleTemplate: '%s',
   plugins: [
     {
