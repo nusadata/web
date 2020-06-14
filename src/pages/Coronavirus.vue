@@ -42,11 +42,26 @@ export default {
   computed: {
     meta() {
       return {
-        title: 'Coronavirus In Indonesia'
+        title: this.title,
+        meta: this.$generateMeta(
+          this.title,
+          this.description,
+          this.$page.metadata.siteUrl,
+          this.url
+        )
       }
     },
     provinces() {
       return provinces
+    },
+    title() {
+      return 'Coronavirus In Indonesia - Nusadata'
+    },
+    description() {
+      return 'Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.'
+    },
+    url() {
+      return `${this.$page.metadata.siteUrl}/coronavirus/`
     }
   }
 }
@@ -194,6 +209,9 @@ var provinces = {
 
 <page-query>
   query {
+    metadata {
+      siteUrl
+    }
     byProvince: allCoronavirusByProvince {
       edges {
         node {

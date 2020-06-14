@@ -35,8 +35,23 @@ export default {
   computed: {
     meta() {
       return {
-        title: `Dengue Fever in Indonesia ${this.yearRange[this.yearRange.length - 1]}-${this.yearRange[0]}`
+        title: this.title,
+        meta: this.$generateMeta(
+          this.title,
+          this.description,
+          this.$page.metadata.siteUrl,
+          this.url
+        )
       }
+    },
+    title() {
+      return `Dengue Fever in Indonesia ${this.yearRange[this.yearRange.length - 1]}-${this.yearRange[0]}`
+    },
+    description() {
+      return 'In Indonesia, dengue fever still becomes an important public health issue all over the country. This data visualization provides insights about the spread of the disease in all provinces and the trend of the cases in 2011-2018.'
+    },
+    url() {
+      return `${this.$page.metadata.siteUrl}/dengue/`
     }
   },
   data() {
@@ -46,3 +61,11 @@ export default {
   }
 }
 </script>
+
+<page-query>
+  query {
+    metadata {
+      siteUrl
+    }
+  }
+</page-query>

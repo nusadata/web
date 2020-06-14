@@ -334,8 +334,23 @@ export default {
   computed: {
     meta() {
       return {
-        title: `Coronavirus Timeline in Indonesia - Nusadata`
+        title: this.title,
+        meta: this.$generateMeta(
+          this.title,
+          this.description,
+          this.$page.metadata.siteUrl,
+          this.url
+        )
       }
+    },
+    title() {
+      return 'Coronavirus Timeline in Indonesia - Nusadata'
+    },
+    description() {
+      return 'This page provides timeline visualization regarding the government actions in response to COVID-19 pandemic. This page is best viewed in desktop platform.'
+    },
+    url() {
+      return `${this.$page.metadata.siteUrl}/coronavirus-timeline/`
     }
   },
   data() {
@@ -558,6 +573,9 @@ export default {
 
 <page-query>
   query {
+    metadata {
+      siteUrl
+    }
     allCoronavirus {
       edges {
         node {

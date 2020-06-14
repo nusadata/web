@@ -36,10 +36,27 @@ export default {
   computed: {
     meta() {
       return {
-        title: 'Nusadata - Indonesia in Data Visualization'
+        title: this.title,
+        meta: this.$generateMeta(
+          this.title,
+          this.$page.metadata.siteDescription,
+          this.$page.metadata.siteUrl,
+          this.$page.metadata.siteUrl
+        )
       }
+    },
+    title() {
+      return 'Nusadata - Indonesia in Data Visualization'
     }
   }
 }
 </script>
 
+<page-query>
+  query {
+    metadata {
+      siteUrl
+      siteDescription
+    }
+  }
+</page-query>

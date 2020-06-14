@@ -7,7 +7,7 @@
     </h1>
     <p class="text-3xl leading-tight font-bold mb-5">Collections of <span class="text-blue-500">Data Visualization</span></p>
     <p class="text-gray-500 mb-8">
-    We are still working on a lot of stuffs, so for now there are still few data visualizations here. Many new data visualizations will be added soon.
+      {{ this.description }}
     </p>
   </section>
   <section class="px-5 mb-24">
@@ -41,11 +41,26 @@ export default {
   computed: {
     meta() {
       return {
-        title: 'Collections of data visualization - Nusadata'
+        title: this.title,
+        meta: this.$generateMeta(
+          this.title,
+          this.description,
+          this.$page.metadata.siteUrl,
+          this.url,
+        ),
       }
+    },
+    title() {
+      return 'Collections of data visualization - Nusadata'
+    },
+    description() {
+      return 'We are still working on a lot of stuffs, so for now there are still few data visualizations here. Many new data visualizations will be added soon.'
     },
     items() {
       return this.$page.allCollections.edges[0].node.items
+    },
+    url() {
+      return `${this.$page.metadata.siteUrl}/collections/`;
     }
   }
 }
@@ -53,6 +68,9 @@ export default {
 
 <page-query>
   query {
+    metadata {
+      siteUrl
+    }
     allCollections {
       edges {
         node {
