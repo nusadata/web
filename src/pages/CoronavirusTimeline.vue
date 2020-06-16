@@ -33,260 +33,30 @@
       <div class="relative viewbox">
         <div class="article-container w-1/2 z-10 px-5 lg:px-0">
           <article class="py-5">
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-03-02T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-03-05T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">3 March 2020</p>
+            <transition name="fade" v-for="(data, idx) in timelineData" :key="idx">
+              <section v-show="currentDate >= new Date(data.display.start).getTime() &&
+                               currentDate < new Date(data.display.end).getTime()">
+                <p class="text-gray-500 font-semibold">{{ data.date }}</p>
                 <h2 class="text-3xl font-bold leading-tight mb-2">
-                  The first cases
+                  {{ data.title }}
                 </h2>
                 <p class="mb-2">
-                  President Joko Widodo announced two first positive cases in Indonesia
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/02/breaking-jokowi-announces-indonesias-first-two-confirmed-covid-19-cases.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-03-08T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-03-11T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">8 March 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Expanded international travel ban
-                </h2>
-                <p class="mb-2">
-                  Travel restrictions expanded to include several cities in South Korea, Italy and Iran. Visitors from these countries must provide a valid health certificate.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/05/covid-19-indonesia-issues-travel-ban-for-hardest-hit-iran-south-korea-italy.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-03-13T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-03-15T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">13 March 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Treatment facilities
-                </h2>
-                <p class="mb-2">
-                  The government designated 132 treatment facilities across Indonesia
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://infeksiemerging.kemkes.go.id/situasi-infeksi-emerging/info-corona-virus/menteri-kesehatan-tetapkan-132-rumah-sakit-rujukan-covid-19/" target="__blank" rel="nofollow noopener">Kementerian Kesehatan</a>)
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-03-16T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-03-20T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">16 March 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Activities began to be restricted
-                </h2>
-                <p class="mb-2">
-                  Following to President Joko Widodo call on social distancing, major Jakarta companies started conducting work from home policy [1]. Several regions closed schools and imposed learning activity from home [2]. MUI issued a fatwa to forbid non-compulsory worships in mosque during pandemic [3]. On 17 March, COVID-19 health protocols have been released to public [4].
+                  {{ data.content }}
                 </p>
                 <p class="text-sm text-gray-500">
                   (source:
-                    [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/03/15/work-from-home-policy-in-effect-at-major-jakarta-companies-over-virus-concerns.html" rel="nofollow noopener">The Jakarta Post</a>
-                    [2] <a class="underline" href="https://www.bbc.com/indonesia/indonesia-51769074" rel="nofollow noopener">BBC</a>
-                    [3] <a class="underline" href="https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19" rel="nofollow noopener">Fatwa MUI number 14 2020</a>
-                    [4] <a class="underline" href="https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona" target="__blank" rel="nofollow noopener">Kompas.com</a>
-                  )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-03-23T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-03-28T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">23 March 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Kemayoran Athletes Village
-                </h2>
-                <p class="mb-2">
-                  Kemayoran Athletes Village was officially converted to house COVID-19 patients with mild symptoms. This site claimed to be able to house up to 1800 patients.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://nasional.kompas.com/read/2020/03/18/19194761/wisma-atlet-untuk-pasien-covid-19-wapres-ada-1800-tempat-tidur" target="__blank" rel="nofollow noopener">Kompas.com</a>)
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-03-30T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-04-7T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">30 March 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Not yet lockdown for Jakarta
-                </h2>
-                <p class="mb-2">
-                  President Joko Widodo refused to impose lockdown on Jakarta.  Bus routes connecting Jakarta and other cities and provinces will remain open following the cancellation of a plan to temporarily suspend operations of AKAP buses.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>)
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-04-02T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-04-05T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">2 April 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Temporary entry ban for all foreign citizens
-                </h2>
-                <p class="mb-2">
-                  The Directorate General of Immigration in Indonesia temporarily ban entry to the Republic of Indonesia for foreign citizens with several exceptions.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source:
-                    <a class="underline" href="https://www.indonesia.travel/gb/en/news/temporary-entry-ban-for-foreign-citizen-entering-the-republic-of-indonesia" target="__blank" rel="nofollow noopener">indonesia.travel</a>
-                   )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-04-10T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-04-12T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">10 April 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Large-scale Social Restrictions (PSBB)
-                </h2>
-                <p class="mb-2">
-                  The government of DKI Jakarta imposed large-scale social restrictions, followed by several other regions like Bogor, Depok, Bekasi and Tangerang.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source:
-                    <a class="underline" href="https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup" target="__blank" rel="nofollow noopener">Kompas.com</a>
-                   )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-04-13T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-04-18T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">13 April 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  COVID-19 is a national disaster
-                </h2>
-                <p class="mb-2">
-                  President Joko Widodo declared COVID-19 as a national disaster after it has infected 4557 people and caused 399 deaths in Indonesia.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://setkab.go.id/presiden-tetapkan-bencana-nonalam-penyebaran-covid-19-sebagai-bencana-nasional/" target="__blank" rel="nofollow noopener">setkab.go.id</a>)
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-04-21T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-04-25T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">21 April 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Mudik Idul Fitri is banned
-                </h2>
-                <p class="mb-2">
-                  President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19 [1]. To help with this effort, several long distance transportations were banned until at least 31 May [2].
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source:
-                   [1] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                   [2] <a class="underline" href="https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                  )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-05-04T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-05-06T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">4 May 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Regional elections are postponed
-                </h2>
-                <p class="mb-2">
-                  President issued a regulation to postpone 2020 regional elections until December with a potential to prolong the postponement should the national disaster persist.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://jdih.setneg.go.id/viewpdfperaturan/P18867/Perpu%20Nomor%202%20Tahun%202020" target="__blank" rel="nofollow noopener">jdih.setneg.go.id</a>
-                  )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-05-06T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-05-09T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">6 May 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Public transportation was allowed to operate but not for 'mudik'
-                </h2>
-                <p class="mb-2">
-                  Transportation Minister said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                  )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-05-20T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-05-23T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">20 May 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Government tightened security at 'mudik' ban checkpoints
-                </h2>
-                <p class="mb-2">
-                  The government began to tighten its monitoring of the mudik ban as the Idul Fitri holiday on 24-25 May was approaching. Violators would either be stopped or turned back.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html" target="__blank" rel="nofollow noopener">The Jakarta Post</a>
-                  )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-05-29T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-06-01T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">29 May 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Religious activities on public are starting to return
-                </h2>
-                <p class="mb-2">
-                  Using SE 15/2020, the Minister of Religious Affairs allows houses of worship to reopen if it is deemed safe by its respective regional head of COVID-19 Task Force and as long as they implement a strict health and hygiene protocol.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://covid19.go.id/storage/app/media/Regulasi/SE%20Menag%20Nomor%2015%202020%20Rumah%20Ibadah.pdf" target="__blank" rel="nofollow noopener">covid19.go.id</a>
-                  )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-06-04T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-06-07T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">4 June 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  PSBB begins to relax
-                </h2>
-                <p class="mb-2">
-                  Jakarta Governor Anies Baswedan has issued Pergub No. 51/2020 on the implementation of relaxing PSBB (transitional PSBB). The document lists various regulations in place during transitional PSBB period, such as allowing business to operate with 50% presence.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://covid19.go.id/p/protokol/pergub-51-tahun-2020-tentang-pelaksanaan-psbb-transisi" target="__blank" rel="nofollow noopener">covid19.go.id</a>
-                  )
-                </p>
-              </section>
-            </transition>
-            <transition name="fade">
-              <section v-show="currentDate >= new Date('2020-06-08T00:00:00.000Z').getTime() &&
-                               currentDate < new Date('2020-06-11T00:00:00.000Z').getTime()">
-                <p class="text-gray-500 font-semibold">8 June 2020</p>
-                <h2 class="text-3xl font-bold leading-tight mb-2">
-                  Ojek to return operating
-                </h2>
-                <p class="mb-2">
-                  The Ministry of Transportation has issued regulation Permenhub No. 41/2020 to relax the various restrictions placed by the previous regulation (Permenhub No. 18/2020). The relaxations include allowing motorcycle taxi services (ojek) to continue operating again and increase the maximum capacity of flight passengers to 70%.
-                </p>
-                <p class="text-sm text-gray-500">
-                  (source: <a class="underline" href="https://covid19.go.id/storage/app/media/Regulasi/PM%2041%20TAHUN%202020.pdf" target="__blank" rel="nofollow noopener">covid19.go.id</a>
+                  <template v-if="data.sources.length === 1">
+                    <a class="underline" :href="data.sources[0].url" target="__blank" rel="nofollow noreferrer">
+                      {{ data.sources[0].name }}
+                    </a>
+                  </template>
+                  <template v-else>
+                    <template v-for="(source, idxSrc) in data.sources">
+                      [{{ idxSrc + 1 }}] <a class="underline" :href="source.url" target="__blank" rel="nofollow noreferrer">
+                        {{ source.name }}
+                      </a>
+                    </template>
+                  </template>
                   )
                 </p>
               </section>
@@ -308,6 +78,8 @@
 </template>
 
 <script>
+import timelineData from '~/data/coronavirus-timeline.json'
+
 export default {
   metaInfo() {
     return {
@@ -355,23 +127,8 @@ export default {
       xFn: null,
       yFn: null,
       scrollFn: null,
-      captionsGraph: [
-        { date: '2020-03-02T00:00:00.000Z', value: 2 },
-        { date: '2020-03-08T00:00:00.000Z', value: 14 },
-        { date: '2020-03-13T00:00:00.000Z', value: 35 },
-        { date: '2020-03-16T00:00:00.000Z', value: 18 },
-        { date: '2020-03-23T00:00:00.000Z', value: 65 },
-        { date: '2020-04-02T00:00:00.000Z', value: 114 },
-        { date: '2020-04-10T00:00:00.000Z', value: 220 },
-        { date: '2020-04-13T00:00:00.000Z', value: 316 },
-        { date: '2020-04-21T00:00:00.000Z', value: 376 },
-        { date: '2020-05-04T00:00:00.000Z', value: 395 },
-        { date: '2020-05-06T00:00:00.000Z', value: 368 },
-        { date: '2020-05-20T00:00:00.000Z', value: 693 },
-        { date: '2020-05-29T00:00:00.000Z', value: 678 },
-        { date: '2020-06-04T00:00:00.000Z', value: 585 },
-        { date: '2020-06-08T00:00:00.000Z', value: 847 },
-      ]
+      timelineData,
+      captionsGraph: timelineData.map(({ graph }) => ({ date: graph.date, value: graph.value }))
     }
   },
   watch: {
@@ -413,14 +170,15 @@ export default {
 
 
     footerRect = document.querySelector('#article-footer').getBoundingClientRect()
-    const contentRect = document.querySelector('.content-container').getBoundingClientRect()
 
     window.addEventListener("scroll", () => {
         this.scrollY = this.scrollFn(window.scrollY)
-        const top = footerRect.top - contentRect.height - footerRect.height
+        const top = footerRect.top - footerRect.height
         if (window.scrollY >= top) {
-          document.querySelector('.content-container').setAttribute('style', `position: absolute; bottom: ${footerRect.height}px; left: 0`)
-          document.querySelector('.article-container').setAttribute('style', `position: absolute; bottom: ${footerRect.height}px; left: 0`)
+          const graph = document.querySelector('.content-container')
+          const article = document.querySelector('.article-container')
+          graph.setAttribute('style', `position: absolute; bottom: ${footerRect.height}px; left: 0`)
+          article.setAttribute('style', `position: absolute; bottom: ${footerRect.height + graph.offsetHeight - article.offsetHeight}px; left: 0`)
         } else if (window.scrollY >= headerRect.bottom) {
           document.querySelector('.content-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
 					document.querySelector('.article-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
@@ -431,6 +189,7 @@ export default {
       },
       {passive: true}
     );
+
     this.render(this.$page.allCoronavirus.edges[0].node.daily, viewboxWidth, viewboxHeight)
   },
   methods: {
@@ -535,6 +294,8 @@ export default {
       //   .call(this.$d3.axisLeft(y).ticks(5))
 
       // this.renderLegend(svg)
+      this.graphHeight = document.querySelector('.content-container').offsetHeight
+      this.articleHeight = document.querySelector('.article-container').offsetHeight
     },
     createLinearGradient(svg, id, firstColor, secondColor) {
       const linearGradientId = this.getId(id)
