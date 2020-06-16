@@ -31,7 +31,7 @@
          </div>
       </header>
       <div class="relative viewbox">
-        <div class="article-container w-1/2 z-10 px-5 lg:px-0">
+        <div class="article-container z-10 px-5 lg:px-0">
           <article class="py-5">
             <transition name="fade" v-for="(data, idx) in timelineData" :key="idx">
               <section v-show="currentDate >= new Date(data.display.start).getTime() &&
@@ -153,21 +153,38 @@ export default {
 		const headerRect = document.querySelector('#article-header').getBoundingClientRect()
     const scrollLength = 15000
     let footerRect = document.querySelector('#article-footer').getBoundingClientRect()
-    document.querySelector('.viewbox').setAttribute(
-      'style',
-      `height: ${scrollLength + footerRect.height}px`
+    const $viewbox = document.querySelector('.viewbox')
+    this.applyStyle(
+      $viewbox,
+      {
+        height: `${scrollLength + footerRect.height}px`
+      }
     )
 
-    const viewboxRect = document.querySelector('.viewbox').getBoundingClientRect()
-    const viewboxWidth = document.querySelector('.viewbox').offsetWidth - (20 * 2) // 20px == 1.25rem
+    const viewboxRect = $viewbox.getBoundingClientRect()
+    const viewboxWidth = $viewbox.offsetWidth - (20 * 2) // 20px == 1.25rem
     const viewboxHeight = window.innerHeight
 
     this.scrollFn = this.$d3.scaleLinear().domain([headerRect.bottom, scrollLength]).range([0, viewboxWidth])
 
-    document.querySelector('.viewbox').setAttribute('style', `height: ${scrollLength}px`)
-    document.querySelector('.content-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
-		document.querySelector('.article-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
-
+    this.applyStyle(
+      document.querySelector('.content-container'),
+      {
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        bottom: 'unset',
+      }
+    )
+    this.applyStyle(
+      document.querySelector('.article-container'),
+      {
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        bottom: 'unset',
+      }
+    )
 
     footerRect = document.querySelector('#article-footer').getBoundingClientRect()
 
@@ -177,14 +194,62 @@ export default {
         if (window.scrollY >= top) {
           const graph = document.querySelector('.content-container')
           const article = document.querySelector('.article-container')
-          graph.setAttribute('style', `position: absolute; bottom: ${footerRect.height}px; left: 0`)
-          article.setAttribute('style', `position: absolute; bottom: ${footerRect.height + graph.offsetHeight - article.offsetHeight}px; left: 0`)
+          this.applyStyle(
+            graph,
+            {
+              position: 'absolute',
+              bottom: `${footerRect.height}px`,
+              top: 'unset',
+              left: '0'
+            }
+          )
+          this.applyStyle(
+            article,
+            {
+              position: 'absolute',
+              bottom: `${footerRect.height + graph.offsetHeight - article.offsetHeight}px`,
+              top: 'unset',
+              left: '0'
+            }
+          )
         } else if (window.scrollY >= headerRect.bottom) {
-          document.querySelector('.content-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
-					document.querySelector('.article-container').setAttribute('style', `position: fixed; top: 0; left: ${viewboxRect.left}px;`)
+          this.applyStyle(
+            document.querySelector('.content-container'),
+            {
+              position: 'fixed',
+              top: '0',
+              bottom: 'unset',
+              left: `${viewboxRect.left}px`
+            }
+          )
+          this.applyStyle(
+            document.querySelector('.article-container'),
+            {
+              position: 'fixed',
+              top: '0',
+              bottom: 'unset',
+              left: `${viewboxRect.left}px`
+            }
+          )
         } else {
-          document.querySelector('.content-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
-		      document.querySelector('.article-container').setAttribute('style', `position: absolute; top: 0; left: 0`)
+          this.applyStyle(
+            document.querySelector('.content-container'),
+            {
+              position: 'absolute',
+              top: '0',
+              left: '0',
+              bottom: 'unset',
+            }
+          )
+          this.applyStyle(
+            document.querySelector('.article-container'),
+            {
+              position: 'absolute',
+              top: '0',
+              left: '0',
+              bottom: 'unset',
+            }
+          )
 				}
       },
       {passive: true}
@@ -199,12 +264,26 @@ export default {
     getId(selector) {
       return `${this.selectorPrefix}-${selector}`
     },
+    applyStyle(el, styleObj) {
+      Object.keys(styleObj).forEach(styleAttr => {
+        el.style[styleAttr] = styleObj[styleAttr]
+      })
+    },
     render(confirmed, viewboxWidth, viewboxHeight) {
       const selector = this.getSelector('.content')
       const marginX = 15
       const marginY = 40
       const width = viewboxWidth - (marginX * 2)
       const height = viewboxHeight - (marginY * 2)
+
+      // set width for article
+      this.applyStyle(
+        document.querySelector('.article-container'),
+        {
+          width: `${viewboxWidth * 2 / 3}px`
+        }
+      )
+
       this.$d3.select(selector)
         .selectAll('*')
         .remove()
@@ -294,8 +373,6 @@ export default {
       //   .call(this.$d3.axisLeft(y).ticks(5))
 
       // this.renderLegend(svg)
-      this.graphHeight = document.querySelector('.content-container').offsetHeight
-      this.articleHeight = document.querySelector('.article-container').offsetHeight
     },
     createLinearGradient(svg, id, firstColor, secondColor) {
       const linearGradientId = this.getId(id)
