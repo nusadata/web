@@ -11,13 +11,13 @@
       </p>
     </header>
     <ul class="flex flex-wrap -mx-5 px-5 lg:px-0">
-      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
+      <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">Total labs</p>
           <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalLabs) }}</p>
         </div>
       </li>
-      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
+      <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">PCR labs</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.pcrLabs.total) }}</p>
@@ -26,7 +26,7 @@
           </p>
         </div>
       </li>
-      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
+      <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">TCM labs</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.tcmLabs.total) }}</p>
