@@ -9,12 +9,14 @@
           </h1>
         </header>
         <p class="text-gray-500">
-          Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.
+          {{ description }}
         </p>
       </section>
       <CoronavirusSummary :daily="$page.allCoronavirus.edges[0].node.daily" :province-daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
       <CoronavirusTrendNewCases :daily="$page.allCoronavirus.edges[0].node.daily" />
       <CoronavirusTrendByProvince :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
+      <CoronavirusLabSummary />
+      <CoronavirusTrendTests />
       <CoronavirusMap :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
       <CoronavirusTrend :daily="$page.allCoronavirus.edges[0].node.daily" />
     </main>
@@ -24,9 +26,11 @@
 <script>
 import CoronavirusMap from '~/components/CoronavirusMap.vue'
 import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
+import CoronavirusLabSummary from '~/components/CoronavirusLabSummary.vue'
 import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
+import CoronavirusTrendTests from '~/components/CoronavirusTrendTests.vue'
 
 export default {
   metaInfo() {
@@ -34,10 +38,12 @@ export default {
   },
   components: {
     CoronavirusMap,
+    CoronavirusLabSummary,
     CoronavirusSummary,
     CoronavirusTrend,
     CoronavirusTrendByProvince,
     CoronavirusTrendNewCases,
+    CoronavirusTrendTests
   },
   computed: {
     meta() {
@@ -58,7 +64,7 @@ export default {
       return 'Coronavirus In Indonesia - Nusadata'
     },
     description() {
-      return 'Indonesia is the second worst affected country in Southeast Asia by covid-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.'
+      return 'Indonesia is the worst affected country in Southeast Asia by COVID-19. This page provides visualizations about the trend of daily new cases, the spread of diseases in all provinces from day one until today and many more.'
     },
     url() {
       return `${this.$page.metadata.siteUrl}/coronavirus/`

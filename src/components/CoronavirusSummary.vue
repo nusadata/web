@@ -8,13 +8,13 @@
       </h2>
     </header>
     <ul class="flex flex-wrap -mx-5 px-5 lg:px-0">
-      <li class="mb-5 w-full lg:w-1/4">
+      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">Total confirmed cases</p>
           <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalCases) }}</p>
         </div>
       </li>
-      <li class="mb-5 w-full lg:w-1/4">
+      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">New cases</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.newCases) }}</p>
@@ -26,7 +26,7 @@
           </p>
         </div>
       </li>
-      <li class="mb-5 w-full lg:w-1/4">
+      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">Avg cases in one week</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(Math.ceil(summary.avgCasesOneWeek)) }}</p>
@@ -38,7 +38,7 @@
           </p>
         </div>
       </li>
-      <li class="mb-5 w-full lg:w-1/4">
+      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">Highest new cases</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">
@@ -49,11 +49,82 @@
           </p>
         </div>
       </li>
+      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
+        <div class="mx-5">
+          <p class="mb-2">Total tests</p>
+          <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalTests) }}</p>
+        </div>
+      </li>
+      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
+        <div class="mx-5">
+          <p class="mb-2">New tests</p>
+          <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.newTests) }}</p>
+          <p class="text-gray-500">
+          <span :class="(summary.percentMarginNewTestsPastDay > 0 ? 'text-green-500' : 'text-red-500')">
+            {{ summary.percentMarginNewTestsPastDay > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginNewTestsPastDay) }}%
+          </span>
+          from previous day
+          </p>
+        </div>
+      </li>
+      <li class="mb-5 w-full lg:w-1/4">
+        <div class="mx-5">
+          <p class="mb-2">Avg tests in one week</p>
+          <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(Math.ceil(summary.avgTestsOneWeek)) }}</p>
+          <p class="text-gray-500">
+          <span :class="(summary.percentMarginAvgTestsOneWeek > 0 ? 'text-green-500' : 'text-red-500')">
+            {{ summary.percentMarginAvgTestsOneWeek > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginAvgTestsOneWeek) }}%
+          </span>
+          from previous week
+          </p>
+        </div>
+      </li>
     </ul>
   </section>
 </template>
 
 <script>
+import testRecords from '~/data/coronavirus-tests.json'
+
+export default {
+  props: {
+    daily: {
+      type: Array,
+      required: true
+    },
+    provinceDaily: {
+      type: Array,
+      required: true
+    },
+    provinces: {
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    summary() {
+      const [newCases, percentMarginNewCasesPastDay] = getNewCases(this.daily)
+      const [avgCasesOneWeek, percentMarginAvgCasesOneWeek] = getAverageCasesPastOneWeek(this.daily)
+
+      const [newTests, percentMarginNewTestsPastDay] = getNewTests(testRecords)
+      const [avgTestsOneWeek, percentMarginAvgTestsOneWeek] = getAverageTestsPastOneWeek(testRecords)
+
+      return {
+        totalCases: getTotalCases(this.daily),
+        newCases,
+        percentMarginNewCasesPastDay,
+        avgCasesOneWeek,
+        percentMarginAvgCasesOneWeek,
+        highestNewCasesInProvince: getHighestNewCasesInProvince(this.provinceDaily),
+        totalTests: getTotalTests(testRecords),
+        newTests,
+        percentMarginNewTestsPastDay,
+        avgTestsOneWeek,
+        percentMarginAvgTestsOneWeek,
+      }
+    }
+  }
+}
 
 function getTotalCases(records) {
   return records[records.length - 1].jumlah_positif_kum.value
@@ -96,34 +167,28 @@ function getHighestNewCasesInProvince(records) {
   }
 }
 
-export default {
-  props: {
-    daily: {
-      type: Array,
-      required: true
-    },
-    provinceDaily: {
-      type: Array,
-      required: true
-    },
-    provinces: {
-      type: Object,
-      required: true
-    }
-  },
-  computed: {
-    summary() {
-      const [newCases, percentMarginNewCasesPastDay] = getNewCases(this.daily)
-      const [avgCasesOneWeek, percentMarginAvgCasesOneWeek] = getAverageCasesPastOneWeek(this.daily)
-      return {
-        totalCases: getTotalCases(this.daily),
-        newCases,
-        percentMarginNewCasesPastDay,
-        avgCasesOneWeek,
-        percentMarginAvgCasesOneWeek,
-        highestNewCasesInProvince: getHighestNewCasesInProvince(this.provinceDaily)
-      }
-    }
-  }
+function getTotalTests(records) {
+  return records[records.length - 1].people_tests.total
+}
+
+function getNewTests(records) {
+  const newTests = records[records.length - 1].people_tests.daily.total
+  const pastDayTests = records[records.length - 2].people_tests.daily.total
+  return [newTests, ((newTests - pastDayTests) / pastDayTests * 100)]
+}
+
+function getAverageTestsPastOneWeek(records) {
+  const latestRecord = records[records.length - 1].people_tests.total
+  const pastOneWeekRecord = records[records.length - 7].people_tests.total
+  const totalCasesPastOneWeek = latestRecord - pastOneWeekRecord
+  const avgCasesPastOneWeek = totalCasesPastOneWeek / 7
+
+  const recordsWithoutPastOneWeek = records.slice(0, records.length - 7)
+  const latestTwoWeekRecord = recordsWithoutPastOneWeek[recordsWithoutPastOneWeek.length - 1].people_tests.total
+  const pastTwoWeekRecord = recordsWithoutPastOneWeek[recordsWithoutPastOneWeek.length - 7].people_tests.total
+  const totalCasesPastTwoWeek = latestTwoWeekRecord - pastTwoWeekRecord
+  const avgCasesPastTwoWeek = totalCasesPastTwoWeek / 7
+
+  return [avgCasesPastOneWeek, ((avgCasesPastOneWeek - avgCasesPastTwoWeek) / avgCasesPastTwoWeek * 100)]
 }
 </script>

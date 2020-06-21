@@ -6,6 +6,7 @@ generateDataByProvince()
 generateProvinces()
 generateSummary()
 generateNationalTrendOverPeriod()
+generateTestsData()
 
 async function generateDataByProvince() {
   const content = await fs.readFile(path.resolve(__dirname, '../static/dengue-indonesia-2011-2018.csv'))
@@ -135,6 +136,110 @@ async function generateNationalTrendOverPeriod() {
 
   await fs.writeFile(
     path.join(__dirname, '../src/data/dengue-national.json'),
+    JSON.stringify(exported),
+    { encoding: 'utf8' }
+  )
+}
+
+async function generateTestsData() {
+  const content = await fs.readFile(path.resolve(__dirname, `../static/coronavirus-tests.csv`))
+  const records = parse(content, {
+    columns: true,
+    skip_empty_lines: true
+  })
+  let exported = []
+  records.forEach((record, idx) => {
+    if (idx === 0) return
+
+    const currentRecord = record
+    const pastRecord = records[idx - 1]
+    const dailyLabPcr = +currentRecord.lab_pcr - +pastRecord.lab_pcr
+    const dailyLabTcm = +currentRecord.lab_tcm - +pastRecord.lab_tcm
+    const dailyOnlineLab = +currentRecord.total_online_lab - +pastRecord.total_online_lab
+    const dailyOnlineLabPcr = +currentRecord.online_lab_pcr - +pastRecord.online_lab_pcr
+    const dailyOnlineLabTcm = +currentRecord.online_lab_tcm - +pastRecord.online_lab_tcm
+    const dailySpecimenTests = +currentRecord.total_specimen_tests - +pastRecord.total_specimen_tests
+    const dailySpecimenTestsPcr = +currentRecord.specimen_tests_pcr - +pastRecord.specimen_tests_pcr
+    const dailySpecimenTestsTcm = +currentRecord.specimen_tests_tcm - +pastRecord.specimen_tests_tcm
+    const dailyPeopleTests = +currentRecord.total_people_tests - +pastRecord.total_people_tests
+    const dailyPeopleTestsPcr = +currentRecord.people_tests_pcr - +pastRecord.people_tests_pcr
+    const dailyPeopleTestsTcm = +currentRecord.people_tests_tcm - +pastRecord.people_tests_tcm
+    const dailyPositiveCases = +currentRecord.positive_cases - +pastRecord.positive_cases
+    const dailyPositiveCasesPcr = +currentRecord.positive_cases_pcr - +pastRecord.positive_cases_pcr
+    const dailyPositiveCasesTcm = +currentRecord.positive_cases_tcm - +pastRecord.positive_cases_tcm
+    const dailyNegativeCases = +currentRecord.negative_cases - +pastRecord.negative_cases
+    const dailyNegativeCasesPcr = +currentRecord.negative_cases_pcr - +pastRecord.negative_cases_pcr
+    const dailyNegativeCasesTcm = +currentRecord.negative_cases_tcm - +pastRecord.negative_cases_tcm
+    const dailyCitiesAffected = +currentRecord.cities - +pastRecord.cities
+
+    exported.push({
+      date: record.date,
+      lab: {
+        pcr: +record.lab_pcr,
+        tcm: +record.lab_tcm,
+        daily: {
+          pcr: dailyLabPcr,
+          tcm: dailyLabTcm
+        }
+      },
+      online_lab: {
+        total: +record.total_online_lab,
+        pcr: +record.online_lab_pcr,
+        tcm: +record.online_lab_tcm,
+        daily: {
+          total: dailyOnlineLab,
+          pcr: dailyOnlineLabPcr,
+          tcm: dailyOnlineLabTcm
+        }
+      },
+      specimen_tests: {
+        total: +record.total_specimen_tests,
+        pcr: +record.specimen_tests_pcr,
+        tcm: +record.specimen_tests_tcm,
+        daily: {
+          total: dailySpecimenTests,
+          pcr: dailySpecimenTestsPcr,
+          tcm: dailySpecimenTestsTcm
+        }
+      },
+      people_tests: {
+        total: +record.total_people_tests,
+        pcr: +record.people_tests_pcr,
+        tcm: +record.people_tests_tcm,
+        daily: {
+          total: dailyPeopleTests,
+          pcr: dailyPeopleTestsPcr,
+          tcm: dailyPeopleTestsTcm
+        }
+      },
+      positive_cases: {
+        total: +record.positive_cases,
+        pcr: +record.positive_cases_pcr,
+        tcm: +record.positive_cases_tcm,
+        daily: {
+          total: dailyPositiveCases,
+          pcr: dailyPositiveCasesPcr,
+          tcm: dailyPositiveCasesTcm,
+        }
+      },
+      negative_cases: {
+        total: +record.negative_cases,
+        pcr: +record.negative_cases_pcr,
+        tcm: +record.negative_cases_tcm,
+        daily: {
+          total: dailyNegativeCases,
+          pcr: dailyNegativeCasesPcr,
+          tcm: dailyNegativeCasesTcm
+        }
+      },
+      cities_affected: {
+        total: +record.cities,
+        daily: dailyCitiesAffected,
+      }
+    })
+  })
+  await fs.writeFile(
+    path.join(__dirname, '../src/data/coronavirus-tests.json'),
     JSON.stringify(exported),
     { encoding: 'utf8' }
   )
