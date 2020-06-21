@@ -51,13 +51,13 @@
       </li>
       <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">Total tests</p>
+          <p class="mb-2">Total people tested</p>
           <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalTests) }}</p>
         </div>
       </li>
       <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">New tests</p>
+          <p class="mb-2">New people tested</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.newTests) }}</p>
           <p class="text-gray-500">
           <span :class="(summary.percentMarginNewTestsPastDay > 0 ? 'text-green-500' : 'text-red-500')">
