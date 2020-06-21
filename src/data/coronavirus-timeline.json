@@ -325,7 +325,7 @@
     "date": "14 June 2020",
     "display": {
       "start": "2020-06-14T00:00:00.000Z",
-      "end": "2020-06-16T00:00:00.000Z"
+      "end": "2020-06-17T00:00:00.000Z"
     },
     "sources": [
       {
@@ -336,6 +336,25 @@
     "graph": {
       "date": "2020-06-14T00:00:00.000Z",
       "value": 857
+    }
+  },
+  {
+    "title": "New health protocol is published",
+    "content": "Ministry of Health releases a new health protocol to support people's activity in public without creating new cluster during pandemic period.",
+    "date": "19 June 2020",
+    "display": {
+      "start": "2020-06-19T00:00:00.000Z",
+      "end": "2020-06-22T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-nomor-hk0107menkes3822020",
+        "name": "covid19.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-06-19T00:00:00.000Z",
+      "value": 1041
     }
   }
 ]
