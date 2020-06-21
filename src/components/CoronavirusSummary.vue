@@ -51,6 +51,12 @@
       </li>
       <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
         <div class="mx-5">
+          <p class="mb-2">Total specimen tested</p>
+          <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalSpecimenTests) }}</p>
+        </div>
+      </li>
+      <li class="mb-5 w-full md:w-1/2 lg:w-1/4">
+        <div class="mx-5">
           <p class="mb-2">Total people tested</p>
           <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalTests) }}</p>
         </div>
@@ -116,6 +122,7 @@ export default {
         avgCasesOneWeek,
         percentMarginAvgCasesOneWeek,
         highestNewCasesInProvince: getHighestNewCasesInProvince(this.provinceDaily),
+        totalSpecimenTests: testRecords[testRecords.length - 1].specimen_tests.total,
         totalTests: getTotalTests(testRecords),
         newTests,
         percentMarginNewTestsPastDay,
