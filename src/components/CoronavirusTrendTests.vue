@@ -5,7 +5,7 @@
       <h2
         id="trend-of-coronavirus-tests"
         class="font-semibold text-2xl mx-5 lg:mx-0 mb-4">
-        Trend of tests performed per day
+        Trend of people tested per day
       </h2>
     </header>
     <div class="overflow-x-auto">
