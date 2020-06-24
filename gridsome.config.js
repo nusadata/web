@@ -22,6 +22,12 @@ module.exports = {
           whitelistPatternsChildren: [/^tippy/]
         }
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-73365330-2'
+      }
     }
   ]
 }
