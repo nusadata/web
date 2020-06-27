@@ -45,7 +45,7 @@ export default {
       }
     },
     title() {
-      return `Dengue Fever in Indonesia ${this.yearRange[this.yearRange.length - 1]}-${this.yearRange[0]}`
+      return `Dengue Fever in Indonesia ${this.yearRange[this.yearRange.length - 1]}-${this.yearRange[0]} - Nusadata`
     },
     description() {
       return 'In Indonesia, dengue fever still becomes an important public health issue all over the country. This data visualization provides insights about the spread of the disease in all provinces and the trend of the cases in 2011-2018.'
