@@ -344,7 +344,7 @@
     "date": "19 June 2020",
     "display": {
       "start": "2020-06-19T00:00:00.000Z",
-      "end": "2020-06-30T00:00:00.000Z"
+      "end": "2020-06-27T00:00:00.000Z"
     },
     "sources": [
       {
@@ -355,6 +355,25 @@
     "graph": {
       "date": "2020-06-19T00:00:00.000Z",
       "value": 1041
+    }
+  },
+  {
+    "title": "Disbursement for COVID-19 response budget is going too slow",
+    "content": "President Joko Widodo at the cabinet meeting on Sunday, 28 June 2020 highlighted the slow disbursement of the government COVID-19 response budget as he called on ministers to go extra mile. One of the biggest highlight is the spending of the COVID-19 budgets for health ministry which is only about 1.53% from the total of 75 trillion rupiahs.",
+    "date": "28 June 2020",
+    "display": {
+      "start": "2020-06-28T00:00:00.000Z",
+      "end": "2020-07-20T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/07/01/administrative-issues-hamper-covid-19-budget-disbursement-sri-mulyani.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-06-28T00:00:00.000Z",
+      "value": 1198
     }
   }
 ]
