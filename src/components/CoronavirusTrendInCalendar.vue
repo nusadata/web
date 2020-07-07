@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex-col md:flex-row items-center md:items-start">
-    <article v-for="(month, monthName) in monthsEnum" :key="monthName" class="mb-10 mr-10" :style="calendarStyle">
+    <article v-for="(month, monthName) in monthsEnum"
+      :key="monthName"
+      class="mb-10 mr-0 md:mr-10"
+      :style="calendarStyle">
       <h2 class="capitalize text-lg text-center mb-2">{{ monthName }}</h2>
       <header class="flex flex-wrap" :style="calendarStyle">
         <div v-for="dayName in dayNames" :key="dayName" class="text-gray-500" :style="calendarDayStyle">
@@ -19,6 +22,7 @@
         </day>
       </div>
     </article>
+
     <Modal v-if="event">
       <div class="w-screen max-w-lg overflow-y-auto">
         <header class="flex">
@@ -53,7 +57,7 @@ import events from '../data/coronavirus-calendar.json'
 import Day from './CoronavirusTrendInCalendarDay.vue'
 import Modal from './Modal.vue'
 
-const calendarDaySize = 60
+const maxCalendarDaySize = 60
 
 export default {
   components: { Day, Modal },
@@ -69,6 +73,7 @@ export default {
       fgColorFn: null,
       ratioFn: null,
       event: null,
+      calendarDaySize: maxCalendarDaySize,
     };
   },
   computed: {
@@ -86,13 +91,13 @@ export default {
     },
     calendarStyle() {
       return {
-        width: `${calendarDaySize * 7}px`,
+        width: `${this.calendarDaySize * 7}px`,
       }
     },
     calendarDayStyle() {
       return {
-        width: `${calendarDaySize}px`,
-        height: `${calendarDaySize}px`,
+        width: `${this.calendarDaySize}px`,
+        height: `${this.calendarDaySize}px`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -106,7 +111,23 @@ export default {
       .domain([0, this.$d3.max(this.daily, d => d.jumlah_positif.value)])
       .range([0, 1])
   },
+  mounted() {
+    this.setCalendarDaySize()
+    let timeout
+    window.addEventListener('resize', () => {
+      if (timeout) {
+        window.cancelAnimationFrame(timeout)
+      }
+      timeout = window.requestAnimationFrame(this.setCalendarDaySize)
+    }, false)
+  },
   methods: {
+    setCalendarDaySize() {
+      console.log('shit')
+      const calendarWidth = this.$el.offsetWidth
+      const calendarDaySize = calendarWidth / 7
+      this.calendarDaySize = (maxCalendarDaySize * 7) > calendarWidth ? calendarDaySize : maxCalendarDaySize
+    },
     getFirstDay(year, month) {
       return (new Date(year, month)).getDay()
     },
