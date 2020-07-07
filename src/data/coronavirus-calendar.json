@@ -1,0 +1,237 @@
+[
+  {
+    "date": "2020-03-2020",
+    "formatted_date": "3 March 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/02/breaking-jokowi-announces-indonesias-first-two-confirmed-covid-19-cases.html",
+        "name": "The Jakarta Post",
+        "content": "President Joko Widodo announced two first positive cases in Indonesia"
+      }
+    ]
+  },
+  {
+    "date": "2020-03-08",
+    "formatted_date": "8 March 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/05/covid-19-indonesia-issues-travel-ban-for-hardest-hit-iran-south-korea-italy.html",
+        "name": "The Jakarta Post",
+        "content": "Travel restrictions expanded to include several cities in South Korea, Italy and Iran. Visitors from these countries must provide a valid health certificate."
+      }
+    ]
+  },
+  {
+    "date": "2020-03-13",
+    "formatted_date": "13 March 2020",
+    "sources": [
+      {
+        "url": "https://infeksiemerging.kemkes.go.id/situasi-infeksi-emerging/info-corona-virus/menteri-kesehatan-tetapkan-132-rumah-sakit-rujukan-covid-19/",
+        "name": "Kementerian Kesehatan",
+        "content": "The government designated 132 treatment facilities across Indonesia"
+      }
+    ]
+  },
+  {
+    "date": "2020-03-16",
+    "formatted_date": "16 March 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/15/work-from-home-policy-in-effect-at-major-jakarta-companies-over-virus-concerns.html",
+        "name": "The Jakarta Post",
+        "content": "Following to President Joko Widodo call on social distancing, major Jakarta companies started conducting work from home policy"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/indonesia-51769074",
+        "name": "BBC",
+        "content": "Several regions closed schools and imposed learning activity from home"
+      },
+      {
+        "url": "https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19",
+        "name": "Fatwa MUI no. 14 2020",
+        "content": "MUI issued a fatwa to forbid non-compulsory worships in mosque during pandemic"
+      }
+    ]
+  },
+  {
+    "date": "2020-03-17",
+    "formatted_date": "17 March 2020",
+    "sources": [
+      {
+        "url": "https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona",
+        "name": "Kompas.com",
+        "content": "COVID-19 health protocols have been released to public"
+      }
+    ]
+  },
+  {
+    "date": "2020-03-23",
+    "formatted_date": "23 March 2020",
+    "sources": [
+      {
+        "url": "https://nasional.kompas.com/read/2020/03/18/19194761/wisma-atlet-untuk-pasien-covid-19-wapres-ada-1800-tempat-tidur",
+        "name": "Kompas.com",
+        "content": "Kemayoran Athletes Village was officially converted to house COVID-19 patients with mild symptoms. This site claimed to be able to house up to 1800 patients."
+      }
+    ]
+  },
+  {
+    "date": "2020-03-30",
+    "formatted_date": "30 March 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html",
+        "name": "The Jakarta Post",
+        "content": "President Joko Widodo refused to impose lockdown on Jakarta.  Bus routes connecting Jakarta and other cities and provinces will remain open following the cancellation of a plan to temporarily suspend operations of AKAP buses."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-02",
+    "formatted_date": "2 April 2020",
+    "sources": [
+      {
+        "url": "https://www.indonesia.travel/gb/en/news/temporary-entry-ban-for-foreign-citizen-entering-the-republic-of-indonesia",
+        "name": "indonesia.travel",
+        "content": "The Directorate General of Immigration in Indonesia temporarily ban entry to the Republic of Indonesia for foreign citizens with several exceptions."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-10",
+    "formatted_date": "10 April 2020",
+    "sources": [
+      {
+        "url": "https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup",
+        "name": "Kompas.com",
+        "content": "The government of DKI Jakarta imposed large-scale social restrictions, followed by several other regions like Bogor, Depok, Bekasi and Tangerang."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-13",
+    "formatted_date": "13 April 2020",
+    "sources": [
+      {
+        "url": "https://setkab.go.id/presiden-tetapkan-bencana-nonalam-penyebaran-covid-19-sebagai-bencana-nasional/",
+        "name": "setkab.go.id",
+        "content": "President Joko Widodo declared COVID-19 as a national disaster after it has infected 4557 people and caused 399 deaths in Indonesia."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-21",
+    "formatted_date": "21 April 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html",
+        "name": "The Jakarta Post",
+        "content": "President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19"
+      },
+      {
+        "url": "https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html",
+        "name": "The Jakarta Post",
+        "content": "To help with this effort, several long distance transportations were banned until at least 31 May"
+      }
+    ]
+  },
+  {
+    "date": "2020-05-04",
+    "formatted_date": "4 May 2020",
+    "sources": [
+      {
+        "url": "https://jdih.setneg.go.id/viewpdfperaturan/P18867/Perpu%20Nomor%202%20Tahun%202020",
+        "name": "jdih.setneg.go.id",
+        "content": "President issued a regulation to postpone 2020 regional elections until December with a potential to prolong the postponement should the national disaster persist."
+      }
+    ]
+  },
+  {
+    "date": "2020-05-06",
+    "formatted_date": "6 May 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html",
+        "name": "The Jakarta Post",
+        "content": "Transportation Minister said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik."
+      }
+    ]
+  },
+  {
+    "date": "2020-05-20",
+    "formatted_date": "20 May 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html",
+        "name": "The Jakarta Post",
+        "content": "The government began to tighten its monitoring of the mudik ban as the Idul Fitri holiday on 24-25 May was approaching. Violators would either be stopped or turned back."
+      }
+    ]
+  },
+  {
+    "date": "2020-05-29",
+    "formatted_date": "29 May 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/storage/app/media/Regulasi/SE%20Menag%20Nomor%2015%202020%20Rumah%20Ibadah.pdf",
+        "name": "covid19.go.id",
+        "content": "Using SE 15/2020, the Minister of Religious Affairs allows houses of worship to reopen if it is deemed safe by its respective regional head of COVID-19 Task Force and as long as they implement a strict health and hygiene protocol."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-04",
+    "formatted_date": "4 June 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/protokol/pergub-51-tahun-2020-tentang-pelaksanaan-psbb-transisi",
+        "name": "covid19.go.id",
+        "content": "Jakarta Governor Anies Baswedan has issued Pergub No. 51/2020 on the implementation of relaxing PSBB (transitional PSBB). The document lists various regulations in place during transitional PSBB period, such as allowing business to operate with 50% presence."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-08",
+    "formatted_date": "8 June 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/storage/app/media/Regulasi/PM%2041%20TAHUN%202020.pdf",
+        "name": "covid19.go.id",
+        "content": "The Ministry of Transportation has issued regulation Permenhub No. 41/2020 to relax the various restrictions placed by the previous regulation (Permenhub No. 18/2020). The relaxations include allowing motorcycle taxi services (ojek) to continue operating again and increase the maximum capacity of flight passengers to 70%."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-14",
+    "formatted_date": "14 June 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-8-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "National Covid-19 Task Force publishes a circular No. 8 2020 to regulate working shifts for companies within Jabodetabek region in effort to reducing the potential of crowd arising in public transportations during peak hours."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-19",
+    "formatted_date": "19 June 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-nomor-hk0107menkes3822020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health releases a new health protocol to support people's activity in public without creating new cluster during pandemic period."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-28",
+    "formatted_date": "28 June 2020",
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/07/01/administrative-issues-hamper-covid-19-budget-disbursement-sri-mulyani.html",
+        "name": "The Jakarta Post",
+        "content": "President Joko Widodo at the cabinet meeting on Sunday, 28 June 2020 highlighted the slow disbursement of the government COVID-19 response budget as he called on ministers to go extra mile. One of the biggest highlight is the spending of the COVID-19 budgets for health ministry which is only about 1.53% from the total of 75 trillion rupiahs."
+      }
+    ]
+  }
+]
