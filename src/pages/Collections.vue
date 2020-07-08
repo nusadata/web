@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import collections from '~/data/collections.json'
+
 export default {
   metaInfo() {
     return this.meta
@@ -57,7 +59,7 @@ export default {
       return 'We are still working on a lot of stuffs, so for now there are still few data visualizations here. Many new data visualizations will be added soon.'
     },
     items() {
-      return this.$page.allCollections.edges[0].node.items
+      return collections
     },
     url() {
       return `${this.$page.metadata.siteUrl}/collections/`;
@@ -70,18 +72,6 @@ export default {
   query {
     metadata {
       siteUrl
-    }
-    allCollections {
-      edges {
-        node {
-          items {
-            name
-            description
-            link
-            new
-          }
-        }
-      }
     }
   }
 </page-query>

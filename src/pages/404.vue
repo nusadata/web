@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import collections from '~/data/collections.json'
+
 export default {
   metaInfo() {
     return this.meta
@@ -38,24 +40,8 @@ export default {
       }
     },
     items() {
-      return this.$page.allCollections.edges[0].node.items
+      return collections
     }
   }
 }
 </script>
-
-<page-query>
-  query {
-    allCollections {
-      edges {
-        node {
-          items {
-            name
-            description
-            link
-          }
-        }
-      }
-    }
-  }
-</page-query>
