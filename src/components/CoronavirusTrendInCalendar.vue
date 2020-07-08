@@ -56,7 +56,7 @@
 
     <Modal v-if="event">
       <div class="w-screen max-w-lg max-h-screen overflow-y-auto">
-        <header class="flex">
+        <header class="flex sticky top-0 left-0 bg-gray-800">
           <h2 class="flex-1 px-5 py-3 text-gray-400">
             {{ event.formatted_date }}
           </h2>
