@@ -5,7 +5,7 @@
         <header class="mb-2">
           <h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
           <p class="text-gray-500 font-semibold">2011-2018</p>
-          <p class="text-3xl font-bold">
+          <p class="text-2xl sm:text-3xl font-bold">
             <span class="text-blue-500">Dengue Fever</span> in Indonesia
           </p>
         </header>
