@@ -72,7 +72,7 @@
             <li v-for="(source, id) in event.sources" :key="id" class="mb-6">
               <p class="text-base mb-2">{{ source.content }}</p>
               <div class="text-sm text-gray-500">
-                <a class="underline" :href="source.url">{{ source.name }}</a>
+                <a class="underline" :href="source.url" target="__blank" rel="nofollow noreferrer">{{ source.name }}</a>
               </div>
              </li>
           </ul>
