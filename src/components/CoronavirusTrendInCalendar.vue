@@ -29,13 +29,13 @@
         :style="calendarStyle">
         <h2 class="capitalize text-lg text-center mb-2">{{ monthName }}</h2>
         <header class="flex flex-wrap" :style="calendarStyle">
-          <div v-for="dayName in dayNames" :key="dayName" class="text-gray-500" :style="calendarDayStyle">
+          <div v-for="dayName in dayNames" :key="dayName" class="text-sm sm:text-base text-gray-500" :style="calendarDayStyle">
             {{ dayName }}
           </div>
         </header>
 
         <div class="flex flex-wrap">
-          <button v-for="day in getFirstDay(2020, month)" :key="day" :style="calendarDayStyle"/>
+          <button v-for="day in getFirstDay(2020, month)" :key="day" class="text-sm sm:text-base" :style="calendarDayStyle"/>
           <day
             v-for="date in getDaysInMonth(2020, month)"
             :key="`date-${date}`"

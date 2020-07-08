@@ -6,7 +6,7 @@
         <circle cx="3" cy="3" r="3"/>
       </svg>
     </span>
-    <span class="flex items-center justify-center h-full relative" :style="textStyle">
+    <span class="flex items-center justify-center h-full relative text-sm sm:text-base" :style="textStyle">
       <slot/>
     </span>
   </button>
