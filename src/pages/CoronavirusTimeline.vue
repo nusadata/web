@@ -195,74 +195,77 @@ export default {
 
     footerRect = document.querySelector('#article-footer').getBoundingClientRect()
 
-    window.addEventListener("scroll", () => {
-        this.scrollY = this.scrollFn(window.scrollY)
-        const top = footerRect.top - footerRect.height
-        if (window.scrollY >= top) {
-          const graph = document.querySelector('.content-container')
-          const article = document.querySelector('.article-container')
-          this.applyStyle(
-            graph,
-            {
-              position: 'absolute',
-              bottom: `${footerRect.height}px`,
-              top: 'unset',
-              left: '0'
-            }
-          )
-          this.applyStyle(
-            article,
-            {
-              position: 'absolute',
-              bottom: `${footerRect.height + graph.offsetHeight - article.offsetHeight}px`,
-              top: 'unset',
-              left: '0'
-            }
-          )
-        } else if (window.scrollY >= headerRect.bottom) {
-          this.applyStyle(
-            document.querySelector('.content-container'),
-            {
-              position: 'fixed',
-              top: '0',
-              bottom: 'unset',
-              left: `${viewboxRect.left}px`
-            }
-          )
-          this.applyStyle(
-            document.querySelector('.article-container'),
-            {
-              position: 'fixed',
-              top: '0',
-              bottom: 'unset',
-              left: `${viewboxRect.left}px`
-            }
-          )
-        } else {
-          this.applyStyle(
-            document.querySelector('.content-container'),
-            {
-              position: 'absolute',
-              top: '0',
-              left: '0',
-              bottom: 'unset',
-            }
-          )
-          this.applyStyle(
-            document.querySelector('.article-container'),
-            {
-              position: 'absolute',
-              top: '0',
-              left: '0',
-              bottom: 'unset',
-            }
-          )
-				}
-      },
-      {passive: true}
-    );
+    this.scrollListenerFn = () => {
+      this.scrollY = this.scrollFn(window.scrollY)
+      const top = footerRect.top - footerRect.height
+      if (window.scrollY >= top) {
+        const graph = document.querySelector('.content-container')
+        const article = document.querySelector('.article-container')
+        this.applyStyle(
+          graph,
+          {
+            position: 'absolute',
+            bottom: `${footerRect.height}px`,
+            top: 'unset',
+            left: '0'
+          }
+        )
+        this.applyStyle(
+          article,
+          {
+            position: 'absolute',
+            bottom: `${footerRect.height + graph.offsetHeight - article.offsetHeight}px`,
+            top: 'unset',
+            left: '0'
+          }
+        )
+      } else if (window.scrollY >= headerRect.bottom) {
+        this.applyStyle(
+          document.querySelector('.content-container'),
+          {
+            position: 'fixed',
+            top: '0',
+            bottom: 'unset',
+            left: `${viewboxRect.left}px`
+          }
+        )
+        this.applyStyle(
+          document.querySelector('.article-container'),
+          {
+            position: 'fixed',
+            top: '0',
+            bottom: 'unset',
+            left: `${viewboxRect.left}px`
+          }
+        )
+      } else {
+        this.applyStyle(
+          document.querySelector('.content-container'),
+          {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            bottom: 'unset',
+          }
+        )
+        this.applyStyle(
+          document.querySelector('.article-container'),
+          {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            bottom: 'unset',
+          }
+        )
+      }
+    }
+
+    window.addEventListener('scroll', this.scrollListenerFn, {passive: true});
 
     this.render(this.$page.allCoronavirus.edges[0].node.daily, viewboxWidth, viewboxHeight)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.scrollListenerFn);
   },
   methods: {
     getSelector(selector) {
