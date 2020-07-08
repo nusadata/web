@@ -1,27 +1,44 @@
 <template>
-  <div class="flex flex-col md:flex-row items-center md:items-start">
-    <article v-for="(month, monthName) in monthsEnum"
-      :key="monthName"
-      class="mb-10 mr-0 md:mr-10"
-      :style="calendarStyle">
-      <h2 class="capitalize text-lg text-center mb-2">{{ monthName }}</h2>
-      <header class="flex flex-wrap" :style="calendarStyle">
-        <div v-for="dayName in dayNames" :key="dayName" class="text-gray-500" :style="calendarDayStyle">
-          {{ dayName }}
-        </div>
-      </header>
-
-      <div class="flex flex-wrap">
-        <button v-for="day in getFirstDay(2020, month)" :key="day" :style="calendarDayStyle"/>
-        <day
-          v-for="date in getDaysInMonth(2020, month)"
-          :key="`date-${date}`"
-          :data-obj="getCalendarDayObj(2020, month, date)"
-          @click="openEvent(2020, month, date)">
-          {{ date }}
-        </day>
+  <div>
+    <div class="mb-10 flex flex-col items-center text-sm">
+      <div class="mb-1 w-full max-w-sm">
+        <p class="text-center">New cases per day</p>
       </div>
-    </article>
+      <div class="w-full max-w-sm flex items-center">
+        <div class="flex-none">
+          <p class="mr-2">0</p>
+        </div>
+        <div class="w-full" :style="calendarLegendStyle"/>
+        <div class="flex-none text-right">
+          <p class="ml-2">{{ this.maxCases }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center md:items-start">
+      <article v-for="(month, monthName) in monthsEnum"
+        :key="monthName"
+        class="mb-10 mr-0 md:mr-10"
+        :style="calendarStyle">
+        <h2 class="capitalize text-lg text-center mb-2">{{ monthName }}</h2>
+        <header class="flex flex-wrap" :style="calendarStyle">
+          <div v-for="dayName in dayNames" :key="dayName" class="text-gray-500" :style="calendarDayStyle">
+            {{ dayName }}
+          </div>
+        </header>
+
+        <div class="flex flex-wrap">
+          <button v-for="day in getFirstDay(2020, month)" :key="day" :style="calendarDayStyle"/>
+          <day
+            v-for="date in getDaysInMonth(2020, month)"
+            :key="`date-${date}`"
+            :data-obj="getCalendarDayObj(2020, month, date)"
+            @click="openEvent(2020, month, date)">
+            {{ date }}
+          </day>
+        </div>
+      </article>
+    </div>
 
     <Modal v-if="event">
       <div class="w-screen max-w-lg overflow-y-auto">
@@ -37,7 +54,6 @@
           </button>
         </header>
         <section class="px-5 py-3">
-          <h3 class="text-xl mb-6">Events in this date</h3>
           <ul>
             <li v-for="(source, id) in event.sources" :key="id" class="mb-6">
               <p class="text-base mb-2">{{ source.content }}</p>
@@ -49,6 +65,7 @@
         </section>
       </div>
     </Modal>
+
   </div>
 </template>
 
@@ -73,6 +90,7 @@ export default {
       fgColorFn: null,
       ratioFn: null,
       event: null,
+      maxCases: 0,
       calendarDaySize: maxCalendarDaySize,
     };
   },
@@ -103,12 +121,33 @@ export default {
         justifyContent: 'center',
       }
     },
+    calendarLegendStyle() {
+      const shades = this.$d3.schemeBlues[9]
+      const factor = 100 / (shades.length - 1)
+
+      let gradientValue = 'linear-gradient(90deg'
+      let point = 0
+
+      shades.forEach(shade => {
+        gradientValue += `, ${shade} ${point}%`
+        point += factor
+      })
+
+      gradientValue += ')'
+
+      return {
+        background: `${shades[shades.length - 1]}`,
+        background: gradientValue,
+        height: '10px',
+      }
+    },
   },
   created() {
     this.bgColorFn = this.$d3.interpolateBlues
     this.fgColorFn = this.$d3.scaleQuantize([0, 1], ['#1a202c', '#edf2f7'])
+    this.maxCases = this.$d3.max(this.daily, d => d.jumlah_positif.value)
     this.ratioFn = this.$d3.scaleLinear()
-      .domain([0, this.$d3.max(this.daily, d => d.jumlah_positif.value)])
+      .domain([0, this.maxCases])
       .range([0, 1])
   },
   mounted() {
@@ -123,7 +162,6 @@ export default {
   },
   methods: {
     setCalendarDaySize() {
-      console.log('shit')
       const calendarWidth = this.$el.offsetWidth
       const calendarDaySize = calendarWidth / 7
       this.calendarDaySize = (maxCalendarDaySize * 7) > calendarWidth ? calendarDaySize : maxCalendarDaySize
