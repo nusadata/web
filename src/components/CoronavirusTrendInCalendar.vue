@@ -1,5 +1,12 @@
 <template>
   <div>
+    <div class="text-center mt-5 mb-16">
+      <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
+        Click or tap in date with dots to view events
+      </span>
+    </div>
+
+
     <div class="mb-10 flex flex-col items-center text-sm">
       <div class="mb-1 w-full max-w-sm">
         <p class="text-center">New cases per day</p>
@@ -39,6 +46,13 @@
         </div>
       </article>
     </div>
+
+    <div class="text-center mt-5 mb-16">
+      <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
+        Click or tap in date with dots to view events
+      </span>
+    </div>
+
 
     <Modal v-if="event">
       <div class="w-screen max-w-lg overflow-y-auto">
