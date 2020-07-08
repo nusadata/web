@@ -40,7 +40,7 @@
             v-for="date in getDaysInMonth(2020, month)"
             :key="`date-${date}`"
             :data-obj="getCalendarDayObj(2020, month, date)"
-            @click="openEvent(2020, month, date)">
+            @click="openEvent">
             {{ date }}
           </day>
         </div>
@@ -68,6 +68,9 @@
           </button>
         </header>
         <section class="px-5 py-3">
+          <div class="mb-6">
+            <p class="inline-block rounded px-3 py-1 bg-gray-700 text-sm">Number of new cases: {{ event.numOfCases }}</p>
+          </div>
           <ul>
             <li v-for="(source, id) in event.sources" :key="id" class="mb-6">
               <p class="text-base mb-2">{{ source.content }}</p>
@@ -207,20 +210,16 @@ export default {
           backgroundColor: `${this.bgColorFn(ratio)}`,
           color: `${this.fgColorFn(ratio)}`,
           event: selectedEvent,
+          numOfCases: data.jumlah_positif.value,
           ...this.calendarDayStyle,
         }
       }
 
       return this.calendarDayStyle
     },
-    openEvent(year, month, date) {
-      const event = events.find(item => {
-        const dateObj = new Date(item.date)
-        return year === dateObj.getFullYear() &&
-          month === dateObj.getMonth() &&
-          date === dateObj.getDate()
-      })
+    openEvent({ event, numOfCases }) {
       this.event = event
+      this.event.numOfCases = numOfCases
       document.querySelector('body').style.overflow = 'hidden'
     },
     closeEvent() {
