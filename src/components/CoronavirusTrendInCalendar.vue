@@ -13,7 +13,7 @@
       </div>
       <div class="w-full max-w-sm flex items-center">
         <div class="flex-none">
-          <p class="mr-2">0</p>
+          <p class="mr-2">1</p>
         </div>
         <div class="w-full" :style="calendarLegendStyle"/>
         <div class="flex-none text-right">
@@ -206,9 +206,13 @@ export default {
             month === dateObj.getMonth() &&
             date === dateObj.getDate()
         })
+
+        const bgColor = data.jumlah_positif.value === 0 ? 'transparent' : this.bgColorFn(ratio)
+        const fgColor = data.jumlah_positif.value === 0 ? this.fgColorFn(1) : this.fgColorFn(ratio)
+
         return {
-          backgroundColor: `${this.bgColorFn(ratio)}`,
-          color: `${this.fgColorFn(ratio)}`,
+          backgroundColor: `${bgColor}`,
+          color: `${fgColor}`,
           event: selectedEvent,
           numOfCases: data.jumlah_positif.value,
           ...this.calendarDayStyle,
