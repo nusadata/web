@@ -6,7 +6,7 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/03/02/breaking-jokowi-announces-indonesias-first-two-confirmed-covid-19-cases.html",
         "name": "The Jakarta Post",
-        "content": "President Joko Widodo announced two first positive cases in Indonesia"
+        "content": "President Joko Widodo announces two first positive cases in Indonesia"
       }
     ]
   },
@@ -28,7 +28,12 @@
       {
         "url": "https://infeksiemerging.kemkes.go.id/situasi-infeksi-emerging/info-corona-virus/menteri-kesehatan-tetapkan-132-rumah-sakit-rujukan-covid-19/",
         "name": "Kementerian Kesehatan",
-        "content": "The government designated 132 treatment facilities across Indonesia"
+        "content": "The government has designated 132 treatment facilities across Indonesia."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/keppres-nomor-7-tahun-2020-tentang-gugus-tugas-percepatan-penanganan-covid-i9",
+        "name": "covid19.go.id",
+        "content": "The government forms a special task force for COVID-19 (Gugus Tugas Percepatan Penanganan COVID-19) to combat the pandemic in a national scale. This task force will report directly to the president."
       }
     ]
   },
@@ -65,13 +70,24 @@
     ]
   },
   {
+    "date": "2020-03-20",
+    "formatted_date": "20 March 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/keppres-nomor-9-tahun-2020-tentang-perubahan-atas-keppres-nomor-7-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "The government issues a Kepres No. 9 2020 which revise the previous Kepres No. 7 2020. This revision is mainly about changes in special task force's organization structure and budgeting for the task force"
+      }
+    ]
+  },
+  {
     "date": "2020-03-23",
     "formatted_date": "23 March 2020",
     "sources": [
       {
         "url": "https://nasional.kompas.com/read/2020/03/18/19194761/wisma-atlet-untuk-pasien-covid-19-wapres-ada-1800-tempat-tidur",
         "name": "Kompas.com",
-        "content": "Kemayoran Athletes Village was officially converted to house COVID-19 patients with mild symptoms. This site claimed to be able to house up to 1800 patients."
+        "content": "Kemayoran Athletes Village has officially converted to house COVID-19 patients with mild symptoms. This site claimed to be able to house up to 1800 patients."
       }
     ]
   },
@@ -82,7 +98,12 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html",
         "name": "The Jakarta Post",
-        "content": "President Joko Widodo refused to impose lockdown on Jakarta.  Bus routes connecting Jakarta and other cities and provinces will remain open following the cancellation of a plan to temporarily suspend operations of AKAP buses."
+        "content": "President Joko Widodo still refuses to impose lockdown on Jakarta.  Bus routes connecting Jakarta and other cities and provinces will remain open following the cancellation of a plan to temporarily suspend operations of AKAP buses."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-republik-indonesia-nomor-hk0107menkes2182020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health issues a regulation to exclude licensing of national import trade system for several health equipments for COVID-19."
       }
     ]
   },
@@ -98,13 +119,109 @@
     ]
   },
   {
+    "date": "2020-04-06",
+    "formatted_date": "6 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/se-menpan-rb-nomor-41-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Ministry of PANRB publishes a circular for all government officials to not traveling and 'mudik', and to always promote social distancing, wearing a mask, not travelling for mudik and healthy lifestyle."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/larangan-mudik-untuk-bumn-dan-keluarga",
+        "name": "covid19.go.id",
+        "content": "Ministry of BUMN publishes a circular for all BUMN employees and their families to not traveling and 'mudik', and to always promote social distancing, wearing a mask, not travelling for mudik and healthy lifestyle."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/petunjuk-teknis-klaim-penggantian-biaya-perawatan-pasien-penyakit-infeksi-emerging-tertentu-bagi-rumah-sakit-yang-menyelenggarakan-pelayanan-coronavirus-disease-2019-covid-19-edisi-maret-2020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health releases a technical guideline regarding how to claim a medical cost replacement for hospitals that provide COVID-19 treatment services."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-07",
+    "formatted_date": "7 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-republik-indonesia-nomor-hk0107menkes2392020-tentang-psbb-di-wilayah-provinsi-dki-jakarta",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health assigns a large-scale social restriction (PSBB) in DKI Jakarta region."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-08",
+    "formatted_date": "8 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/permenkes-no-9-tahun-2020-tentang-pedoman-psbb-dalam-rangka-percepatan-penanganan-covid-19",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health issues a guideline for a large-scale social restriction (PSBB) which include schools and offices, religious activities, public activities, social and cultural activities, and transportations. This guideline also explains about the procedure which should be taken if any regional government wants to impose PSBB in their region."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-09",
+    "formatted_date": "9 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/skb-perubahan-kedua-libur-nasional-dan-cuti-bersama-2020",
+        "name": "covid19.go.id",
+        "content": "To reduce people movements during pandemic, Ministry of Religious Affairs, Ministry of Workforces and Ministry of PANRB together releases a regulation to move mass leaves for Idul Fitri holiday to 28, 29, 30 and 31 December."
+      },
+      {
+        "url": "https://corona.jakarta.go.id/uploads/documents/id/Peraturan%20Gubernur%20Nomor%2033%20Tahun%202020%20tentang%20Pelaksanaan%20PSBB%20Dalam%20Penanganan%20COVID-19%20di%20Provinsi%20DKI%20Jakarta.pdf",
+        "name": "corona.jakarta.go.id",
+        "content": "Governor of DKI Jakarta publishes a complete technical guidelines to implement a large-scale social restriction (PSBB)in the region."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/peraturan-menteri-perhubungan-nomor-pm-18-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Transportation publishes a health procedure to prevent the spreadness of COVID-19 for all kinds of public transportations."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/se-menpan-rb-nomor-46-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Ministry of PANRB releases a new circular No. 46 2020 which revise the previous circular No. 36 2020. The changes include a traveling ban for families of goverment officials and unimportant leaves prohibition."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-perindustrian-republik-indonesia-nomor-7-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Industry releases a procedure for requesting permission for carrying industrial operations out during pandemic."
+      }
+    ]
+  },
+  {
     "date": "2020-04-10",
     "formatted_date": "10 April 2020",
     "sources": [
       {
         "url": "https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup",
         "name": "Kompas.com",
-        "content": "The government of DKI Jakarta imposed large-scale social restrictions, followed by several other regions like Bogor, Depok, Bekasi and Tangerang."
+        "content": "A large-scale social restriction (PSBB) is effectively started in DKI Jakarta, followed by several other regions like Bogor, Depok, Bekasi and Tangerang."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-11",
+    "formatted_date": "11 April 2020",
+    "sources": [
+      {
+        "url": "https://jdih.setkab.go.id/PUUdoc/176084/Keppres_Nomor_11_Tahun_2020.pdf",
+        "name": "jdih.setkab.go.id",
+        "content": "President Joko Widodo declares COVID-19 as a national health emergency."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-12",
+    "formatted_date": "12 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-nomor-hk0-107menkes2492020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health assigns a large-scale social restriction (PSBB) in Kabupaten Tangerang, Kota Tangerang and Kota Tangerang Selatan."
       }
     ]
   },
@@ -115,7 +232,29 @@
       {
         "url": "https://setkab.go.id/presiden-tetapkan-bencana-nonalam-penyebaran-covid-19-sebagai-bencana-nasional/",
         "name": "setkab.go.id",
-        "content": "President Joko Widodo declared COVID-19 as a national disaster after it has infected 4557 people and caused 399 deaths in Indonesia."
+        "content": "President Joko Widodo declares COVID-19 as a national disaster after it has infected 4557 people and caused 399 deaths in Indonesia."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-14",
+    "formatted_date": "14 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-hk0202i3852020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health releases a circular to promote wearing a mask in public and washing hands frequently as suggested by WHO."
+      }
+    ]
+  },
+  {
+    "date": "2020-04-18",
+    "formatted_date": "18 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/peraturan-gubernur-jawa-barat-nomor-30-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Governor of Jawa Barat imposes a large-scale social restriction (PSBB) in Kota Bandung, Kota Cimahi, Kabupaten Bandung, Kabupaten Bandung Barat and Kabupaten Sumedang."
       }
     ]
   },
@@ -126,12 +265,12 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html",
         "name": "The Jakarta Post",
-        "content": "President Joko Widodo announced his decision to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19"
+        "content": "President Joko Widodo announce to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19"
       },
       {
         "url": "https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html",
         "name": "The Jakarta Post",
-        "content": "To help with this effort, several long distance transportations were banned until at least 31 May"
+        "content": "Several long distance transportations such as airplanes, trains and buses are banned until at least 31 May"
       }
     ]
   },
@@ -142,7 +281,7 @@
       {
         "url": "https://jdih.setneg.go.id/viewpdfperaturan/P18867/Perpu%20Nomor%202%20Tahun%202020",
         "name": "jdih.setneg.go.id",
-        "content": "President issued a regulation to postpone 2020 regional elections until December with a potential to prolong the postponement should the national disaster persist."
+        "content": "President issues a regulation to postpone 2020 regional elections until December with a potential to prolong the postponement should the national disaster persist."
       }
     ]
   },
@@ -153,7 +292,7 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html",
         "name": "The Jakarta Post",
-        "content": "Transportation Minister said that it was possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik."
+        "content": "Transportation Minister says that it is possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik."
       }
     ]
   },
@@ -164,7 +303,7 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html",
         "name": "The Jakarta Post",
-        "content": "The government began to tighten its monitoring of the mudik ban as the Idul Fitri holiday on 24-25 May was approaching. Violators would either be stopped or turned back."
+        "content": "The government begins to tighten its monitoring of the mudik ban as the Idul Fitri holiday on 24-25 May is approaching. Violators will either be stopped or turned back."
       }
     ]
   },
