@@ -9,6 +9,11 @@
           </g-link>
           <div class="flex-1 flex justify-end text-right text-sm">
             <g-link
+              class="py-5 text-gray-500 hover:text-gray-400 mr-5"
+              to="/coronavirus-calendar/">
+              COVID-19 in calendar
+            </g-link>
+            <g-link
               class="py-5 text-gray-500 hover:text-gray-400"
               to="/collections/">
               Collections
