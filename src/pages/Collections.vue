@@ -5,7 +5,7 @@
     <h1 class="hidden" aria-hidden="true">
       {{ this.meta.title }}
     </h1>
-    <p class="text-2xl sm:text-3xl leading-tight font-bold mb-5">Collections of <span class="text-blue-500">Data Visualization</span></p>
+    <p class="text-2xl sm:text-3xl leading-tight font-bold mb-5 text-blue-500">Collections of <span class="text-gray-200">Data Visualization</span></p>
     <p class="text-gray-500 mb-8">
       {{ this.description }}
     </p>

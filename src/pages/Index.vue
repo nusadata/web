@@ -8,8 +8,7 @@
         <div class="flex items-center py-10">
           <div
             class="hero flex-1">
-            <p class="text-sm font-semibold uppercase text-gray-600 tracking-wide mb-1">Coming soon</p>
-            <p class="text-4xl leading-tight font-bold mb-5">Indonesia in <span class="text-blue-500">Data Visualization</span></p>
+            <p class="text-4xl leading-tight font-bold text-blue-500 mb-5">Indonesia <span class="text-gray-200">in Data Visualization</span></p>
             <p class="text-gray-500 mb-8">
               Nusadata is a place to see various kinds of interesting data visualization and statistics about Indonesia. We want to help people to easily find information about Indonesia with a fast website and reliable source.
             </p>

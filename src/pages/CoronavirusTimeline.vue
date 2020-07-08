@@ -4,8 +4,8 @@
       <header id="article-header" class="px-5 lg:px-0">
         <div class="flex items-center">
           <g-link class="flex-none text-lg leading-none" to="/">
-            <span class="font-bold text-gray-200">Nusa</span>
-            <span class="font-bold text-blue-500">data</span>
+            <span class="font-bold text-blue-500">Nusa</span>
+            <span class="font-bold text-gray-200">data</span>
           </g-link>
 
           <div class="flex-1 flex justify-end text-right text-sm">

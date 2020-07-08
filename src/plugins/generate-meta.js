@@ -5,7 +5,7 @@ export default {
 }
 
 export function generateMeta(title, description, siteUrl, url) {
-  const image = `${siteUrl}/og-image.png`
+  const image = `${siteUrl}/nusadata-logo-lg.png`
 
   return [
     {
