@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <main role="main">
-      <section class="mt-5 px-5 py-10 max-w-6xl mx-auto">
+      <section class="mt-5 px-5 py-10 max-w-4xl mx-auto">
         <header class="mb-2">
           <h1 class="text-2xl sm:text-3xl font-bold">
             <span class="text-blue-500">Coronavirus</span>
@@ -12,7 +12,7 @@
           {{ description }}
         </p>
       </section>
-      <section class="px-5 max-w-6xl mx-auto overflow-x-auto">
+      <section class="px-5 max-w-6xl mx-auto">
         <CoronavirusTrendInCalendar :daily="$page.allCoronavirus.edges[0].node.daily"/>
       </section>
     </main>

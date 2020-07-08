@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center md:items-start">
+    <div class="flex flex-col md:flex-row items-center md:items-start overflow-x-auto">
       <article v-for="(month, monthName) in monthsEnum"
         :key="monthName"
         class="mb-10 mr-0 md:mr-10"
