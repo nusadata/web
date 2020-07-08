@@ -219,6 +219,13 @@ export default {
         }
       }
 
+      const currentTime = (new Date()).getTime()
+      const selectedTime = (new Date(year, month, date)).getTime()
+
+      if (selectedTime > currentTime) {
+        return Object.assign({}, this.calendarDayStyle, { color: '#4a5568', cursor: 'default' })
+      }
+
       return this.calendarDayStyle
     },
     openEvent({ event, numOfCases }) {

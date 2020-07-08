@@ -24,7 +24,8 @@ export default {
     boxStyle() {
       return {
         width: this.dataObj.width,
-        height: this.dataObj.height
+        height: this.dataObj.height,
+        cursor: this.dataObj.cursor
       }
     },
     bgStyle() {
