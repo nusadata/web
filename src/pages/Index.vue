@@ -16,8 +16,8 @@
             <div class="flex flex-wrap">
               <g-link
                 class="w-full sm:w-auto px-5 py-3 mb-5 sm:mb-0 mr-0 sm:mr-5 text-base md:text-lg text-center text-gray-800 rounded inline-block bg-gray-400 hover:bg-gray-300 font-semibold shadow"
-                to="/coronavirus-timeline/">
-                View coronavirus timeline
+                to="/coronavirus-calendar/">
+                View COVID-19 in calendar
               </g-link>
               <g-link
                 class="w-full sm:w-auto px-5 py-3 mb-5 sm:mb-0 text-base md:text-lg text-center rounded inline-block bg-gray-800 hover:bg-gray-700 font-semibold shadow"
