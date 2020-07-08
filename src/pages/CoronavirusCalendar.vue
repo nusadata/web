@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <main role="main">
-      <section class="mt-5 px-5 py-10 max-w-4xl mx-auto">
+      <section class="mt-5 px-5 lg:px-0 py-10 max-w-4xl mx-auto">
         <header class="mb-2">
           <h1 class="text-2xl sm:text-3xl font-bold">
             <span class="text-blue-500">Coronavirus</span>
