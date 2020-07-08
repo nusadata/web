@@ -2,7 +2,7 @@
   <div>
     <div class="text-center mt-5 mb-16">
       <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
-        Click or tap in date with dots to view events
+        Click or tap on date with dots to view events
       </span>
     </div>
 
@@ -49,7 +49,7 @@
 
     <div class="text-center mt-5 mb-16">
       <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
-        Click or tap in date with dots to view events
+        Click or tap on date with dots to view events
       </span>
     </div>
 
