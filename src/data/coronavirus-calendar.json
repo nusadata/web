@@ -265,12 +265,34 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html",
         "name": "The Jakarta Post",
-        "content": "President Joko Widodo announce to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19"
+        "content": "President Joko Widodo announces to ban Idul Fitri mudik (exodus) starting from 24 April to limit the spread of COVID-19"
       },
       {
         "url": "https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html",
         "name": "The Jakarta Post",
         "content": "Several long distance transportations such as airplanes, trains and buses are banned until at least 31 May"
+      }
+    ]
+  },
+  {
+    "date": "2020-04-24",
+    "formatted_date": "24 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-kesehatan-nomor-hk0201menkes2952020",
+        "name": "covid19.go.id",
+        "content": "Ministry of Health publishes a circular to stress again about the medical cost reimbursement procedures for hospitals that provide COVID-19 treatment services. There are some additional information regarding charging procedure for patient with hereditary disease and patient with complications"
+      }
+    ]
+  },
+  {
+    "date": "2020-04-30",
+    "formatted_date": "30 April 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/peraturan-gubernur-daerah-khusus-ibukota-jakarta-nomor-41-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Government of DKI Jakarta will enforce a penalty for any violation during large-scale social restrictions. Individual can be fined from Rp100.000 up to Rp250.000, and companies can be fined from Rp5.000.000 up to Rp50.000.000 depending on certain classification."
       }
     ]
   },
@@ -293,6 +315,43 @@
         "url": "https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html",
         "name": "The Jakarta Post",
         "content": "Transportation Minister says that it is possible for the government to allow all means of public transportation to start operations on 7 May to accommodate particular individuals while insisting on banning this year’s Idul Fitri mudik."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-4-tahun-2020",
+        "name": "covid.19.go.id",
+        "content": "Special Task Force for COVID-19 releases a circular to describe a traveling ban exception for individuals with certain criterions. The exception include government officers or private companies who provide essential logistic services, emergency patient, returning migrant workers or students from abroad."
+      }
+    ]
+  },
+  {
+    "date": "2020-05-08",
+    "formatted_date": "8 May 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/se-dirjen-perhubungan-laut-nomor-21-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Directorate General of Sea Transportation publishes a circular to operate all means of sea transportations for supporting essential logistic services and traveling for particular individuals as described by Special Task Force for COVID-19 via circular No. 4 2020."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/se-dirjen-perhubungan-darat-nomor-9-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Following to Special Task Force's circular No. 4 2020, Directorate General of Land Transportation publishes a technical guideline to operate land transportations for supporting essential logistic services and traveling for particular individuals"
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/se-dirjen-perkeretaapian-nomor-um006218djka20",
+        "name": "covid19.go.id",
+        "content": "Following to Special Task Force's circular No. 4 2020, Directorate General of Railroad System publishes a technical guideline to operate special train for supporting traveling for particular individuals"
+      }
+    ]
+  },
+  {
+    "date": "2020-05-12",
+    "formatted_date": "12 May 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-panrb-republik-indonesia-nomor-55-tahun-2020-tentang-pembatasan-kegiatan-mudik",
+        "name": "covid19.go.id",
+        "content": "Following to Special Task Force's circular No. 4 2020, Ministry of PANRB releases a circular to allow government officials with certain criterion to travel by following the procedure explained in the letter"
       }
     ]
   },
