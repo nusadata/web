@@ -47,8 +47,8 @@ export default {
   methods: {
     onClick() {
       const { event, numOfCases } = this.dataObj
-      if (!!event && !!numOfCases) {
-        this.$emit('click', { event, numOfCases})
+      if (!!event) {
+        this.$emit('click', { event, numOfCases })
       }
     }
   }
