@@ -4,7 +4,7 @@
       <h2
         id="trend-of-coronavirus-new-cases"
         class="font-semibold text-2xl mx-5 lg:mx-0 my-4">
-        Trend of new cases per day
+        {{ $d[locale].trend_of_new_cases_per_day }}
       </h2>
     </header>
     <div class="overflow-x-auto">
@@ -23,7 +23,11 @@ export default {
     daily: {
       type: Array,
       required: true
-    }
+    },
+    locale: {
+      type: String,
+      default: 'en',
+    },
   },
   mounted() {
     this.render()

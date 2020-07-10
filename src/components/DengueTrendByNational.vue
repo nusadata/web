@@ -5,15 +5,10 @@
         <h2
           id="trend-of-dengue-fever"
           class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4">
-          National trend of {{ legendText }}
+          {{ $d[locale][`national_trend_of_${currentType}`] }}
         </h2>
         <p class="mx-5 lg:mx-0 mb-5 text-gray-500">
-          <template v-if="currentType === 'total_cases'">
-            In 2016, Indonesia saw a record breaking number with a total of more than 200.000 cases. However in the following year, the figure immediately fall into the smallest record in the period.
-          </template>
-          <template v-if="currentType === 'total_deaths'">
-            The total deaths figure has a similar pattern with the total cases trend. The death toll saw the highest record with over 1500 cases which also happened in 2016.
-          </template>
+          {{ descriptions[locale][`national_trend_${currentType}`] }}
         </p>
       </div>
       <div class="mb-5 lg:mb-0 flex-none w-full lg:w-1/3">
@@ -23,7 +18,7 @@
               v-for="type in types"
               :key="`type-${type}`"
               :value="type">
-              {{ type.replace('_', ' ') }}
+              {{ $d[locale][type] }}
             </option>
           </select>
         </div>
@@ -36,6 +31,7 @@
 </template>
 
 <script>
+import descriptions from '~/data/dengue.json'
 import data from '~/data/dengue-national.json'
 import provinces from '~/data/provinces.json'
 
@@ -44,24 +40,18 @@ export default {
     selectorPrefix: {
       type: String,
       default: 'tndv'
-    }
-  },
-  computed: {
-    legendText() {
-      const texts = {
-        total_cases: 'total cases',
-        total_deaths: 'total deaths',
-        incident_rate: 'incident rate',
-        fatality_rate: 'fatality rate (%)',
-      }
-      return texts[this.currentType]
+    },
+    locale: {
+      type: String,
+      default: 'id',
     }
   },
   data() {
     return {
       types: ['total_cases', 'total_deaths'],
+      currentType: 'total_cases',
       provinces,
-      currentType: 'total_cases'
+      descriptions,
     }
   },
   mounted() {

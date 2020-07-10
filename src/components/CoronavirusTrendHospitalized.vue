@@ -4,7 +4,7 @@
       <h2
         id="trend-of-coronavirus-hospitalized"
         class="font-semibold text-2xl mx-5 lg:mx-0 mb-4">
-        Trend of people hospitalized for COVID-19 per day
+        {{ $d[locale].trend_of_people_hospitalized_per_day }}
       </h2>
     </header>
     <div class="overflow-x-auto">
@@ -24,6 +24,10 @@ export default {
       type: Array,
       required: true
     },
+    locale: {
+      type: String,
+      default: 'en'
+    }
   },
   mounted() {
     this.render()

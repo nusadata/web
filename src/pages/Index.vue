@@ -8,20 +8,20 @@
         <div class="flex items-center py-10">
           <div
             class="hero flex-1">
-            <p class="text-4xl leading-tight font-bold text-blue-500 mb-5">Indonesia <span class="text-gray-200">in Data Visualization</span></p>
+            <p class="text-4xl leading-tight font-bold text-blue-500 mb-5">Visualisasi Data <span class="text-gray-200">Indonesia</span></p>
             <p class="text-gray-500 mb-8">
-              Nusadata is a place to see various kinds of interesting data visualization and statistics about Indonesia. We want to help people to easily find information about Indonesia with a fast website and reliable source.
+              {{ description }}
             </p>
             <div class="flex flex-wrap">
               <g-link
                 class="w-full sm:w-auto px-5 py-3 mb-5 sm:mb-0 mr-0 sm:mr-5 text-base md:text-lg text-center text-gray-800 rounded inline-block bg-gray-400 hover:bg-gray-300 font-semibold shadow"
-                to="/coronavirus-calendar/">
-                View COVID-19 in calendar
+                to="/kalender-covid19/">
+                Lihat kalender COVID-19
               </g-link>
               <g-link
                 class="w-full sm:w-auto px-5 py-3 mb-5 sm:mb-0 text-base md:text-lg text-center rounded inline-block bg-gray-800 hover:bg-gray-700 font-semibold shadow"
-                to="/collections/">
-                View collections ->
+                to="/koleksi/">
+                Lihat koleksi ->
               </g-link>
             </div>
           </div>
@@ -35,7 +35,10 @@
 </template>
 
 <script>
+import Layout from '~/layouts/Id.vue'
+
 export default {
+  components: { Layout },
   metaInfo() {
     return this.meta
   },
@@ -45,14 +48,17 @@ export default {
         title: this.title,
         meta: this.$generateMeta(
           this.title,
-          this.$page.metadata.siteDescription,
+          this.description,
           this.$page.metadata.siteUrl,
           this.$page.metadata.siteUrl
         )
       }
     },
+    description() {
+      return this.$page.metadata.siteDescription
+    },
     title() {
-      return 'Nusadata - Indonesia in Data Visualization'
+      return 'Nusadata - Visualisasi Data Indonesia'
     }
   }
 }

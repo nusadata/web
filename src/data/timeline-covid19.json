@@ -1,0 +1,363 @@
+[
+  {
+    "title": "Kasus pertama",
+    "content": "Presiden Joko Widodo mengumumkan dua kasus positif COVID-19 pertama di Indonesia",
+    "date": "3 Maret 2020",
+    "display": {
+      "start": "2020-03-02T00:00:00.000Z",
+      "end": "2020-03-05T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/02/breaking-jokowi-announces-indonesias-first-two-confirmed-covid-19-cases.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-03-02T00:00:00.000Z",
+      "value": 2
+    }
+  },
+  {
+    "title": "Perluasan pembatasan perjalanan luar negeri",
+    "content": "Pembatasan perjalanan luar negeri diperluas dengan memasukkan beberapa kota di Korea Selatan, Itali dan Iran. Pengunjung dari negara-negara ini harus menyediakan sertifikat kesehatan yang valid untuk masuk ke Indonesia.",
+    "date": "8 Maret 2020",
+    "display": {
+      "start": "2020-03-08T00:00:00.000Z",
+      "end": "2020-03-11T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/05/covid-19-indonesia-issues-travel-ban-for-hardest-hit-iran-south-korea-italy.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-03-08T00:00:00.000Z",
+      "value": 14
+    }
+  },
+  {
+    "title": "Fasilitan perawatan",
+    "content": "Pemerintah telah menunjuk 132 fasilitas perawatan COVID-19 di seluruh Indonesia.",
+    "date": "13 Maret 2020",
+    "display": {
+      "start": "2020-03-13T00:00:00.000Z",
+      "end": "2020-03-15T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://infeksiemerging.kemkes.go.id/situasi-infeksi-emerging/info-corona-virus/menteri-kesehatan-tetapkan-132-rumah-sakit-rujukan-covid-19/",
+        "name": "Kementerian Kesehatan"
+      }
+    ],
+    "graph": {
+      "date": "2020-03-13T00:00:00.000Z",
+      "value": 35
+    }
+  },
+  {
+    "title": "Kegiatan mulai dibatasi",
+    "content": "Berdasarkan ajakan Presiden Joko Widodo untuk melakukan jarak sosial, beberapa perusahaan besar di Jakarta mulai melaksanakan kebijakan 'work from home'",
+    "date": "16 Maret 2020",
+    "display": {
+      "start": "2020-03-16T00:00:00.000Z",
+      "end": "2020-03-20T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/15/work-from-home-policy-in-effect-at-major-jakarta-companies-over-virus-concerns.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-03-16T00:00:00.000Z",
+      "value": 18
+    }
+  },
+  {
+    "title": "Wisma Atlet Kemayoran",
+    "content": "Wisma Atlet Kemayoran telah dikonversi untuk menampung pasien COVID-19 dengan gejala ringan. Lokasi ini diklaim dapat menampung sampai 1800 pasien.",
+    "date": "23 Maret 2020",
+    "display": {
+      "start": "2020-03-23T00:00:00.000Z",
+      "end": "2020-03-28T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://nasional.kompas.com/read/2020/03/18/19194761/wisma-atlet-untuk-pasien-covid-19-wapres-ada-1800-tempat-tidur",
+        "name": "Kompas.com"
+      }
+    ],
+    "graph": {
+      "date": "2020-03-23T00:00:00.000Z",
+      "value": 65
+    }
+  },
+  {
+    "title": "Belum lockdown untuk Jakarta",
+    "content": "Presiden Joko Widodo menolak untuk melakukan lockdown di Jakarta. Rute bus yang menghubungkan Jakarta dan kota sekitarnya akan tetap dibuka sesuai dengan pembatalan rencana untuk menghentikan sementara operasional bus AKAP.",
+    "date": "30 Maret 2020",
+    "display": {
+      "start": "2020-03-30T00:00:00.000Z",
+      "end": "2020-04-01T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-03-30T00:00:00.000Z",
+      "value": 129
+    }
+  },
+  {
+    "title": "Pelarangan masuk untuk WNA sementara",
+    "content": "Direktorat Jenderal Keimigrasian di Indonesia untuk sementara waktu melarang masuk warga negara asing ke Indonesia dengan beberapa pengecualian.",
+    "date": "2 April 2020",
+    "display": {
+      "start": "2020-04-02T00:00:00.000Z",
+      "end": "2020-04-05T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.indonesia.travel/gb/en/news/temporary-entry-ban-for-foreign-citizen-entering-the-republic-of-indonesia",
+        "name": "indonesia.travel"
+      }
+    ],
+    "graph": {
+      "date": "2020-04-02T00:00:00.000Z",
+      "value": 114
+    }
+  },
+  {
+    "title": "Pembatasan Sosial Berskala Besar (PSBB)",
+    "content": "PSBB efektif dimulai di DKI Jakarta, diikuti oleh wilayah lain seperti Bogor, Depok, Bekasi dan Tangerang.",
+    "date": "10 April 2020",
+    "display": {
+      "start": "2020-04-10T00:00:00.000Z",
+      "end": "2020-04-12T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup",
+        "name": "Kompas.com"
+      }
+    ],
+    "graph": {
+      "date": "2020-04-10T00:00:00.000Z",
+      "value": 220
+    }
+  },
+  {
+    "title": "COVID-19 adalah bencana nasional",
+    "content": "Presiden Joko Widodo menetapkan COVID-19 sebagai bencana nasional setelah menginfeksi 4557 orang dan menyebabkan kematian sebanyak 399 orang di Indonesia.",
+    "date": "13 April 2020",
+    "display": {
+      "start": "2020-04-13T00:00:00.000Z",
+      "end": "2020-04-18T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://setkab.go.id/presiden-tetapkan-bencana-nonalam-penyebaran-covid-19-sebagai-bencana-nasional/",
+        "name": "setkab.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-04-13T00:00:00.000Z",
+      "value": 316
+    }
+  },
+  {
+    "title": "Mudik Idul Fitri dilarang",
+    "content": "President Joko Widodo mengumumkan pelarangan mudik Idul Fitri mulai dari tanggal 24 April untuk membatasi penyebaran COVID-19",
+    "date": "21 April 2020",
+    "display": {
+      "start": "2020-04-21T00:00:00.000Z",
+      "end": "2020-04-25T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-04-21T00:00:00.000Z",
+      "value": 376
+    }
+  },
+  {
+    "title": "Pemilihan umum daerah ditunda",
+    "content": "Presiden mengeluarkan peraturan untuk menunda pemilihan umum daerah tahun 2020 sampai bulan Desember yang mungkin bisa diperpanjang apabila situasi pandemi tidak kunjung membaik.",
+    "date": "4 Mei 2020",
+    "display": {
+      "start": "2020-05-04T00:00:00.000Z",
+      "end": "2020-05-06T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://jdih.setneg.go.id/viewpdfperaturan/P18867/Perpu%20Nomor%202%20Tahun%202020",
+        "name": "jdih.setneg.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-05-04T00:00:00.000Z",
+      "value": 395
+    }
+  },
+  {
+    "title": "Transportasi umum boleh beroperasi tapi bukan untuk mudik",
+    "content": "Menteri Perhubungan mengatakan bahwa pemerintah dapat mengizinkan segala macam bentuk transportasi umum untuk mulai beroperasi lagi tanggal 7 Mei untuk mengakomodasi individu tertentu dengan tetap menekankan pelarangan mudik Idul Fitri.",
+    "date": "6 Mei 2020",
+    "display": {
+      "start": "2020-05-06T00:00:00.000Z",
+      "end": "2020-05-09T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-05-06T00:00:00.000Z",
+      "value": 368
+    }
+  },
+  {
+    "title": "Pemerintah meningkatkan keamanan pada checkpoint mudik",
+    "content": "Pemerintah mulai meningkatkan monitoring pelarangan mudik sehubungan dengan libur Idul Fitri pada tanggal 24-25 Mei yang semakin mendekat. Pelanggar akan distop di tempat atau diinstruksikan untuk putar balik.",
+    "date": "20 Mei 2020",
+    "display": {
+      "start": "2020-05-20T00:00:00.000Z",
+      "end": "2020-05-23T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-05-20T00:00:00.000Z",
+      "value": 693
+    }
+  },
+  {
+    "title": "Kegiatan keagamaan di tempat umum mulai diperbolehkan",
+    "content": "Menggunakan surat edaran 15/2020, Menteri Agama memperbolehkan tempat-tempat ibadah untuk dibuka kembali apabila sudah dianggap aman oleh ketua gugus tugas COVID-19 setempat dan menerapkan protokol kesehatan yang ketat.",
+    "date": "29 Mei 2020",
+    "display": {
+      "start": "2020-05-29T00:00:00.000Z",
+      "end": "2020-06-01T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://covid19.go.id/storage/app/media/Regulasi/SE%20Menag%20Nomor%2015%202020%20Rumah%20Ibadah.pdf",
+        "name": "covid19.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-05-29T00:00:00.000Z",
+      "value": 678
+    }
+  },
+  {
+    "title": "PSBB mulai dilonggarkan",
+    "content": "Gubernur DKI Jakarta mengeluarkan Pergub No. 51/2020 mengenai implementasi PSBB transisi. Dokumen tersebut mendeskripsikan berbagai macam peraturan yang harus dipatuhi saat periode PSBB transisi seperti memperbolehkan kantor-kantor untuk beroperasi dengan kapasitas maksimum 50% dari kapasitas normal.",
+    "date": "4 Juni 2020",
+    "display": {
+      "start": "2020-06-04T00:00:00.000Z",
+      "end": "2020-06-07T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/protokol/pergub-51-tahun-2020-tentang-pelaksanaan-psbb-transisi",
+        "name": "covid19.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-06-04T00:00:00.000Z",
+      "value": 585
+    }
+  },
+  {
+    "title": "Ojek kembali beroperasi",
+    "content": "Kementerian Perhubungan mengeluarkan Permenhub No. 41/2020 untuk merelaksasikan beberapa pembatasan yang diatur oleh peraturan sebelumnya (Permenhub No. 18/2020). Relaksasi tersebut meliputi perizinan ojek untuk beroperasi kembali dan meningkatkan kapasitas maksimum penumpang menjadi 70% untuk pesawat komersil.",
+    "date": "8 Juni 2020",
+    "display": {
+      "start": "2020-06-08T00:00:00.000Z",
+      "end": "2020-06-11T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://covid19.go.id/storage/app/media/Regulasi/PM%2041%20TAHUN%202020.pdf",
+        "name": "covid19.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-06-08T00:00:00.000Z",
+      "value": 847
+    }
+  },
+  {
+    "title": "Jam kerja disesuaikan untuk periode 'new normal'",
+    "content": "Gugus Tugas Percepatan Penanganan COVID-19 mengeluarkan surat edaran No. 8 2020 untuk mengatur shift kerja untuk perusahaan di wilayah Jabodetabek untuk mengurangi potensi timbulnya kerumunan di transportasi publik saat peak hours.",
+    "date": "14 Juni 2020",
+    "display": {
+      "start": "2020-06-14T00:00:00.000Z",
+      "end": "2020-06-17T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-8-tahun-2020",
+        "name": "covid19.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-06-14T00:00:00.000Z",
+      "value": 857
+    }
+  },
+  {
+    "title": "Protokol kesehatan baru dirilis",
+    "content": "Kementerian Kesehatan merilis protokol kesehatan baru untuk mendukung kegiatan masyarakat di tempat umum dengan tanpa menimbulkan kluster baru selama masa pandemi.",
+    "date": "19 Juni 2020",
+    "display": {
+      "start": "2020-06-19T00:00:00.000Z",
+      "end": "2020-06-27T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-nomor-hk0107menkes3822020",
+        "name": "covid19.go.id"
+      }
+    ],
+    "graph": {
+      "date": "2020-06-19T00:00:00.000Z",
+      "value": 1041
+    }
+  },
+  {
+    "title": "Penyerapan anggaran COVID-19 berjalan terlalu lambat",
+    "content": "Presiden Joko Widodo pada sidang kabinet Minggu, 28 Juni 2020 menyoroti penyerapan anggaran pemerintah untuk COVID-19 yang lama dan beliau mengajak semua menteri untuk bekerja lebih keras lagi. Salah satu sorotan terbesar adalah anggaran COVID-19 untuk Kementerian Kesehatan yang baru dipakai 1.53% dari total anggaran 75 triliun rupiah.",
+    "date": "28 Juni 2020",
+    "display": {
+      "start": "2020-06-28T00:00:00.000Z",
+      "end": "2020-07-20T00:00:00.000Z"
+    },
+    "sources": [
+      {
+        "url": "https://www.thejakartapost.com/news/2020/07/01/administrative-issues-hamper-covid-19-budget-disbursement-sri-mulyani.html",
+        "name": "The Jakarta Post"
+      }
+    ],
+    "graph": {
+      "date": "2020-06-28T00:00:00.000Z",
+      "value": 1198
+    }
+  }
+]

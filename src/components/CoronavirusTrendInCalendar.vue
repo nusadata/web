@@ -2,14 +2,14 @@
   <div>
     <div class="text-center mt-5 mb-16">
       <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
-        Click or tap on date with dots to view events
+        {{ $d[locale].calendar_hint }}
       </span>
     </div>
 
 
     <div class="mb-10 flex flex-col items-center text-sm">
       <div class="mb-1 w-full max-w-sm">
-        <p class="text-center">New cases per day</p>
+        <p class="text-center">{{ $d[locale].new_cases_per_day }}</p>
       </div>
       <div class="w-full max-w-sm flex items-center">
         <div class="flex-none">
@@ -49,7 +49,7 @@
 
     <div class="text-center mt-5 mb-16">
       <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
-        Click or tap on date with dots to view events
+        {{ $d[locale].calendar_hint }}
       </span>
     </div>
 
@@ -87,7 +87,8 @@
 </template>
 
 <script>
-import events from '../data/coronavirus-calendar.json'
+import eventsEn from '../data/coronavirus-calendar.json'
+import eventsId from '../data/kalender-covid19.json'
 import Day from './CoronavirusTrendInCalendarDay.vue'
 import Modal from './Modal.vue'
 
@@ -99,6 +100,10 @@ export default {
     daily: {
       type: Array,
       required: true,
+    },
+    locale: {
+      type: String,
+      default: 'en',
     }
   },
   data() {
@@ -112,16 +117,28 @@ export default {
     };
   },
   computed: {
+    events() {
+      return this.locale === 'en' ? eventsEn : eventsId
+    },
     dayNames() {
-      return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+      return this.$d[this.locale].day_names_short
     },
     monthsEnum() {
+      if (this.locale === 'en') {
+        return {
+          march: 2,
+          april: 3,
+          may: 4,
+          june: 5,
+          july: 6,
+        }
+      }
       return {
-        march: 2,
+        maret: 2,
         april: 3,
-        may: 4,
-        june: 5,
-        july: 6,
+        mei: 4,
+        juni: 5,
+        juli: 6,
       }
     },
     calendarStyle() {
@@ -200,7 +217,7 @@ export default {
 
       if (data) {
         const ratio = this.ratioFn(data.jumlah_positif.value)
-        const selectedEvent = events.find(event => {
+        const selectedEvent = this.events.find(event => {
           const dateObj = new Date(event.date)
           return year === dateObj.getFullYear() &&
             month === dateObj.getMonth() &&

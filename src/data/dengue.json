@@ -1,0 +1,16 @@
+{
+  "en": {
+    "national_trend_total_cases": "In 2016, Indonesia saw a record breaking number with a total of more than 200.000 cases. However in the following year, the figure immediately fall into the smallest record in the period.",
+   "national_trend_total_deaths": "The total deaths figure has a similar pattern with the total cases trend. The death toll saw the highest record with over 1500 cases which also happened in 2016.",
+   "province_trend_total_cases": "The average total cases for most provinces in Java Island are remarkably higher than other regions, which is related to their higher population. In 2016, almost all provinces have a significant surge in total cases compared to the previous and the next year's figure.",
+   "province_trend_total_deaths": "In 2016, most of provinces have a significant surge in total deaths compared to the previous and the next year's figure. Despite having a high average cases, the average deaths number in Jakarta is very low with a max number of 20.",
+   "province_trend_fatality_rate": "The trend pattern of fatality rate for all provinces are extremely diverse. The only worth mentioning is that except Maluku and Papua regions, the trend of fatality rate for most provinces is going downward to the end of 2018."
+  },
+  "id": {
+    "national_trend_total_cases": "Pada tahun 2016 terdapat lebih 200.000 kasus yang merupakan rekor tertinggi selama periode 2011-2018. Namun pada tahun berikutnya, tren kasus menurun jauh dan menjadi rekor terendah selama periode.",
+   "national_trend_total_deaths": "Tren total kematian menunjukkan pola yang mirip dengan tren total kasus. Jumlah kematian mencapai rekor tertinggi dengan lebih dari 1500 kejadian yang juga terjadi di tahun 2016.",
+   "province_trend_total_cases": "Rata-rata total kasus untuk provinsi di pulau Jawa menunjukkan angka yang jauh lebih tinggi dibandingkan daerah yang lain. Pada tahun 2016, hampir semua provinsi di Indonesia mengalami kenaikan yang signifikan pada total kasus dibandingkan dengan tahun sebelum dan setelahnya.",
+   "province_trend_total_deaths": "Pada tahun 2016, hampir semua provinsi mengalami kenaikan yang signifikan pada angka total kematian dibandingkan dengan tahun sebelum dan setelahnya. Meskipun memiliki rata-rata kasus yang tinggi, rata-rata kematian di Jakarta sangat rendah dengan angka maksimum 20.",
+   "province_trend_fatality_rate": "Pola tren laju kematian untuk seluruh provinsi sangat beragam. Satu hal yang layak disebut adalah tren laju kematian untuk hampir semua provinsi mengalami penurunan sampai akhir 2018 kecuali untuk wilayah Maluku dan Papua."
+  }
+}
