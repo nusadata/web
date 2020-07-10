@@ -10,7 +10,7 @@ const pathPrefix = isGithubPages ? '/web' : ''
 
 module.exports = {
   siteName: 'Nusadata',
-  siteDescription: 'Collections of data visualization based on Indonesian statistics',
+  siteDescription: 'Nusadata adalah tempat untuk melihat berbagai macam visualisasi data dan statistik yang menarik tentang Indonesia. Kami ingin membantu masyarakat untuk dapat mengakses informasi mengenai negeri kita ini dengan website yang cepat dan sumber yang kredibel.',
   siteUrl,
   pathPrefix,
   titleTemplate: '%s',

@@ -1,11 +1,11 @@
 <template>
   <section :class="`${selectorPrefix} max-w-4xl mb-24 mx-auto overflow-x-hidden`">
     <header>
-      <p class="text-gray-500 font-semibold mx-5 lg:mx-0 text-sm mb-1 mt-4">Data starts from 7 May 2020</p>
+      <p class="text-gray-500 font-semibold mx-5 lg:mx-0 text-sm mb-1 mt-4">{{ $d[locale].data_starts_from_7_may_2020 }}</p>
       <h2
         id="trend-of-affected-cities"
         class="font-semibold text-2xl mx-5 lg:mx-0 mb-4">
-        Trend of total affected cities
+        {{ $d[locale].trend_of_total_affected_cities }}
       </h2>
     </header>
     <div class="overflow-x-auto">
@@ -22,6 +22,10 @@ export default {
     selectorPrefix: {
       type: String,
       default: 'cac'
+    },
+    locale: {
+      type: String,
+      default: 'en',
     }
   },
   mounted() {
@@ -89,7 +93,7 @@ export default {
         .attr('x', 490)
         .attr('y', 22)
         .style('fill', '#dd6b20')
-        .text('total cities in Indonesia (514)')
+        .text(`${this.$d[this.locale].total_cities_in_indonesia} (514)`)
 
       const mouseG = svg.append('g')
         .attr('class', 'mouse-over-effect')

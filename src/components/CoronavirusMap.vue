@@ -4,7 +4,7 @@
       <h2
         id="map-of-coronavirus"
         class="font-semibold text-2xl mx-5 lg:mx-0 my-4">
-        Map of total cases
+        {{ $d[locale].map_of_total_cases }}
       </h2>
     </header>
     <div class="overflow-x-auto">
@@ -29,6 +29,10 @@ export default {
     provinces: {
       type: Object,
       required: true
+    },
+    locale: {
+      type: String,
+      default: 'en',
     }
   },
   computed: {
@@ -46,7 +50,7 @@ export default {
     },
     legendText() {
       const texts = {
-        total_cases: 'Number of total cases',
+        total_cases: this.$d[this.locale].number_of_total_cases,
       }
       return texts[this.currentType]
     }

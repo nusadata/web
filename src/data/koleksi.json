@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Kalender COVID-19",
+    "description": "Halaman ini menyediakan visualisasi data mengenai aksi pemerintah merespon pandemi COVID-19 dalam bentuk kalender.",
+    "link": "/kalender-covid19/",
+    "new": true
+  },
+  {
+    "name": "Timeline COVID-19",
+    "description": "Halaman ini menyediakan visualisasi timeline mengenai aksi pemerintah merespon pandemi COVID-19. Halaman ini paling baik diakses dari platform desktop.",
+    "link": "/timeline-covid19/",
+    "new": false
+  },
+  {
+    "name": "Dasbor COVID-19",
+    "description": "Halaman ini menyediakan visualisasi data mengenai tren perkembangan kasus positif baru per hari, persebaran penyakit di seluruh provinsi dari hari pertama sampai hari ini dan sebagainya.",
+    "link": "/dasbor-covid19/",
+    "new": false
+  },
+  {
+    "name": "Dengue di Indonesia",
+    "description": "Visualisasi data ini menyediakan wawasan mengenai penyebaran penyakit ini di semua provinsi dan tren perkembangan kasusnya dari tahun ke tahun pada periode 2011-208.",
+    "link": "/dengue-di-indonesia/",
+    "new": false
+  }
+]

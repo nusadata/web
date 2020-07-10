@@ -5,7 +5,7 @@
         <h2
           id="trend-of-coronavirus-by-province"
           class="font-semibold text-2xl mx-5 lg:mx-0 my-4">
-          Trend of new cases by province
+          {{ $d[locale].trend_of_new_cases_by_province }}
         </h2>
       </div>
       <div
@@ -42,6 +42,10 @@ export default {
     provinces: {
       type: Object,
       required: true
+    },
+    locale: {
+      type: String,
+      default: 'en',
     }
   },
   data() {

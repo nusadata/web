@@ -5,7 +5,7 @@
         <h2
           id="map-of-dengue-fever"
           class="font-semibold text-2xl pt-4 mb-4">
-          Map of {{ currentType.replace('_', ' ') }} in {{ currentYear }}
+          {{ $d[locale][`map_of_${currentType}_in`](currentYear) }}
         </h2>
       </div>
       <div
@@ -25,7 +25,7 @@
               v-for="type in types"
               :key="`type-${type}`"
               :value="type">
-              {{ type.replace('_', ' ') }}
+              {{ $d[locale][type] }}
             </option>
           </select>
         </div>
@@ -49,7 +49,11 @@ export default {
     yearRange: {
       type: Array,
       default: () => [],
-    }
+    },
+    locale: {
+      type: String,
+      default: 'en'
+    },
   },
   computed: {
     colorRange() {
@@ -71,11 +75,12 @@ export default {
       return range[this.currentType]
     },
     legendText() {
+      const d = this.$d[this.locale]
       const texts = {
-        total_cases: 'Number of total cases',
-        total_deaths: 'Number of total deaths',
-        incident_rate: 'Number of incident rate',
-        fatality_rate: 'Number of fatality rate (%)'
+        total_cases: d.number_of_total_cases,
+        total_deaths: d.number_of_total_deaths,
+        incident_rate: d.number_of_incident_rate,
+        fatality_rate: d.number_of_fatality_rate,
       }
       return texts[this.currentType]
     }

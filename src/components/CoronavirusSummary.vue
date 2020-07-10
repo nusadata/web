@@ -4,84 +4,84 @@
       <h2
         id="summary-of-coronavirus"
         class="font-semibold text-2xl mx-5 lg:mx-0 my-4">
-        Summary
+        {{ $d[locale].summary }}
       </h2>
     </header>
     <ul class="flex flex-wrap -mx-5 px-5 lg:px-0">
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">Total confirmed cases</p>
+          <p class="mb-2">{{ $d[locale].total_confirmed_cases }}</p>
           <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalCases) }}</p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">New cases</p>
+          <p class="mb-2">{{ $d[locale].new_cases }}</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.newCases) }}</p>
           <p class="text-gray-500">
           <span :class="(summary.percentMarginNewCasesPastDay > 0 ? 'text-red-500' : 'text-green-500')">
             {{ summary.percentMarginNewCasesPastDay > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginNewCasesPastDay) }}%
           </span>
-          from previous day
+          {{ $d[locale].from_previous_day }}
           </p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">Avg cases in one week</p>
+          <p class="mb-2">{{ $d[locale].avg_cases_in_one_week }}</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(Math.ceil(summary.avgCasesOneWeek)) }}</p>
           <p class="text-gray-500">
           <span :class="(summary.percentMarginAvgCasesOneWeek > 0 ? 'text-red-500' : 'text-green-500')">
             {{ summary.percentMarginAvgCasesOneWeek > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginAvgCasesOneWeek) }}%
           </span>
-          from previous week
+          {{ $d[locale].from_previous_week }}
           </p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">Highest new cases</p>
+          <p class="mb-2">{{ $d[locale].highest_new_cases }}</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">
           {{ summary.highestNewCasesInProvince.value }}
           </p>
           <p v-if="summary.highestNewCasesInProvince.province" class="text-gray-500">
-          in {{ provinces[summary.highestNewCasesInProvince.province].name }}
+          {{ $d[locale].in }} {{ provinces[summary.highestNewCasesInProvince.province].name }}
           </p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">Total specimen tested</p>
+          <p class="mb-2">{{ $d[locale].total_specimen_tested }}</p>
           <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalSpecimenTests) }}</p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">Total people tested</p>
+          <p class="mb-2">{{ $d[locale].total_people_tested }}</p>
           <p class="text-4xl text-blue-400 leading-none">{{ $delimiter(summary.totalTests) }}</p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">New people tested</p>
+          <p class="mb-2">{{ $d[locale].new_people_tested }}</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.newTests) }}</p>
           <p class="text-gray-500">
           <span :class="(summary.percentMarginNewTestsPastDay > 0 ? 'text-green-500' : 'text-red-500')">
             {{ summary.percentMarginNewTestsPastDay > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginNewTestsPastDay) }}%
           </span>
-          from previous day
+          {{ $d[locale].from_previous_day }}
           </p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
-          <p class="mb-2">Avg tests in one week</p>
+          <p class="mb-2">{{ $d[locale].avg_tests_in_one_week }}</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(Math.ceil(summary.avgTestsOneWeek)) }}</p>
           <p class="text-gray-500">
           <span :class="(summary.percentMarginAvgTestsOneWeek > 0 ? 'text-green-500' : 'text-red-500')">
             {{ summary.percentMarginAvgTestsOneWeek > 0 ? '+' : '' }}{{ Math.ceil(summary.percentMarginAvgTestsOneWeek) }}%
           </span>
-          from previous week
+          {{ $d[locale].from_previous_week }}
           </p>
         </div>
       </li>
@@ -105,6 +105,10 @@ export default {
     provinces: {
       type: Object,
       required: true
+    },
+    locale: {
+      type: String,
+      default: 'en'
     }
   },
   computed: {
