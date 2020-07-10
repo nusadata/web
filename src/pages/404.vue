@@ -36,7 +36,11 @@ export default {
   computed: {
     meta() {
       return {
-        title: '404 Not Found - Nusadata'
+        title: '404 Not Found - Nusadata',
+        htmlAttrs: {
+          lang: 'en',
+          dir: 'ltr',
+        }
       }
     },
     items() {

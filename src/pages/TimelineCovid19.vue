@@ -104,8 +104,20 @@ export default {
         class: 'font-sans bg-gray-900 text-gray-200'
       },
       htmlAttrs: {
-        class: 'antialiased'
-      }
+        class: 'antialiased',
+        lang: 'id',
+        dir: 'ltr'
+      },
+      link: [
+        {
+          href: this.url, hreflang: 'id', rel: 'alternate'
+        },
+        {
+          href: this.$page.metadata.siteUrl + '/coronavirus-timeline/',
+          hreflang: 'en',
+          rel: 'alternate'
+        }
+      ]
     }
   },
   props: {

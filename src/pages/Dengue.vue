@@ -36,12 +36,27 @@ export default {
     meta() {
       return {
         title: this.title,
+        htmlAttrs: {
+          lang: 'en',
+          dir: 'ltr',
+        },
         meta: this.$generateMeta(
           this.title,
           this.description,
           this.$page.metadata.siteUrl,
           this.url
-        )
+        ),
+        link: [
+          {
+            href: this.url, hreflang: 'en', rel: 'alternate'
+
+          },
+          {
+            href: this.$page.metadata.siteUrl + '/dengue-di-indonesia/',
+            hreflang: 'id',
+            rel: 'alternate'
+          }
+        ]
       }
     },
     title() {

@@ -35,12 +35,27 @@ export default {
     meta() {
       return {
         title: this.title,
+        htmlAttrs: {
+          lang: 'id',
+          dir: 'ltr',
+        },
         meta: this.$generateMeta(
           this.title,
           this.description,
           this.$page.metadata.siteUrl,
           this.url
-        )
+        ),
+        link: [
+          {
+            href: this.url, hreflang: 'id', rel: 'alternate'
+
+          },
+          {
+            href: this.$page.metadata.siteUrl + '/coronavirus-calendar/',
+            hreflang: 'en',
+            rel: 'alternate'
+          }
+        ]
       }
     },
     title() {

@@ -46,6 +46,10 @@ export default {
     meta() {
       return {
         title: this.title,
+        htmlAttrs: {
+          lang: 'id',
+          dir: 'ltr',
+        },
         meta: this.$generateMeta(
           this.title,
           this.description,
