@@ -356,6 +356,17 @@
     ]
   },
   {
+    "date": "2020-05-15",
+    "formatted_date": "15 Mei 2020",
+    "sources": [
+      {
+        "url": "https://nasional.kompas.com/read/2020/03/15/15432101/ini-arahan-lengkap-jokowi-demi-mencegah-meluasnya-corona-di-indonesia?page=all",
+        "name": "Kompas.com",
+        "content": "Pada hari Minggu, 15 Mei 2020 di Istana Bogor, Presiden Joko Widodo menyampaikan arahan terkait dampak perekonomian di Indonesia akibat COVID-19. Beliau menyampaikan bahwa pemerintah telah mengambil langkah-langkah cepat untuk mengantisipasi dampak ekonomi namun dengan tetap menjaga Indonesia dari penyebaran COVID-19. Beliau meminta kepada seluruh rakyat Indonesia untuk tetap tenang, tidak panik dan tetap produktif dengan tetap meningkatkan kewaspadaan terhadap COVID-19."
+      }
+    ]
+  },
+  {
     "date": "2020-05-20",
     "formatted_date": "20 Mei 2020",
     "sources": [
@@ -363,6 +374,44 @@
         "url": "https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html",
         "name": "The Jakarta Post",
         "content": "Pemerintah mulai meningkatkan monitoring pelarangan mudik sehubungan dengan libur Idul Fitri pada tanggal 24-25 Mei yang semakin mendekat. Pelanggar akan distop di tempat atau diinstruksikan untuk putar balik."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-ketenagakerjaan-nomor-m70202v2020",
+        "name": "covid19.go.id",
+        "content": "Menteri Ketenagakerjaan mengeluarkan surat edaran untuk memberikan penjelasan mengenai protokol pencegahan penularan COVID-19 di tempat kerja yang masih diperbolehkan untuk beroperasi selama pandemi."
+      }
+    ]
+  },
+  {
+    "date": "2020-05-25",
+    "formatted_date": "25 Mei 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-5-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Gugus Tugas Percepatan Penanganan COVID-19 mengeluarkan surat edaran No. 5 2020 untuk merevisi surat edaran No. 4 2020. Dalam surat edaran ini terdapat pembetulan persyaratan dokumen untuk melakukan perjalanan selama masa pandemi, salah satunya yaitu menunjukkan surat keterangan uji tes PCR dengan hasil negatif yang berlaku 7 hari, atau surat keterangan uji rapid test dengan hasil non-reaktif yang berlaku 3 hari pada saat keberangkatan."
+      }
+    ]
+  },
+  {
+    "date": "2020-05-27",
+    "formatted_date": "27 Mei 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-6-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Gugus Tugas Percepatan Penanganan COVID-19 mengeluarkan surat edaran No. 6 2020. Surat edaran ini menjelaskan bahwa setelah ditetapkannya status bencana nasional non alam oleh presiden, kepala daerah tidak perlu lagi menetapkan status kedaruratan bencana COVID-19. Status kedaruratan akan berakhir pada saat ditetapkannya Kepres tentang penetapan berakhirnya status bencana nasional."
+      }
+    ]
+  },
+  {
+    "date": "2020-05-28",
+    "formatted_date": "28 Mei 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-perdagangan-nomor-12-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Menteri Perdagangan mengeluarkan surat edaran No. 12 2020 untuk mengatur penyelenggaraan kegiatan perdagangan dalam rangka menjaga ketersediaan dan kelancaran distribusi barang dan jasa, dan menerapkan protokol kesehatan bagi penyelenggara kegiatan perdagangan. Beberapa contoh protokol kesehatan yang harus dilakukan diantaranya menerapkan pengaturan sirkulasi dan jumlah pengunjung maksimal 40% untuk tempat usaha yang tertutup, memastikan semua penyelenggara negatif COVID-19 dengan melakukan tes PCR atau rapid test, melakukan screening suhu tubuh dibawah 37,5 derajat sebelum tempat usaha dibuka, menggunakan masker atau face shield dan menjaga jarak."
       }
     ]
   },
@@ -389,13 +438,39 @@
     ]
   },
   {
+    "date": "2020-06-06",
+    "formatted_date": "6 Juni 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-7-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Gugus Tugas Percepatan Penanganan COVID-19 merilis surat edaran No. 7 2020 untuk menjelaskan kriteria dan persyaratan perjalanan orang dalam masa new normal. Setiap individu yang melakukan perjalanan orang dengan transportasi umum harus dapat menunjukkan surat uji tes PCR dengan hasil negatif yang berlaku 7 hari atau surat keterangan uji rapid test non-reaktif yang berlaku 3 hari pada saat keberangkatan. Surat edaran ini juga sekaligus mencabut surat edaran No. 4 2020 dan No. 5 2020."
+      }
+    ]
+  },
+  {
     "date": "2020-06-08",
     "formatted_date": "8 Juni 2020",
     "sources": [
       {
         "url": "https://covid19.go.id/storage/app/media/Regulasi/PM%2041%20TAHUN%202020.pdf",
         "name": "covid19.go.id",
-        "content": "Kementerian Perhubungan mengeluarkan Permenhub No. 41/2020 untuk merelaksasikan beberapa pembatasan yang diatur oleh peraturan sebelumnya (Permenhub No. 18/2020). Relaksasi tersebut meliputi perizinan ojek untuk beroperasi kembali dan meningkatkan kapasitas maksimum penumpang menjadi 70% untuk pesawat komersil."
+        "content": "Kementerian Perhubungan mengeluarkan Permenhub No. 41 2020 untuk merelaksasikan beberapa pembatasan yang diatur oleh peraturan sebelumnya (Permenhub No. 18/2020). Relaksasi tersebut meliputi perizinan ojek untuk beroperasi kembali dan meningkatkan kapasitas maksimum penumpang menjadi 70% untuk pesawat komersil."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-11-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Kementerian Perhubungan mengeluarkan surat edaran No. 11 2020 untuk memberikan pedoman dan petunjuk teknis penyelenggaraan perjalanan orang dengan transportasi darat. Pedoman dan petunjuk teknis dilakukan melalui 3 tahapan fase, yaitu fase 1 pembatasan bersyarat (9-30 Juni 2020), fase 2 masa pemulihan atau penyebaran terkendali (1-31 Juli 2020), dan fase 3 new normal (1-31 Agustus 2020)."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-12-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Kementerian Perhubungan mengeluarkan surat edaran No. 12 2020 untuk memberikan petunjuk pelaksanaan perjalanan orang dengan transportasi laut dalam masa new normal."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-13-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Kementerian Perhubungan mengeluarkan surat edaran No. 13 2020 untuk menetapkan pengaturan operasional transportasi udara dalam masa new normal. Pengaturan operasional transportasi udara ini berlaku pada daerah yang ditetapkan sebagai wilayah PSBB maupun tidak."
       }
     ]
   },
