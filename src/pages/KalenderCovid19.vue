@@ -62,7 +62,7 @@ export default {
       return 'Kalender COVID-19 - Nusadata'
     },
     description() {
-      return 'Halaman ini menyediakan visualisasi kalender mengenai aksi pemerintah dalam merespon situasi pandemi terhadap tren perkembangan kasus baru COVID-19 per hari secara aktual. Kami telah mengumpulkan banyak peristiwa penting, pengumuman publik, protokol dan regulasi dari berbagai macam media.'
+      return 'Halaman ini menyajikan visualisasi kalender mengenai aksi pemerintah dalam merespon situasi pandemi terhadap tren perkembangan kasus baru COVID-19 per hari secara aktual. Kami telah mengumpulkan banyak peristiwa penting, pengumuman publik, protokol dan regulasi dari berbagai macam media.'
     },
     url() {
       return `${this.$page.metadata.siteUrl}/kalender-covid19/`

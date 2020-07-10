@@ -25,7 +25,7 @@
         <h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
         <p class="font-bold text-2xl sm:text-3xl pt-10 mb-2"><span class="text-blue-500">Timeline</span> COVID-19</p>
         <p class="text-gray-500">
-          Halaman ini menyediakan visualisasi timeline terkait dengan aksi pemerintah merespon pandemik COVID-19 mulai dari kasus pertama sampai hari ini. Kami akan memperbarui halaman ini secara berkala mengikuti perkembangan terakhir dari situasi pandemik di Indonesia. Halaman ini lebih baik diakses dari platform desktop.
+          Halaman ini menyajikan visualisasi timeline terkait dengan aksi pemerintah merespon pandemi COVID-19 mulai dari kasus pertama sampai hari ini. Kami akan memperbarui halaman ini secara berkala mengikuti perkembangan terakhir dari situasi pandemik di Indonesia. Halaman ini lebih baik diakses dari platform desktop.
         </p>
 
         <div class="text-center mt-10">
@@ -142,7 +142,7 @@ export default {
       return 'Timeline COVID-19 di Indonesia - Nusadata'
     },
     description() {
-      return 'Halaman ini menyediakan visualisasi timeline terkait dengan aksi pemerintah merespon pandemik COVID-19. Halaman ini lebih baik diakses dari platform desktop.'
+      return 'Halaman ini menyajikan visualisasi timeline terkait dengan aksi pemerintah merespon pandemi COVID-19. Halaman ini lebih baik diakses dari platform desktop.'
     },
     url() {
       return `${this.$page.metadata.siteUrl}/timeline-covid19/`

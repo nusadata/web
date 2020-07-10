@@ -66,7 +66,7 @@ export default {
       return `Demam Berdarah Dengue in Indonesia ${this.yearRange[this.yearRange.length - 1]}-${this.yearRange[0]} - Nusadata`
     },
     description() {
-      return 'Di Indonesia, demam berdarah dengue masih menjadi isu kesehatan yang penting di seluruh penjuru negeri. Visualisasi data ini menyediakan wawasan mengenai penyebaran penyakit ini di semua provinsi dan tren perkembangan kasusnya dari tahun ke tahun pada periode 2011-208'
+      return 'Di Indonesia, demam berdarah dengue masih menjadi isu kesehatan yang penting di seluruh penjuru negeri. Visualisasi data ini memberikan wawasan mengenai penyebaran penyakit ini di semua provinsi dan tren perkembangan kasusnya dari tahun ke tahun pada periode 2011-208'
     },
     url() {
       return `${this.$page.metadata.siteUrl}/dengue-di-indonesia/`
