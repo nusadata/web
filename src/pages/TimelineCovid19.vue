@@ -29,7 +29,7 @@
         </p>
 
         <div class="text-center mt-10">
-          <span class="bg-gray-800 rounded px-3 py-1 text-xs">
+          <span class="bg-gray-800 rounded px-3 py-1 text-xs inline-block">
             Untuk tampilan mobile, kamu bisa mengunjungi <g-link class="underline" to="/kalender-covid19/">kalender COVID-19</g-link>
           </span>
         </div>

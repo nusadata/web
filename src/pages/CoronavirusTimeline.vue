@@ -27,7 +27,7 @@
         <p class="text-gray-500">This page provides timeline visualization regarding the government actions in response to COVID-19 pandemic starting from the first case to this day. We will update this page regularly following to the latest development of pandemic situation in Indonesia. Best viewed in desktop platform.</p>
 
         <div class="text-center mt-10">
-          <span class="bg-gray-800 rounded px-3 py-1 text-xs">
+          <span class="bg-gray-800 rounded px-3 py-1 text-xs inline-block">
             For best mobile experience, you can visit this <g-link class="underline" to="/coronavirus-calendar/">calendar format</g-link>
           </span>
         </div>

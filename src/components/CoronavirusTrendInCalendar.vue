@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center mt-5 mb-16">
-      <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
+      <span class="bg-gray-800 rounded px-3 py-1 text-xs inline-block max-w-sm mx-auto">
         {{ $d[locale].calendar_hint }}
       </span>
     </div>
@@ -48,7 +48,7 @@
     </div>
 
     <div class="text-center mt-5 mb-16">
-      <span class="bg-gray-800 rounded px-3 py-1 text-xs max-w-sm mx-auto">
+      <span class="bg-gray-800 rounded px-3 py-1 text-xs inline-block max-w-sm mx-auto">
         {{ $d[locale].calendar_hint }}
       </span>
     </div>
@@ -69,7 +69,7 @@
         </header>
         <section class="px-5 py-3">
           <div class="mb-6">
-            <p class="inline-block rounded px-3 py-1 bg-gray-700 text-sm">Number of new cases: {{ event.numOfCases }}</p>
+            <p class="inline-block rounded px-3 py-1 bg-gray-700 text-sm">{{ $d[locale].number_of_new_cases }}: {{ event.numOfCases }}</p>
           </div>
           <ul>
             <li v-for="(source, id) in event.sources" :key="id" class="mb-6">
