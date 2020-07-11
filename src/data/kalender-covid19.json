@@ -471,6 +471,33 @@
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-13-tahun-2020",
         "name": "covid19.go.id",
         "content": "Kementerian Perhubungan mengeluarkan surat edaran No. 13 2020 untuk menetapkan pengaturan operasional transportasi udara dalam masa new normal. Pengaturan operasional transportasi udara ini berlaku pada daerah yang ditetapkan sebagai wilayah PSBB maupun tidak."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-kementerian-pertanian-direktorat-jendral-perternakan-dan-kesehatan-hewan-nomor-0008sepk320062020",
+        "name": "covid19.go.id",
+        "content": "Sehubungan dengan pelaksanaan Hari Raya Idul Adha 1441 H (2020 M), Direktorat Jenderal Peternakan dan Kesehatan Hewan merilis petunjuk pelaksanaan kegiatan kurban dengan mengikuti protokol kesehatan COVID-19. Anak-anak dan warga lanjut usia yang rentan tertular penyakit serta orang dengan penyakit bawaan dihimbau untuk tidak mengikuti shalat Idul Adha."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-11",
+    "formatted_date": "11 Juni 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-pemuda-dan-olahraga-no-6111menporavi2020",
+        "name": "covid19.go.id",
+        "content": "Kementerian Pemuda dan Olahraga merilis protokol kesehatan untuk segala kegiatan yang terkait dengan keolahragaan dan kepemudaan dalam periode new normal."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-12",
+    "formatted_date": "12 Juni 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-agama-nomor-515-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Keputusan Menteri Agama No. 515 2020 menetapkan keringanan uang kuliah tunggal (UKT) bagi mahasiswa perguruan tinggi agama negeri yang perekonomian keluarganya terdampak COVID-19. Keringanan dapat berupa pengurangan UKT, perpanjangan waktu pembayaran UKT atau pembayaran UKT secara diangsur."
       }
     ]
   },
@@ -486,13 +513,45 @@
     ]
   },
   {
+    "date": "2020-06-15",
+    "formatted_date": "15 Juni 2020",
+    "sources": [
+      {
+        "url": "https://www.kemdikbud.go.id/main/blog/2020/06/panduan-penyelenggaraan-pembelajaran-tahun-ajaran-baru-di-masa-pandemi-covid19",
+        "name": "kemendikbud.go.id",
+        "content": "Menteri Pendidikan dan Kebudayaan, Menteri Agama, Menteri Kesehatan dan Menteri Dalam Negeri mengeluarkan panduan penyelenggaraan pembelajaran tahun ajaran 2020/2021. Sekolah yang berada di wilayah zona hijau COVID-19 dapat melakukan kegiatan pembelajaran tatap muka dengan mengikuti prosedur perizinan dan protokol kesehatan. Sekolah dan madrasah berasrama pada zona hijau dilarang membuka asrama dan melakukan kegiatan pembelajaran tatap muka selama 2 bulan pertama sejak tahun ajaran baru dimulai."
+      }
+    ]
+  },
+  {
     "date": "2020-06-19",
     "formatted_date": "19 Juni 2020",
     "sources": [
       {
         "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-nomor-hk0107menkes3822020",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan merilis protokol kesehatan baru untuk mendukung kegiatan masyarakat di tempat umum dengan tanpa menimbulkan kluster baru selama masa pandemi."
+        "content": "Kementerian Kesehatan merilis protokol kesehatan baru untuk mendukung kegiatan masyarakat di tempat umum dengan tanpa menimbulkan kluster baru selama periode new normal."
+      },
+      {
+        "url": "https://setkab.go.id/pemerintah-luncurkan-3-kebijakan-dukung-mahasiswa-dan-sekolah-terdampak-covid-19/",
+        "name": "setkab.go.id",
+        "content": "Kementerian Pendidikan dan Kebudayaan melalui Permendikbud No. 25 2020 mengeluarkan kebijakan untuk mendukung mahasiswa dan satuan pendidikan yang terdampak pandemi COVID-19. Kebijakan tersebut diantaranya memberikan keringanan UKT, memberikan dana bantuan pandemi, dan memberikan bantuan melalui BOS afirmasi dan BOS kinerja."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-26",
+    "formatted_date": "26 Juni 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-9-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Gugus Tugas Percepatan Penanganan COVID-19 mengeluarkan surat edaran No. 9 tahun 2020 untuk merevisi surat edaran No. 7 tahun 2020. Surat edaran ini memperpanjang berlakunya surat keterangan uji tes PCR dari 7 hari menjadi 14 hari, dan surat keterangan uji rapid test dari 3 hari menjadi 14 hari pada saat keberangkatan."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menkes-nomor-hk0201menkes3822020",
+        "name": "covid19.go.id",
+        "content": "Kementerian Kesehatan mengeluarkan protokol pengawasan pelaku perjalanan dalam negeri untuk mencegah dan mengendalikan penyebaran COVID-19 di bandara dan pelabuhan."
       }
     ]
   },
@@ -504,6 +563,39 @@
         "url": "https://www.thejakartapost.com/news/2020/07/01/administrative-issues-hamper-covid-19-budget-disbursement-sri-mulyani.html",
         "name": "The Jakarta Post",
         "content": "Presiden Joko Widodo pada sidang kabinet Minggu, 28 Juni 2020 menyoroti penyerapan anggaran pemerintah untuk COVID-19 yang lama dan beliau mengajak semua menteri untuk bekerja lebih keras lagi. Salah satu sorotan terbesar adalah anggaran COVID-19 untuk Kementerian Kesehatan yang baru dipakai 1.53% dari total anggaran 75 triliun rupiah."
+      }
+    ]
+  },
+  {
+    "date": "2020-06-30",
+    "formatted_date": "30 Juni 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menag-nomor-18-tahun-2020",
+        "name": "covid19.go.id",
+        "content": "Kementerian Agama mengeluarkan surat edaran No. 18 2020 terkait dengan penyelenggaraan shalat Idul Adha dan penyembelihan hewan kurban. Surat edaran ini memperbolehkan pelaksanaan kegiatan shalat Idul Adha dan penyembelihan hewan kurban di semua daerah dengan memperhatikan protokol kesehatan dan berkoordinasi dengan pemerintah daerah setempat, kecuali untuk tempat-tempat yang dianggap belum aman COVID-19 oleh pemerintah daerah setempat."
+      }
+    ]
+  },
+  {
+    "date": "2020-07-06",
+    "formatted_date": "6 Juli 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-menkes-nomor-hk0202i28752020",
+        "name": "covid19.go.id",
+        "content": "Merespon keresahan masyarakat terhadap biaya pemeriksaan rapid test yang bervariasi, Kementerian Kesehatan mengeluarkan surat edaran untuk menentukan batas tarif tertinggi pemeriksaan rapid test sebesar Rp150.000 yang berlaku untuk masyarakat yang melakukan pemeriksaan atas permintaan sendiri."
+      }
+    ]
+  },
+  {
+    "date": "2020-07-09",
+    "formatted_date": "9 Juli 2020",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-keputusan-bersama-nomor-02kb2020-dan-nomor-kb1um0400m-k2020",
+        "name": "covid19.go.id",
+        "content": "Menteri Pendidikan dan Kebudayaan dan Menteri Pariwisata dan Ekonomi Kreatif menerbitkan panduan teknis pencegahan dan pengendalian COVID-19 di bidang kebudayaan dan ekonomi kreatif. Pembukaan kembali museum, bioskop, cagar budaya dan tempat-tempat kebudayaan dan pendidikan lainnya dapat dilakukan dengan mengikuti protokol kesehatan yang ketat seperti menggunakan masker, menjaga jarak dsb."
       }
     ]
   }
