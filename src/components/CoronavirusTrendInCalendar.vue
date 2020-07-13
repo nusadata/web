@@ -34,7 +34,7 @@
           </div>
         </header>
 
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap mb-5">
           <button v-for="day in getFirstDay(2020, month)" :key="day" class="text-sm sm:text-base" :style="calendarDayStyle"/>
           <day
             v-for="date in getDaysInMonth(2020, month)"
@@ -44,6 +44,15 @@
             {{ date }}
           </day>
         </div>
+
+        <aside v-if="highlight[month]">
+          <ul>
+            <li v-for="(caption, date) in highlight[month]" :key="date" class="text-sm text-gray-500">
+              <span class="mr-2 text-blue-500">{{ date }}</span>
+              <span>{{ caption }}</span>
+            </li>
+          </ul>
+        </aside>
       </article>
     </div>
 
@@ -87,8 +96,9 @@
 </template>
 
 <script>
-import eventsEn from '../data/coronavirus-calendar.json'
-import eventsId from '../data/kalender-covid19.json'
+import highlight from '~/data/kalender-covid19-highlight.json'
+import eventsEn from '~/data/coronavirus-calendar.json'
+import eventsId from '~/data/kalender-covid19.json'
 import Day from './CoronavirusTrendInCalendarDay.vue'
 import Modal from './Modal.vue'
 
@@ -175,6 +185,7 @@ export default {
         height: '10px',
       }
     },
+    highlight() { return highlight },
   },
   created() {
     this.bgColorFn = this.$d3.interpolateBlues
@@ -208,12 +219,26 @@ export default {
       return lastDate.getDate()
     },
     getCalendarDayObj(year, month, date) {
+      let style = Object.assign({}, this.calendarDayStyle)
+
       const data = this.daily.find(item => {
         const dateObj = new Date(item.key)
         return year === dateObj.getFullYear() &&
           month === dateObj.getMonth() &&
           date === dateObj.getDate()
       })
+
+      const isHighlight = this.highlight[month] ?
+        Object.keys(this.highlight[month]).find(d => (new Date(d)).setHours(0, 0, 0, 0) === (new Date(year, month, date, 0, 0, 0, 0)).getTime()) :
+        false;
+
+      if (isHighlight) {
+        style = {
+          border: '2px solid #4299e1',
+          ...style,
+        }
+      }
+
 
       if (data) {
         const ratio = this.ratioFn(data.jumlah_positif.value)
@@ -227,12 +252,12 @@ export default {
         const bgColor = data.jumlah_positif.value === 0 ? 'transparent' : this.bgColorFn(ratio)
         const fgColor = data.jumlah_positif.value === 0 ? this.fgColorFn(1) : this.fgColorFn(ratio)
 
-        return {
+        style = {
           backgroundColor: `${bgColor}`,
           color: `${fgColor}`,
           event: selectedEvent,
           numOfCases: data.jumlah_positif.value,
-          ...this.calendarDayStyle,
+          ...style,
         }
       }
 
@@ -240,10 +265,10 @@ export default {
       const selectedTime = (new Date(year, month, date)).getTime()
 
       if (selectedTime > currentTime) {
-        return Object.assign({}, this.calendarDayStyle, { color: '#4a5568', cursor: 'default' })
+        style = Object.assign({}, style, { color: '#4a5568', cursor: 'default' })
       }
 
-      return this.calendarDayStyle
+      return style
     },
     openEvent({ event, numOfCases }) {
       this.event = event

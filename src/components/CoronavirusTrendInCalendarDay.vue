@@ -18,14 +18,15 @@ export default {
     dataObj: {
       type: Object,
       required: true
-    },
+    }
   },
   computed: {
     boxStyle() {
       return {
         width: this.dataObj.width,
         height: this.dataObj.height,
-        cursor: this.dataObj.cursor
+        cursor: this.dataObj.cursor,
+        border: this.dataObj.border,
       }
     },
     bgStyle() {
