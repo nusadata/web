@@ -47,9 +47,9 @@
 
         <aside v-if="highlight[month]">
           <ul>
-            <li v-for="(caption, date) in highlight[month]" :key="date" class="text-sm text-gray-500">
-              <span class="mr-2 text-blue-500">{{ date }}</span>
-              <span>{{ caption }}</span>
+            <li v-for="(item, key) in highlight[month]" :key="key" class="text-sm text-gray-500">
+              <span class="mr-2 text-blue-500">{{ item.date }}</span>
+              <span>{{ item.content }}</span>
             </li>
           </ul>
         </aside>
