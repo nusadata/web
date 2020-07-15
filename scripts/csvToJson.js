@@ -158,18 +158,18 @@ async function generateTestsData() {
     const dailyOnlineLab = +currentRecord.total_online_lab - +pastRecord.total_online_lab
     const dailyOnlineLabPcr = +currentRecord.online_lab_pcr - +pastRecord.online_lab_pcr
     const dailyOnlineLabTcm = +currentRecord.online_lab_tcm - +pastRecord.online_lab_tcm
-    const dailySpecimenTests = +currentRecord.total_specimen_tests - +pastRecord.total_specimen_tests
-    const dailySpecimenTestsPcr = +currentRecord.specimen_tests_pcr - +pastRecord.specimen_tests_pcr
-    const dailySpecimenTestsTcm = +currentRecord.specimen_tests_tcm - +pastRecord.specimen_tests_tcm
-    const dailyPeopleTests = +currentRecord.total_people_tests - +pastRecord.total_people_tests
-    const dailyPeopleTestsPcr = +currentRecord.people_tests_pcr - +pastRecord.people_tests_pcr
-    const dailyPeopleTestsTcm = +currentRecord.people_tests_tcm - +pastRecord.people_tests_tcm
-    const dailyPositiveCases = +currentRecord.positive_cases - +pastRecord.positive_cases
-    const dailyPositiveCasesPcr = +currentRecord.positive_cases_pcr - +pastRecord.positive_cases_pcr
-    const dailyPositiveCasesTcm = +currentRecord.positive_cases_tcm - +pastRecord.positive_cases_tcm
-    const dailyNegativeCases = +currentRecord.negative_cases - +pastRecord.negative_cases
-    const dailyNegativeCasesPcr = +currentRecord.negative_cases_pcr - +pastRecord.negative_cases_pcr
-    const dailyNegativeCasesTcm = +currentRecord.negative_cases_tcm - +pastRecord.negative_cases_tcm
+    const dailySpecimenTests = +currentRecord.specimen_tests_daily
+    const dailySpecimenTestsPcr = +currentRecord.specimen_tests_pcr_daily
+    const dailySpecimenTestsTcm = +currentRecord.specimen_tests_tcm_daily
+    const dailyPeopleTests = +currentRecord.people_tests_daily
+    const dailyPeopleTestsPcr = +currentRecord.people_tests_pcr_daily
+    const dailyPeopleTestsTcm = +currentRecord.people_tests_tcm_daily
+    const dailyPositiveCases = +currentRecord.positive_cases_daily
+    const dailyPositiveCasesPcr = +currentRecord.positive_cases_pcr_daily
+    const dailyPositiveCasesTcm = +currentRecord.positive_cases_tcm_daily
+    const dailyNegativeCases = +currentRecord.negative_cases_daily
+    const dailyNegativeCasesPcr = +currentRecord.negative_cases_pcr_daily
+    const dailyNegativeCasesTcm = +currentRecord.negative_cases_tcm_daily
     const dailyCitiesAffected = +currentRecord.cities - +pastRecord.cities
 
     exported.push({
