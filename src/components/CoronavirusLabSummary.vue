@@ -18,18 +18,12 @@
         <div class="mx-5">
           <p class="mb-2">{{ $d[locale].pcr_labs }}</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.pcrLabs.total) }}</p>
-          <p class="text-gray-500">
-            {{ $delimiter(summary.pcrLabs.offline) }} + {{ $delimiter(summary.pcrLabs.online) }} online
-          </p>
         </div>
       </li>
       <li class="mb-8 w-1/2 md:w-1/3 lg:w-1/4">
         <div class="mx-5">
           <p class="mb-2">{{ $d[locale].tcm_labs }}</p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">{{ $delimiter(summary.tcmLabs.total) }}</p>
-          <p class="text-gray-500">
-            {{ $delimiter(summary.tcmLabs.offline) }} + {{ $delimiter(summary.tcmLabs.online) }} online
-          </p>
         </div>
       </li>
     </ul>
@@ -50,16 +44,12 @@ export default {
     summary() {
       const lastRecord = records[records.length - 1]
       return {
-        totalLabs: lastRecord.lab.pcr + lastRecord.lab.tcm + lastRecord.online_lab.total,
+        totalLabs: lastRecord.online_lab.total,
         pcrLabs: {
           total: lastRecord.lab.pcr + lastRecord.online_lab.pcr,
-          offline: lastRecord.lab.pcr,
-          online: lastRecord.online_lab.pcr
         },
         tcmLabs: {
           total: lastRecord.lab.tcm + lastRecord.online_lab.tcm,
-          offline: lastRecord.lab.tcm,
-          online: lastRecord.online_lab.tcm
         }
       }
     }
