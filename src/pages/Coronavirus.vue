@@ -20,7 +20,6 @@
       <CoronavirusTrendByProvince :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
       <CoronavirusLabSummary />
       <CoronavirusTrendTests />
-      <CoronavirusTrendHospitalized :daily="$page.allCoronavirus.edges[0].node.daily"/>
       <CoronavirusMap :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
       <CoronavirusTrendAffectedCities/>
       <CoronavirusTrend :daily="$page.allCoronavirus.edges[0].node.daily" />
@@ -35,7 +34,6 @@ import CoronavirusLabSummary from '~/components/CoronavirusLabSummary.vue'
 import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
 import CoronavirusTrendAffectedCities from '~/components/CoronavirusTrendAffectedCities.vue'
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
-import CoronavirusTrendHospitalized from '~/components/CoronavirusTrendHospitalized.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
 import CoronavirusTrendTests from '~/components/CoronavirusTrendTests.vue'
 import updateTime from '~/data/coronavirus-update-time.json'
@@ -52,7 +50,6 @@ export default {
     CoronavirusTrendAffectedCities,
     CoronavirusTrendByProvince,
     CoronavirusTrendNewCases,
-    CoronavirusTrendHospitalized,
     CoronavirusTrendTests
   },
   computed: {
