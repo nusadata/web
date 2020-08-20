@@ -38,13 +38,13 @@ export default {
   computed: {
     colorRange() {
       const range = {
-        total_cases: [0, 2000],
+        total_cases: [0, 10000],
       }
       return range[this.currentType]
     },
     stopRange() {
       const range = {
-        total_cases: [0, 200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800],
+        total_cases: [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000],
       }
       return range[this.currentType]
     },
