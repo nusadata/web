@@ -9,15 +9,17 @@ generateNationalTrendOverPeriod()
 generateTestsData()
 
 async function generateDataByProvince() {
-  const content = await fs.readFile(path.resolve(__dirname, '../static/dengue-indonesia-2011-2018.csv'))
+  const content = await fs.readFile(
+    path.resolve(__dirname, '../static/dengue-indonesia-2011-2018.csv')
+  )
   const records = parse(content, {
     columns: true,
-    skip_empty_lines: true
+    skip_empty_lines: true,
   })
 
   let exportedObj = {}
 
-  records.forEach(record => {
+  records.forEach((record) => {
     if (exportedObj[record.slug]) {
       exportedObj[record.slug].push(record)
     } else {
@@ -26,24 +28,29 @@ async function generateDataByProvince() {
   })
 
   await fs.writeFile(
-    path.join(__dirname, '../static/dengue-indonesia-by-province-2011-2018.json'),
+    path.join(
+      __dirname,
+      '../static/dengue-indonesia-by-province-2011-2018.json'
+    ),
     JSON.stringify(exportedObj),
     { encoding: 'utf8' }
   )
 }
 
 async function generateProvinces() {
-  const content = await fs.readFile(path.resolve(__dirname, '../static/dengue-indonesia-2011.csv'))
+  const content = await fs.readFile(
+    path.resolve(__dirname, '../static/dengue-indonesia-2011.csv')
+  )
   const records = parse(content, {
     columns: true,
-    skip_empty_lines: true
+    skip_empty_lines: true,
   })
 
   let exportedObj = {}
 
-  records.forEach(record => {
+  records.forEach((record) => {
     exportedObj[record.slug] = {
-      name: record.province
+      name: record.province,
     }
   })
 
@@ -55,10 +62,12 @@ async function generateProvinces() {
 }
 
 async function generateSummary() {
-  const content = await fs.readFile(path.resolve(__dirname, '../static/dengue-indonesia-2011-2018.csv'))
+  const content = await fs.readFile(
+    path.resolve(__dirname, '../static/dengue-indonesia-2011-2018.csv')
+  )
   const records = parse(content, {
     columns: true,
-    skip_empty_lines: true
+    skip_empty_lines: true,
   })
 
   let totalCases = 0
@@ -71,7 +80,7 @@ async function generateSummary() {
   let provinceWithMaxDeathCases = ''
   let yearWithMaxDeathCases = 2011
 
-  records.forEach(record => {
+  records.forEach((record) => {
     const currentTotalCases = +record.total_cases
     const currentDeathCases = +record.total_deaths
 
@@ -88,7 +97,6 @@ async function generateSummary() {
       provinceWithMaxDeathCases = record.province
       yearWithMaxDeathCases = +record.year
     }
-
   })
 
   const exportedObj = {
@@ -99,7 +107,7 @@ async function generateSummary() {
     year_with_max_total_cases: yearWithMaxTotalCases,
     max_death_cases: maxDeathCases,
     province_with_max_death_cases: provinceWithMaxDeathCases,
-    year_with_max_death_cases: yearWithMaxDeathCases
+    year_with_max_death_cases: yearWithMaxDeathCases,
   }
 
   await fs.writeFile(
@@ -115,10 +123,12 @@ async function generateNationalTrendOverPeriod() {
 
   for (let i = 0; i < yearRange.length; i++) {
     const year = yearRange[i]
-    const content = await fs.readFile(path.resolve(__dirname, `../static/dengue-indonesia-${year}.csv`))
+    const content = await fs.readFile(
+      path.resolve(__dirname, `../static/dengue-indonesia-${year}.csv`)
+    )
     const records = parse(content, {
       columns: true,
-      skip_empty_lines: true
+      skip_empty_lines: true,
     })
     const obj = {
       population: 0,
@@ -126,7 +136,7 @@ async function generateNationalTrendOverPeriod() {
       total_deaths: 0,
       year,
     }
-    records.forEach(record => {
+    records.forEach((record) => {
       obj.population += +record.population
       obj.total_cases += +record.total_cases
       obj.total_deaths += +record.total_deaths
@@ -142,10 +152,12 @@ async function generateNationalTrendOverPeriod() {
 }
 
 async function generateTestsData() {
-  const content = await fs.readFile(path.resolve(__dirname, `../static/coronavirus-tests.csv`))
+  const content = await fs.readFile(
+    path.resolve(__dirname, `../static/coronavirus-tests.csv`)
+  )
   const records = parse(content, {
     columns: true,
-    skip_empty_lines: true
+    skip_empty_lines: true,
   })
   let exported = []
   records.forEach((record, idx) => {
@@ -155,9 +167,12 @@ async function generateTestsData() {
     const pastRecord = records[idx - 1]
     const dailyLabPcr = +currentRecord.lab_pcr - +pastRecord.lab_pcr
     const dailyLabTcm = +currentRecord.lab_tcm - +pastRecord.lab_tcm
-    const dailyOnlineLab = +currentRecord.total_online_lab - +pastRecord.total_online_lab
-    const dailyOnlineLabPcr = +currentRecord.online_lab_pcr - +pastRecord.online_lab_pcr
-    const dailyOnlineLabTcm = +currentRecord.online_lab_tcm - +pastRecord.online_lab_tcm
+    const dailyOnlineLab =
+      +currentRecord.total_online_lab - +pastRecord.total_online_lab
+    const dailyOnlineLabPcr =
+      +currentRecord.online_lab_pcr - +pastRecord.online_lab_pcr
+    const dailyOnlineLabTcm =
+      +currentRecord.online_lab_tcm - +pastRecord.online_lab_tcm
     const dailySpecimenTests = +currentRecord.specimen_tests_daily
     const dailySpecimenTestsPcr = +currentRecord.specimen_tests_pcr_daily
     const dailySpecimenTestsTcm = +currentRecord.specimen_tests_tcm_daily
@@ -179,8 +194,8 @@ async function generateTestsData() {
         tcm: +record.lab_tcm,
         daily: {
           pcr: dailyLabPcr,
-          tcm: dailyLabTcm
-        }
+          tcm: dailyLabTcm,
+        },
       },
       online_lab: {
         total: +record.total_online_lab,
@@ -189,8 +204,8 @@ async function generateTestsData() {
         daily: {
           total: dailyOnlineLab,
           pcr: dailyOnlineLabPcr,
-          tcm: dailyOnlineLabTcm
-        }
+          tcm: dailyOnlineLabTcm,
+        },
       },
       specimen_tests: {
         total: +record.total_specimen_tests,
@@ -199,8 +214,8 @@ async function generateTestsData() {
         daily: {
           total: dailySpecimenTests,
           pcr: dailySpecimenTestsPcr,
-          tcm: dailySpecimenTestsTcm
-        }
+          tcm: dailySpecimenTestsTcm,
+        },
       },
       people_tests: {
         total: +record.total_people_tests,
@@ -209,8 +224,8 @@ async function generateTestsData() {
         daily: {
           total: dailyPeopleTests,
           pcr: dailyPeopleTestsPcr,
-          tcm: dailyPeopleTestsTcm
-        }
+          tcm: dailyPeopleTestsTcm,
+        },
       },
       positive_cases: {
         total: +record.positive_cases,
@@ -220,7 +235,7 @@ async function generateTestsData() {
           total: dailyPositiveCases,
           pcr: dailyPositiveCasesPcr,
           tcm: dailyPositiveCasesTcm,
-        }
+        },
       },
       negative_cases: {
         total: +record.negative_cases,
@@ -229,13 +244,13 @@ async function generateTestsData() {
         daily: {
           total: dailyNegativeCases,
           pcr: dailyNegativeCasesPcr,
-          tcm: dailyNegativeCasesTcm
-        }
+          tcm: dailyNegativeCasesTcm,
+        },
       },
       cities_affected: {
         total: +record.cities,
         daily: dailyCitiesAffected,
-      }
+      },
     })
   })
   await fs.writeFile(
