@@ -17,7 +17,7 @@
         </div>
         <div class="w-full" :style="calendarLegendStyle"/>
         <div class="flex-none text-right">
-          <p class="ml-2">{{ this.maxCases }}</p>
+          <p class="ml-2">{{ $delimiter(maxCases) }}</p>
         </div>
       </div>
     </div>
