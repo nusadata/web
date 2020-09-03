@@ -10,7 +10,7 @@ import generateMetaPlugin from '~/plugins/generate-meta'
 // import font from './font'
 import 'tippy.js/dist/tippy.css'
 
-export default function (Vue, { router, head, isClient }) {
+export default function (Vue, { _router, head, isClient }) {
   Vue.prototype.$devMode = process.env.GRIDSOME_DEV_MODE === 'true'
   Vue.prototype.$isClient = isClient
   Vue.prototype.$d3 = d3
@@ -28,6 +28,7 @@ export default function (Vue, { router, head, isClient }) {
 
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap',
+    href:
+      'https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap',
   })
 }

@@ -3,12 +3,13 @@
     <header>
       <h2
         id="map-of-coronavirus"
-        class="font-semibold text-2xl mx-5 lg:mx-0 my-4">
+        class="font-semibold text-2xl mx-5 lg:mx-0 my-4"
+      >
         {{ $d[locale].map_of_total_cases }}
       </h2>
     </header>
     <div class="overflow-x-auto">
-      <div class="content min-w-2xl"/>
+      <div class="content min-w-2xl" />
     </div>
   </section>
 </template>
@@ -35,6 +36,11 @@ export default {
       default: 'en',
     }
   },
+  data() {
+    return {
+      currentType: 'total_cases'
+    }
+  },
   computed: {
     colorRange() {
       const range = {
@@ -53,11 +59,6 @@ export default {
         total_cases: this.$d[this.locale].number_of_total_cases,
       }
       return texts[this.currentType]
-    }
-  },
-  data() {
-    return {
-      currentType: 'total_cases'
     }
   },
   mounted() {

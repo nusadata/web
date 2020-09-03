@@ -1,35 +1,51 @@
 <template>
   <Layout>
-  <main class="max-w-6xl mx-auto relative">
-  <section class="mt-5 py-10 mx-5">
-    <h1 class="hidden" aria-hidden="true">
-      {{ this.meta.title }}
-    </h1>
-    <p class="text-2xl sm:text-3xl leading-tight font-bold mb-5 text-blue-500">Koleksi <span class="text-gray-200">Visualisasi Data</span></p>
-    <p class="text-gray-500 mb-8">
-      {{ this.description }}
-    </p>
-  </section>
-  <section class="px-5 mb-24">
-    <ul class="flex flex-wrap -mx-5">
-      <li v-for="item in items" class="w-full md:w-1/2 lg:w-1/3 mb-10">
-        <article class="mx-5">
-          <header>
-            <h3 class="text-lg mb-2 inline-block mr-2">
-              <g-link :to="item.link" class="hover:underline hover:text-blue-500">{{ item.name }}</g-link>
-            </h3>
-            <span
-              v-if="item.new"
-              class="font-semibold bg-blue-600 px-2 py-1 text-xs rounded inline-block leading-tight">
-              Baru
-            </span>
-          </header>
-          <p class="text-gray-500">{{ item.description }}</p>
-        </article>
-      </li>
-    </ul>
-  </section>
-  </main>
+    <main class="max-w-6xl mx-auto relative">
+      <section class="mt-5 py-10 mx-5">
+        <h1 class="hidden" aria-hidden="true">
+          {{ meta.title }}
+        </h1>
+        <p
+          class="text-2xl sm:text-3xl leading-tight font-bold mb-5 text-blue-500"
+        >
+          Koleksi <span class="text-gray-200">Visualisasi Data</span>
+        </p>
+        <p class="text-gray-500 mb-8">
+          {{ description }}
+        </p>
+      </section>
+      <section class="px-5 mb-24">
+        <ul class="flex flex-wrap -mx-5">
+          <li
+            v-for="(item, idx) in items"
+            :key="item.name + idx"
+            class="w-full md:w-1/2 lg:w-1/3 mb-10"
+          >
+            <article class="mx-5">
+              <header>
+                <h3 class="text-lg mb-2 inline-block mr-2">
+                  <g-link
+                    :to="item.link"
+                    class="hover:underline hover:text-blue-500"
+                  >
+                    {{ item.name }}
+                  </g-link>
+                </h3>
+                <span
+                  v-if="item.new"
+                  class="font-semibold bg-blue-600 px-2 py-1 text-xs rounded inline-block leading-tight"
+                >
+                  Baru
+                </span>
+              </header>
+              <p class="text-gray-500">
+                {{ item.description }}
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
   </Layout>
 </template>
 
@@ -54,19 +70,20 @@ export default {
           this.title,
           this.description,
           this.$page.metadata.siteUrl,
-          this.url,
+          this.url
         ),
         link: [
           {
-            href: this.url, hreflang: 'id', rel: 'alternate'
-
+            href: this.url,
+            hreflang: 'id',
+            rel: 'alternate',
           },
           {
             href: this.$page.metadata.siteUrl + '/collections/',
             hreflang: 'en',
-            rel: 'alternate'
-          }
-        ]
+            rel: 'alternate',
+          },
+        ],
       }
     },
     title() {
@@ -79,9 +96,9 @@ export default {
       return collections
     },
     url() {
-      return `${this.$page.metadata.siteUrl}/koleksi/`;
-    }
-  }
+      return `${this.$page.metadata.siteUrl}/koleksi/`
+    },
+  },
 }
 </script>
 

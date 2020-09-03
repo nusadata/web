@@ -1,5 +1,8 @@
 <template>
-  <main :class="`${selectorPrefix} relative max-w-4xl h-screen mx-auto py-5`" role="main">
+  <main
+    :class="`${selectorPrefix} relative max-w-4xl h-screen mx-auto py-5`"
+    role="main"
+  >
     <div class="z-0">
       <header id="article-header" class="px-5 lg:px-0">
         <div class="flex items-center">
@@ -11,44 +14,79 @@
           <div class="flex-1 flex justify-end text-right text-xs sm:text-sm">
             <g-link
               class="py-5 text-gray-500 hover:text-gray-400 mr-5"
-              to="/coronavirus-calendar/">
+              to="/coronavirus-calendar/"
+            >
               COVID-19 in calendar
             </g-link>
             <g-link
               class="py-5 text-gray-500 hover:text-gray-400"
-              to="/collections/">
+              to="/collections/"
+            >
               Collections
             </g-link>
           </div>
         </div>
 
-        <h1 class="hidden" aria-hidden="true">{{ meta.title }}</h1>
-        <p class="font-bold text-2xl sm:text-3xl pt-10 mb-2"><span class="text-blue-500">Coronavirus</span> Timeline</p>
-        <p class="text-gray-500">This page provides timeline visualization regarding the government actions in response to COVID-19 pandemic starting from the first case to this day. We will update this page regularly following to the latest development of pandemic situation in Indonesia. Best viewed in desktop platform.</p>
+        <h1 class="hidden" aria-hidden="true">
+          {{ meta.title }}
+        </h1>
+        <p class="font-bold text-2xl sm:text-3xl pt-10 mb-2">
+          <span class="text-blue-500">Coronavirus</span> Timeline
+        </p>
+        <p class="text-gray-500">
+          This page provides timeline visualization regarding the government
+          actions in response to COVID-19 pandemic starting from the first case
+          to this day. We will update this page regularly following to the
+          latest development of pandemic situation in Indonesia. Best viewed in
+          desktop platform.
+        </p>
 
         <div class="text-center mt-10">
           <span class="bg-gray-800 rounded px-3 py-1 text-xs inline-block">
-            For best mobile experience, you can visit this <g-link class="underline" to="/coronavirus-calendar/">calendar format</g-link>
+            For best mobile experience, you can visit this
+            <g-link class="underline" to="/coronavirus-calendar/"
+              >calendar format</g-link
+            >
           </span>
         </div>
 
         <div class="flex flex-col items-center pt-20 pb-10">
           <p class="text-gray-500">Scroll down to navigate</p>
-					<span class="text-gray-500">
-						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-							<line x1="12" y1="5" x2="12" y2="19"></line>
-							<polyline points="19 12 12 19 5 12"></polyline>
-						</svg>
-					</span>
-         </div>
+          <span class="text-gray-500">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="css-i6dzq1"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </span>
+        </div>
       </header>
       <div class="relative viewbox">
         <div class="article-container z-10 px-5 lg:px-0">
           <article class="py-5">
-            <transition name="fade" v-for="(data, idx) in timelineData" :key="idx">
-              <section v-show="currentDate >= new Date(data.display.start).getTime() &&
-                               currentDate < new Date(data.display.end).getTime()">
-                <p class="text-gray-500 font-semibold">{{ data.date }}</p>
+            <transition
+              v-for="(data, idx) in timelineData"
+              :key="idx"
+              name="fade"
+            >
+              <section
+                v-show="
+                  currentDate >= new Date(data.display.start).getTime() &&
+                  currentDate < new Date(data.display.end).getTime()
+                "
+              >
+                <p class="text-gray-500 font-semibold">
+                  {{ data.date }}
+                </p>
                 <h2 class="text-3xl font-bold leading-tight mb-2">
                   {{ data.title }}
                 </h2>
@@ -58,16 +96,30 @@
                 <p class="text-sm text-gray-500">
                   (source:
                   <template v-if="data.sources.length === 1">
-                    <a class="underline" :href="data.sources[0].url" target="__blank" rel="nofollow noreferrer">
+                    <a
+                      class="underline"
+                      :href="data.sources[0].url"
+                      target="__blank"
+                      rel="nofollow noreferrer"
+                    >
                       {{ data.sources[0].name }}
                     </a>
                   </template>
                   <template v-else>
-                    <template v-for="(source, idxSrc) in data.sources">
-                      [{{ idxSrc + 1 }}] <a class="underline" :href="source.url" target="__blank" rel="nofollow noreferrer">
+                    <div
+                      v-for="(source, idxSrc) in data.sources"
+                      :key="idxSrc + source.name"
+                    >
+                      [{{ idxSrc + 1 }}]
+                      <a
+                        class="underline"
+                        :href="source.url"
+                        target="__blank"
+                        rel="nofollow noreferrer"
+                      >
                         {{ source.name }}
                       </a>
-                    </template>
+                    </div>
                   </template>
                   )
                 </p>
@@ -76,9 +128,12 @@
           </article>
         </div>
         <div class="content-container px-5 lg:px-0">
-          <div class="content"/>
+          <div class="content" />
         </div>
-        <div id="article-footer" class="text-lg text-gray-500 px-5 lg:px-0 py-48 text-center absolute bottom-0 left-0 w-full">
+        <div
+          id="article-footer"
+          class="text-lg text-gray-500 px-5 lg:px-0 py-48 text-center absolute bottom-0 left-0 w-full"
+        >
           <p class="mb-5">Wash your hands often</p>
           <p class="mb-5">Always use mask on public</p>
           <p class="mb-5">Keep 1.5m distance from each other</p>
@@ -97,7 +152,7 @@ export default {
     return {
       ...this.meta,
       bodyAttrs: {
-        class: 'font-sans bg-gray-900 text-gray-200'
+        class: 'font-sans bg-gray-900 text-gray-200',
       },
       htmlAttrs: {
         class: 'antialiased',
@@ -106,21 +161,36 @@ export default {
       },
       link: [
         {
-          href: this.url, hreflang: 'id', rel: 'alternate'
-
+          href: this.url,
+          hreflang: 'id',
+          rel: 'alternate',
         },
         {
           href: this.$page.metadata.siteUrl + '/timeline-covid19/',
           hreflang: 'en',
-          rel: 'alternate'
-        }
-      ]
+          rel: 'alternate',
+        },
+      ],
     }
   },
   props: {
     selectorPrefix: {
       type: String,
-      default: 'cts'
+      default: 'cts',
+    },
+  },
+  data() {
+    return {
+      scrollY: 0,
+      currentDate: new Date('2020-03-02T00:00:00.000Z').getTime(),
+      xFn: null,
+      yFn: null,
+      scrollFn: null,
+      timelineData,
+      captionsGraph: timelineData.map(({ graph }) => ({
+        date: graph.date,
+        value: graph.value,
+      })),
     }
   },
   computed: {
@@ -132,7 +202,7 @@ export default {
           this.description,
           this.$page.metadata.siteUrl,
           this.url
-        )
+        ),
       }
     },
     title() {
@@ -143,75 +213,74 @@ export default {
     },
     url() {
       return `${this.$page.metadata.siteUrl}/coronavirus-timeline/`
-    }
-  },
-  data() {
-    return {
-      scrollY: 0,
-      currentDate: new Date('2020-03-02T00:00:00.000Z').getTime(),
-      xFn: null,
-      yFn: null,
-      scrollFn: null,
-      timelineData,
-      captionsGraph: timelineData.map(({ graph }) => ({ date: graph.date, value: graph.value }))
-    }
+    },
   },
   watch: {
     scrollY(scroll) {
       const daily = this.$page.allCoronavirus.edges[0].node.daily
       const xDate = this.xFn.invert(scroll)
-      const bisect = this.$d3.bisector(data => new Date(data.key)).left
+      const bisect = this.$d3.bisector((data) => new Date(data.key)).left
       const idx = bisect(daily, xDate)
       const currentData = daily[idx] ? daily[idx] : daily[daily.length - 1]
       this.currentDate = currentData.key
-      this.$d3.select('.mouse-per-line-confirmed text').text(
-        Math.ceil(this.yFn.invert(this.yFn(currentData.jumlah_positif.value))))
+      this.$d3
+        .select('.mouse-per-line-confirmed text')
+        .text(
+          Math.ceil(this.yFn.invert(this.yFn(currentData.jumlah_positif.value)))
+        )
       this.$d3.select('.mouse-per-line-confirmed circle').style('opacity', '1')
-      this.$d3.select('.mouse-per-line-confirmed').attr('transform', `translate(${this.xFn(new Date(currentData.key))}, ${this.yFn(currentData.jumlah_positif.value)})`)
-    }
+      this.$d3
+        .select('.mouse-per-line-confirmed')
+        .attr(
+          'transform',
+          `translate(${this.xFn(new Date(currentData.key))}, ${this.yFn(
+            currentData.jumlah_positif.value
+          )})`
+        )
+    },
   },
   mounted() {
     this.scrollY = window.scrollY
 
     // Important note: these need to be declare first because we need to display
     // scroll first before getting the correct width
-		const headerRect = document.querySelector('#article-header').getBoundingClientRect()
+    const headerRect = document
+      .querySelector('#article-header')
+      .getBoundingClientRect()
     const scrollLength = 15000
-    let footerRect = document.querySelector('#article-footer').getBoundingClientRect()
+    let footerRect = document
+      .querySelector('#article-footer')
+      .getBoundingClientRect()
     const $viewbox = document.querySelector('.viewbox')
-    this.applyStyle(
-      $viewbox,
-      {
-        height: `${scrollLength + footerRect.height}px`
-      }
-    )
+    this.applyStyle($viewbox, {
+      height: `${scrollLength + footerRect.height}px`,
+    })
 
     const viewboxRect = $viewbox.getBoundingClientRect()
-    const viewboxWidth = $viewbox.offsetWidth - (20 * 2) // 20px == 1.25rem
+    const viewboxWidth = $viewbox.offsetWidth - 20 * 2 // 20px == 1.25rem
     const viewboxHeight = window.innerHeight
 
-    this.scrollFn = this.$d3.scaleLinear().domain([headerRect.bottom, scrollLength]).range([0, viewboxWidth])
+    this.scrollFn = this.$d3
+      .scaleLinear()
+      .domain([headerRect.bottom, scrollLength])
+      .range([0, viewboxWidth])
 
-    this.applyStyle(
-      document.querySelector('.content-container'),
-      {
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        bottom: 'unset',
-      }
-    )
-    this.applyStyle(
-      document.querySelector('.article-container'),
-      {
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        bottom: 'unset',
-      }
-    )
+    this.applyStyle(document.querySelector('.content-container'), {
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      bottom: 'unset',
+    })
+    this.applyStyle(document.querySelector('.article-container'), {
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      bottom: 'unset',
+    })
 
-    footerRect = document.querySelector('#article-footer').getBoundingClientRect()
+    footerRect = document
+      .querySelector('#article-footer')
+      .getBoundingClientRect()
 
     this.scrollListenerFn = () => {
       this.scrollY = this.scrollFn(window.scrollY)
@@ -219,71 +288,59 @@ export default {
       if (window.scrollY >= top) {
         const graph = document.querySelector('.content-container')
         const article = document.querySelector('.article-container')
-        this.applyStyle(
-          graph,
-          {
-            position: 'absolute',
-            bottom: `${footerRect.height}px`,
-            top: 'unset',
-            left: '0'
-          }
-        )
-        this.applyStyle(
-          article,
-          {
-            position: 'absolute',
-            bottom: `${footerRect.height + graph.offsetHeight - article.offsetHeight}px`,
-            top: 'unset',
-            left: '0'
-          }
-        )
+        this.applyStyle(graph, {
+          position: 'absolute',
+          bottom: `${footerRect.height}px`,
+          top: 'unset',
+          left: '0',
+        })
+        this.applyStyle(article, {
+          position: 'absolute',
+          bottom: `${
+            footerRect.height + graph.offsetHeight - article.offsetHeight
+          }px`,
+          top: 'unset',
+          left: '0',
+        })
       } else if (window.scrollY >= headerRect.bottom) {
-        this.applyStyle(
-          document.querySelector('.content-container'),
-          {
-            position: 'fixed',
-            top: '0',
-            bottom: 'unset',
-            left: `${viewboxRect.left}px`
-          }
-        )
-        this.applyStyle(
-          document.querySelector('.article-container'),
-          {
-            position: 'fixed',
-            top: '0',
-            bottom: 'unset',
-            left: `${viewboxRect.left}px`
-          }
-        )
+        this.applyStyle(document.querySelector('.content-container'), {
+          position: 'fixed',
+          top: '0',
+          bottom: 'unset',
+          left: `${viewboxRect.left}px`,
+        })
+        this.applyStyle(document.querySelector('.article-container'), {
+          position: 'fixed',
+          top: '0',
+          bottom: 'unset',
+          left: `${viewboxRect.left}px`,
+        })
       } else {
-        this.applyStyle(
-          document.querySelector('.content-container'),
-          {
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            bottom: 'unset',
-          }
-        )
-        this.applyStyle(
-          document.querySelector('.article-container'),
-          {
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            bottom: 'unset',
-          }
-        )
+        this.applyStyle(document.querySelector('.content-container'), {
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          bottom: 'unset',
+        })
+        this.applyStyle(document.querySelector('.article-container'), {
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          bottom: 'unset',
+        })
       }
     }
 
-    window.addEventListener('scroll', this.scrollListenerFn, {passive: true});
+    window.addEventListener('scroll', this.scrollListenerFn, { passive: true })
 
-    this.render(this.$page.allCoronavirus.edges[0].node.daily, viewboxWidth, viewboxHeight)
+    this.render(
+      this.$page.allCoronavirus.edges[0].node.daily,
+      viewboxWidth,
+      viewboxHeight
+    )
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.scrollListenerFn);
+    window.removeEventListener('scroll', this.scrollListenerFn)
   },
   methods: {
     getSelector(selector) {
@@ -293,7 +350,7 @@ export default {
       return `${this.selectorPrefix}-${selector}`
     },
     applyStyle(el, styleObj) {
-      Object.keys(styleObj).forEach(styleAttr => {
+      Object.keys(styleObj).forEach((styleAttr) => {
         el.style[styleAttr] = styleObj[styleAttr]
       })
     },
@@ -301,95 +358,111 @@ export default {
       const selector = this.getSelector('.content')
       const marginX = 15
       const marginY = 40
-      const width = viewboxWidth - (marginX * 2)
-      const height = viewboxHeight - (marginY * 2)
+      const width = viewboxWidth - marginX * 2
+      const height = viewboxHeight - marginY * 2
 
       // set width for article
-      this.applyStyle(
-        document.querySelector('.article-container'),
-        {
-          width: `${viewboxWidth * 2 / 3}px`
-        }
-      )
+      this.applyStyle(document.querySelector('.article-container'), {
+        width: `${(viewboxWidth * 2) / 3}px`,
+      })
 
-      this.$d3.select(selector)
-        .selectAll('*')
-        .remove()
+      this.$d3.select(selector).selectAll('*').remove()
 
-      const svg = this.$d3.select(selector)
+      const svg = this.$d3
+        .select(selector)
         .append('svg')
         .attr('width', viewboxWidth)
         .attr('height', viewboxHeight)
         .append('g')
         .attr('transform', `translate(${marginX}, ${marginY})`)
 
-      const linearGradientId = this.createLinearGradient(svg, 'linear-gradient', '#2c5282', '#1a202c')
+      const linearGradientId = this.createLinearGradient(
+        svg,
+        'linear-gradient',
+        '#2c5282',
+        '#1a202c'
+      )
 
-      const x = this.$d3.scaleTime()
-        .domain(this.$d3.extent(confirmed, d => new Date(d.key)))
+      const x = this.$d3
+        .scaleTime()
+        .domain(this.$d3.extent(confirmed, (d) => new Date(d.key)))
         .range([0, width])
       this.xFn = x
 
-      const y = this.$d3.scaleLinear()
-        .domain([0, this.$d3.max(confirmed, d => d.jumlah_positif.value)]) // need to be adjustable
+      const y = this.$d3
+        .scaleLinear()
+        .domain([0, this.$d3.max(confirmed, (d) => d.jumlah_positif.value)]) // need to be adjustable
         .range([height, 0])
       this.yFn = y
 
-      svg.append('path')
+      svg
+        .append('path')
         .datum(confirmed)
         .attr('class', 'area')
         .attr('fill', `url(#${linearGradientId})`)
-        .attr('d', this.$d3.area()
-          .x(d => x(new Date(d.key)))
-          .y0(height)
-          .y1(d => y(d.jumlah_positif.value))
-          .curve(this.$d3.curveMonotoneX))
+        .attr(
+          'd',
+          this.$d3
+            .area()
+            .x((d) => x(new Date(d.key)))
+            .y0(height)
+            .y1((d) => y(d.jumlah_positif.value))
+            .curve(this.$d3.curveMonotoneX)
+        )
 
-      svg.append('path')
+      svg
+        .append('path')
         .datum(confirmed)
         .attr('class', 'line')
-        .attr('d', this.$d3.line()
-          .x(d => x(new Date(d.key)))
-          .y(d => y(d.jumlah_positif.value))
-          .curve(this.$d3.curveMonotoneX))
+        .attr(
+          'd',
+          this.$d3
+            .line()
+            .x((d) => x(new Date(d.key)))
+            .y((d) => y(d.jumlah_positif.value))
+            .curve(this.$d3.curveMonotoneX)
+        )
 
-      const mouseG = svg.append('g')
-        .attr('class', 'mouse-over-effect')
+      const mouseG = svg.append('g').attr('class', 'mouse-over-effect')
 
       const mousePerLineConfirmed = mouseG
         .append('g')
         .attr('class', 'mouse-per-line-confirmed')
 
-      mousePerLineConfirmed.append('circle')
+      mousePerLineConfirmed
+        .append('circle')
         .attr('r', 5)
         .attr('class', 'circle')
 
-      mousePerLineConfirmed.append('text')
+      mousePerLineConfirmed
+        .append('text')
         .attr('class', 'text')
         .attr('transform', 'translate(-5,-10)')
 
-      svg.append('g')
+      svg
+        .append('g')
         .attr('transform', `translate(0, ${height})`)
         .style('font', '1rem Manrope')
         .call(this.$d3.axisBottom(x).ticks(5))
 
-      const captionCircles = svg.append('g')
-        .attr('class', 'caption-circles')
+      const captionCircles = svg.append('g').attr('class', 'caption-circles')
       const self = this
-      this.captionsGraph.forEach(caption => {
-        captionCircles.append('circle')
+      this.captionsGraph.forEach((caption) => {
+        captionCircles
+          .append('circle')
           .attr('r', 5)
           .attr('class', 'caption-circle-donut')
           .attr('cx', x(new Date(caption.date)))
           .attr('cy', y(caption.value))
 
-        captionCircles.append('circle')
+        captionCircles
+          .append('circle')
           .attr('r', 8)
           .attr('class', 'caption-circle')
           .attr('data-x', x(new Date(caption.date)))
           .attr('cx', x(new Date(caption.date)))
           .attr('cy', y(caption.value))
-          .on('click', function (d, i) {
+          .on('click', function (_d, _i) {
             const x = +this.getAttribute('data-x')
             const scrollY = self.scrollFn.invert(x).toFixed(2)
             window.scrollTo(0, scrollY)
@@ -404,7 +477,8 @@ export default {
     },
     createLinearGradient(svg, id, firstColor, secondColor) {
       const linearGradientId = this.getId(id)
-      const linearGradient = svg.append('defs')
+      const linearGradient = svg
+        .append('defs')
         .attr('class', 'linear-gradient-wrapper')
         .append('linearGradient')
         .attr('id', linearGradientId)
@@ -413,22 +487,23 @@ export default {
         .attr('y1', '0%')
         .attr('y2', '100%')
 
-      linearGradient.append('stop')
+      linearGradient
+        .append('stop')
         .attr('class', 'start')
         .attr('offset', '0%')
         .attr('stop-color', firstColor)
         .attr('stop-opacity', 1)
 
-      linearGradient.append('stop')
+      linearGradient
+        .append('stop')
         .attr('class', 'end')
         .attr('offset', '100%')
         .attr('stop-color', secondColor)
         .attr('stop-opacity', 1)
 
       return linearGradientId
-    }
-  }
-
+    },
+  },
 }
 </script>
 
@@ -502,8 +577,9 @@ export default {
   fill: #edf2f7;
   stroke: none;
 }
-.cts .fade-enter-active, .fade-leave-active {
-  transition: opacity .15s;
+.cts .fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s;
 }
 .cts .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

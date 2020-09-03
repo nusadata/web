@@ -4,7 +4,8 @@
       <div class="w-full lg:w-2/3">
         <h2
           id="trend-of-dengue-fever"
-          class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4">
+          class="font-semibold text-2xl mx-5 lg:mx-0 pt-4 mb-4"
+        >
           {{ $d[locale][`national_trend_of_${currentType}`] }}
         </h2>
         <p class="mx-5 lg:mx-0 mb-5 text-gray-500">
@@ -13,11 +14,15 @@
       </div>
       <div class="mb-5 lg:mb-0 flex-none w-full lg:w-1/3">
         <div class="mx-5 lg:mx-0 flex items-center justify-start lg:justify-center">
-          <select v-model="currentType" class="text-gray-800">
+          <select
+            v-model="currentType"
+            class="text-gray-800"
+          >
             <option
               v-for="type in types"
               :key="`type-${type}`"
-              :value="type">
+              :value="type"
+            >
               {{ $d[locale][type] }}
             </option>
           </select>
@@ -25,7 +30,7 @@
       </div>
     </header>
     <div class="overflow-x-auto">
-      <div class="content min-w-2xl max-w-3xl"/>
+      <div class="content min-w-2xl max-w-3xl" />
     </div>
   </section>
 </template>
@@ -54,13 +59,13 @@ export default {
       descriptions,
     }
   },
-  mounted() {
-    this.render(this.currentType)
-  },
   watch: {
     currentType(type) {
       this.render(type)
     }
+  },
+  mounted() {
+    this.render(this.currentType)
   },
   methods: {
     getSelector(selector) {

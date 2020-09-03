@@ -13,7 +13,10 @@
         </p>
       </section>
       <section class="px-5 max-w-6xl mx-auto">
-        <CoronavirusTrendInCalendar :daily="$page.allCoronavirus.edges[0].node.daily" locale="id"/>
+        <CoronavirusTrendInCalendar
+          :daily="$page.allCoronavirus.edges[0].node.daily"
+          locale="id"
+        />
       </section>
     </main>
   </Layout>
