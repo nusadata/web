@@ -90,7 +90,7 @@ export default {
         .range([0, 700])
 
       const y = this.$d3.scaleLinear()
-        .domain([0, 700])
+        .domain([0, 1000])
         .range([400, 0])
 
       svg.append('path')
