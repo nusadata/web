@@ -142,6 +142,7 @@ export default {
           june: 5,
           july: 6,
           august: 7,
+          september: 8,
         }
       }
       return {
@@ -151,6 +152,7 @@ export default {
         juni: 5,
         juli: 6,
         agustus: 7,
+        september: 8,
       }
     },
     calendarStyle() {
