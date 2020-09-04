@@ -4,6 +4,10 @@
       "date": "3 Maret",
       "content": "Kasus positif pertama"
     },
+    "2020-03-13": {
+      "date": "13 Maret",
+      "content": "Pembentukan Gugus Tugas Percepatan Penanganan COVID-19"
+    },
     "2020-03-16": {
       "date": "16 Maret",
       "content": "Penutupan kegiatan di tempat umum"
@@ -29,6 +33,12 @@
     "2020-06-04": {
       "date": "4 Juni",
       "content": "PSBB transisi"
+    }
+  },
+  "6": {
+    "2020-07-20": {
+      "date": "7 Juni",
+      "content": "Pembentukan Komite Penanganan COVID-19 dan PEN, dan pemberhentian Gugus Tugas Percepatan Penanganan COVID-19"
     }
   }
 }
