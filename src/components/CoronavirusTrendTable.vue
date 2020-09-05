@@ -5,7 +5,7 @@
       <h2
         id="trend-of-coronavirus-by-province"
         class="font-semibold text-xl sm:text-2xl mx-5 lg:mx-0 mb-8">
-        Perkembangan COVID-19 di tiap provinsi
+        Perkembangan kasus di tiap provinsi
       </h2>
     </header>
     <div class="overflow-x-auto">
