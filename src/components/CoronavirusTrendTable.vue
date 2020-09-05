@@ -10,10 +10,10 @@
     </header>
     <div class="overflow-x-auto">
       <div class="min-w-2xl max-w-4xl px-5 lg:px-0">
-        <table class="w-full">
+        <table class="w-full relative">
           <thead class="text-left">
             <tr>
-              <th class="uppercase font-normal text-sm text-gray-500 p-2">Provinsi</th>
+              <th class="uppercase font-normal text-sm text-gray-500 p-2 left-0 absolute">Provinsi</th>
               <th class="uppercase font-normal text-sm text-gray-500 p-2 w-16">Total kasus</th>
               <th class="uppercase font-normal text-sm text-gray-500 p-2 w-16">Kasus baru</th>
               <th class="uppercase font-normal text-sm text-gray-500 p-2 w-16">Rataan kasus 7 hari</th>
@@ -26,7 +26,7 @@
           </thead>
           <tbody>
             <tr v-for="(province, key, index) in provinces" :key="province.slug" :class="{ 'bg-gray-800': (index % 2) > 0 }">
-              <td class="p-2 text-sm">{{ province.name }}</td>
+              <td class="p-2 text-sm left-0 absolute">{{ province.name }}</td>
               <td class="p-2 text-sm text-right">{{ $delimiter(calculateTotalByProvince(daily, key)) }}</td>
               <td class="p-2 text-sm text-right">{{ $delimiter(latestUpdate.filter(item => item.key === key)[0].cases) }}</td>
               <td class="p-2 text-sm text-right">
