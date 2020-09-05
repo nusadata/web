@@ -4,16 +4,18 @@
       <p class="text-gray-500 font-semibold mx-5 lg:mx-0 text-sm mb-1">Sampai {{ daily[daily.length - 1].date }}</p>
       <h2
         id="trend-of-coronavirus-by-province"
-        class="font-semibold text-xl sm:text-2xl mx-5 lg:mx-0 mb-4">
+        class="font-semibold text-xl sm:text-2xl mx-5 lg:mx-0 mb-8">
         Perkembangan kasus di tiap provinsi
       </h2>
     </header>
-    <div class="overflow-x-auto">
-      <div class="min-w-2xl max-w-4xl px-5 lg:px-0">
-        <table class="w-full relative">
+    <div class="max-w-4xl px-5 lg:px-0">
+      <div class="overflow-x-auto">
+        <table class="relative" style="width: 896px;">
           <thead class="text-left">
             <tr>
-              <th class="uppercase font-normal text-sm text-gray-500 p-2 left-0 absolute">Provinsi</th>
+              <th class="uppercase font-normal text-sm text-gray-500 p-2 w-40 left-0 sticky bg-gray-900 border-shadow" style="height: 100px;">
+                Provinsi
+              </th>
               <th class="uppercase font-normal text-sm text-gray-500 p-2 w-16">Total kasus</th>
               <th class="uppercase font-normal text-sm text-gray-500 p-2 w-16">Kasus baru</th>
               <th class="uppercase font-normal text-sm text-gray-500 p-2 w-16">Rataan kasus 7 hari</th>
@@ -26,7 +28,9 @@
           </thead>
           <tbody>
             <tr v-for="(province, key, index) in provinces" :key="province.slug" :class="{ 'bg-gray-800': (index % 2) > 0 }">
-              <td class="p-2 text-sm left-0 absolute">{{ province.name }}</td>
+              <td class="p-2 text-sm w-40 left-0 sticky border-shadow" style="height: 56px;" :class="((index % 2) > 0 ? 'bg-gray-800' : 'bg-gray-900')">
+                {{ province.name }}
+              </td>
               <td class="p-2 text-sm text-right">{{ $delimiter(calculateTotalByProvince(daily, key)) }}</td>
               <td class="p-2 text-sm text-right">{{ $delimiter(latestUpdate.filter(item => item.key === key)[0].cases) }}</td>
               <td class="p-2 text-sm text-right">
@@ -54,8 +58,8 @@
             </tr>
           </tbody>
         </table>
-        <p class="mt-8 text-sm text-gray-500">* perhitungan menggunakan data populasi penduduk tahun 2018</p>
       </div>
+      <p class="mt-8 text-sm text-gray-500">* perhitungan menggunakan data populasi penduduk tahun 2018</p>
     </div>
   </section>
 </template>
@@ -120,3 +124,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.border-shadow {
+  box-shadow: 2px 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+</style>
