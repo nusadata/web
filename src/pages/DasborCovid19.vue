@@ -30,18 +30,18 @@
         :provinces="provinces"
         locale="id"
       />
-      <CoronavirusLabSummary locale="id" />
-      <CoronavirusTrendTests locale="id" />
+      <CoronavirusTrendTable 
+        :daily="$page.byProvince.edges[0].node.list" 
+        :provinces="provinces" 
+        locale="id"/>
       <CoronavirusMap
         :daily="$page.byProvince.edges[0].node.list"
         :provinces="provinces"
         locale="id"
       />
       <CoronavirusTrendAffectedCities locale="id" />
-      <CoronavirusTrend
-        :daily="$page.allCoronavirus.edges[0].node.daily"
-        locale="id"
-      />
+      <CoronavirusLabSummary locale="id" />
+      <CoronavirusTrendTests locale="id" />
     </main>
   </Layout>
 </template>
@@ -50,10 +50,10 @@
 import CoronavirusMap from '~/components/CoronavirusMap.vue'
 import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
 import CoronavirusLabSummary from '~/components/CoronavirusLabSummary.vue'
-import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
 import CoronavirusTrendAffectedCities from '~/components/CoronavirusTrendAffectedCities.vue'
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
+import CoronavirusTrendTable from '~/components/CoronavirusTrendTable.vue'
 import CoronavirusTrendTests from '~/components/CoronavirusTrendTests.vue'
 import Layout from '~/layouts/Id.vue'
 import updateTime from '~/data/coronavirus-update-time.json'
@@ -66,10 +66,10 @@ export default {
     CoronavirusMap,
     CoronavirusLabSummary,
     CoronavirusSummary,
-    CoronavirusTrend,
     CoronavirusTrendAffectedCities,
     CoronavirusTrendByProvince,
     CoronavirusTrendNewCases,
+    CoronavirusTrendTable,
     CoronavirusTrendTests,
     Layout,
   },
@@ -119,139 +119,173 @@ export default {
 var provinces = {
   "ACEH": {
     slug: "special-region-of-aceh",
-    name: "Aceh"
+    name: "Aceh",
+    population: 5281314,
   },
   "SUMATERA UTARA": {
     slug: "north-sumatera",
-    name: "Sumatera Utara"
+    name: "Sumatera Utara",
+    population: 14415391,
   },
   "SUMATERA BARAT": {
     slug: "west-sumatera",
     name: "Sumatera Barat",
+    population: 5382077,
   },
   "RIAU": {
     slug: "riau",
     name: "Riau",
+    population: 6814909,
   },
   "JAMBI": {
     slug: "jambi",
     name: "Jambi",
+    population: 3570272,
   },
   "SUMATERA SELATAN": {
     slug: "south-sumatera",
     name: "Sumatera Selatan",
+    population: 8370320,
   },
   "BENGKULU": {
     slug: "bengkulu",
     name: "Bengkulu",
+    population: 1963300,
   },
   "LAMPUNG": {
     slug: "lampung",
-    name: "Lampung"
+    name: "Lampung",
+    population: 8370485,
   },
   "KEPULAUAN BANGKA BELITUNG": {
     slug: "bangka-belitung-islands",
     name: "Bangka Belitung",
+    population: 1459873,
   },
   "KEPULAUAN RIAU": {
     slug: "riau-islands",
     name: "Kepulauan Riau",
+    population: 2136521,
   },
 	"DKI JAKARTA": {
     slug: "jakarta-special-capital-region",
     name: "DKI Jakarta",
+    population: 10467629,
   },
 	"JAWA BARAT": {
     slug: "west-java",
     name: "Jawa Barat",
+    population: 48683861,
   },
   "JAWA TENGAH": {
     slug: "central-java",
     name: "Jawa Tengah",
+    population: 34490835,
   },
   "DAERAH ISTIMEWA YOGYAKARTA": {
     slug: "special-region-of-yogyakarta",
-    name: "Yogyakarta"
+    name: "Yogyakarta",
+    population: 3802872,
   },
   "JAWA TIMUR": {
     slug: "east-java",
     name: "Jawa Timur",
+    population: 39500851,
   },
   "BANTEN": {
     slug: "banten",
     name: "Banten",
+    population: 12689736,
   },
 	"BALI": {
     slug: "bali",
     name: "Bali",
+    population: 4292154,
   },
   "NUSA TENGGARA BARAT": {
     slug: "west-nusa-tenggara",
     name: "Nusa Tenggara Barat",
+    population: 5013687,
   },
   "NUSA TENGGARA TIMUR": {
     slug: "east-nusa-tenggara",
     name: "Nusa Tenggara Timur",
+    population: 5371519,
   },
 	"KALIMANTAN BARAT": {
     slug: "west-kalimantan",
     name: "Kalimantan Barat",
+    population: 5001664,
   },
   "KALIMANTAN TENGAH": {
     slug: "central-kalimantan",
     name: "Kalimantan Tengah",
+    population: 2660209,
   },
 	"KALIMANTAN SELATAN": {
     slug: "south-kalimantan",
     name: "Kalimantan Selatan",
+    population: 4182695,
   },
 	"KALIMANTAN TIMUR": {
     slug: "east-kalimantan",
     name: "Kalimantan Timur",
+    population: 3648835,
   },
 	"KALIMANTAN UTARA": {
     slug: "north-kalimantan",
     name: "Kalimantan Utara",
+    population: 716407,
   },
   "SULAWESI UTARA": {
     slug: "north-sulawesi",
     name: "Sulawesi Utara",
+    population: 2484392,
   },
   "GORONTALO": {
     slug: "gorontalo",
     name: "Gorontalo",
+    population: 1185492,
   },
   "SULAWESI BARAT": {
     slug: "west-sulawesi",
     name: "Sulawesi Barat",
+    population: 1355554,
   },
   "SULAWESI TENGAH": {
     slug: "central-sulawesi",
     name: "Sulawesi Tengah",
+    population: 3010443,
   },
   "SULAWESI TENGGARA": {
     slug: "southeast-sulawesi",
     name: "Sulawesi Tenggara",
+    population: 2895213,
   },
   "SULAWESI SELATAN": {
     slug: "south-sulawesi",
     name: "Sulawesi Selatan",
+    population: 8771970,
   },
 	"MALUKU": {
     slug: "maluku",
     name: "Maluku",
+    population: 1773776,
   },
 	"MALUKU UTARA": {
     slug: "north-maluku",
     name: "Maluku Utara",
+    population: 1232632,
   },
 	"PAPUA": {
     slug: "special-region-of-papua",
     name: "Papua",
+    population: 3322526,
   },
 	"PAPUA BARAT": {
     slug: "special-region-of-west-papua",
     name: "Papua Barat",
+    population: 937458,
   },
 }
 
