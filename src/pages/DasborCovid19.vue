@@ -15,14 +15,33 @@
       <aside class="text-gray-500 text-sm max-w-4xl mx-auto px-5 lg:px-0 mb-8">
         <p>Data terakhir diperbarui <time :datetime="updateTime.id">{{ updateTime.id }}</time></p>
       </aside>
-      <CoronavirusSummary :daily="$page.allCoronavirus.edges[0].node.daily" :province-daily="$page.byProvince.edges[0].node.list" :provinces="provinces" locale="id"/>
-      <CoronavirusTrendNewCases :daily="$page.allCoronavirus.edges[0].node.daily" locale="id"/>
-      <CoronavirusTrendByProvince :daily="$page.byProvince.edges[0].node.list" :provinces="provinces" locale="id"/>
-      <CoronavirusTrendTable :daily="$page.byProvince.edges[0].node.list" :provinces="provinces" locale="id"/>
-      <CoronavirusMap :daily="$page.byProvince.edges[0].node.list" :provinces="provinces" locale="id"/>
-      <CoronavirusTrendAffectedCities locale="id"/>
-      <CoronavirusLabSummary locale="id"/>
-      <CoronavirusTrendTests locale="id"/>
+      <CoronavirusSummary
+        :daily="$page.allCoronavirus.edges[0].node.daily"
+        :province-daily="$page.byProvince.edges[0].node.list"
+        :provinces="provinces"
+        locale="id"
+      />
+      <CoronavirusTrendNewCases
+        :daily="$page.allCoronavirus.edges[0].node.daily"
+        locale="id"
+      />
+      <CoronavirusTrendByProvince
+        :daily="$page.byProvince.edges[0].node.list"
+        :provinces="provinces"
+        locale="id"
+      />
+      <CoronavirusTrendTable 
+        :daily="$page.byProvince.edges[0].node.list" 
+        :provinces="provinces" 
+        locale="id"/>
+      <CoronavirusMap
+        :daily="$page.byProvince.edges[0].node.list"
+        :provinces="provinces"
+        locale="id"
+      />
+      <CoronavirusTrendAffectedCities locale="id" />
+      <CoronavirusLabSummary locale="id" />
+      <CoronavirusTrendTests locale="id" />
     </main>
   </Layout>
 </template>

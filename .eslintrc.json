@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "parser": "babel-eslint"
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "prettier",
+    "prettier/vue"
+  ],
+  "rules": {
+    "no-unused-vars": [
+      1,
+      {
+        "argsIgnorePattern": "^_|^next$"
+      }
+    ]
+  }
+}

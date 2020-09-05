@@ -1,8 +1,14 @@
 <template>
-  <div class="overlay" :style="overlayStyles.root">
-    <div class="overlay__content" :style="overlayStyles.content">
+  <div
+    class="overlay"
+    :style="overlayStyles.root"
+  >
+    <div
+      class="overlay__content"
+      :style="overlayStyles.content"
+    >
       <div class="bg-gray-800 shadow rounded">
-        <slot/>
+        <slot />
       </div>
     </div>
   </div>

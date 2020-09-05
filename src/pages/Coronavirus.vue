@@ -15,13 +15,23 @@
       <aside class="text-gray-500 text-sm max-w-4xl mx-auto px-5 lg:px-0 mb-8">
         <p>Data is updated at <time :datetime="updateTime.en">{{ updateTime.en }}</time></p>
       </aside>
-      <CoronavirusSummary :daily="$page.allCoronavirus.edges[0].node.daily" :province-daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
+      <CoronavirusSummary
+        :daily="$page.allCoronavirus.edges[0].node.daily"
+        :province-daily="$page.byProvince.edges[0].node.list"
+        :provinces="provinces"
+      />
       <CoronavirusTrendNewCases :daily="$page.allCoronavirus.edges[0].node.daily" />
-      <CoronavirusTrendByProvince :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
+      <CoronavirusTrendByProvince
+        :daily="$page.byProvince.edges[0].node.list"
+        :provinces="provinces"
+      />
       <CoronavirusLabSummary />
       <CoronavirusTrendTests />
-      <CoronavirusMap :daily="$page.byProvince.edges[0].node.list" :provinces="provinces"/>
-      <CoronavirusTrendAffectedCities/>
+      <CoronavirusMap
+        :daily="$page.byProvince.edges[0].node.list"
+        :provinces="provinces"
+      />
+      <CoronavirusTrendAffectedCities />
       <CoronavirusTrend :daily="$page.allCoronavirus.edges[0].node.daily" />
     </main>
   </Layout>
