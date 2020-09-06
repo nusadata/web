@@ -102,7 +102,7 @@ export default {
         .domain(this.$d3.extent(confirmed, (d) => new Date(d.date)))
         .range([0, 700])
 
-      const y = this.$d3.scaleLinear().domain([0, 700]).range([400, 0])
+      const y = this.$d3.scaleLinear().domain([0, 1400]).range([400, 0])
 
       svg
         .append('path')
