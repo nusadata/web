@@ -38,6 +38,7 @@
 
 <script>
 import { followCursor } from 'tippy.js'
+import {delimiter} from '~/plugins/delimiter'
 
 export default {
   props: {
@@ -148,7 +149,7 @@ export default {
           'data-tooltip',
           (d) =>
             `${data.get(d.properties.slug).name} ${
-              data.get(d.properties.slug).value
+              delimiter(data.get(d.properties.slug).value)
             }`
         )
         .attr('stroke', strokeColor)

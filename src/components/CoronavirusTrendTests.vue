@@ -21,6 +21,7 @@
 
 <script>
 import records from '~/data/coronavirus-tests.json'
+import {delimiter} from '~/plugins/delimiter'
 
 export default {
   props: {
@@ -259,9 +260,9 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  Math.ceil(
+                  delimiter(Math.ceil(
                     y.invert(y(confirmed[idx].people_tests.daily.total))
-                  )
+                  ))
                 )
 
               return `translate(${x(
@@ -281,9 +282,9 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  Math.ceil(
+                  delimiter(Math.ceil(
                     y.invert(y(confirmed[idx].negative_cases.daily.total))
-                  )
+                  ))
                 )
 
               return `translate(${x(
@@ -303,9 +304,9 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  Math.ceil(
+                  delimiter(Math.ceil(
                     y.invert(y(confirmed[idx].positive_cases.daily.total))
-                  )
+                  ))
                 )
 
               return `translate(${x(
