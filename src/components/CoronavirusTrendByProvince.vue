@@ -37,6 +37,8 @@
 </template>
 
 <script>
+import {delimiter} from '~/plugins/delimiter'
+
 export default {
   props: {
     selectorPrefix: {
@@ -183,7 +185,7 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  Math.ceil(
+                  delimiter(Math.ceil(
                     y.invert(
                       y(
                         confirmed[idx].data.filter(
@@ -191,7 +193,7 @@ export default {
                         )[0].cases
                       )
                     )
-                  )
+                  ))
                 )
 
               return `translate(${x(

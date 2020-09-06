@@ -26,7 +26,7 @@
         />
         <div class="flex-none text-right">
           <p class="ml-2">
-            {{ maxCases }}
+            {{ $delimiter(maxCases) }}
           </p>
         </div>
       </div>
