@@ -25,7 +25,6 @@
         :daily="$page.byProvince.edges[0].node.list"
         :provinces="provinces"
       />
-      <CoronavirusLabSummary />
       <CoronavirusTrendTests />
       <CoronavirusMap
         :daily="$page.byProvince.edges[0].node.list"
@@ -40,7 +39,6 @@
 <script>
 import CoronavirusMap from '~/components/CoronavirusMap.vue'
 import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
-import CoronavirusLabSummary from '~/components/CoronavirusLabSummary.vue'
 import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
 import CoronavirusTrendAffectedCities from '~/components/CoronavirusTrendAffectedCities.vue'
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
@@ -54,7 +52,6 @@ export default {
   },
   components: {
     CoronavirusMap,
-    CoronavirusLabSummary,
     CoronavirusSummary,
     CoronavirusTrend,
     CoronavirusTrendAffectedCities,
