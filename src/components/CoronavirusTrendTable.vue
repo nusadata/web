@@ -68,6 +68,9 @@
 import CoronavirusTrendRollingAvg from './CoronavirusTrendRollingAvg.vue';
 
 export default {
+  components: {
+    CoronavirusTrendRollingAvg,
+  },
   props: {
     selectorPrefix: {
       type: String,
@@ -85,9 +88,6 @@ export default {
       type: String,
       default: 'en',
     }
-  },
-  components: {
-    CoronavirusTrendRollingAvg,
   },
   computed: {
     latestUpdate() {
