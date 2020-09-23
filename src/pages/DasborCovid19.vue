@@ -12,9 +12,6 @@
           {{ description }}
         </p>
       </section>
-      <aside class="text-gray-500 text-sm max-w-4xl mx-auto px-5 lg:px-0 mb-8">
-        <p>Data terakhir diperbarui <time :datetime="updateTime.id">{{ updateTime.id }}</time></p>
-      </aside>
       <CoronavirusSummary
         :daily="$page.allCoronavirus.edges[0].node.daily"
         :province-daily="$page.byProvince.edges[0].node.list"
@@ -54,7 +51,6 @@ import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
 import CoronavirusTrendTable from '~/components/CoronavirusTrendTable.vue'
 import CoronavirusTrendTests from '~/components/CoronavirusTrendTests.vue'
 import Layout from '~/layouts/Id.vue'
-import updateTime from '~/data/coronavirus-update-time.json'
 
 export default {
   metaInfo() {
@@ -109,7 +105,6 @@ export default {
     url() {
       return `${this.$page.metadata.siteUrl}/dasbor-covid19/`
     },
-    updateTime: () => updateTime,
   }
 }
 

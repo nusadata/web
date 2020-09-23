@@ -12,9 +12,6 @@
           {{ description }}
         </p>
       </section>
-      <aside class="text-gray-500 text-sm max-w-4xl mx-auto px-5 lg:px-0 mb-8">
-        <p>Data is updated at <time :datetime="updateTime.en">{{ updateTime.en }}</time></p>
-      </aside>
       <CoronavirusSummary
         :daily="$page.allCoronavirus.edges[0].node.daily"
         :province-daily="$page.byProvince.edges[0].node.list"
@@ -44,7 +41,6 @@ import CoronavirusTrendAffectedCities from '~/components/CoronavirusTrendAffecte
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
 import CoronavirusTrendTests from '~/components/CoronavirusTrendTests.vue'
-import updateTime from '~/data/coronavirus-update-time.json'
 
 export default {
   metaInfo() {
@@ -98,7 +94,6 @@ export default {
     url() {
       return `${this.$page.metadata.siteUrl}/coronavirus/`
     },
-    updateTime: () => updateTime,
   }
 }
 
