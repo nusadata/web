@@ -36,8 +36,6 @@
         :provinces="provinces"
         locale="id"
       />
-      <CoronavirusTrendAffectedCities locale="id" />
-      <CoronavirusTrendTests locale="id" />
     </main>
   </Layout>
 </template>
@@ -45,11 +43,9 @@
 <script>
 import CoronavirusMap from '~/components/CoronavirusMap.vue'
 import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
-import CoronavirusTrendAffectedCities from '~/components/CoronavirusTrendAffectedCities.vue'
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
 import CoronavirusTrendTable from '~/components/CoronavirusTrendTable.vue'
-import CoronavirusTrendTests from '~/components/CoronavirusTrendTests.vue'
 import Layout from '~/layouts/Id.vue'
 
 export default {
@@ -59,11 +55,9 @@ export default {
   components: {
     CoronavirusMap,
     CoronavirusSummary,
-    CoronavirusTrendAffectedCities,
     CoronavirusTrendByProvince,
     CoronavirusTrendNewCases,
     CoronavirusTrendTable,
-    CoronavirusTrendTests,
     Layout,
   },
   computed: {

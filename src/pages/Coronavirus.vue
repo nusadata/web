@@ -22,12 +22,10 @@
         :daily="$page.byProvince.edges[0].node.list"
         :provinces="provinces"
       />
-      <CoronavirusTrendTests />
       <CoronavirusMap
         :daily="$page.byProvince.edges[0].node.list"
         :provinces="provinces"
       />
-      <CoronavirusTrendAffectedCities />
       <CoronavirusTrend :daily="$page.allCoronavirus.edges[0].node.daily" />
     </main>
   </Layout>
@@ -37,10 +35,8 @@
 import CoronavirusMap from '~/components/CoronavirusMap.vue'
 import CoronavirusSummary from '~/components/CoronavirusSummary.vue'
 import CoronavirusTrend from '~/components/CoronavirusTrend.vue'
-import CoronavirusTrendAffectedCities from '~/components/CoronavirusTrendAffectedCities.vue'
 import CoronavirusTrendByProvince from '~/components/CoronavirusTrendByProvince.vue'
 import CoronavirusTrendNewCases from '~/components/CoronavirusTrendNewCases.vue'
-import CoronavirusTrendTests from '~/components/CoronavirusTrendTests.vue'
 
 export default {
   metaInfo() {
@@ -50,10 +46,8 @@ export default {
     CoronavirusMap,
     CoronavirusSummary,
     CoronavirusTrend,
-    CoronavirusTrendAffectedCities,
     CoronavirusTrendByProvince,
-    CoronavirusTrendNewCases,
-    CoronavirusTrendTests
+    CoronavirusTrendNewCases
   },
   computed: {
     meta() {
