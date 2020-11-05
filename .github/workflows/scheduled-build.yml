@@ -1,0 +1,12 @@
+name: Scheduled Build
+on:
+  schedule:
+    - cron: 0 12 * * *
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        env:
+          NETLIFY_WEBHOOK_TOKEN: ${{ secrets.NETLIFY_WEBHOOK_TOKEN }}
+        run: curl -X POST -d {} "https://api.netlify.com/build_hooks/$NETLIFY_WEBHOOK_TOKEN"
