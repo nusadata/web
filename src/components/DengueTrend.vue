@@ -49,7 +49,6 @@
 </template>
 
 <script>
-import {delimiter} from '~/plugins/delimiter'
 import descriptions from '~/data/dengue.json'
 import provinces from '~/data/provinces.json'
 
@@ -212,9 +211,11 @@ export default {
       //   .attr('width', x.bandwidth())
       //   .attr('height', d => 400 - y(+d[type]))
 
+      const self = this
+
       this.$tippy(this.getSelector('.circle-pad'), {
         content(ref) {
-          return delimiter(ref.getAttribute('data-tooltip'))
+          return self.$delimiter(ref.getAttribute('data-tooltip'))
         }
       })
 
