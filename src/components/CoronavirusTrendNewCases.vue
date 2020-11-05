@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import {delimiter} from '~/plugins/delimiter'
 
 export default {
   props: {
@@ -264,7 +263,7 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  delimiter(Math.ceil(y.invert(y(confirmed[idx].jumlah_positif.value))))
+                  self.$delimiter(Math.ceil(y.invert(y(confirmed[idx].jumlah_positif.value))))
                 )
 
               return `translate(${x(
@@ -284,7 +283,7 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  delimiter(Math.ceil(y.invert(y(confirmed[idx].jumlah_sembuh.value))))
+                  self.$delimiter(Math.ceil(y.invert(y(confirmed[idx].jumlah_sembuh.value))))
                 )
 
               return `translate(${x(
@@ -304,7 +303,7 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  delimiter(Math.ceil(y.invert(y(confirmed[idx].jumlah_meninggal.value))))
+                  self.$delimiter(Math.ceil(y.invert(y(confirmed[idx].jumlah_meninggal.value))))
                 )
 
               return `translate(${x(

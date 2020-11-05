@@ -16,7 +16,6 @@
 
 <script>
 import {followCursor} from 'tippy.js'
-import {delimiter} from '~/plugins/delimiter'
 
 export default {
   props: {
@@ -105,7 +104,7 @@ export default {
         .data(geojson.features)
         .join('path')
         .attr('fill', d => this.color(data.get(d.properties.slug).value))
-        .attr('data-tooltip', d => `${data.get(d.properties.slug).name} ${delimiter(data.get(d.properties.slug).value)}`)
+        .attr('data-tooltip', d => `${data.get(d.properties.slug).name} ${this.$delimiter(data.get(d.properties.slug).value)}`)
         .attr('stroke', strokeColor)
         .attr('stroke-linejoin', 'round')
         .attr('d', generator)

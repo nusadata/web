@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import {delimiter} from '~/plugins/delimiter'
 import descriptions from '~/data/dengue.json'
 import data from '~/data/dengue-national.json'
 import provinces from '~/data/provinces.json'
@@ -173,9 +172,11 @@ export default {
         .style('font', '1rem Manrope')
         .call(this.$d3.axisLeft(y).ticks(5))
 
+      const self = this
+
       this.$tippy(this.getSelector('.circle-pad'), {
         content(ref) {
-          return delimiter(ref.getAttribute('data-tooltip'))
+          return self.$delimiter(ref.getAttribute('data-tooltip'))
         }
       })
 

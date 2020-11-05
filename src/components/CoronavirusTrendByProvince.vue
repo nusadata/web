@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import {delimiter} from '~/plugins/delimiter'
 
 export default {
   props: {
@@ -185,7 +184,7 @@ export default {
                 .select(this)
                 .select('text')
                 .text(
-                  delimiter(Math.ceil(
+                  self.$delimiter(Math.ceil(
                     y.invert(
                       y(
                         confirmed[idx].data.filter(
