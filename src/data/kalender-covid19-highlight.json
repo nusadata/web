@@ -45,6 +45,30 @@
     "2020-08-20": {
       "date": "20 Agustus",
       "content": "Pemerintah bekerja sama dengan Sinovac untuk memproduksi vaksin COVID-19"
+    },
+    "2020-08-27": {
+      "date": "27 Agustus",
+      "content": "Pemerintah meluncurkan program subsidi gaji"
+    }
+  },
+  "8": {
+    "2020-09-03": {
+      "date": "3 September",
+      "content": "Pembentukan Tim Nasional Percepatan Pengembangan Vaksin COVID-19"
+    },
+    "2020-09-11": {
+      "date": "11 September",
+      "content": "PSBB transisi dihentikan dan PSBB yang lebih ketat kembali diberlakukan"
+    }
+  },
+  "9": {
+    "2020-10-06": {
+      "date": "6 Oktober",
+      "content": "PT Bio Farma ditunjuk untuk melakukan pengadaan vaksin COVID-19 di Indonesia."
+    },
+    "2020-10-12": {
+      "date": "6 Oktober",
+      "content": "PSBB dihentikan dan PSBB transisi kembali diberlakukan."
     }
   }
 }

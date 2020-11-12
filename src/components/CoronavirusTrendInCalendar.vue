@@ -136,7 +136,7 @@
         <section class="px-5 py-3">
           <div class="mb-6">
             <p class="inline-block rounded px-3 py-1 bg-gray-700 text-sm">
-              {{ $d[locale].number_of_new_cases }}: {{ event.numOfCases }}
+              {{ $d[locale].number_of_new_cases }}: {{ $delimiter(event.numOfCases) }}
             </p>
           </div>
           <ul>
@@ -211,6 +211,9 @@ export default {
           july: 6,
           august: 7,
           september: 8,
+          october: 9,
+          november: 10,
+          december: 11,
         }
       }
       return {
@@ -221,6 +224,9 @@ export default {
         juli: 6,
         agustus: 7,
         september: 8,
+        october: 9,
+        november: 10,
+        desember: 11,
       }
     },
     calendarStyle() {
