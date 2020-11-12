@@ -3,9 +3,10 @@
     :class="`${selectorPrefix} max-w-4xl mb-24 mx-auto overflow-x-hidden`"
   >
     <header>
+      <p class="text-gray-500 font-semibold mx-5 lg:mx-0 text-sm mb-1">Sampai {{ $date(daily[daily.length - 1].key) }}</p>
       <h2
         id="trend-of-coronavirus"
-        class="font-semibold text-2xl mx-5 lg:mx-0 my-4"
+        class="font-semibold text-2xl mx-5 lg:mx-0 mb-4"
       >
         {{ $d[locale].trend_of_total_cases }}
       </h2>

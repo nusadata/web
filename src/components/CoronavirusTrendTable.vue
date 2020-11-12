@@ -1,7 +1,6 @@
 <template>
   <section :class="`${selectorPrefix} max-w-4xl mb-24 mx-auto overflow-x-hidden`">
     <header>
-      <p class="text-gray-500 font-semibold mx-5 lg:mx-0 text-sm mb-1">Sampai {{ daily[daily.length - 1].date }}</p>
       <h2
         id="trend-of-coronavirus-by-province"
         class="font-semibold text-xl sm:text-2xl mx-5 lg:mx-0 mb-8">
