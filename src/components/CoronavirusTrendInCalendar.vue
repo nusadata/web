@@ -166,7 +166,6 @@
 
 <script>
 import highlight from '~/data/kalender-covid19-highlight.json'
-import eventsEn from '~/data/coronavirus-calendar.json'
 import eventsId from '~/data/kalender-covid19.json'
 import Day from './CoronavirusTrendInCalendarDay.vue'
 import Modal from './Modal.vue'
@@ -197,7 +196,7 @@ export default {
   },
   computed: {
     events() {
-      return this.locale === 'en' ? eventsEn : eventsId
+      return eventsId
     },
     dayNames() {
       return this.$d[this.locale].day_names_short

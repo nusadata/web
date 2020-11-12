@@ -6,11 +6,10 @@
           {{ meta.title }}
         </h1>
         <p class="text-3xl leading-tight font-bold mb-5">
-          404 <span class="text-blue-500">Not Found</span>
+          404 <span class="text-blue-500">Halaman tidak ditemukan</span>
         </p>
         <p class="text-gray-500 mb-8">
-          The page that you are looking for is not existed. You can help
-          yourself by clicking on one of these links below.
+          Maaf, halaman yang kamu cari tidak ditemukan. Mungkin kamu tertarik untuk mengunjungi salah satu link di bawah ini.
         </p>
       </section>
       <section class="px-5 mb-24">
@@ -41,18 +40,20 @@
 </template>
 
 <script>
-import collections from '~/data/collections.json'
+import Layout from '~/layouts/Id.vue'
+import collections from '~/data/koleksi.json'
 
 export default {
+  components: { Layout },
   metaInfo() {
     return this.meta
   },
   computed: {
     meta() {
       return {
-        title: '404 Not Found - Nusadata',
+        title: '404 Halaman tidak ditemukan - Nusadata',
         htmlAttrs: {
-          lang: 'en',
+          lang: 'id',
           dir: 'ltr',
         },
       }
