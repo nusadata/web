@@ -3,6 +3,7 @@
     <main role="main">
       <section class="mt-5 px-5 lg:px-0 py-10 max-w-4xl mx-auto">
         <header class="mb-2">
+          <p class="text-gray-500 font-semibold mx-5 lg:mx-0 text-sm mb-1">Sampai {{ $date($page.allCoronavirus.edges[0].node.daily[$page.allCoronavirus.edges[0].node.daily.length - 1].key) }}</p>
           <h1 class="text-2xl sm:text-3xl font-bold">
             <span class="text-blue-500">Dasbor</span>
             COVID-19
