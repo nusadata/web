@@ -34,7 +34,11 @@ export default {
     locale: {
       type: String,
       default: 'en',
-    }
+    },
+    maxRange: {
+      type: Number,
+      default: 35000,
+    },
   },
   data() {
     return {
@@ -44,13 +48,21 @@ export default {
   computed: {
     colorRange() {
       const range = {
-        total_cases: [0, 10000],
+        total_cases: [0, this.maxRange],
       }
       return range[this.currentType]
     },
     stopRange() {
+      const maxStop = 10
+      const step = this.maxRange / maxStop
+      const stops = []
+
+      for (let i = 0; i < maxStop; i++) {
+        stops.push(i * step)
+      }
+
       const range = {
-        total_cases: [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000],
+        total_cases: stops,
       }
       return range[this.currentType]
     },
@@ -131,7 +143,7 @@ export default {
         .attr('x2', '100%')
         .attr('y2', '0%')
 
-      const stops = this.stopRange;
+      const stops = this.stopRange
 
       linearGradient.selectAll('stop')
         .data(stops)
@@ -163,7 +175,7 @@ export default {
             .style('text-anchor', 'middle')
             .style('fill', fillColor)
             .attr('class', 'legend-stop')
-            .text(text)
+            .text(this.$delimiter(text))
         }
       })
 
