@@ -10,21 +10,29 @@ const axios = require('axios')
 module.exports = function (api) {
   // load source from api.covid19api.com
   api.loadSource(async actions => {
-    const { data } = await axios.get('https://data.covid19.go.id/public/api/update.json')
-    const collection = actions.addCollection('Coronavirus')
-    collection.addNode({
-      new: data.update.penambahan,
-      daily: data.update.harian,
-      total: data.update.total
-    })
+    try {
+      const { data } = await axios.get('https://data.covid19.go.id/public/api/update.json')
+      const collection = actions.addCollection('Coronavirus')
+      collection.addNode({
+        new: data.update.penambahan,
+        daily: data.update.harian,
+        total: data.update.total
+      })
+    } catch (err) {
+      console.log('https://data.covid19.go.id/public/api/update.json', err)
+    }
   })
 
   api.loadSource(async actions => {
-    const { data } = await axios.get('https://data.covid19.go.id/public/api/prov_time.json')
-    const collection = actions.addCollection('CoronavirusByProvince')
-    collection.addNode({
-      list: data.list,
-    })
+    try {
+      const { data } = await axios.get('https://data.covid19.go.id/public/api/prov_time.json')
+      const collection = actions.addCollection('CoronavirusByProvince')
+      collection.addNode({
+        list: data.list,
+      })
+    } catch (err) {
+      console.log('https://data.covid19.go.id/public/api/prov_time.json', err)
+    }
   })
 
   api.createPages(({ createPage }) => {
