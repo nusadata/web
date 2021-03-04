@@ -281,7 +281,7 @@ export default {
   },
   methods: {
     setCalendarDaySize() {
-      const calendarWidth = this.$el.offsetWidth
+      const calendarWidth = this.$el.offsetWidth - 1 // reduce with 1px to fix firefox weird offset
       const calendarDaySize = calendarWidth / 7
       this.calendarDaySize =
         maxCalendarDaySize * 7 > calendarWidth
