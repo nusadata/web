@@ -14,6 +14,7 @@ module.exports = {
   siteUrl,
   pathPrefix,
   titleTemplate: '%s',
+  icon: './src/images/favicon.png',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',

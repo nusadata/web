@@ -30,7 +30,7 @@
           </div>
           <div class="flex-1 hidden md:block">
             <g-image
-              src="~/indonesia-map.png"
+              src="~/images/indonesia-map.png"
               alt="Indonesian map"
               class="opacity-25"
             />
