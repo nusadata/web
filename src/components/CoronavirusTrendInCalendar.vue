@@ -36,13 +36,13 @@
       class="flex flex-col md:flex-row items-center md:items-start overflow-x-auto"
     >
       <article
-        v-for="(month, monthName) in monthsEnum"
-        :key="monthName"
+        v-for="(month) in calendarMonths"
+        :key="`month-${month.value}-${month.year}`"
         class="mb-10 mr-0 md:mr-10"
         :style="calendarStyle"
       >
         <h2 class="capitalize text-lg text-center mb-2">
-          {{ monthName }}
+          {{ month.name }} {{ month.year }}
         </h2>
         <header
           class="flex flex-wrap"
@@ -60,25 +60,25 @@
 
         <div class="flex flex-wrap mb-5">
           <button
-            v-for="day in getFirstDay(2020, month)"
+            v-for="day in getFirstDay(month.year, month.value)"
             :key="day"
             class="text-sm sm:text-base"
             :style="calendarDayStyle"
           />
           <day
-            v-for="date in getDaysInMonth(2020, month)"
-            :key="`date-${date}`"
-            :data-obj="getCalendarDayObj(2020, month, date)"
+            v-for="date in getDaysInMonth(month.year, month.value)"
+            :key="`date-${date}-${month.year}`"
+            :data-obj="getCalendarDayObj(month.year, month.value, date)"
             @click="openEvent"
           >
             {{ date }}
           </day>
         </div>
 
-        <aside v-if="highlight[month]">
+      <aside v-if="highlight[getCalendarHighlightKey(month.year, month.value)]">
           <ul>
             <li
-              v-for="(item, key) in highlight[month]"
+             v-for="(item, key) in highlight[getCalendarHighlightKey(month.year, month.value)]"
               :key="key"
               class="text-sm text-gray-500"
             >
@@ -201,33 +201,21 @@ export default {
     dayNames() {
       return this.$d[this.locale].day_names_short
     },
-    monthsEnum() {
-      if (this.locale === 'en') {
-        return {
-          march: 2,
-          april: 3,
-          may: 4,
-          june: 5,
-          july: 6,
-          august: 7,
-          september: 8,
-          october: 9,
-          november: 10,
-          december: 11,
-        }
+    calendarMonths() {
+      const { months } = this.$d[this.locale]
+      const result = []
+      let monthIndex
+      // for 2020, from march to december
+      for (monthIndex = 2; monthIndex < 12; monthIndex++) {
+        result.push({ value: monthIndex, name: months[monthIndex], year: 2020 })
       }
-      return {
-        maret: 2,
-        april: 3,
-        mei: 4,
-        juni: 5,
-        juli: 6,
-        agustus: 7,
-        september: 8,
-        october: 9,
-        november: 10,
-        desember: 11,
+
+      // for 2021, from januari to today month
+      const todayMonthIndex = (new Date()).getMonth()
+      for (monthIndex = 0; monthIndex <= todayMonthIndex; monthIndex++) {
+        result.push({ value: monthIndex, name: months[monthIndex], year: 2021 })
       }
+      return result
     },
     calendarStyle() {
       return {
@@ -307,6 +295,9 @@ export default {
       const lastDate = new Date(year, month + 1, 0)
       return lastDate.getDate()
     },
+    getCalendarHighlightKey(year, month) {
+      return `${month}-${year}`
+    },
     getCalendarDayObj(year, month, date) {
       let style = Object.assign({}, this.calendarDayStyle)
 
@@ -319,8 +310,9 @@ export default {
         )
       })
 
-      const isHighlight = this.highlight[month]
-        ? Object.keys(this.highlight[month]).find(
+      const key = this.getCalendarHighlightKey(year, month)
+      const isHighlight = this.highlight[key]
+        ? Object.keys(this.highlight[key]).find(
             (d) =>
               new Date(d).setHours(0, 0, 0, 0) ===
               new Date(year, month, date, 0, 0, 0, 0).getTime()
