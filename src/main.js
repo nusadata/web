@@ -3,11 +3,9 @@
 //
 import * as d3 from 'd3'
 import tippy from 'tippy.js'
-import DefaultLayout from '~/layouts/Default.vue'
 import delimiterPlugin from '~/plugins/delimiter'
 import dictionaryPlugin from '~/plugins/dictionary'
 import generateMetaPlugin from '~/plugins/generate-meta'
-// import font from './font'
 import 'tippy.js/dist/tippy.css'
 
 export default function (Vue, { _router, head, isClient }) {
@@ -18,13 +16,6 @@ export default function (Vue, { _router, head, isClient }) {
   Vue.use(delimiterPlugin)
   Vue.use(dictionaryPlugin)
   Vue.use(generateMetaPlugin)
-  Vue.component('Layout', DefaultLayout)
-
-  // HEAD manipulation
-  // head.style.push({
-  //   cssText: font,
-  //   type: 'text/css'
-  // })
 
   head.link.push({
     rel: 'stylesheet',
