@@ -68,7 +68,19 @@
     },
     "2020-10-12": {
       "date": "12 Oktober",
-      "content": "PSBB dihentikan dan PSBB transisi kembali diberlakukan."
+      "content": "PSBB dihentikan dan PSBB transisi kembali diberlakukan. Sebanyak 30 juta dosis vaksin akan sampai pada akhir tahun 2020."
+    }
+  },
+  "11-2020": {
+    "2020-12-28": {
+      "date": "28 Desember",
+      "content": "Pemerintah mencegah masuk WNA dari seluruh negara dari tanggal 1-14 Januari 2021."
+    }
+  },
+  "0-2021": {
+    "2021-01-06": {
+      "date": "6 Januari",
+      "content": "Pelaksanaan vaksinasi dimulai pada minggu kedua Januari. Pemerintah menambah kebijakan restriksi untuk wilayah Jawa-Bali pada 11-25 Januari."
     }
   }
 }

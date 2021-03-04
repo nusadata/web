@@ -145,9 +145,9 @@
               :key="id"
               class="mb-6"
             >
-              <p class="text-base mb-2">
-                {{ source.content }}
-              </p>
+              <div class="text-base mb-2">
+                <p v-html="source.content"/>
+              </div>
               <div class="text-sm text-gray-500">
                 <a
                   class="underline"
