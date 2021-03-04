@@ -320,7 +320,11 @@ export default {
         .append('g')
         .attr('transform', `translate(0, 400)`)
         .style('font', '1rem Manrope')
-        .call(this.$d3.axisBottom(x).ticks(5))
+        .call(this.$d3.axisBottom(x).ticks(5).tickFormat(d => {
+          const month = this.$d[this.locale].months[d.getMonth()]
+          const year = d.getFullYear()
+          return `${month} ${year}`
+        }))
 
       svg
         .append('g')
