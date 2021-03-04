@@ -57,7 +57,7 @@
             {{ $d[locale].highest_new_cases }}
           </p>
           <p class="mb-2 text-4xl text-blue-400 leading-none">
-            {{ summary.highestNewCasesInProvince.value }}
+            {{ $delimiter(summary.highestNewCasesInProvince.value) }}
           </p>
           <p
             v-if="summary.highestNewCasesInProvince.province"
