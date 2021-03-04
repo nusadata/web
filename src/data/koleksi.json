@@ -3,7 +3,7 @@
     "name": "Kalender COVID-19",
     "description": "Halaman ini menyajikan visualisasi data mengenai aksi pemerintah merespon pandemi COVID-19 dalam bentuk kalender.",
     "link": "/kalender-covid19/",
-    "new": true
+    "new": false
   },
   {
     "name": "Timeline COVID-19",
