@@ -257,7 +257,7 @@ export default {
     },
   },
   created() {
-    this.bgColorFn = this.$d3.interpolateBlues
+    this.bgColorFn = this.$d3.interpolateDiscrete(this.$d3.schemeBlues[9])
     this.fgColorFn = this.$d3.scaleQuantize([0, 1], ['#1a202c', '#edf2f7'])
     this.maxCases = this.$d3.max(this.daily, (d) => d.jumlah_positif.value)
     this.ratioFn = this.$d3
