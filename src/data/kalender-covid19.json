@@ -953,8 +953,19 @@
     ]
   },
   {
+    "date": "2020-12-30",
+    "formatted_date": "30 Desember 2020",
+    "sources": [
+      {
+        "url": "https://jdih.kemenkeu.go.id/in/page/dokumen-peraturan/be4433ee-3f47-46a8-663a-08d8b8465e44",
+        "name": "jdih.kemenkeu.go.id",
+        "content": "Kementerian Keuangan mengeluarkan Peraturan No. 239/PMK.05/2020. Peraturan tersebut memberikan berbagai fasilitas pajak terhadap barang dan jasa yang diperlukan dalam rangka penanganan pandemi, dan memperpanjang pemberlakuan fasilitas pajak penghasilan sampai dengan tanggal 30 Juni 2021."
+      }
+    ]
+  },
+  {
     "date": "2021-01-06",
-    "formatted_date": "6 Januari 2020",
+    "formatted_date": "6 Januari 2021",
     "sources": [
       {
         "url": "https://setkab.go.id/menkes-sebut-vaksinasi-covid-19-akan-dimulai-pekan-depan/",
@@ -965,6 +976,82 @@
         "url": "https://setkab.go.id/pemerintah-terapkan-kebijakan-pembatasan-aktivitas-pada-11-25-januari-2021/",
         "name": "setkab.go.id",
         "content": "Pemerintah memutuskan untuk menerapkan kebijakan aktivitas masyarakat pada 11-25 Januari terutama di wilayah Jawa-Bali untuk menekan laju pertambahan kasus COVID-19. Pembatasan akan diterapkan pada provinsi, kabupaten atau kota yang memenuhi salah satu kriteria yang telah ditetapkan, yaitu: 1. tingkat kematian di atas 3%; 2. tingkat kesembuhan di bawah 82%. 3. tingkat kasus aktif di atas 14%; 4. tingkat keterisian rumah sakit untuk ICU dan isolasi di atas 70%."
+      }
+    ]
+  },
+  {
+    "date": "2021-01-09",
+    "formatted_date": "9 Januari 2021",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-1-tahun-2021",
+        "name": "covid19.go.id",
+        "content": "Satuan Tugas COVID-19 menerbitkan Surat Edaran No. 1 Tahun 2021 tentang ketentuan perjalanan orang dalam negeri dalam masa pandemi. Ketentuan tersebut berlaku untuk berbagai macam moda transportasi dan menjabarkan beberapa pedoman, seperti penggunaan masker kain 3 lapis atau masker medis, kewajiban memiliki surat tes PCR negatif untuk semua orang yang melakukan perjalanan udara kecuali untuk anak usia di bawah 12 tahun, pemberlakuan rapid tes antigen secara acak dan berbagai ketentuan lainnya. Surat edaran tersebut berlaku efektif mulai dari tanggal 9-25 Januari 2021 dan akan dievaluasi lebih lanjut sesuai kebutuhan."
+      }
+    ]
+  },
+  {
+    "date": "2021-01-13",
+    "formatted_date": "13 Januari 2021",
+    "sources": [
+      {
+        "url": "https://setkab.go.id/presiden-jokowi-vaksinasi-covid-19-akan-dilakukan-di-seluruh-tanah-air/",
+        "name": "setkab.go.id",
+        "content": "Pemerintah melaksanakan vaksinasi COVID-19 perdana di Istana Merdeka, Jakarta. Presiden RI Joko Widodo menjadi orang pertama yang menerima suntikan vaksin. Selain itu, perwakilan dari bidang kesehatan, agama, pedagang pasar, pengusaha, buruh, guru dan tenaga kesehatan juga ikut menerima suntikan vaksin pada sesi perdana tersebut."
+      }
+    ]
+  },
+  {
+    "date": "2021-01-14",
+    "formatted_date": "14 Januari 2021",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/storage/app/media/Regulasi/2021/Januari/surat%20edaran%20Nomor%202%20Tahun%202021%20tentang%20Protokol%20Kesehatan%20perjalanan%20internasional%20dalam%20mas%20pandemi%20corona%20virus%20disease%202019.pdf",
+        "name": "covid.go.id",
+        "content": "Melalui Surat Edaran No. 2 Tahun 2021, Satuan Tugas Penanganan COVID-19 mengeluarkan protokol kesehatan perjalanan internasional dalam masa pandemi COVID-19. Surat tersebut juga memperpanjang masa penutupan masuknya WNA dari semua negara ke Indonesia sampai 25 Januari 2021, dan memperketat protokol kesehatan untuk orang yang melakukan perjalanan ke Indonesia seperti tes PCR sebelum keberangkatan dan setelah kedatangan, serta ketentuan-ketentuan yang lainnya."
+      }
+    ]
+  },
+  {
+    "date": "2021-01-21",
+    "formatted_date": "21 Januari 2021",
+    "sources": [
+      {
+        "url": "https://setkab.go.id/pemerintah-perpanjang-kebijakan-ppkm-sampai-8-februari-2020/",
+        "name": "setkab.go.id",
+        "content": "Pemerintah memperpanjang kebijakan Pemberlakuan Pembatasan Kegiatan Masyarakat (PPKM) selama 2 minggu, yaitu dari 26 Januari sampai dengan 8 Februari 2021. Keputusan ini diambil setelah melihat tingkat kesembuhan dan tingkat kematian yang belum mencapai nilai yang diharapkan pada banyak daerah yang diterapkan PPKM."
+      }
+    ]
+  },
+  {
+    "date": "2021-01-26",
+    "formatted_date": "26 Januari 2021",
+    "sources": [
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-5-tahun-2021",
+        "name": "covid19.go.id",
+        "content": "Melalui Surat Edaran No. 5 Tahun 2021, Satuan Tugas Penanganan COVID-19 memperpanjang ketentuan perjalanan orang dalam negeri sampai tanggal 8 Februari."
+      },
+      {
+        "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-6-tahun-2021",
+        "name": "covid19.go.id",
+        "content": "Melalui Surat Edaran No. 6 Tahun 2021, Satuan Tugas Penanganan COVID-19 memperpanjang larangan WNA masuk ke Indonesia sampai 8 Februari 2021."
+      },
+      {
+        "url": "https://setkab.go.id/rujuk-se-satgas-terbaru-kemenhub-perpanjang-penerapan-protokol-kesehatan-perjalanan-dalam-negeri-dan-internasional/",
+        "name": "setkab.go.id",
+        "content": "Kementerian Perhubungan mengeluarkan Surat Edaran Petunjuk Pelaksanaan Perjalanan Orang untuk moda transportasi dalam negeri dan internasional, yang berisi tentang perpanjanganan penerapan protokol kesehatan perjalanan dalam negeri dan internasional mulai dari 26 Januari sampai dengan 8 Februari 2021."
+      }
+    ]
+  },
+  {
+    "date": "2021-01-28",
+    "formatted_date": "28 Januari 2021",
+    "sources": [
+      {
+        "url": "https://jdih.kemenkeu.go.id/download/6c497d80-032f-4be9-a3d0-afe26452a74d/7~PMK.05~2021Per.pdf",
+        "name": "jdih.kemenkeu.go.id",
+        "content": "Kementerian Keuangan mengeluarkan Peraturan Menteri Keuangan No. 7/PMK.05/2021 untuk mengatur tata cara pembayaran dan penyaluran dana pengadaan vaksin. Peraturan tersebut menetapkan bahwa pembayaran untuk pengadaan vaksin dari luar negeri akan menggunakan valuta asing agar lebih efisien dan untuk menjaga kestabilan pasar valuta asing di dalam negeri."
       }
     ]
   }
