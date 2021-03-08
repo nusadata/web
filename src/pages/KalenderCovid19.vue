@@ -47,18 +47,7 @@ export default {
           this.description,
           this.$page.metadata.siteUrl,
           this.url
-        ),
-        link: [
-          {
-            href: this.url, hreflang: 'id', rel: 'alternate'
-
-          },
-          {
-            href: this.$page.metadata.siteUrl + '/coronavirus-calendar/',
-            hreflang: 'en',
-            rel: 'alternate'
-          }
-        ]
+        )
       }
     },
     title() {

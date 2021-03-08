@@ -155,19 +155,7 @@ export default {
         class: 'antialiased',
         lang: 'id',
         dir: 'ltr',
-      },
-      link: [
-        {
-          href: this.url,
-          hreflang: 'id',
-          rel: 'alternate',
-        },
-        {
-          href: this.$page.metadata.siteUrl + '/coronavirus-timeline/',
-          hreflang: 'en',
-          rel: 'alternate',
-        },
-      ],
+      }
     }
   },
   props: {
