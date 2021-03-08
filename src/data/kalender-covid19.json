@@ -6,7 +6,8 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/03/02/breaking-jokowi-announces-indonesias-first-two-confirmed-covid-19-cases.html",
         "name": "The Jakarta Post",
-        "content": "Presiden Joko Widodo mengumumkan dua kasus positif COVID-19 pertama di Indonesia"
+        "content": "Presiden Joko Widodo mengumumkan dua kasus positif COVID-19 pertama di Indonesia",
+        "tags": []
       }
     ]
   },
@@ -17,7 +18,8 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/03/05/covid-19-indonesia-issues-travel-ban-for-hardest-hit-iran-south-korea-italy.html",
         "name": "The Jakarta Post",
-        "content": "Pembatasan perjalanan luar negeri diperluas dengan memasukkan beberapa kota di Korea Selatan, Itali dan Iran. Pengunjung dari negara-negara ini harus menyediakan sertifikat kesehatan yang valid untuk masuk ke Indonesia."
+        "content": "Pembatasan perjalanan luar negeri diperluas dengan memasukkan beberapa kota di Korea Selatan, Itali dan Iran. Pengunjung dari negara-negara ini harus menyediakan sertifikat kesehatan yang valid untuk masuk ke Indonesia.",
+        "tags": ["travelling"]
       }
     ]
   },
@@ -28,12 +30,14 @@
       {
         "url": "https://infeksiemerging.kemkes.go.id/situasi-infeksi-emerging/info-corona-virus/menteri-kesehatan-tetapkan-132-rumah-sakit-rujukan-covid-19/",
         "name": "Kementerian Kesehatan",
-        "content": "Pemerintah telah menunjuk 132 fasilitas perawatan COVID-19 di seluruh Indonesia."
+        "content": "Pemerintah telah menunjuk 132 fasilitas perawatan COVID-19 di seluruh Indonesia.",
+        "tags": []
       },
       {
         "url": "https://covid19.go.id/p/regulasi/keppres-nomor-7-tahun-2020-tentang-gugus-tugas-percepatan-penanganan-covid-i9",
         "name": "covid19.go.id",
-        "content": "Pemerintah membentuk Gugus Tugas Percepatan Penanganan COVID-19 untuk mengatasi situasi pandemi dalam skala nasional. Gugus tugas ini bertanggung jawab langsung kepada presiden."
+        "content": "Pemerintah membentuk Gugus Tugas Percepatan Penanganan COVID-19 untuk mengatasi situasi pandemi dalam skala nasional. Gugus tugas ini bertanggung jawab langsung kepada presiden.",
+        "tags": []
       }
     ]
   },
@@ -44,17 +48,20 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/03/15/work-from-home-policy-in-effect-at-major-jakarta-companies-over-virus-concerns.html",
         "name": "The Jakarta Post",
-        "content": "Berdasarkan ajakan Presiden Joko Widodo untuk melakukan jarak sosial, beberapa perusahaan besar di Jakarta mulai melaksanakan kebijakan 'work from home'"
+        "content": "Berdasarkan ajakan Presiden Joko Widodo untuk melakukan jarak sosial, beberapa perusahaan besar di Jakarta mulai melaksanakan kebijakan 'work from home'",
+        "tags": ["protokol kesehatan"]
       },
       {
         "url": "https://www.bbc.com/indonesia/indonesia-51769074",
         "name": "BBC",
-        "content": "Beberapa wilayah di Indonesia menutup sekolah dan menyelenggarakan kegiatan belajar mengajar dari rumah"
+        "content": "Beberapa wilayah di Indonesia menutup sekolah dan menyelenggarakan kegiatan belajar mengajar dari rumah",
+        "tags": ["protokol kesehatan"]
       },
       {
         "url": "https://covid19.go.id/p/protokol/fatwa-majelis-ulama-indonesia-nomor-14-tahun-2020-tentang-penyelenggaran-ibadah-dalam-situasi-terjadi-wabah-covid-19",
         "name": "Fatwa MUI no. 14 2020",
-        "content": "MUI menerbitkan fatwa untuk melarang kegiatan ibadah di masjid saat situasi pandemi"
+        "content": "MUI menerbitkan fatwa untuk melarang kegiatan ibadah di masjid saat situasi pandemi",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -65,7 +72,8 @@
       {
         "url": "https://www.kompas.com/tren/read/2020/03/17/105258465/berikut-protokol-kesehatan-jika-alami-gejala-virus-corona",
         "name": "Kompas.com",
-        "content": "Protokol kesehatan COVID-19 dirilis pertama kali ke publik"
+        "content": "Protokol kesehatan COVID-19 dirilis pertama kali ke publik",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -76,7 +84,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/keppres-nomor-9-tahun-2020-tentang-perubahan-atas-keppres-nomor-7-tahun-2020",
         "name": "Keppres No. 9 2020",
-        "content": "Pemerintah menerbitkan Kepres No. 9 2020 untuk merevisi Kepres No. 7 2020. Revisi ini secara umum membahas mengenai perubahan dalam struktur organisasi dan sumber anggaran belanja untuk gugus tugas."
+        "content": "Pemerintah menerbitkan Kepres No. 9 2020 untuk merevisi Kepres No. 7 2020. Revisi ini secara umum membahas mengenai perubahan dalam struktur organisasi dan sumber anggaran belanja untuk gugus tugas.",
+        "tags": []
       }
     ]
   },
@@ -87,7 +96,8 @@
       {
         "url": "https://nasional.kompas.com/read/2020/03/18/19194761/wisma-atlet-untuk-pasien-covid-19-wapres-ada-1800-tempat-tidur",
         "name": "Kompas.com",
-        "content": "Wisma Atlet Kemayoran telah dikonversi untuk menampung pasien COVID-19 dengan gejala ringan. Lokasi ini diklaim dapat menampung sampai 1800 pasien."
+        "content": "Wisma Atlet Kemayoran telah dikonversi untuk menampung pasien COVID-19 dengan gejala ringan. Lokasi ini diklaim dapat menampung sampai 1800 pasien.",
+        "tags": []
       }
     ]
   },
@@ -98,12 +108,14 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/03/30/jokowi-refuses-to-impose-lockdown-on-jakarta.html",
         "name": "The Jakarta Post",
-        "content": "Presiden Joko Widodo menolak untuk melakukan lockdown di Jakarta. Rute bus yang menghubungkan Jakarta dan kota sekitarnya akan tetap dibuka sesuai dengan pembatalan rencana untuk menghentikan sementara operasional bus AKAP."
+        "content": "Presiden Joko Widodo menolak untuk melakukan lockdown di Jakarta. Rute bus yang menghubungkan Jakarta dan kota sekitarnya akan tetap dibuka sesuai dengan pembatalan rencana untuk menghentikan sementara operasional bus AKAP.",
+        "tags": ["travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-republik-indonesia-nomor-hk0107menkes2182020",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan mengeluarkan peraturan untuk mengecualikan perizinan perdagangan impor untuk beberapa peralatan kesehatan untuk COVID-19."
+        "content": "Kementerian Kesehatan mengeluarkan peraturan untuk mengecualikan perizinan perdagangan impor untuk beberapa peralatan kesehatan untuk COVID-19.",
+        "tags": []
       }
     ]
   },
@@ -114,7 +126,8 @@
       {
         "url": "https://www.indonesia.travel/gb/en/news/temporary-entry-ban-for-foreign-citizen-entering-the-republic-of-indonesia",
         "name": "indonesia.travel",
-        "content": "Direktorat Jenderal Keimigrasian di Indonesia untuk sementara waktu melarang masuk warga negara asing ke Indonesia dengan beberapa pengecualian."
+        "content": "Direktorat Jenderal Keimigrasian di Indonesia untuk sementara waktu melarang masuk warga negara asing ke Indonesia dengan beberapa pengecualian.",
+        "tags": ["travelling"]
       }
     ]
   },
@@ -125,17 +138,20 @@
       {
         "url": "https://covid19.go.id/p/regulasi/se-menpan-rb-nomor-41-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Kementerian PANRB mengeluarkan surat edaran untuk semua pejabat pemerintah agar tidak melakukan perjalanan keluar daerah dan/atau mudik, dan selalu mempromosikan jarak sosial, menggunakan masker, tidak melakukan mudik dan gaya hidup sehat."
+        "content": "Kementerian PANRB mengeluarkan surat edaran untuk semua pejabat pemerintah agar tidak melakukan perjalanan keluar daerah dan/atau mudik, dan selalu mempromosikan jarak sosial, menggunakan masker, tidak melakukan mudik dan gaya hidup sehat.",
+        "tags": ["protokol kesehatan", "travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/larangan-mudik-untuk-bumn-dan-keluarga",
         "name": "covid19.go.id",
-        "content": "Kementerian BUMN mengeluarkan surat edaran untuk seluruh karyawan BUMN dan keluarga agar tidak melakukan perjalanan keluar daerah dan/atau mudik, dan selalu mempromosikan jarak sosial, menggunakan masker, tidak melakukan mudik dan gaya hidup sehat."
+        "content": "Kementerian BUMN mengeluarkan surat edaran untuk seluruh karyawan BUMN dan keluarga agar tidak melakukan perjalanan keluar daerah dan/atau mudik, dan selalu mempromosikan jarak sosial, menggunakan masker, tidak melakukan mudik dan gaya hidup sehat.",
+        "tags": ["protokol kesehatan", "travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/petunjuk-teknis-klaim-penggantian-biaya-perawatan-pasien-penyakit-infeksi-emerging-tertentu-bagi-rumah-sakit-yang-menyelenggarakan-pelayanan-coronavirus-disease-2019-covid-19-edisi-maret-2020",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan merilis pedoman teknis mengenai tata cara klaim biaya pengganti perawatan medis untuk semua rumah sakit yang menyediakan pelayanan COVID-19."
+        "content": "Kementerian Kesehatan merilis pedoman teknis mengenai tata cara klaim biaya pengganti perawatan medis untuk semua rumah sakit yang menyediakan pelayanan COVID-19.",
+        "tags": []
       }
     ]
   },
@@ -146,7 +162,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-republik-indonesia-nomor-hk0107menkes2392020-tentang-psbb-di-wilayah-provinsi-dki-jakarta",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan menetapkan PSBB di DKI Jakarta."
+        "content": "Kementerian Kesehatan menetapkan PSBB di DKI Jakarta.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -157,7 +174,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/permenkes-no-9-tahun-2020-tentang-pedoman-psbb-dalam-rangka-percepatan-penanganan-covid-19",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan mengeluarkan pedoman untuk PSBB yang meliputi sekolah dan kantor, kegiatan ibadah, kegiatan publik, kegiatan sosial budaya dan transportasi. Pedoman ini juga menjelaskan mengenai prosedur yang harus diikuti apabila ada pemerintah daerah yang ingin menerapkan PSBB di wilayahnya."
+        "content": "Kementerian Kesehatan mengeluarkan pedoman untuk PSBB yang meliputi sekolah dan kantor, kegiatan ibadah, kegiatan publik, kegiatan sosial budaya dan transportasi. Pedoman ini juga menjelaskan mengenai prosedur yang harus diikuti apabila ada pemerintah daerah yang ingin menerapkan PSBB di wilayahnya.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -168,27 +186,32 @@
       {
         "url": "https://covid19.go.id/p/regulasi/skb-perubahan-kedua-libur-nasional-dan-cuti-bersama-2020",
         "name": "covid19.go.id",
-        "content": "Untuk mengurangi perpindahan orang selama pandemi, Kementerian Agama, Kementerian Ketenagakerjaan dan Kementerian PANRB secara bersama mengeluarkan regulasi untuk menggeser cuti bersama Idul Fitri ke tanggal 28, 29, 30 dan 31 Desember."
+        "content": "Untuk mengurangi perpindahan orang selama pandemi, Kementerian Agama, Kementerian Ketenagakerjaan dan Kementerian PANRB secara bersama mengeluarkan regulasi untuk menggeser cuti bersama Idul Fitri ke tanggal 28, 29, 30 dan 31 Desember.",
+        "tags": ["travelling"]
       },
       {
         "url": "https://corona.jakarta.go.id/uploads/documents/id/Peraturan%20Gubernur%20Nomor%2033%20Tahun%202020%20tentang%20Pelaksanaan%20PSBB%20Dalam%20Penanganan%20COVID-19%20di%20Provinsi%20DKI%20Jakarta.pdf",
         "name": "corona.jakarta.go.id",
-        "content": "Gubernur DKI Jakarta mengeluarkan pedoman teknis untuk mengimplementasikan PSBB di wilayah Jakarta."
+        "content": "Gubernur DKI Jakarta mengeluarkan pedoman teknis untuk mengimplementasikan PSBB di wilayah Jakarta.",
+        "tags": ["protokol kesehatan"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/peraturan-menteri-perhubungan-nomor-pm-18-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Menteri Perhubungan mengeluarkan prosedur kesehatan untuk mencegah penyebaran COVID-19 di transportasi umum."
+        "content": "Menteri Perhubungan mengeluarkan prosedur kesehatan untuk mencegah penyebaran COVID-19 di transportasi umum.",
+        "tags": ["protokol kesehatan"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/se-menpan-rb-nomor-46-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Kementerian PANRB mengeluarkan surat edaran baru No. 46 2020 untuk merevisi surat edaran sebelumnya No. 36 2020. Perubahan meliputi pelarangan perjalanan keluar daerah untuk pejabat pemerintah dan keluarga dan tidak memperbolehkan cuti yang tidak penting."
+        "content": "Kementerian PANRB mengeluarkan surat edaran baru No. 46 2020 untuk merevisi surat edaran sebelumnya No. 36 2020. Perubahan meliputi pelarangan perjalanan keluar daerah untuk pejabat pemerintah dan keluarga dan tidak memperbolehkan cuti yang tidak penting.",
+        "tags": ["travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-perindustrian-republik-indonesia-nomor-7-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Kementrian Perindustrian mengeluarkan prosedur permintaan perizinan untuk melaksanakan operasional industri selama pandemi."
+        "content": "Kementrian Perindustrian mengeluarkan prosedur permintaan perizinan untuk melaksanakan operasional industri selama pandemi.",
+        "tags": ["ekonomi"]
       }
     ]
   },
@@ -199,7 +222,8 @@
       {
         "url": "https://megapolitan.kompas.com/read/2020/04/07/21552791/psbb-jakarta-mulai-10-april-belajar-tetap-di-rumah-fasilitas-umum-ditutup",
         "name": "Kompas.com",
-        "content": "PSBB efektif dimulai di DKI Jakarta, diikuti oleh wilayah lain seperti Bogor, Depok, Bekasi dan Tangerang."
+        "content": "PSBB efektif dimulai di DKI Jakarta, diikuti oleh wilayah lain seperti Bogor, Depok, Bekasi dan Tangerang.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -210,7 +234,8 @@
       {
         "url": "https://jdih.setkab.go.id/PUUdoc/176084/Keppres_Nomor_11_Tahun_2020.pdf",
         "name": "jdih.setkab.go.id",
-        "content": "Presiden Joko Widodo menetapkan COVID-19 sebagai kedaruratan kesehatan masyarakat."
+        "content": "Presiden Joko Widodo menetapkan COVID-19 sebagai kedaruratan kesehatan masyarakat.",
+        "tags": []
       }
     ]
   },
@@ -221,7 +246,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/keputusan-menteri-kesehatan-nomor-hk0-107menkes2492020",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan menetapkan wilayah PSBB di Kabupaten Tangerang, Kota Tangerang dan Kota Tangerang Selatan."
+        "content": "Kementerian Kesehatan menetapkan wilayah PSBB di Kabupaten Tangerang, Kota Tangerang dan Kota Tangerang Selatan.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -243,7 +269,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-hk0202i3852020",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan merilis surat edaran untuk mempromosikan penggunaan masker di tempat umum dan sering mencuci tangan seperti yang telah dianjurkan oleh WHO."
+        "content": "Kementerian Kesehatan merilis surat edaran untuk mempromosikan penggunaan masker di tempat umum dan sering mencuci tangan seperti yang telah dianjurkan oleh WHO.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -254,7 +281,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/peraturan-gubernur-jawa-barat-nomor-30-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Gubernur Jawa Barat menerapkan PSBB di Kota Bandung, Kota Cimahi, Kabupaten Bandung, Kabupaten Bandung Barat dan Kabupaten Sumedang."
+        "content": "Gubernur Jawa Barat menerapkan PSBB di Kota Bandung, Kota Cimahi, Kabupaten Bandung, Kabupaten Bandung Barat dan Kabupaten Sumedang.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -265,12 +293,14 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/04/21/breaking-jokowi-bans-mudik-as-ramadan-approaches.html",
         "name": "The Jakarta Post",
-        "content": "President Joko Widodo mengumumkan pelarangan mudik Idul Fitri mulai dari tanggal 24 April untuk membatasi penyebaran COVID-19"
+        "content": "President Joko Widodo mengumumkan pelarangan mudik Idul Fitri mulai dari tanggal 24 April untuk membatasi penyebaran COVID-19",
+        "tags": ["travelling"]
       },
       {
         "url": "https://www.thejakartapost.com/news/2020/04/23/govt-temporarily-bans-passenger-travel-to-prevent-mudik.html",
         "name": "The Jakarta Post",
-        "content": "Beberapa transportasi umum jarak jauh seperti pesawat, kereta api dan bus dilarang beroperasi setidaknya sampai tanggal 31 Mei"
+        "content": "Beberapa transportasi umum jarak jauh seperti pesawat, kereta api dan bus dilarang beroperasi setidaknya sampai tanggal 31 Mei",
+        "tags": ["travelling"]
       }
     ]
   },
@@ -281,7 +311,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-kesehatan-nomor-hk0201menkes2952020",
         "name": "covid19.go.id",
-        "content": "Kementerian Kesehatan mempublikasikan surat edaran untuk menekankan kembali tentang penggantian biaya medis untuk rumah sakit yang menyediakan pelayanan COVID-19. Ada beberapa informasi tambahan mengenai tata cara perhitungan biaya untuk pasien dengan penyakit bawaan dan pasien dengan komplikasi."
+        "content": "Kementerian Kesehatan mempublikasikan surat edaran untuk menekankan kembali tentang penggantian biaya medis untuk rumah sakit yang menyediakan pelayanan COVID-19. Ada beberapa informasi tambahan mengenai tata cara perhitungan biaya untuk pasien dengan penyakit bawaan dan pasien dengan komplikasi.",
+        "tags": []
       }
     ]
   },
@@ -292,7 +323,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/peraturan-gubernur-daerah-khusus-ibukota-jakarta-nomor-41-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Pemerintah DKI Jakarta akan memberi sanksi untuk setiap pelanggaran saat PSBB. Pelanggar individu dapat didenda paling sedikit Rp100.000 sampai Rp250.000. Perusahaan dapat didenda paling sedikit Rp5.000.000 sampai Rp50.000.000 tergantung dengan klasifikasinya."
+        "content": "Pemerintah DKI Jakarta akan memberi sanksi untuk setiap pelanggaran saat PSBB. Pelanggar individu dapat didenda paling sedikit Rp100.000 sampai Rp250.000. Perusahaan dapat didenda paling sedikit Rp5.000.000 sampai Rp50.000.000 tergantung dengan klasifikasinya.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -303,7 +335,8 @@
       {
         "url": "https://jdih.setneg.go.id/viewpdfperaturan/P18867/Perpu%20Nomor%202%20Tahun%202020",
         "name": "jdih.setneg.go.id",
-        "content": "Presiden mengeluarkan peraturan untuk menunda pemilihan umum daerah tahun 2020 sampai bulan Desember yang mungkin bisa diperpanjang apabila situasi pandemi tidak kunjung membaik."
+        "content": "Presiden mengeluarkan peraturan untuk menunda pemilihan umum daerah tahun 2020 sampai bulan Desember yang mungkin bisa diperpanjang apabila situasi pandemi tidak kunjung membaik.",
+        "tags": []
       }
     ]
   },
@@ -314,12 +347,14 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/05/06/government-to-allow-public-transportation-to-operate-but-still-bans-mudik.html",
         "name": "The Jakarta Post",
-        "content": "Menteri Perhubungan mengatakan bahwa pemerintah dapat mengizinkan segala macam bentuk transportasi umum untuk mulai beroperasi lagi tanggal 7 Mei untuk mengakomodasi individu tertentu dengan tetap menekankan pelarangan mudik Idul Fitri."
+        "content": "Menteri Perhubungan mengatakan bahwa pemerintah dapat mengizinkan segala macam bentuk transportasi umum untuk mulai beroperasi lagi tanggal 7 Mei untuk mengakomodasi individu tertentu dengan tetap menekankan pelarangan mudik Idul Fitri.",
+        "tags": ["travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-4-tahun-2020",
         "name": "covid.19.go.id",
-        "content": "Gugus Tugas Percepatan Penanganan COVID-19 merilis surat edaran untuk mengecualikan pelarangan perjalanan untuk individu dengan kriteria tertentu. Pengeculian meliputi pegawai pemerintah atau swasta yang menyediakan pelayanan kebutuhan dasar, pasien yang membutuhkan pelayanan kesehatan darurat, dan pekerja migran atau pelajar yang pulang dari luar negeri."
+        "content": "Gugus Tugas Percepatan Penanganan COVID-19 merilis surat edaran untuk mengecualikan pelarangan perjalanan untuk individu dengan kriteria tertentu. Pengeculian meliputi pegawai pemerintah atau swasta yang menyediakan pelayanan kebutuhan dasar, pasien yang membutuhkan pelayanan kesehatan darurat, dan pekerja migran atau pelajar yang pulang dari luar negeri.",
+        "tags": ["travelling"]
       }
     ]
   },
@@ -330,17 +365,20 @@
       {
         "url": "https://covid19.go.id/p/regulasi/se-dirjen-perhubungan-laut-nomor-21-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Direktorat Jenderal Perhubungan Laut mengeluarkan surat edaran untuk mengoperasikan segala bentuk transportasi laut untuk mengakomodasi pelayanan kebutuhan dasar dan perjalanan untuk individu tertentu seperti yang telah disampaikan oleh Gugus Tugas Percepatan Penanganan COVID-19 melalui surat edaran No. 4 2020."
+        "content": "Direktorat Jenderal Perhubungan Laut mengeluarkan surat edaran untuk mengoperasikan segala bentuk transportasi laut untuk mengakomodasi pelayanan kebutuhan dasar dan perjalanan untuk individu tertentu seperti yang telah disampaikan oleh Gugus Tugas Percepatan Penanganan COVID-19 melalui surat edaran No. 4 2020.",
+        "tags": ["travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/se-dirjen-perhubungan-darat-nomor-9-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Terkait dengan surat edaran Gugus Tugas Percepatan Penanganan COVID-19 No. 4 2020, Direktorat Jenderal Perhubungan Darat merilis pedoman teknis untuk mengoperasikan transportasi darat untuk mengakomodasi pelayanan kebutuhan dasar dan perjalanan untuk individu tertentu."
+        "content": "Terkait dengan surat edaran Gugus Tugas Percepatan Penanganan COVID-19 No. 4 2020, Direktorat Jenderal Perhubungan Darat merilis pedoman teknis untuk mengoperasikan transportasi darat untuk mengakomodasi pelayanan kebutuhan dasar dan perjalanan untuk individu tertentu.",
+        "tags": ["travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/se-dirjen-perkeretaapian-nomor-um006218djka20",
         "name": "covid19.go.id",
-        "content": "Terkait dengan surat edaran Gugus Tugas Percepatan Penanganan COVID-19 No. 4 2020, Direktorat Jenderal Perkeretaapian mengeluarkan pedoman teknis untuk mengoperasikan kereta khusus untuk mengakomodasi pelayanan kebutuhan dasar dan perjalanan untuk individu tertentu."
+        "content": "Terkait dengan surat edaran Gugus Tugas Percepatan Penanganan COVID-19 No. 4 2020, Direktorat Jenderal Perkeretaapian mengeluarkan pedoman teknis untuk mengoperasikan kereta khusus untuk mengakomodasi pelayanan kebutuhan dasar dan perjalanan untuk individu tertentu.",
+        "tags": ["travelling"]
       }
     ]
   },
@@ -351,7 +389,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-panrb-republik-indonesia-nomor-55-tahun-2020-tentang-pembatasan-kegiatan-mudik",
         "name": "covid19.go.id",
-        "content": "Terkait dengan surat edaran Gugus Tugas Percepatan Penanganan COVID-19 No. 4 2020, Kementerian PANRB mengeluarkan surat edaran untuk memperbolehkan pegawai pemerintahan dengan kriteria tertentu untuk melakukan perjalanan dengan mengikuti prosedur yang dijelaskan pada surat tersebut."
+        "content": "Terkait dengan surat edaran Gugus Tugas Percepatan Penanganan COVID-19 No. 4 2020, Kementerian PANRB mengeluarkan surat edaran untuk memperbolehkan pegawai pemerintahan dengan kriteria tertentu untuk melakukan perjalanan dengan mengikuti prosedur yang dijelaskan pada surat tersebut.",
+        "tags": ["travelling"]
       }
     ]
   },
@@ -362,7 +401,8 @@
       {
         "url": "https://nasional.kompas.com/read/2020/03/15/15432101/ini-arahan-lengkap-jokowi-demi-mencegah-meluasnya-corona-di-indonesia?page=all",
         "name": "Kompas.com",
-        "content": "Pada hari Minggu, 15 Mei 2020 di Istana Bogor, Presiden Joko Widodo menyampaikan arahan terkait dampak perekonomian di Indonesia akibat COVID-19. Beliau menyampaikan bahwa pemerintah telah mengambil langkah-langkah cepat untuk mengantisipasi dampak ekonomi namun dengan tetap menjaga Indonesia dari penyebaran COVID-19. Beliau meminta kepada seluruh rakyat Indonesia untuk tetap tenang, tidak panik dan tetap produktif dengan tetap meningkatkan kewaspadaan terhadap COVID-19."
+        "content": "Pada hari Minggu, 15 Mei 2020 di Istana Bogor, Presiden Joko Widodo menyampaikan arahan terkait dampak perekonomian di Indonesia akibat COVID-19. Beliau menyampaikan bahwa pemerintah telah mengambil langkah-langkah cepat untuk mengantisipasi dampak ekonomi namun dengan tetap menjaga Indonesia dari penyebaran COVID-19. Beliau meminta kepada seluruh rakyat Indonesia untuk tetap tenang, tidak panik dan tetap produktif dengan tetap meningkatkan kewaspadaan terhadap COVID-19.",
+        "tags": ["ekonomi"]
       }
     ]
   },
@@ -373,12 +413,14 @@
       {
         "url": "https://www.thejakartapost.com/news/2020/05/19/covid-19-govt-to-tighten-security-at-mudik-ban-checkpoints-as-idul-fitri-approaches.html",
         "name": "The Jakarta Post",
-        "content": "Pemerintah mulai meningkatkan monitoring pelarangan mudik sehubungan dengan libur Idul Fitri pada tanggal 24-25 Mei yang semakin mendekat. Pelanggar akan distop di tempat atau diinstruksikan untuk putar balik."
+        "content": "Pemerintah mulai meningkatkan monitoring pelarangan mudik sehubungan dengan libur Idul Fitri pada tanggal 24-25 Mei yang semakin mendekat. Pelanggar akan distop di tempat atau diinstruksikan untuk putar balik.",
+        "tags": ["travelling"]
       },
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-ketenagakerjaan-nomor-m70202v2020",
         "name": "covid19.go.id",
-        "content": "Menteri Ketenagakerjaan mengeluarkan surat edaran untuk memberikan penjelasan mengenai protokol pencegahan penularan COVID-19 di tempat kerja yang masih diperbolehkan untuk beroperasi selama pandemi."
+        "content": "Menteri Ketenagakerjaan mengeluarkan surat edaran untuk memberikan penjelasan mengenai protokol pencegahan penularan COVID-19 di tempat kerja yang masih diperbolehkan untuk beroperasi selama pandemi.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -389,7 +431,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-nomor-5-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Gugus Tugas Percepatan Penanganan COVID-19 mengeluarkan surat edaran No. 5 2020 untuk merevisi surat edaran No. 4 2020. Dalam surat edaran ini terdapat pembetulan persyaratan dokumen untuk melakukan perjalanan selama masa pandemi, salah satunya yaitu menunjukkan surat keterangan uji tes PCR dengan hasil negatif yang berlaku 7 hari, atau surat keterangan uji rapid test dengan hasil non-reaktif yang berlaku 3 hari pada saat keberangkatan."
+        "content": "Gugus Tugas Percepatan Penanganan COVID-19 mengeluarkan surat edaran No. 5 2020 untuk merevisi surat edaran No. 4 2020. Dalam surat edaran ini terdapat pembetulan persyaratan dokumen untuk melakukan perjalanan selama masa pandemi, salah satunya yaitu menunjukkan surat keterangan uji tes PCR dengan hasil negatif yang berlaku 7 hari, atau surat keterangan uji rapid test dengan hasil non-reaktif yang berlaku 3 hari pada saat keberangkatan.",
+        "tags": ["travelling", "protokol kesehatan"]
       }
     ]
   },
@@ -411,7 +454,8 @@
       {
         "url": "https://covid19.go.id/p/regulasi/surat-edaran-menteri-perdagangan-nomor-12-tahun-2020",
         "name": "covid19.go.id",
-        "content": "Menteri Perdagangan mengeluarkan surat edaran No. 12 2020 untuk mengatur penyelenggaraan kegiatan perdagangan dalam rangka menjaga ketersediaan dan kelancaran distribusi barang dan jasa, dan menerapkan protokol kesehatan bagi penyelenggara kegiatan perdagangan. Beberapa contoh protokol kesehatan yang harus dilakukan diantaranya menerapkan pengaturan sirkulasi dan jumlah pengunjung maksimal 40% untuk tempat usaha yang tertutup, memastikan semua penyelenggara negatif COVID-19 dengan melakukan tes PCR atau rapid test, melakukan screening suhu tubuh dibawah 37,5 derajat sebelum tempat usaha dibuka, menggunakan masker atau face shield dan menjaga jarak."
+        "content": "Menteri Perdagangan mengeluarkan surat edaran No. 12 2020 untuk mengatur penyelenggaraan kegiatan perdagangan dalam rangka menjaga ketersediaan dan kelancaran distribusi barang dan jasa, dan menerapkan protokol kesehatan bagi penyelenggara kegiatan perdagangan. Beberapa contoh protokol kesehatan yang harus dilakukan diantaranya menerapkan pengaturan sirkulasi dan jumlah pengunjung maksimal 40% untuk tempat usaha yang tertutup, memastikan semua penyelenggara negatif COVID-19 dengan melakukan tes PCR atau rapid test, melakukan screening suhu tubuh dibawah 37,5 derajat sebelum tempat usaha dibuka, menggunakan masker atau face shield dan menjaga jarak.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
@@ -422,7 +466,8 @@
       {
         "url": "https://covid19.go.id/storage/app/media/Regulasi/SE%20Menag%20Nomor%2015%202020%20Rumah%20Ibadah.pdf",
         "name": "covid19.go.id",
-        "content": "Menggunakan surat edaran 15/2020, Menteri Agama memperbolehkan tempat-tempat ibadah untuk dibuka kembali apabila sudah dianggap aman oleh ketua gugus tugas COVID-19 setempat dan menerapkan protokol kesehatan yang ketat."
+        "content": "Menggunakan surat edaran 15/2020, Menteri Agama memperbolehkan tempat-tempat ibadah untuk dibuka kembali apabila sudah dianggap aman oleh ketua gugus tugas COVID-19 setempat dan menerapkan protokol kesehatan yang ketat.",
+        "tags": ["protokol kesehatan"]
       }
     ]
   },
