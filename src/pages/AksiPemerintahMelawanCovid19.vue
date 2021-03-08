@@ -16,7 +16,7 @@
         <div class="mb-6 whitespace-no-wrap overflow-x-auto">
           <button
             v-for="tagSelection in tagSelections"
-            :key="tagSelection"
+            :key="`tag-selection-${tagSelection}`"
             :class="tagSelection === selectedTag ? 'bg-blue-800' : 'bg-gray-800'"
             class="text-sm px-2 py-1 rounded mr-2 mb-2"
             @click="selectTag(tagSelection)">
@@ -34,11 +34,18 @@
                   <div class="mb-1">
                     <a
                       :href="source.url"
-                      class="text-sm text-gray-500 underline"
+                      class="text-sm text-gray-500 underline mr-2"
                       target="__blank"
                       rel="nofollow noreferrer">
                       {{ source.name }}
                     </a>
+                    <button
+                      v-for="tag in source.tags"
+                      :key="`tag-${tag}`"
+                      class="bg-gray-800 text-xs px-1 rounded mr-2"
+                      @click="selectTag(tag)">
+                      {{ tag }}
+                    </button>
                   </div>
                   <p class="md:mr-16">{{ source.content }}</p>
                 </div>
